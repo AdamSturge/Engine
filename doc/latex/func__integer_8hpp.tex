@@ -1,0 +1,44 @@
+\hypertarget{func__integer_8hpp}{}\section{include/glm/detail/func\+\_\+integer.hpp File Reference}
+\label{func__integer_8hpp}\index{include/glm/detail/func\+\_\+integer.\+hpp@{include/glm/detail/func\+\_\+integer.\+hpp}}
+{\ttfamily \#include \char`\"{}setup.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}precision.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}func\+\_\+common.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}func\+\_\+vector\+\_\+relational.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}func\+\_\+integer.\+inl\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL vec\+Type$<$ uint, P $>$ \hyperlink{group__core__func__integer_ga2fc1a46e7b7e9fbbd8fa444fbacaa2aa}{glm\+::uadd\+Carry} (vec\+Type$<$ uint, P $>$ const \&x, vec\+Type$<$ uint, P $>$ const \&y, vec\+Type$<$ uint, P $>$ \&carry)
+\item 
+{\footnotesize template$<$precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL vec\+Type$<$ uint, P $>$ \hyperlink{group__core__func__integer_ga22a889bf08313b7e547e2cdb8bb15ee4}{glm\+::usub\+Borrow} (vec\+Type$<$ uint, P $>$ const \&x, vec\+Type$<$ uint, P $>$ const \&y, vec\+Type$<$ uint, P $>$ \&borrow)
+\item 
+{\footnotesize template$<$precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL void \hyperlink{group__core__func__integer_ga456ff9dcec42f6769a9ae2a2af7f1ce1}{glm\+::umul\+Extended} (vec\+Type$<$ uint, P $>$ const \&x, vec\+Type$<$ uint, P $>$ const \&y, vec\+Type$<$ uint, P $>$ \&msb, vec\+Type$<$ uint, P $>$ \&lsb)
+\item 
+{\footnotesize template$<$precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL void \hyperlink{group__core__func__integer_ga6e6e8b29ca40d8ca2df10b58ed17d426}{glm\+::imul\+Extended} (vec\+Type$<$ int, P $>$ const \&x, vec\+Type$<$ int, P $>$ const \&y, vec\+Type$<$ int, P $>$ \&msb, vec\+Type$<$ int, P $>$ \&lsb)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL vec\+Type$<$ T, P $>$ \hyperlink{group__core__func__integer_gab84b88f3a8e367774e5dd1c618c353cf}{glm\+::bitfield\+Extract} (vec\+Type$<$ T, P $>$ const \&Value, int Offset, int Bits)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL vec\+Type$<$ T, P $>$ \hyperlink{group__core__func__integer_ga5681dfac9239beb1b8bd995e3c6496d7}{glm\+::bitfield\+Insert} (vec\+Type$<$ T, P $>$ const \&Base, vec\+Type$<$ T, P $>$ const \&Insert, int Offset, int Bits)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL vec\+Type$<$ T, P $>$ \hyperlink{group__core__func__integer_ga153e7e8d0c035f83cce50fc3e580930f}{glm\+::bitfield\+Reverse} (vec\+Type$<$ T, P $>$ const \&v)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL int \hyperlink{group__core__func__integer_ga44abfe3379e11cbd29425a843420d0d6}{glm\+::bit\+Count} (gen\+Type v)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL vec\+Type$<$ int, P $>$ \hyperlink{group__core__func__integer_ga1f29640969a3c54564da06ac67a5392e}{glm\+::bit\+Count} (vec\+Type$<$ T, P $>$ const \&v)
+\item 
+{\footnotesize template$<$typename gen\+I\+U\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL int \hyperlink{group__core__func__integer_gaf74c4d969fa34ab8acb9d390f5ca5274}{glm\+::find\+L\+SB} (gen\+I\+U\+Type x)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL vec\+Type$<$ int, P $>$ \hyperlink{group__core__func__integer_ga014a72009e68233c34c06a6dc2251b8c}{glm\+::find\+L\+SB} (vec\+Type$<$ T, P $>$ const \&v)
+\item 
+{\footnotesize template$<$typename gen\+I\+U\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL int \hyperlink{group__core__func__integer_ga7e4a794d766861c70bc961630f8ef621}{glm\+::find\+M\+SB} (gen\+I\+U\+Type x)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL vec\+Type$<$ int, P $>$ \hyperlink{group__core__func__integer_ga433104d77ec2ba58888aaefb77e9183f}{glm\+::find\+M\+SB} (vec\+Type$<$ T, P $>$ const \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{group__core}{G\+LM Core}
+
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+8 Integer Functions} 
+\end{DoxySeeAlso}

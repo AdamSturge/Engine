@@ -1,0 +1,58 @@
+\hypertarget{func__matrix_8hpp}{}\section{include/glm/detail/func\+\_\+matrix.hpp File Reference}
+\label{func__matrix_8hpp}\index{include/glm/detail/func\+\_\+matrix.\+hpp@{include/glm/detail/func\+\_\+matrix.\+hpp}}
+{\ttfamily \#include \char`\"{}../detail/precision.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../detail/setup.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../detail/type\+\_\+mat.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../vec2.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../vec3.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../vec4.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mat2x2.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mat2x3.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mat2x4.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mat3x2.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mat3x3.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mat3x4.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mat4x2.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mat4x3.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mat4x4.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}func\+\_\+matrix.\+inl\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1outerProduct__trait_3_01T_00_01P_00_01tvec2_00_01tvec2_01_4}{glm\+::detail\+::outer\+Product\+\_\+trait$<$ T, P, tvec2, tvec2 $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1outerProduct__trait_3_01T_00_01P_00_01tvec2_00_01tvec3_01_4}{glm\+::detail\+::outer\+Product\+\_\+trait$<$ T, P, tvec2, tvec3 $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1outerProduct__trait_3_01T_00_01P_00_01tvec2_00_01tvec4_01_4}{glm\+::detail\+::outer\+Product\+\_\+trait$<$ T, P, tvec2, tvec4 $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1outerProduct__trait_3_01T_00_01P_00_01tvec3_00_01tvec2_01_4}{glm\+::detail\+::outer\+Product\+\_\+trait$<$ T, P, tvec3, tvec2 $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1outerProduct__trait_3_01T_00_01P_00_01tvec3_00_01tvec3_01_4}{glm\+::detail\+::outer\+Product\+\_\+trait$<$ T, P, tvec3, tvec3 $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1outerProduct__trait_3_01T_00_01P_00_01tvec3_00_01tvec4_01_4}{glm\+::detail\+::outer\+Product\+\_\+trait$<$ T, P, tvec3, tvec4 $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1outerProduct__trait_3_01T_00_01P_00_01tvec4_00_01tvec2_01_4}{glm\+::detail\+::outer\+Product\+\_\+trait$<$ T, P, tvec4, tvec2 $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1outerProduct__trait_3_01T_00_01P_00_01tvec4_00_01tvec3_01_4}{glm\+::detail\+::outer\+Product\+\_\+trait$<$ T, P, tvec4, tvec3 $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1outerProduct__trait_3_01T_00_01P_00_01tvec4_00_01tvec4_01_4}{glm\+::detail\+::outer\+Product\+\_\+trait$<$ T, P, tvec4, tvec4 $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class mat\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL mat\+Type$<$ T, P $>$ \hyperlink{group__core__func__matrix_ga4a54992e4741188ee624b21e3ba91814}{glm\+::matrix\+Comp\+Mult} (mat\+Type$<$ T, P $>$ const \&x, mat\+Type$<$ T, P $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+TypeA, template$<$ typename, precision $>$ class vec\+TypeB$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL detail\+::outer\+Product\+\_\+trait$<$ T, P, vec\+TypeA, vec\+TypeB $>$\+::type \hyperlink{group__core__func__matrix_gae9f513dc8e4f3ceb993669321b6d0f09}{glm\+::outer\+Product} (vec\+TypeA$<$ T, P $>$ const \&c, vec\+TypeB$<$ T, P $>$ const \&r)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class mat\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__core__func__matrix_ga26ea77c574802bc6fc193c40478718d2}{glm\+::determinant} (mat\+Type$<$ T, P $>$ const \&m)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class mat\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL mat\+Type$<$ T, P $>$ \hyperlink{group__core__func__matrix_gaff4e89603cf51cdbcedebc57cd8808a3}{glm\+::inverse} (mat\+Type$<$ T, P $>$ const \&m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{group__core}{G\+LM Core}
+
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}

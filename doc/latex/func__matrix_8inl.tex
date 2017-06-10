@@ -1,0 +1,63 @@
+\hypertarget{func__matrix_8inl}{}\section{include/glm/detail/func\+\_\+matrix.inl File Reference}
+\label{func__matrix_8inl}\index{include/glm/detail/func\+\_\+matrix.\+inl@{include/glm/detail/func\+\_\+matrix.\+inl}}
+{\ttfamily \#include \char`\"{}../geometric.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__matrixCompMult}{glm\+::detail\+::compute\+\_\+matrix\+Comp\+Mult$<$ mat\+Type, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__transpose}{glm\+::detail\+::compute\+\_\+transpose$<$ mat\+Type, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__transpose_3_01tmat2x2_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+transpose$<$ tmat2x2, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__transpose_3_01tmat2x3_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+transpose$<$ tmat2x3, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__transpose_3_01tmat2x4_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+transpose$<$ tmat2x4, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__transpose_3_01tmat3x2_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+transpose$<$ tmat3x2, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__transpose_3_01tmat3x3_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+transpose$<$ tmat3x3, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__transpose_3_01tmat3x4_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+transpose$<$ tmat3x4, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__transpose_3_01tmat4x2_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+transpose$<$ tmat4x2, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__transpose_3_01tmat4x3_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+transpose$<$ tmat4x3, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__transpose_3_01tmat4x4_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+transpose$<$ tmat4x4, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__determinant}{glm\+::detail\+::compute\+\_\+determinant$<$ mat\+Type, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__determinant_3_01tmat2x2_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+determinant$<$ tmat2x2, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__determinant_3_01tmat3x3_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+determinant$<$ tmat3x3, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__determinant_3_01tmat4x4_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+determinant$<$ tmat4x4, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__inverse}{glm\+::detail\+::compute\+\_\+inverse$<$ mat\+Type, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__inverse_3_01tmat2x2_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+inverse$<$ tmat2x2, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__inverse_3_01tmat3x3_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+inverse$<$ tmat3x3, T, P, Aligned $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1compute__inverse_3_01tmat4x4_00_01T_00_01P_00_01Aligned_01_4}{glm\+::detail\+::compute\+\_\+inverse$<$ tmat4x4, T, P, Aligned $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class mat\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER mat\+Type$<$ T, P $>$ \hyperlink{group__core__func__matrix_ga4a54992e4741188ee624b21e3ba91814}{glm\+::matrix\+Comp\+Mult} (mat\+Type$<$ T, P $>$ const \&x, mat\+Type$<$ T, P $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+TypeA, template$<$ typename, precision $>$ class vec\+TypeB$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER detail\+::outer\+Product\+\_\+trait$<$ T, P, vec\+TypeA, vec\+TypeB $>$\+::type \hyperlink{group__core__func__matrix_gae9f513dc8e4f3ceb993669321b6d0f09}{glm\+::outer\+Product} (vec\+TypeA$<$ T, P $>$ const \&c, vec\+TypeB$<$ T, P $>$ const \&r)
+\item 
+\mbox{\Hypertarget{func__matrix_8inl_a44eaf0309b3d7a9e71e31b5d4a8dbaab}\label{func__matrix_8inl_a44eaf0309b3d7a9e71e31b5d4a8dbaab}} 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class mat\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER mat\+Type$<$ T, P $>$\+::transpose\+\_\+type {\bfseries glm\+::transpose} (mat\+Type$<$ T, P $>$ const \&m)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class mat\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER T \hyperlink{group__core__func__matrix_ga26ea77c574802bc6fc193c40478718d2}{glm\+::determinant} (mat\+Type$<$ T, P $>$ const \&m)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class mat\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER mat\+Type$<$ T, P $>$ \hyperlink{group__core__func__matrix_gaff4e89603cf51cdbcedebc57cd8808a3}{glm\+::inverse} (mat\+Type$<$ T, P $>$ const \&m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{group__core}{G\+LM Core} 

@@ -69,8 +69,8 @@ int main()
     glfwSetKeyCallback(window,KeyCallback);
     glClearColor(0.2f,0.3f,0.3f,0.1f);
 
-    glfwSetCursorPosCallback(window,MouseCallback);
-    glfwSetInputMode(window,GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    //glfwSetCursorPosCallback(window,MouseCallback);
+    //glfwSetInputMode(window,GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     glfwSetScrollCallback(window, ScrollCallback);
 
@@ -84,6 +84,8 @@ int main()
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
 
+
+    bool start = false;
     while(!glfwWindowShouldClose(window))
     {
         GLfloat current_frame = glfwGetTime();
@@ -95,7 +97,8 @@ int main()
 
         if(keys[GLFW_KEY_F])
         {
-            glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
+            //glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
+            start = true;
         }
 
         if(keys[GLFW_KEY_G])
@@ -124,7 +127,10 @@ int main()
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, view.data());
         glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, projection.data());
   
-        scene.StepPhysics();        
+        if(start)
+        {
+            scene.StepPhysics();
+        }        
        
         scene.Render(shader);
 

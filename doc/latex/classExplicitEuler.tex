@@ -1,0 +1,82 @@
+\hypertarget{classExplicitEuler}{}\section{Explicit\+Euler Class Reference}
+\label{classExplicitEuler}\index{Explicit\+Euler@{Explicit\+Euler}}
+
+
+Implementation of Explicit Euler method for solving Newton\textquotesingle{}s equations of motion.  
+
+
+
+
+{\ttfamily \#include $<$explicit\+\_\+euler.\+h$>$}
+
+Inheritance diagram for Explicit\+Euler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classExplicitEuler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classExplicitEuler_aa16df6a77bb175fdd6291c302cb61d17}{Explicit\+Euler} ()
+\item 
+\hyperlink{classExplicitEuler_ab7ba8cf17d34831178c47a3a3711c3b0}{Explicit\+Euler} (G\+Lfloat dt)
+\item 
+void \hyperlink{classExplicitEuler_aee3f98264fab0eac7517d9dc8487ecb4}{Solve} (const Vector3\+Gf xi, const Vector3\+Gf vi, const G\+Lfloat mass, const Vector3\+Gf F, Vector3\+Gf \&xf, Vector3\+Gf \&vf)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of Explicit Euler method for solving Newton\textquotesingle{}s equations of motion. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classExplicitEuler_aa16df6a77bb175fdd6291c302cb61d17}\label{classExplicitEuler_aa16df6a77bb175fdd6291c302cb61d17}} 
+\index{Explicit\+Euler@{Explicit\+Euler}!Explicit\+Euler@{Explicit\+Euler}}
+\index{Explicit\+Euler@{Explicit\+Euler}!Explicit\+Euler@{Explicit\+Euler}}
+\subsubsection{\texorpdfstring{Explicit\+Euler()}{ExplicitEuler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Explicit\+Euler\+::\+Explicit\+Euler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs an instance of Exlplict\+Euler with a default grid size \mbox{\Hypertarget{classExplicitEuler_ab7ba8cf17d34831178c47a3a3711c3b0}\label{classExplicitEuler_ab7ba8cf17d34831178c47a3a3711c3b0}} 
+\index{Explicit\+Euler@{Explicit\+Euler}!Explicit\+Euler@{Explicit\+Euler}}
+\index{Explicit\+Euler@{Explicit\+Euler}!Explicit\+Euler@{Explicit\+Euler}}
+\subsubsection{\texorpdfstring{Explicit\+Euler()}{ExplicitEuler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Explicit\+Euler\+::\+Explicit\+Euler (\begin{DoxyParamCaption}\item[{G\+Lfloat}]{dt }\end{DoxyParamCaption})}
+
+Constructs an instance of \hyperlink{classExplicitEuler}{Explicit\+Euler} with the provided grid size 
+\begin{DoxyParams}{Parameters}
+{\em dt} & difference between two points on the grid \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classExplicitEuler_aee3f98264fab0eac7517d9dc8487ecb4}\label{classExplicitEuler_aee3f98264fab0eac7517d9dc8487ecb4}} 
+\index{Explicit\+Euler@{Explicit\+Euler}!Solve@{Solve}}
+\index{Solve@{Solve}!Explicit\+Euler@{Explicit\+Euler}}
+\subsubsection{\texorpdfstring{Solve()}{Solve()}}
+{\footnotesize\ttfamily void Explicit\+Euler\+::\+Solve (\begin{DoxyParamCaption}\item[{const Vector3\+Gf}]{xi,  }\item[{const Vector3\+Gf}]{vi,  }\item[{const G\+Lfloat}]{mass,  }\item[{const Vector3\+Gf}]{F,  }\item[{Vector3\+Gf \&}]{xf,  }\item[{Vector3\+Gf \&}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Solves Newton\textquotesingle{}s equations of motion 
+\begin{DoxyParams}{Parameters}
+{\em xi} & intial position of entity \\
+\hline
+{\em vi} & initial velocity of entity \\
+\hline
+{\em mass} & mass of entity \\
+\hline
+{\em xf} & Final poisition of entity. This will be updated with the new position for the next grid point \\
+\hline
+{\em vf} & Final velocity of entity. This will be ipdated with the new velocity for the next grid point \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classTimeIntegrator}{Time\+Integrator}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/adam/\+Desktop/\+Engine/include/explicit\+\_\+euler.\+h\item 
+/home/adam/\+Desktop/\+Engine/explicit\+\_\+euler.\+cpp\end{DoxyCompactItemize}

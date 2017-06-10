@@ -1,0 +1,29 @@
+Jonathan Dummer 2007-\/07-\/26-\/10.\+36
+
+Simple Open\+GL Image Library
+
+A tiny c library for uploading images as textures into Open\+GL. Also saving and loading of images is supported.
+
+I\textquotesingle{}m using Sean\textquotesingle{}s Tool Box image loader as a base\+: \href{http://www.nothings.org/}{\tt http\+://www.\+nothings.\+org/}
+
+I\textquotesingle{}m upgrading it to load T\+GA and D\+DS files, and a direct path for loading D\+DS files straight into Open\+GL textures, when applicable.
+
+Image Formats\+:
+\begin{DoxyItemize}
+\item B\+MP load \& save
+\item T\+GA load \& save
+\item D\+DS load \& save
+\item P\+NG load
+\item J\+PG load
+\end{DoxyItemize}
+
+Open\+GL Texture Features\+:
+\begin{DoxyItemize}
+\item resample to power-\/of-\/two sizes
+\item M\+I\+Pmap generation
+\item compressed texture S3\+TC formats (if supported)
+\item can pre-\/multiply alpha for you, for better compositing
+\item can flip image about the y-\/axis (except pre-\/compressed D\+DS files)
+\end{DoxyItemize}
+
+Thanks to\+: Sean Barret -\/ for the awesome stb\+\_\+image Dan Venkitachalam -\/ for finding some non-\/compliant D\+DS files, and patching some explicit casts everybody at gamedev.\+net 

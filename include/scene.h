@@ -21,13 +21,6 @@ class Scene
         template <class T>
         void StepPhysicsWithType(std::shared_ptr<T> entity_ptr);
 
-	void static MouseCallback(GLFWwindow*,double xpos, double ypos);
-
-	void staticScrollCallback(GLFWwindow*, double xoffset, double yoffset);
-
-	void BindCameraEventListeners();
-	
-
     public :
         Scene();
 

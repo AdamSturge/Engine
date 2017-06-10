@@ -1,0 +1,106 @@
+\hypertarget{classMesh}{}\section{Mesh Class Reference}
+\label{classMesh}\index{Mesh@{Mesh}}
+
+
+Defines a mesh.  
+
+
+
+
+{\ttfamily \#include $<$mesh.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMesh_a2af137f1571af89172b9c102302c416b}{Mesh} ()
+\item 
+\hyperlink{classMesh_acca57d57a35d834a9ba0fa0290a4d121}{Mesh} (std\+::vector$<$ G\+Lfloat $>$ vertices, std\+::vector$<$ std\+::pair$<$ G\+Luint, G\+Luint $>$$>$ edges)
+\item 
+std\+::vector$<$ G\+Lfloat $>$ \hyperlink{classMesh_aad4e49df1b12331d688d677f997360a5}{Get\+Vertices} ()
+\item 
+std\+::vector$<$ std\+::pair$<$ G\+Luint, G\+Luint $>$ $>$ \hyperlink{classMesh_a4c31bac7ef0c5552e8dc692a33726ca3}{Get\+Edges} ()
+\item 
+G\+Luint \hyperlink{classMesh_adbbf05c59fd7cc170ceca2a0a71d7af1}{Get\+Num\+Edges} ()
+\item 
+G\+Luint \hyperlink{classMesh_ad4917bc56c71f31974af4be3eb90a390}{Get\+V\+AO} ()
+\item 
+void \hyperlink{classMesh_abe1f7ce31904fb28cef0c156b892af8e}{Clean\+Up} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a mesh. 
+
+A mesh is represented by a list of vertices and edges. A vertex is a set of 3 floats representing a (x,y,z) pair in R$^\wedge$3. An Edge is represented by a pair of indices into the vertex list. Vertices in edges are listed in clockwise order as they appear on the mesh. Once a mesh is built it is loaded onto the G\+PU so it can be rendered 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMesh_a2af137f1571af89172b9c102302c416b}\label{classMesh_a2af137f1571af89172b9c102302c416b}} 
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Mesh\+::\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Builds a mesh with no vertices or edges \mbox{\Hypertarget{classMesh_acca57d57a35d834a9ba0fa0290a4d121}\label{classMesh_acca57d57a35d834a9ba0fa0290a4d121}} 
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ G\+Lfloat $>$}]{vertices,  }\item[{std\+::vector$<$ std\+::pair$<$ G\+Luint, G\+Luint $>$$>$}]{edges }\end{DoxyParamCaption})}
+
+Builds a mesh with the provided vertices and edges 
+\begin{DoxyParams}{Parameters}
+{\em vertices} & List of vertices for the mesh. It\textquotesingle{}s length should be a multiple of 3 \\
+\hline
+{\em edges} & List of edges for the mesh. Listed in clockwise order \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMesh_abe1f7ce31904fb28cef0c156b892af8e}\label{classMesh_abe1f7ce31904fb28cef0c156b892af8e}} 
+\index{Mesh@{Mesh}!Clean\+Up@{Clean\+Up}}
+\index{Clean\+Up@{Clean\+Up}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{Clean\+Up()}{CleanUp()}}
+{\footnotesize\ttfamily void Mesh\+::\+Clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes the mesh from the G\+PU \mbox{\Hypertarget{classMesh_a4c31bac7ef0c5552e8dc692a33726ca3}\label{classMesh_a4c31bac7ef0c5552e8dc692a33726ca3}} 
+\index{Mesh@{Mesh}!Get\+Edges@{Get\+Edges}}
+\index{Get\+Edges@{Get\+Edges}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{Get\+Edges()}{GetEdges()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ G\+Luint, G\+Luint $>$ $>$ Mesh\+::\+Get\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+A copy of the edges in the mesh 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_adbbf05c59fd7cc170ceca2a0a71d7af1}\label{classMesh_adbbf05c59fd7cc170ceca2a0a71d7af1}} 
+\index{Mesh@{Mesh}!Get\+Num\+Edges@{Get\+Num\+Edges}}
+\index{Get\+Num\+Edges@{Get\+Num\+Edges}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{Get\+Num\+Edges()}{GetNumEdges()}}
+{\footnotesize\ttfamily G\+Luint Mesh\+::\+Get\+Num\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The number of edges in the mesh 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_ad4917bc56c71f31974af4be3eb90a390}\label{classMesh_ad4917bc56c71f31974af4be3eb90a390}} 
+\index{Mesh@{Mesh}!Get\+V\+AO@{Get\+V\+AO}}
+\index{Get\+V\+AO@{Get\+V\+AO}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{Get\+V\+A\+O()}{GetVAO()}}
+{\footnotesize\ttfamily G\+Luint Mesh\+::\+Get\+V\+AO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The vertex array buffer index for this mesh 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_aad4e49df1b12331d688d677f997360a5}\label{classMesh_aad4e49df1b12331d688d677f997360a5}} 
+\index{Mesh@{Mesh}!Get\+Vertices@{Get\+Vertices}}
+\index{Get\+Vertices@{Get\+Vertices}!Mesh@{Mesh}}
+\subsubsection{\texorpdfstring{Get\+Vertices()}{GetVertices()}}
+{\footnotesize\ttfamily std\+::vector$<$ G\+Lfloat $>$ Mesh\+::\+Get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+A copy of the vertices in the mesh 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/adam/\+Desktop/\+Engine/include/mesh.\+h\item 
+/home/adam/\+Desktop/\+Engine/mesh.\+cpp\end{DoxyCompactItemize}

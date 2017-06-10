@@ -1,0 +1,91 @@
+\hypertarget{group__gtx__norm}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}
+\label{group__gtx__norm}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}}
+
+
+Various ways to compute vector norms.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__gtx__norm_ga6d326d62fd9b7f4f0a1b79e56492a7e4}{glm\+::length2} (vec\+Type$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+Type$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__gtx__norm_ga647d2602008801d6ed78f9708eb439cc}{glm\+::distance2} (vec\+Type$<$ T, P $>$ const \&p0, vec\+Type$<$ T, P $>$ const \&p1)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__gtx__norm_gaebe5a39b06e262e615622129f37da4f4}{glm\+::l1\+Norm} (\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__gtx__norm_ga6d5964f09cdb43803496a5ee3ced71cb}{glm\+::l1\+Norm} (\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&v)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__gtx__norm_gafa6fbbc99cd44d81bf030e74eaf7ad64}{glm\+::l2\+Norm} (\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__gtx__norm_ga0a8cb8a0ce88d1d977de23209bf04610}{glm\+::l2\+Norm} (\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__gtx__norm_ga932bb0854e5c5a6ab5a14b023c451ca7}{glm\+::lx\+Norm} (\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&x, \hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&y, unsigned int Depth)
+\item 
+{\footnotesize template$<$typename T , precision P$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__gtx__norm_gaab931b0d1acfe2f9c1cb78311edf24fc}{glm\+::lx\+Norm} (\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&x, unsigned int Depth)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Various ways to compute vector norms. 
+
+$<$\hyperlink{norm_8hpp}{glm/gtx/norm.\+hpp}$>$ need to be included to use these functionalities. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gtx__norm_ga647d2602008801d6ed78f9708eb439cc}\label{group__gtx__norm_ga647d2602008801d6ed78f9708eb439cc}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}!distance2@{distance2}}
+\index{distance2@{distance2}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}}
+\subsubsection{\texorpdfstring{distance2()}{distance2()}}
+{\footnotesize\ttfamily template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+Type$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::distance2 (\begin{DoxyParamCaption}\item[{vec\+Type$<$ T, P $>$ const \&}]{p0,  }\item[{vec\+Type$<$ T, P $>$ const \&}]{p1 }\end{DoxyParamCaption})}
+
+Returns the squared distance between p0 and p1, i.\+e., length2(p0 -\/ p1). From G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm extension. \mbox{\Hypertarget{group__gtx__norm_gaebe5a39b06e262e615622129f37da4f4}\label{group__gtx__norm_gaebe5a39b06e262e615622129f37da4f4}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}!l1\+Norm@{l1\+Norm}}
+\index{l1\+Norm@{l1\+Norm}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}}
+\subsubsection{\texorpdfstring{l1\+Norm()}{l1Norm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::l1\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+Returns the L1 norm between x and y. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm extension. \mbox{\Hypertarget{group__gtx__norm_ga6d5964f09cdb43803496a5ee3ced71cb}\label{group__gtx__norm_ga6d5964f09cdb43803496a5ee3ced71cb}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}!l1\+Norm@{l1\+Norm}}
+\index{l1\+Norm@{l1\+Norm}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}}
+\subsubsection{\texorpdfstring{l1\+Norm()}{l1Norm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::l1\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&}]{v }\end{DoxyParamCaption})}
+
+Returns the L1 norm of v. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm extension. \mbox{\Hypertarget{group__gtx__norm_gafa6fbbc99cd44d81bf030e74eaf7ad64}\label{group__gtx__norm_gafa6fbbc99cd44d81bf030e74eaf7ad64}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}!l2\+Norm@{l2\+Norm}}
+\index{l2\+Norm@{l2\+Norm}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}}
+\subsubsection{\texorpdfstring{l2\+Norm()}{l2Norm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::l2\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+Returns the L2 norm between x and y. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm extension. \mbox{\Hypertarget{group__gtx__norm_ga0a8cb8a0ce88d1d977de23209bf04610}\label{group__gtx__norm_ga0a8cb8a0ce88d1d977de23209bf04610}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}!l2\+Norm@{l2\+Norm}}
+\index{l2\+Norm@{l2\+Norm}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}}
+\subsubsection{\texorpdfstring{l2\+Norm()}{l2Norm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::l2\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Returns the L2 norm of v. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm extension. \mbox{\Hypertarget{group__gtx__norm_ga6d326d62fd9b7f4f0a1b79e56492a7e4}\label{group__gtx__norm_ga6d326d62fd9b7f4f0a1b79e56492a7e4}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}!length2@{length2}}
+\index{length2@{length2}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}}
+\subsubsection{\texorpdfstring{length2()}{length2()}}
+{\footnotesize\ttfamily template$<$typename T , precision P, template$<$ typename, precision $>$ class vec\+Type$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::length2 (\begin{DoxyParamCaption}\item[{vec\+Type$<$ T, P $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Returns the squared length of x. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm extension. \mbox{\Hypertarget{group__gtx__norm_ga932bb0854e5c5a6ab5a14b023c451ca7}\label{group__gtx__norm_ga932bb0854e5c5a6ab5a14b023c451ca7}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}!lx\+Norm@{lx\+Norm}}
+\index{lx\+Norm@{lx\+Norm}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}}
+\subsubsection{\texorpdfstring{lx\+Norm()}{lxNorm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::lx\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&}]{y,  }\item[{unsigned int}]{Depth }\end{DoxyParamCaption})}
+
+Returns the L norm between x and y. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm extension. \mbox{\Hypertarget{group__gtx__norm_gaab931b0d1acfe2f9c1cb78311edf24fc}\label{group__gtx__norm_gaab931b0d1acfe2f9c1cb78311edf24fc}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}!lx\+Norm@{lx\+Norm}}
+\index{lx\+Norm@{lx\+Norm}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm}}
+\subsubsection{\texorpdfstring{lx\+Norm()}{lxNorm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , precision P$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::lx\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1tvec3}{tvec3}$<$ T, P $>$ const \&}]{x,  }\item[{unsigned int}]{Depth }\end{DoxyParamCaption})}
+
+Returns the L norm of v. From G\+L\+M\+\_\+\+G\+T\+X\+\_\+norm extension. 

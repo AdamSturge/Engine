@@ -1,0 +1,47 @@
+\hypertarget{classScene}{}\section{Scene Class Reference}
+\label{classScene}\index{Scene@{Scene}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classScene_a0a3d0bcafa5f18639e2af91c4c43115b}\label{classScene_a0a3d0bcafa5f18639e2af91c4c43115b}} 
+{\bfseries Scene} (std\+::shared\+\_\+ptr$<$ \hyperlink{classTimeIntegrator}{Time\+Integrator} $>$ integrator, \hyperlink{classConstantForceGenerator}{Constant\+Force\+Generator} cfg)
+\item 
+\mbox{\Hypertarget{classScene_a18477e2b5b504b46f3e7d37908abb98d}\label{classScene_a18477e2b5b504b46f3e7d37908abb98d}} 
+void {\bfseries Add\+Physics\+Entity} (std\+::shared\+\_\+ptr$<$ \hyperlink{classPhysicsEntity}{Physics\+Entity} $>$ entity\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classScene_ac20558c7452d933ce3ebe8caa1514702}\label{classScene_ac20558c7452d933ce3ebe8caa1514702}} 
+void {\bfseries Get\+Physics\+Entity} (const G\+Luint index, std\+::shared\+\_\+ptr$<$ \hyperlink{classPhysicsEntity}{Physics\+Entity} $>$ \&entity\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classScene_a5419dc941ee6efc29cd5cef8e7d6d414}\label{classScene_a5419dc941ee6efc29cd5cef8e7d6d414}} 
+void {\bfseries Add\+Model} (std\+::shared\+\_\+ptr$<$ \hyperlink{classModel}{Model} $>$ model\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classScene_a031dc667e4152e4bfd2a8930d31320a4}\label{classScene_a031dc667e4152e4bfd2a8930d31320a4}} 
+void {\bfseries Get\+Model} (const G\+Luint index, std\+::shared\+\_\+ptr$<$ \hyperlink{classModel}{Model} $>$ \&model\+\_\+ptr, G\+Luint \&V\+AO)
+\item 
+\mbox{\Hypertarget{classScene_a2cadf8fe478a7e3a270902a0536751a9}\label{classScene_a2cadf8fe478a7e3a270902a0536751a9}} 
+G\+Luint {\bfseries Get\+Physics\+Entity\+Count} ()
+\item 
+\mbox{\Hypertarget{classScene_a406df661eb7be589964dafe76f7f09c8}\label{classScene_a406df661eb7be589964dafe76f7f09c8}} 
+G\+Luint {\bfseries Get\+Model\+Count} ()
+\item 
+\mbox{\Hypertarget{classScene_a5fe443641612290ba78931132d1fddb5}\label{classScene_a5fe443641612290ba78931132d1fddb5}} 
+void {\bfseries Step\+Physics} ()
+\item 
+\mbox{\Hypertarget{classScene_a603827ae26832207c3d8ff01d4f80f3f}\label{classScene_a603827ae26832207c3d8ff01d4f80f3f}} 
+void {\bfseries Compute\+Net\+Force} (const std\+::shared\+\_\+ptr$<$ \hyperlink{classPhysicsEntity}{Physics\+Entity} $>$ entity\+\_\+ptr, Vector3\+Gf \&force)
+\item 
+\mbox{\Hypertarget{classScene_a7edc9fabe7ef61a426cd6278a0b209fe}\label{classScene_a7edc9fabe7ef61a426cd6278a0b209fe}} 
+void {\bfseries Render} (\hyperlink{classShader}{Shader} shader)
+\item 
+\mbox{\Hypertarget{classScene_a830078c354d5df8ef9b811dac7b2c7dd}\label{classScene_a830078c354d5df8ef9b811dac7b2c7dd}} 
+void {\bfseries Clean\+Up} ()
+\item 
+\mbox{\Hypertarget{classScene_ad4760f2a7033d15e0771a82a8296a8e7}\label{classScene_ad4760f2a7033d15e0771a82a8296a8e7}} 
+void {\bfseries Do\+Movement} (G\+Lfloat delta\+Time, bool keys\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/adam/\+Desktop/\+Engine/include/scene.\+h\item 
+/home/adam/\+Desktop/\+Engine/scene.\+cpp\end{DoxyCompactItemize}

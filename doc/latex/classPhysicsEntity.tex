@@ -1,0 +1,148 @@
+\hypertarget{classPhysicsEntity}{}\section{Physics\+Entity Class Reference}
+\label{classPhysicsEntity}\index{Physics\+Entity@{Physics\+Entity}}
+
+
+An entity subject to the laws of physics.  
+
+
+
+
+{\ttfamily \#include $<$physics\+\_\+entity.\+h$>$}
+
+Inheritance diagram for Physics\+Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPhysicsEntity}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classPhysicsEntity_a171840d3fef1fc21c3f922b240e03538}{E\+N\+T\+I\+T\+Y\+\_\+\+T\+Y\+PE} \{ {\bfseries S\+P\+H\+E\+R\+E\+\_\+\+E\+N\+T\+I\+TY}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPhysicsEntity_a171840d3fef1fc21c3f922b240e03538}{E\+N\+T\+I\+T\+Y\+\_\+\+T\+Y\+PE} \hyperlink{classPhysicsEntity_a5a1eb68e1ecb2d845959addbbc915577}{Get\+Entity\+Type} ()
+\item 
+Vector3\+Gf \hyperlink{classPhysicsEntity_a73d263f4efb4fc87b36493f340d94a97}{Get\+Position} ()
+\item 
+void \hyperlink{classPhysicsEntity_a18913bb368bbe6e61e6838d7e8353bd4}{Set\+Next\+Position} (Vector3\+Gf x)
+\item 
+Vector3\+Gf \hyperlink{classPhysicsEntity_a2064523af6e64719996d505360e37af1}{Get\+Velocity} ()
+\item 
+void \hyperlink{classPhysicsEntity_a6d23d47421d535cc934405e8a7d1a43b}{Set\+Next\+Velocity} (Vector3\+Gf v)
+\item 
+G\+Lfloat \hyperlink{classPhysicsEntity_a07943c4b81878d402b97d1280f8c8ff9}{Get\+Mass} ()
+\item 
+void \hyperlink{classPhysicsEntity_a912c227d955b9a3c82e77b9732c8e5f2}{Update\+From\+Buffers} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPhysicsEntity_a71e8887fb5fd67e84b39d99dae634daf}\label{classPhysicsEntity_a71e8887fb5fd67e84b39d99dae634daf}} 
+\hyperlink{classPhysicsEntity_a171840d3fef1fc21c3f922b240e03538}{E\+N\+T\+I\+T\+Y\+\_\+\+T\+Y\+PE} {\bfseries m\+\_\+entity\+\_\+type}
+\item 
+\mbox{\Hypertarget{classPhysicsEntity_afee5026bb0c5504697b7a6c4c59d8003}\label{classPhysicsEntity_afee5026bb0c5504697b7a6c4c59d8003}} 
+Vector3\+Gf {\bfseries m\+\_\+position}
+\item 
+\mbox{\Hypertarget{classPhysicsEntity_abc38c58fd803d67079f25043331f0018}\label{classPhysicsEntity_abc38c58fd803d67079f25043331f0018}} 
+Vector3\+Gf {\bfseries m\+\_\+next\+\_\+position\+\_\+buffer}
+\item 
+\mbox{\Hypertarget{classPhysicsEntity_ad03f63872ec7c9ddf734e92034d6e112}\label{classPhysicsEntity_ad03f63872ec7c9ddf734e92034d6e112}} 
+Vector3\+Gf {\bfseries m\+\_\+velocity}
+\item 
+\mbox{\Hypertarget{classPhysicsEntity_a00034d95cc1a6f34ceaf5ad961e4afe6}\label{classPhysicsEntity_a00034d95cc1a6f34ceaf5ad961e4afe6}} 
+Vector3\+Gf {\bfseries m\+\_\+next\+\_\+velocity\+\_\+buffer}
+\item 
+\mbox{\Hypertarget{classPhysicsEntity_a5a7bc5174169e169f69723d2483c2eff}\label{classPhysicsEntity_a5a7bc5174169e169f69723d2483c2eff}} 
+G\+Lfloat {\bfseries m\+\_\+mass}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An entity subject to the laws of physics. 
+
+\hyperlink{classPhysicsEntity}{Physics\+Entity} is a base class for all objects in a scene that respond to forces and other physical phenomenon 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classPhysicsEntity_a171840d3fef1fc21c3f922b240e03538}\label{classPhysicsEntity_a171840d3fef1fc21c3f922b240e03538}} 
+\index{Physics\+Entity@{Physics\+Entity}!E\+N\+T\+I\+T\+Y\+\_\+\+T\+Y\+PE@{E\+N\+T\+I\+T\+Y\+\_\+\+T\+Y\+PE}}
+\index{E\+N\+T\+I\+T\+Y\+\_\+\+T\+Y\+PE@{E\+N\+T\+I\+T\+Y\+\_\+\+T\+Y\+PE}!Physics\+Entity@{Physics\+Entity}}
+\subsubsection{\texorpdfstring{E\+N\+T\+I\+T\+Y\+\_\+\+T\+Y\+PE}{ENTITY\_TYPE}}
+{\footnotesize\ttfamily enum \hyperlink{classPhysicsEntity_a171840d3fef1fc21c3f922b240e03538}{Physics\+Entity\+::\+E\+N\+T\+I\+T\+Y\+\_\+\+T\+Y\+PE}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Enum representing the different kinds of physical entities there can be. Used in casting operations 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPhysicsEntity_a5a1eb68e1ecb2d845959addbbc915577}\label{classPhysicsEntity_a5a1eb68e1ecb2d845959addbbc915577}} 
+\index{Physics\+Entity@{Physics\+Entity}!Get\+Entity\+Type@{Get\+Entity\+Type}}
+\index{Get\+Entity\+Type@{Get\+Entity\+Type}!Physics\+Entity@{Physics\+Entity}}
+\subsubsection{\texorpdfstring{Get\+Entity\+Type()}{GetEntityType()}}
+{\footnotesize\ttfamily \hyperlink{classPhysicsEntity_a171840d3fef1fc21c3f922b240e03538}{Physics\+Entity\+::\+E\+N\+T\+I\+T\+Y\+\_\+\+T\+Y\+PE} Physics\+Entity\+::\+Get\+Entity\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Entity type for this instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPhysicsEntity_a07943c4b81878d402b97d1280f8c8ff9}\label{classPhysicsEntity_a07943c4b81878d402b97d1280f8c8ff9}} 
+\index{Physics\+Entity@{Physics\+Entity}!Get\+Mass@{Get\+Mass}}
+\index{Get\+Mass@{Get\+Mass}!Physics\+Entity@{Physics\+Entity}}
+\subsubsection{\texorpdfstring{Get\+Mass()}{GetMass()}}
+{\footnotesize\ttfamily G\+Lfloat Physics\+Entity\+::\+Get\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Mass of this entity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPhysicsEntity_a73d263f4efb4fc87b36493f340d94a97}\label{classPhysicsEntity_a73d263f4efb4fc87b36493f340d94a97}} 
+\index{Physics\+Entity@{Physics\+Entity}!Get\+Position@{Get\+Position}}
+\index{Get\+Position@{Get\+Position}!Physics\+Entity@{Physics\+Entity}}
+\subsubsection{\texorpdfstring{Get\+Position()}{GetPosition()}}
+{\footnotesize\ttfamily Vector3\+Gf Physics\+Entity\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Spatial position for this entity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPhysicsEntity_a2064523af6e64719996d505360e37af1}\label{classPhysicsEntity_a2064523af6e64719996d505360e37af1}} 
+\index{Physics\+Entity@{Physics\+Entity}!Get\+Velocity@{Get\+Velocity}}
+\index{Get\+Velocity@{Get\+Velocity}!Physics\+Entity@{Physics\+Entity}}
+\subsubsection{\texorpdfstring{Get\+Velocity()}{GetVelocity()}}
+{\footnotesize\ttfamily Vector3\+Gf Physics\+Entity\+::\+Get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Spatial velocity for this entity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPhysicsEntity_a18913bb368bbe6e61e6838d7e8353bd4}\label{classPhysicsEntity_a18913bb368bbe6e61e6838d7e8353bd4}} 
+\index{Physics\+Entity@{Physics\+Entity}!Set\+Next\+Position@{Set\+Next\+Position}}
+\index{Set\+Next\+Position@{Set\+Next\+Position}!Physics\+Entity@{Physics\+Entity}}
+\subsubsection{\texorpdfstring{Set\+Next\+Position()}{SetNextPosition()}}
+{\footnotesize\ttfamily void Physics\+Entity\+::\+Set\+Next\+Position (\begin{DoxyParamCaption}\item[{Vector3\+Gf}]{x }\end{DoxyParamCaption})}
+
+Sets the next position buffer for this entity. This {\bfseries D\+O\+ES N\+OT} update the position until \hyperlink{classPhysicsEntity_a912c227d955b9a3c82e77b9732c8e5f2}{Update\+From\+Buffers()} is called. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Next position for this entity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPhysicsEntity_a6d23d47421d535cc934405e8a7d1a43b}\label{classPhysicsEntity_a6d23d47421d535cc934405e8a7d1a43b}} 
+\index{Physics\+Entity@{Physics\+Entity}!Set\+Next\+Velocity@{Set\+Next\+Velocity}}
+\index{Set\+Next\+Velocity@{Set\+Next\+Velocity}!Physics\+Entity@{Physics\+Entity}}
+\subsubsection{\texorpdfstring{Set\+Next\+Velocity()}{SetNextVelocity()}}
+{\footnotesize\ttfamily void Physics\+Entity\+::\+Set\+Next\+Velocity (\begin{DoxyParamCaption}\item[{Vector3\+Gf}]{v }\end{DoxyParamCaption})}
+
+Sets the next velocity buffer for the entity. This {\bfseries D\+O\+ES N\+OT} update the velocity until \hyperlink{classPhysicsEntity_a912c227d955b9a3c82e77b9732c8e5f2}{Update\+From\+Buffers()} is called. 
+\begin{DoxyParams}{Parameters}
+{\em v} & Next velocity for this entity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPhysicsEntity_a912c227d955b9a3c82e77b9732c8e5f2}\label{classPhysicsEntity_a912c227d955b9a3c82e77b9732c8e5f2}} 
+\index{Physics\+Entity@{Physics\+Entity}!Update\+From\+Buffers@{Update\+From\+Buffers}}
+\index{Update\+From\+Buffers@{Update\+From\+Buffers}!Physics\+Entity@{Physics\+Entity}}
+\subsubsection{\texorpdfstring{Update\+From\+Buffers()}{UpdateFromBuffers()}}
+{\footnotesize\ttfamily void Physics\+Entity\+::\+Update\+From\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Updates internal state from buffers. This will load the next position and velocity from their corresponding buffers 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/adam/\+Desktop/\+Engine/include/physics\+\_\+entity.\+h\item 
+/home/adam/\+Desktop/\+Engine/physics\+\_\+entity.\+cpp\end{DoxyCompactItemize}

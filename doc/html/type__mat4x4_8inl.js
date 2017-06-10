@@ -1,0 +1,25 @@
+var type__mat4x4_8inl =
+[
+    [ "operator!=", "type__mat4x4_8inl.html#a4f307dd12855db67708f7198042f419e", null ],
+    [ "operator*", "type__mat4x4_8inl.html#a60a8cd46716e5c76a3011578444ffef7", null ],
+    [ "operator*", "type__mat4x4_8inl.html#a227858cfdb144f8e65ba256f4f1797a8", null ],
+    [ "operator*", "type__mat4x4_8inl.html#adbbcb07514e6d44aad7e6f40e80e8c99", null ],
+    [ "operator*", "type__mat4x4_8inl.html#a03183ab7d846537945d1022a78f6a34f", null ],
+    [ "operator*", "type__mat4x4_8inl.html#a90a5edbd0b42811831af06c6aacd4a8e", null ],
+    [ "operator*", "type__mat4x4_8inl.html#a1c04f769e6bde60bd80b3173b519b741", null ],
+    [ "operator*", "type__mat4x4_8inl.html#a6dd36bf40e677eefd6f3e2acf88a2cf6", null ],
+    [ "operator+", "type__mat4x4_8inl.html#a9989e7e3651cecf45c9b7e856978fac0", null ],
+    [ "operator+", "type__mat4x4_8inl.html#a8d33b2d0bb5b44913406bc51d992dbb2", null ],
+    [ "operator+", "type__mat4x4_8inl.html#adaf33419391a9f6e8779a0f74199013b", null ],
+    [ "operator+", "type__mat4x4_8inl.html#a25f82613cbb54d1328ba0c087361f23a", null ],
+    [ "operator-", "type__mat4x4_8inl.html#a86d70820c6583189bf78bef7a6bd6797", null ],
+    [ "operator-", "type__mat4x4_8inl.html#a663ddfcf136f3a13694686bb0697bbde", null ],
+    [ "operator-", "type__mat4x4_8inl.html#a24aba4a4b8f93adbdc8e6d301d713141", null ],
+    [ "operator-", "type__mat4x4_8inl.html#a0533c5ac15cb344bc9a67803717c5300", null ],
+    [ "operator/", "type__mat4x4_8inl.html#ae255ad250d33a8cfb077044ce0950c27", null ],
+    [ "operator/", "type__mat4x4_8inl.html#a061e49063426cd16bad20d2916f281ca", null ],
+    [ "operator/", "type__mat4x4_8inl.html#ac86c24a679ceb1c0588e0cd9fa31df3d", null ],
+    [ "operator/", "type__mat4x4_8inl.html#af41edbb529eca615b9f65e625fae2bab", null ],
+    [ "operator/", "type__mat4x4_8inl.html#a53cc97cdb468d042fd35bfd46d35fbc0", null ],
+    [ "operator==", "type__mat4x4_8inl.html#a4a5a52bd72d27f2659923dcac3a41bd9", null ]
+];

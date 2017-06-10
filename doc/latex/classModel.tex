@@ -1,0 +1,78 @@
+\hypertarget{classModel}{}\section{Model Class Reference}
+\label{classModel}\index{Model@{Model}}
+
+
+Defines a model used for rendering.  
+
+
+
+
+{\ttfamily \#include $<$model.\+h$>$}
+
+Inheritance diagram for Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classModel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix$<$ G\+Lfloat, 4, 4 $>$ \hyperlink{classModel_af37e550b25274838de666ddc7e2167d6}{Get\+Model\+Matrix} ()
+\item 
+void \hyperlink{classModel_a6b79c9e0c9abc50896e70fe1fabff4e7}{Set\+Model\+Matrix} (Eigen\+::\+Matrix$<$ G\+Lfloat, 4, 4 $>$ model)
+\item 
+\hyperlink{classMesh}{Mesh} \hyperlink{classModel_a332f5a4ecf9bca582e583b3ff7784bf5}{Get\+Mesh} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classModel_afe425f579d17b798e6c454a5c5e2d952}\label{classModel_afe425f579d17b798e6c454a5c5e2d952}} 
+\hyperlink{classMesh}{Mesh} {\bfseries m\+\_\+mesh}
+\item 
+\mbox{\Hypertarget{classModel_a41d60873613f3b75c8242df3bbb44ca9}\label{classModel_a41d60873613f3b75c8242df3bbb44ca9}} 
+Eigen\+::\+Matrix$<$ G\+Lfloat, 4, 4 $>$ {\bfseries m\+\_\+model\+\_\+matrix}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a model used for rendering. 
+
+\hyperlink{classModel}{Model} is the base class for all entities that are rendered in a scene. It stores properites such as the mesh, material properties, textures, etc. It also holds the {\bfseries model matrix} which handles transforming the mesh from local coordinates to world coordinates. See \href{https://learnopengl.com/#!Getting-started/Coordinate-Systems}{\tt Here} for more details. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classModel_a332f5a4ecf9bca582e583b3ff7784bf5}\label{classModel_a332f5a4ecf9bca582e583b3ff7784bf5}} 
+\index{Model@{Model}!Get\+Mesh@{Get\+Mesh}}
+\index{Get\+Mesh@{Get\+Mesh}!Model@{Model}}
+\subsubsection{\texorpdfstring{Get\+Mesh()}{GetMesh()}}
+{\footnotesize\ttfamily \hyperlink{classMesh}{Mesh} Model\+::\+Get\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Copy of the mesh used by this model 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModel_af37e550b25274838de666ddc7e2167d6}\label{classModel_af37e550b25274838de666ddc7e2167d6}} 
+\index{Model@{Model}!Get\+Model\+Matrix@{Get\+Model\+Matrix}}
+\index{Get\+Model\+Matrix@{Get\+Model\+Matrix}!Model@{Model}}
+\subsubsection{\texorpdfstring{Get\+Model\+Matrix()}{GetModelMatrix()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix$<$ G\+Lfloat, 4, 4 $>$ Model\+::\+Get\+Model\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The model matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModel_a6b79c9e0c9abc50896e70fe1fabff4e7}\label{classModel_a6b79c9e0c9abc50896e70fe1fabff4e7}} 
+\index{Model@{Model}!Set\+Model\+Matrix@{Set\+Model\+Matrix}}
+\index{Set\+Model\+Matrix@{Set\+Model\+Matrix}!Model@{Model}}
+\subsubsection{\texorpdfstring{Set\+Model\+Matrix()}{SetModelMatrix()}}
+{\footnotesize\ttfamily void Model\+::\+Set\+Model\+Matrix (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ G\+Lfloat, 4, 4 $>$}]{model }\end{DoxyParamCaption})}
+
+Sets the model matrix 
+\begin{DoxyParams}{Parameters}
+{\em model} & Matrix to be set as the model matrix \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/adam/\+Desktop/\+Engine/include/model.\+h\item 
+/home/adam/\+Desktop/\+Engine/model.\+cpp\end{DoxyCompactItemize}

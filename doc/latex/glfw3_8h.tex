@@ -1,0 +1,883 @@
+\hypertarget{glfw3_8h}{}\section{include/\+G\+L\+F\+W/glfw3.h File Reference}
+\label{glfw3_8h}\index{include/\+G\+L\+F\+W/glfw3.\+h@{include/\+G\+L\+F\+W/glfw3.\+h}}
+
+
+The header of the G\+L\+FW 3 A\+PI.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$G\+L/gl.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structGLFWvidmode}{G\+L\+F\+Wvidmode}
+\begin{DoxyCompactList}\small\item\em Video mode type. \end{DoxyCompactList}\item 
+struct \hyperlink{structGLFWgammaramp}{G\+L\+F\+Wgammaramp}
+\begin{DoxyCompactList}\small\item\em Gamma ramp. \end{DoxyCompactList}\item 
+struct \hyperlink{structGLFWimage}{G\+L\+F\+Wimage}
+\begin{DoxyCompactList}\small\item\em Image data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{glfw3_8h_a428a91acf2c2439dc1a257708ee1f805}\label{glfw3_8h_a428a91acf2c2439dc1a257708ee1f805}} 
+\#define {\bfseries A\+P\+I\+E\+N\+T\+RY}
+\item 
+\mbox{\Hypertarget{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}\label{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}} 
+\#define {\bfseries G\+L\+F\+W\+A\+PI}
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+U\+N\+K\+N\+O\+WN}~-\/1
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+P\+A\+CE}~32
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+A\+P\+O\+S\+T\+R\+O\+P\+HE}~39  /$\ast$ \textquotesingle{} $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+C\+O\+M\+MA}~44  /$\ast$ , $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+M\+I\+N\+US}~45  /$\ast$ -\/ $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+E\+R\+I\+OD}~46  /$\ast$ . $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+L\+A\+SH}~47  /$\ast$ / $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+0}~48
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+1}~49
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+2}~50
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+3}~51
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+4}~52
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+5}~53
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+6}~54
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+7}~55
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+8}~56
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+9}~57
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+E\+M\+I\+C\+O\+L\+ON}~59  /$\ast$ ; $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+Q\+U\+AL}~61  /$\ast$ = $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+A}~65
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+B}~66
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+C}~67
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+D}~68
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+E}~69
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+F}~70
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+G}~71
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+H}~72
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+I}~73
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+J}~74
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+K}~75
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+L}~76
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+M}~77
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+N}~78
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+O}~79
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+P}~80
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+Q}~81
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+R}~82
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+S}~83
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+T}~84
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+U}~85
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+V}~86
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+W}~87
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+X}~88
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+Y}~89
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+Z}~90
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+B\+R\+A\+C\+K\+ET}~91  /$\ast$ \mbox{[} $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+B\+A\+C\+K\+S\+L\+A\+SH}~92  /$\ast$ \textbackslash{} $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+B\+R\+A\+C\+K\+ET}~93  /$\ast$ \mbox{]} $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+G\+R\+A\+V\+E\+\_\+\+A\+C\+C\+E\+NT}~96  /$\ast$ ` $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+W\+O\+R\+L\+D\+\_\+1}~161 /$\ast$ non-\/US \#1 $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+W\+O\+R\+L\+D\+\_\+2}~162 /$\ast$ non-\/US \#2 $\ast$/
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+S\+C\+A\+PE}~256
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+N\+T\+ER}~257
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+T\+AB}~258
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+B\+A\+C\+K\+S\+P\+A\+CE}~259
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+S\+E\+RT}~260
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+D\+E\+L\+E\+TE}~261
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+HT}~262
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+FT}~263
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+D\+O\+WN}~264
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+UP}~265
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+G\+E\+\_\+\+UP}~266
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+G\+E\+\_\+\+D\+O\+WN}~267
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+H\+O\+ME}~268
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+E\+ND}~269
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+C\+A\+P\+S\+\_\+\+L\+O\+CK}~280
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+L\+O\+CK}~281
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+N\+U\+M\+\_\+\+L\+O\+CK}~282
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+R\+I\+N\+T\+\_\+\+S\+C\+R\+E\+EN}~283
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+U\+SE}~284
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F1}~290
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F2}~291
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F3}~292
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F4}~293
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F5}~294
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F6}~295
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F7}~296
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F8}~297
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F9}~298
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F10}~299
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F11}~300
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F12}~301
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F13}~302
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F14}~303
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F15}~304
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F16}~305
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F17}~306
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F18}~307
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F19}~308
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F20}~309
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F21}~310
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F22}~311
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F23}~312
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F24}~313
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+F25}~314
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+0}~320
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+1}~321
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+2}~322
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+3}~323
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+4}~324
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+5}~325
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+6}~326
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+7}~327
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+8}~328
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+9}~329
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+D\+E\+C\+I\+M\+AL}~330
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+D\+I\+V\+I\+DE}~331
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+M\+U\+L\+T\+I\+P\+LY}~332
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+S\+U\+B\+T\+R\+A\+CT}~333
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+A\+DD}~334
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+E\+N\+T\+ER}~335
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+K\+P\+\_\+\+E\+Q\+U\+AL}~336
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+S\+H\+I\+FT}~340
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+C\+O\+N\+T\+R\+OL}~341
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+A\+LT}~342
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+F\+T\+\_\+\+S\+U\+P\+ER}~343
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+S\+H\+I\+FT}~344
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+O\+N\+T\+R\+OL}~345
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+A\+LT}~346
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+R\+I\+G\+H\+T\+\_\+\+S\+U\+P\+ER}~347
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+M\+E\+NU}~348
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+L\+A\+ST}~G\+L\+F\+W\+\_\+\+K\+E\+Y\+\_\+\+M\+E\+NU
+\item 
+\#define \hyperlink{group__mods_ga14994d3196c290aaa347248e51740274}{G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+S\+H\+I\+FT}~0x0001
+\begin{DoxyCompactList}\small\item\em If this bit is set one or more Shift keys were held down. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mods_ga6ed94871c3208eefd85713fa929d45aa}{G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+T\+R\+OL}~0x0002
+\begin{DoxyCompactList}\small\item\em If this bit is set one or more Control keys were held down. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mods_gad2acd5633463c29e07008687ea73c0f4}{G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+A\+LT}~0x0004
+\begin{DoxyCompactList}\small\item\em If this bit is set one or more Alt keys were held down. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mods_ga6b64ba10ea0227cf6f42efd0a220aba1}{G\+L\+F\+W\+\_\+\+M\+O\+D\+\_\+\+S\+U\+P\+ER}~0x0008
+\begin{DoxyCompactList}\small\item\em If this bit is set one or more Super keys were held down. \end{DoxyCompactList}\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+1}~0
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+2}~1
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+3}~2
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+4}~3
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+5}~4
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+6}~5
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+7}~6
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+8}~7
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+A\+ST}~G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+8
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT}~G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+1
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT}~G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+2
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+D\+D\+LE}~G\+L\+F\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+3
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+1}~0
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+2}~1
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+3}~2
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+4}~3
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+5}~4
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+6}~5
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+7}~6
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+8}~7
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+9}~8
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+10}~9
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+11}~10
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+12}~11
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+13}~12
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+14}~13
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+15}~14
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+16}~15
+\item 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+L\+A\+ST}~G\+L\+F\+W\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+16
+\item 
+\#define \hyperlink{group__errors_ga2374ee02c177f12e1fa76ff3ed15e14a}{G\+L\+F\+W\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}~0x00010001
+\begin{DoxyCompactList}\small\item\em G\+L\+FW has not been initialized. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_gaa8290386e9528ccb9e42a3a4e16fc0d0}{G\+L\+F\+W\+\_\+\+N\+O\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+XT}~0x00010002
+\begin{DoxyCompactList}\small\item\em No context is current for this thread. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_ga76f6bb9c4eea73db675f096b404593ce}{G\+L\+F\+W\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+N\+UM}~0x00010003
+\begin{DoxyCompactList}\small\item\em One of the arguments to the function was an invalid enum value. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_gaaf2ef9aa8202c2b82ac2d921e554c687}{G\+L\+F\+W\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+L\+UE}~0x00010004
+\begin{DoxyCompactList}\small\item\em One of the arguments to the function was an invalid value. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_ga9023953a2bcb98c2906afd071d21ee7f}{G\+L\+F\+W\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY}~0x00010005
+\begin{DoxyCompactList}\small\item\em A memory allocation failed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_ga56882b290db23261cc6c053c40c2d08e}{G\+L\+F\+W\+\_\+\+A\+P\+I\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}~0x00010006
+\begin{DoxyCompactList}\small\item\em G\+L\+FW could not find support for the requested A\+PI on the system. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_gad16c5565b4a69f9c2a9ac2c0dbc89462}{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}~0x00010007
+\begin{DoxyCompactList}\small\item\em The requested Open\+GL or Open\+GL ES version is not available. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_gad44162d78100ea5e87cdd38426b8c7a1}{G\+L\+F\+W\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}~0x00010008
+\begin{DoxyCompactList}\small\item\em A platform-\/specific error occurred that does not match any of the more specific categories. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_ga196e125ef261d94184e2b55c05762f14}{G\+L\+F\+W\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}~0x00010009
+\begin{DoxyCompactList}\small\item\em The requested format is not supported or available. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_gacff24d2757da752ae4c80bf452356487}{G\+L\+F\+W\+\_\+\+N\+O\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+N\+T\+E\+XT}~0x0001000A
+\begin{DoxyCompactList}\small\item\em The specified window does not have an Open\+GL or Open\+GL ES context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{glfw3_8h_a54ddb14825a1541a56e22afb5f832a9e}\label{glfw3_8h_a54ddb14825a1541a56e22afb5f832a9e}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+F\+O\+C\+U\+S\+ED}~0x00020001
+\item 
+\mbox{\Hypertarget{glfw3_8h_a39d44b7c056e55e581355a92d240b58a}\label{glfw3_8h_a39d44b7c056e55e581355a92d240b58a}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+I\+C\+O\+N\+I\+F\+I\+ED}~0x00020002
+\item 
+\mbox{\Hypertarget{glfw3_8h_adba13c7a1b3aa40831eb2beedbd5bd1d}\label{glfw3_8h_adba13c7a1b3aa40831eb2beedbd5bd1d}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+LE}~0x00020003
+\item 
+\mbox{\Hypertarget{glfw3_8h_afb3cdc45297e06d8f1eb13adc69ca6c4}\label{glfw3_8h_afb3cdc45297e06d8f1eb13adc69ca6c4}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+V\+I\+S\+I\+B\+LE}~0x00020004
+\item 
+\mbox{\Hypertarget{glfw3_8h_a21b854d36314c94d65aed84405b2f25e}\label{glfw3_8h_a21b854d36314c94d65aed84405b2f25e}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+D\+E\+C\+O\+R\+A\+T\+ED}~0x00020005
+\item 
+\mbox{\Hypertarget{glfw3_8h_a9d9874fc928200136a6dcdad726aa252}\label{glfw3_8h_a9d9874fc928200136a6dcdad726aa252}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+A\+U\+T\+O\+\_\+\+I\+C\+O\+N\+I\+FY}~0x00020006
+\item 
+\mbox{\Hypertarget{glfw3_8h_a7fb0be51407783b41adbf5bec0b09d80}\label{glfw3_8h_a7fb0be51407783b41adbf5bec0b09d80}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+F\+L\+O\+A\+T\+I\+NG}~0x00020007
+\item 
+\mbox{\Hypertarget{glfw3_8h_ad8ccb396253ad0b72c6d4c917eb38a03}\label{glfw3_8h_ad8ccb396253ad0b72c6d4c917eb38a03}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+M\+A\+X\+I\+M\+I\+Z\+ED}~0x00020008
+\item 
+\mbox{\Hypertarget{glfw3_8h_af78ed8e417dbcc1e354906cc2708c982}\label{glfw3_8h_af78ed8e417dbcc1e354906cc2708c982}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+R\+E\+D\+\_\+\+B\+I\+TS}~0x00021001
+\item 
+\mbox{\Hypertarget{glfw3_8h_afba3b72638c914e5fb8a237dd4c50d4d}\label{glfw3_8h_afba3b72638c914e5fb8a237dd4c50d4d}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+G\+R\+E\+E\+N\+\_\+\+B\+I\+TS}~0x00021002
+\item 
+\mbox{\Hypertarget{glfw3_8h_ab292ea403db6d514537b515311bf9ae3}\label{glfw3_8h_ab292ea403db6d514537b515311bf9ae3}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+B\+L\+U\+E\+\_\+\+B\+I\+TS}~0x00021003
+\item 
+\mbox{\Hypertarget{glfw3_8h_afed79a3f468997877da86c449bd43e8c}\label{glfw3_8h_afed79a3f468997877da86c449bd43e8c}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+A\+L\+P\+H\+A\+\_\+\+B\+I\+TS}~0x00021004
+\item 
+\mbox{\Hypertarget{glfw3_8h_a318a55eac1fee57dfe593b6d38149d07}\label{glfw3_8h_a318a55eac1fee57dfe593b6d38149d07}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+D\+E\+P\+T\+H\+\_\+\+B\+I\+TS}~0x00021005
+\item 
+\mbox{\Hypertarget{glfw3_8h_a5339890a45a1fb38e93cb9fcc5fd069d}\label{glfw3_8h_a5339890a45a1fb38e93cb9fcc5fd069d}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+S\+T\+E\+N\+C\+I\+L\+\_\+\+B\+I\+TS}~0x00021006
+\item 
+\mbox{\Hypertarget{glfw3_8h_aead34a9a683b2bc20eecf30ba738bfc6}\label{glfw3_8h_aead34a9a683b2bc20eecf30ba738bfc6}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+A\+C\+C\+U\+M\+\_\+\+R\+E\+D\+\_\+\+B\+I\+TS}~0x00021007
+\item 
+\mbox{\Hypertarget{glfw3_8h_a65713cee1326f8e9d806fdf93187b471}\label{glfw3_8h_a65713cee1326f8e9d806fdf93187b471}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+A\+C\+C\+U\+M\+\_\+\+G\+R\+E\+E\+N\+\_\+\+B\+I\+TS}~0x00021008
+\item 
+\mbox{\Hypertarget{glfw3_8h_a22bbe9104a8ce1f8b88fb4f186aa36ce}\label{glfw3_8h_a22bbe9104a8ce1f8b88fb4f186aa36ce}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+A\+C\+C\+U\+M\+\_\+\+B\+L\+U\+E\+\_\+\+B\+I\+TS}~0x00021009
+\item 
+\mbox{\Hypertarget{glfw3_8h_ae829b55591c18169a40ab4067a041b1f}\label{glfw3_8h_ae829b55591c18169a40ab4067a041b1f}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+A\+C\+C\+U\+M\+\_\+\+A\+L\+P\+H\+A\+\_\+\+B\+I\+TS}~0x0002100A
+\item 
+\mbox{\Hypertarget{glfw3_8h_ab05108c5029443b371112b031d1fa174}\label{glfw3_8h_ab05108c5029443b371112b031d1fa174}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+A\+U\+X\+\_\+\+B\+U\+F\+F\+E\+RS}~0x0002100B
+\item 
+\mbox{\Hypertarget{glfw3_8h_a83d991efca02537e2d69969135b77b03}\label{glfw3_8h_a83d991efca02537e2d69969135b77b03}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+S\+T\+E\+R\+EO}~0x0002100C
+\item 
+\mbox{\Hypertarget{glfw3_8h_a2cdf86fdcb7722fb8829c4e201607535}\label{glfw3_8h_a2cdf86fdcb7722fb8829c4e201607535}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+S\+A\+M\+P\+L\+ES}~0x0002100D
+\item 
+\mbox{\Hypertarget{glfw3_8h_a444a8f00414a63220591f9fdb7b5642b}\label{glfw3_8h_a444a8f00414a63220591f9fdb7b5642b}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+S\+R\+G\+B\+\_\+\+C\+A\+P\+A\+B\+LE}~0x0002100E
+\item 
+\mbox{\Hypertarget{glfw3_8h_a0f20825e6e47ee8ba389024519682212}\label{glfw3_8h_a0f20825e6e47ee8ba389024519682212}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+R\+A\+TE}~0x0002100F
+\item 
+\mbox{\Hypertarget{glfw3_8h_a714a5d569e8a274ea58fdfa020955339}\label{glfw3_8h_a714a5d569e8a274ea58fdfa020955339}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F\+F\+ER}~0x00021010
+\item 
+\mbox{\Hypertarget{glfw3_8h_a649309cf72a3d3de5b1348ca7936c95b}\label{glfw3_8h_a649309cf72a3d3de5b1348ca7936c95b}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+A\+PI}~0x00022001
+\item 
+\mbox{\Hypertarget{glfw3_8h_afe5e4922de1f9932d7e9849bb053b0c0}\label{glfw3_8h_afe5e4922de1f9932d7e9849bb053b0c0}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}~0x00022002
+\item 
+\mbox{\Hypertarget{glfw3_8h_a31aca791e4b538c4e4a771eb95cc2d07}\label{glfw3_8h_a31aca791e4b538c4e4a771eb95cc2d07}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}~0x00022003
+\item 
+\mbox{\Hypertarget{glfw3_8h_afb9475071aa77c6fb05ca5a5c8678a08}\label{glfw3_8h_afb9475071aa77c6fb05ca5a5c8678a08}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+E\+V\+I\+S\+I\+ON}~0x00022004
+\item 
+\mbox{\Hypertarget{glfw3_8h_ade3593916b4c507900aa2d6844810e00}\label{glfw3_8h_ade3593916b4c507900aa2d6844810e00}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+O\+B\+U\+S\+T\+N\+E\+SS}~0x00022005
+\item 
+\mbox{\Hypertarget{glfw3_8h_a13d24b12465da8b28985f46c8557925b}\label{glfw3_8h_a13d24b12465da8b28985f46c8557925b}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+C\+O\+M\+P\+AT}~0x00022006
+\item 
+\mbox{\Hypertarget{glfw3_8h_a87ec2df0b915201e950ca42d5d0831e1}\label{glfw3_8h_a87ec2df0b915201e950ca42d5d0831e1}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+D\+E\+B\+U\+G\+\_\+\+C\+O\+N\+T\+E\+XT}~0x00022007
+\item 
+\mbox{\Hypertarget{glfw3_8h_a44f3a6b4261fbe351e0b950b0f372e12}\label{glfw3_8h_a44f3a6b4261fbe351e0b950b0f372e12}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+P\+R\+O\+F\+I\+LE}~0x00022008
+\item 
+\mbox{\Hypertarget{glfw3_8h_a72b648a8378fe3310c7c7bbecc0f7be6}\label{glfw3_8h_a72b648a8378fe3310c7c7bbecc0f7be6}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+B\+E\+H\+A\+V\+I\+OR}~0x00022009
+\item 
+\mbox{\Hypertarget{glfw3_8h_a5a52fdfd46d8249c211f923675728082}\label{glfw3_8h_a5a52fdfd46d8249c211f923675728082}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR}~0x0002200A
+\item 
+\mbox{\Hypertarget{glfw3_8h_a5154cebfcd831c1cc63a4d5ac9bb4486}\label{glfw3_8h_a5154cebfcd831c1cc63a4d5ac9bb4486}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+C\+R\+E\+A\+T\+I\+O\+N\+\_\+\+A\+PI}~0x0002200B
+\item 
+\mbox{\Hypertarget{glfw3_8h_a8f6dcdc968d214ff14779564f1389264}\label{glfw3_8h_a8f6dcdc968d214ff14779564f1389264}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+N\+O\+\_\+\+A\+PI}~0
+\item 
+\mbox{\Hypertarget{glfw3_8h_a01b3f66db266341425e9abee6b257db2}\label{glfw3_8h_a01b3f66db266341425e9abee6b257db2}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+A\+PI}~0x00030001
+\item 
+\mbox{\Hypertarget{glfw3_8h_a28d9b3bc6c2a522d815c8e146595051f}\label{glfw3_8h_a28d9b3bc6c2a522d815c8e146595051f}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+E\+S\+\_\+\+A\+PI}~0x00030002
+\item 
+\mbox{\Hypertarget{glfw3_8h_a8b306cb27f5bb0d6d67c7356a0e0fc34}\label{glfw3_8h_a8b306cb27f5bb0d6d67c7356a0e0fc34}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+N\+O\+\_\+\+R\+O\+B\+U\+S\+T\+N\+E\+SS}~0
+\item 
+\mbox{\Hypertarget{glfw3_8h_aee84a679230d205005e22487ff678a85}\label{glfw3_8h_aee84a679230d205005e22487ff678a85}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+N\+O\+\_\+\+R\+E\+S\+E\+T\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON}~0x00031001
+\item 
+\mbox{\Hypertarget{glfw3_8h_aec1132f245143fc915b2f0995228564c}\label{glfw3_8h_aec1132f245143fc915b2f0995228564c}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+L\+O\+S\+E\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+O\+N\+\_\+\+R\+E\+S\+ET}~0x00031002
+\item 
+\mbox{\Hypertarget{glfw3_8h_ad6f2335d6f21cc9bab96633b1c111d5f}\label{glfw3_8h_ad6f2335d6f21cc9bab96633b1c111d5f}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+A\+N\+Y\+\_\+\+P\+R\+O\+F\+I\+LE}~0
+\item 
+\mbox{\Hypertarget{glfw3_8h_af094bb16da76f66ebceb19ee213b3de8}\label{glfw3_8h_af094bb16da76f66ebceb19ee213b3de8}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+C\+O\+R\+E\+\_\+\+P\+R\+O\+F\+I\+LE}~0x00032001
+\item 
+\mbox{\Hypertarget{glfw3_8h_ac06b663d79c8fcf04669cc8fcc0b7670}\label{glfw3_8h_ac06b663d79c8fcf04669cc8fcc0b7670}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+P\+R\+O\+F\+I\+LE}~0x00032002
+\item 
+\mbox{\Hypertarget{glfw3_8h_aade31da5b884a84a7625c6b059b9132c}\label{glfw3_8h_aade31da5b884a84a7625c6b059b9132c}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+U\+R\+S\+OR}~0x00033001
+\item 
+\mbox{\Hypertarget{glfw3_8h_ae3bbe2315b7691ab088159eb6c9110fc}\label{glfw3_8h_ae3bbe2315b7691ab088159eb6c9110fc}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+S\+T\+I\+C\+K\+Y\+\_\+\+K\+E\+YS}~0x00033002
+\item 
+\mbox{\Hypertarget{glfw3_8h_a4d7ce8ce71030c3b04e2b78145bc59d1}\label{glfw3_8h_a4d7ce8ce71030c3b04e2b78145bc59d1}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+S\+T\+I\+C\+K\+Y\+\_\+\+M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+NS}~0x00033003
+\item 
+\mbox{\Hypertarget{glfw3_8h_ae04dd25c8577e19fa8c97368561f6c68}\label{glfw3_8h_ae04dd25c8577e19fa8c97368561f6c68}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+N\+O\+R\+M\+AL}~0x00034001
+\item 
+\mbox{\Hypertarget{glfw3_8h_ac4d5cb9d78de8573349c58763d53bf11}\label{glfw3_8h_ac4d5cb9d78de8573349c58763d53bf11}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+I\+D\+D\+EN}~0x00034002
+\item 
+\mbox{\Hypertarget{glfw3_8h_a2315b99a329ce53e6a13a9d46fd5ca88}\label{glfw3_8h_a2315b99a329ce53e6a13a9d46fd5ca88}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED}~0x00034003
+\item 
+\mbox{\Hypertarget{glfw3_8h_a6b47d806f285efe9bfd7aeec667297ee}\label{glfw3_8h_a6b47d806f285efe9bfd7aeec667297ee}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+A\+N\+Y\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+B\+E\+H\+A\+V\+I\+OR}~0
+\item 
+\mbox{\Hypertarget{glfw3_8h_a999961d391db49cb4f949c1dece0e13b}\label{glfw3_8h_a999961d391db49cb4f949c1dece0e13b}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+B\+E\+H\+A\+V\+I\+O\+R\+\_\+\+F\+L\+U\+SH}~0x00035001
+\item 
+\mbox{\Hypertarget{glfw3_8h_afca09088eccacdce4b59036cfae349c5}\label{glfw3_8h_afca09088eccacdce4b59036cfae349c5}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+B\+E\+H\+A\+V\+I\+O\+R\+\_\+\+N\+O\+NE}~0x00035002
+\item 
+\mbox{\Hypertarget{glfw3_8h_a0494c9bfd3f584ab41e6dbeeaa0e6a19}\label{glfw3_8h_a0494c9bfd3f584ab41e6dbeeaa0e6a19}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+N\+A\+T\+I\+V\+E\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+A\+PI}~0x00036001
+\item 
+\mbox{\Hypertarget{glfw3_8h_a03cf65c9ab01fc8b872ba58842c531c9}\label{glfw3_8h_a03cf65c9ab01fc8b872ba58842c531c9}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+E\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+A\+PI}~0x00036002
+\item 
+\#define \hyperlink{group__shapes_ga8ab0e717245b85506cb0eaefdea39d0a}{G\+L\+F\+W\+\_\+\+A\+R\+R\+O\+W\+\_\+\+C\+U\+R\+S\+OR}~0x00036001
+\begin{DoxyCompactList}\small\item\em The regular arrow cursor shape. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__shapes_ga36185f4375eaada1b04e431244774c86}{G\+L\+F\+W\+\_\+\+I\+B\+E\+A\+M\+\_\+\+C\+U\+R\+S\+OR}~0x00036002
+\begin{DoxyCompactList}\small\item\em The text input I-\/beam cursor shape. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__shapes_ga8af88c0ea05ab9e8f9ac1530e8873c22}{G\+L\+F\+W\+\_\+\+C\+R\+O\+S\+S\+H\+A\+I\+R\+\_\+\+C\+U\+R\+S\+OR}~0x00036003
+\begin{DoxyCompactList}\small\item\em The crosshair shape. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__shapes_ga1db35e20849e0837c82e3dc1fd797263}{G\+L\+F\+W\+\_\+\+H\+A\+N\+D\+\_\+\+C\+U\+R\+S\+OR}~0x00036004
+\begin{DoxyCompactList}\small\item\em The hand shape. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__shapes_gabb3eb0109f11bb808fc34659177ca962}{G\+L\+F\+W\+\_\+\+H\+R\+E\+S\+I\+Z\+E\+\_\+\+C\+U\+R\+S\+OR}~0x00036005
+\begin{DoxyCompactList}\small\item\em The horizontal resize arrow shape. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__shapes_gaf024f0e1ff8366fb2b5c260509a1fce5}{G\+L\+F\+W\+\_\+\+V\+R\+E\+S\+I\+Z\+E\+\_\+\+C\+U\+R\+S\+OR}~0x00036006
+\begin{DoxyCompactList}\small\item\em The vertical resize arrow shape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{glfw3_8h_abe11513fd1ffbee5bb9b173f06028b9e}\label{glfw3_8h_abe11513fd1ffbee5bb9b173f06028b9e}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED}~0x00040001
+\item 
+\mbox{\Hypertarget{glfw3_8h_aab64b25921ef21d89252d6f0a71bfc32}\label{glfw3_8h_aab64b25921ef21d89252d6f0a71bfc32}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}~0x00040002
+\item 
+\mbox{\Hypertarget{glfw3_8h_a7a2edf2c18446833d27d07f1b7f3d571}\label{glfw3_8h_a7a2edf2c18446833d27d07f1b7f3d571}} 
+\#define {\bfseries G\+L\+F\+W\+\_\+\+D\+O\+N\+T\+\_\+\+C\+A\+RE}~-\/1
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ G\+L\+FW version macros}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__init_ga6337d9ea43b22fc529b2bba066b4a576}{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}~3
+\begin{DoxyCompactList}\small\item\em The major version number of the G\+L\+FW library. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__init_gaf80d40f0aea7088ff337606e9c48f7a3}{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}~2
+\begin{DoxyCompactList}\small\item\em The minor version number of the G\+L\+FW library. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__init_gab72ae2e2035d9ea461abc3495eac0502}{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+V\+I\+S\+I\+ON}~1
+\begin{DoxyCompactList}\small\item\em The revision number of the G\+L\+FW library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Boolean values}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{glfw3_8h_a2744fbb29b5631bb28802dbe0cf36eba}{G\+L\+F\+W\+\_\+\+T\+R\+UE}~1
+\begin{DoxyCompactList}\small\item\em One. \end{DoxyCompactList}\item 
+\#define \hyperlink{glfw3_8h_ac877fe3b627d21ef3a0a23e0a73ba8c5}{G\+L\+F\+W\+\_\+\+F\+A\+L\+SE}~0
+\begin{DoxyCompactList}\small\item\em Zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Key and button actions}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__input_gada11d965c4da13090ad336e030e4d11f}{G\+L\+F\+W\+\_\+\+R\+E\+L\+E\+A\+SE}~0
+\begin{DoxyCompactList}\small\item\em The key or mouse button was released. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__input_ga2485743d0b59df3791c45951c4195265}{G\+L\+F\+W\+\_\+\+P\+R\+E\+SS}~1
+\begin{DoxyCompactList}\small\item\em The key or mouse button was pressed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__input_gac96fd3b9fc66c6f0eebaf6532595338f}{G\+L\+F\+W\+\_\+\+R\+E\+P\+E\+AT}~2
+\begin{DoxyCompactList}\small\item\em The key was held down until it repeated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__context_ga3d47c2d2fbe0be9c505d0e04e91a133c}{G\+L\+F\+Wglproc}) (void)
+\begin{DoxyCompactList}\small\item\em Client A\+PI function pointer type. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__vulkan_ga70c01918dc9d233a4fbe0681a43018af}{G\+L\+F\+Wvkproc}) (void)
+\begin{DoxyCompactList}\small\item\em Vulkan A\+PI function pointer type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor}
+\begin{DoxyCompactList}\small\item\em Opaque monitor object. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} \hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow}
+\begin{DoxyCompactList}\small\item\em Opaque window object. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{glfw3_8h_a89261ae18c75e863aaf2656ecdd238f4}{G\+L\+F\+Wcursor} \hyperlink{glfw3_8h_a89261ae18c75e863aaf2656ecdd238f4}{G\+L\+F\+Wcursor}
+\begin{DoxyCompactList}\small\item\em Opaque cursor object. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__init_ga6b8a2639706d5c409fc1287e8f55e928}{G\+L\+F\+Werrorfun}) (int, const char $\ast$)
+\begin{DoxyCompactList}\small\item\em The function signature for error callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__window_gafd8db81fdb0e850549dc6bace5ed697a}{G\+L\+F\+Wwindowposfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em The function signature for window position callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__window_gae49ee6ebc03fa2da024b89943a331355}{G\+L\+F\+Wwindowsizefun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em The function signature for window resize callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__window_ga93e7c2555bd837f4ed8b20f76cada72e}{G\+L\+F\+Wwindowclosefun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$)
+\begin{DoxyCompactList}\small\item\em The function signature for window close callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__window_ga7a56f9e0227e2cd9470d80d919032e08}{G\+L\+F\+Wwindowrefreshfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$)
+\begin{DoxyCompactList}\small\item\em The function signature for window content refresh callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__window_ga58be2061828dd35080bb438405d3a7e2}{G\+L\+F\+Wwindowfocusfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em The function signature for window focus/defocus callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__window_gad2d4e4c3d28b1242e742e8268b9528af}{G\+L\+F\+Wwindowiconifyfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em The function signature for window iconify/restore callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__window_ga3e218ef9ff826129c55a7d5f6971a285}{G\+L\+F\+Wframebuffersizefun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em The function signature for framebuffer resize callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__input_ga39893a4a7e7c3239c98d29c9e084350c}{G\+L\+F\+Wmousebuttonfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, int, int, int)
+\begin{DoxyCompactList}\small\item\em The function signature for mouse button callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__input_ga4cfad918fa836f09541e7b9acd36686c}{G\+L\+F\+Wcursorposfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, double, double)
+\begin{DoxyCompactList}\small\item\em The function signature for cursor position callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__input_ga51ab436c41eeaed6db5a0c9403b1c840}{G\+L\+F\+Wcursorenterfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em The function signature for cursor enter/leave callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__input_ga4687e2199c60a18a8dd1da532e6d75c9}{G\+L\+F\+Wscrollfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, double, double)
+\begin{DoxyCompactList}\small\item\em The function signature for scroll callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__input_ga0192a232a41e4e82948217c8ba94fdfd}{G\+L\+F\+Wkeyfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, int, int, int, int)
+\begin{DoxyCompactList}\small\item\em The function signature for keyboard key callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__input_gabf24451c7ceb1952bc02b17a0d5c3e5f}{G\+L\+F\+Wcharfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, unsigned int)
+\begin{DoxyCompactList}\small\item\em The function signature for Unicode character callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__input_gae36fb6897d2b7df9b128900c8ce9c507}{G\+L\+F\+Wcharmodsfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, unsigned int, int)
+\begin{DoxyCompactList}\small\item\em The function signature for Unicode character with modifiers callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__input_gab71f4ca80b651462852e601caf308c4a}{G\+L\+F\+Wdropfun}) (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$, int, const char $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em The function signature for file drop callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__monitor_ga8a7ee579a66720f24d656526f3e44c63}{G\+L\+F\+Wmonitorfun}) (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em The function signature for monitor configuration callbacks. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__input_gaa67aa597e974298c748bfe4fb17d406d}{G\+L\+F\+Wjoystickfun}) (int, int)
+\begin{DoxyCompactList}\small\item\em The function signature for joystick configuration callbacks. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structGLFWvidmode}{G\+L\+F\+Wvidmode} \hyperlink{group__monitor_gae48aadf4ea0967e6605c8f58fa5daccb}{G\+L\+F\+Wvidmode}
+\begin{DoxyCompactList}\small\item\em Video mode type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structGLFWgammaramp}{G\+L\+F\+Wgammaramp} \hyperlink{group__monitor_gaec0bd37af673be8813592849f13e02f0}{G\+L\+F\+Wgammaramp}
+\begin{DoxyCompactList}\small\item\em Gamma ramp. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structGLFWimage}{G\+L\+F\+Wimage} \hyperlink{glfw3_8h_ac81c32f4437de7b3aa58ab62c3d9e5b1}{G\+L\+F\+Wimage}
+\begin{DoxyCompactList}\small\item\em Image data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+G\+L\+F\+W\+A\+PI int \hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the G\+L\+FW library. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__init_gafd90e6fd4819ea9e22e5e739519a6504}{glfw\+Terminate} (void)
+\begin{DoxyCompactList}\small\item\em Terminates the G\+L\+FW library. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__init_ga2402c7824ac0194c13722790ff9559ff}{glfw\+Get\+Version} (int $\ast$major, int $\ast$minor, int $\ast$rev)
+\begin{DoxyCompactList}\small\item\em Retrieves the version of the G\+L\+FW library. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const char $\ast$ \hyperlink{group__init_ga4b9092ac5eace57d94d3cd551d6b8ded}{glfw\+Get\+Version\+String} (void)
+\begin{DoxyCompactList}\small\item\em Returns a string describing the compile-\/time configuration. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__init_ga6b8a2639706d5c409fc1287e8f55e928}{G\+L\+F\+Werrorfun} \hyperlink{group__init_ga5919096b958c47102126061fb5a6f9c3}{glfw\+Set\+Error\+Callback} (\hyperlink{group__init_ga6b8a2639706d5c409fc1287e8f55e928}{G\+L\+F\+Werrorfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the error callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$$\ast$ \hyperlink{group__monitor_gab4d483284c57e28837bc2cd9639e9665}{glfw\+Get\+Monitors} (int $\ast$count)
+\begin{DoxyCompactList}\small\item\em Returns the currently connected monitors. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$ \hyperlink{group__monitor_ga59ea49f377fe701dd76764183e64d9f4}{glfw\+Get\+Primary\+Monitor} (void)
+\begin{DoxyCompactList}\small\item\em Returns the primary monitor. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__monitor_ga45b5481a614ad7beb2aade9746d07563}{glfw\+Get\+Monitor\+Pos} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$monitor, int $\ast$xpos, int $\ast$ypos)
+\begin{DoxyCompactList}\small\item\em Returns the position of the monitor\textquotesingle{}s viewport on the virtual screen. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__monitor_gad0e93a9e42b32394369cabbbdc1ab702}{glfw\+Get\+Monitor\+Physical\+Size} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$monitor, int $\ast$width\+MM, int $\ast$height\+MM)
+\begin{DoxyCompactList}\small\item\em Returns the physical size of the monitor. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const char $\ast$ \hyperlink{group__monitor_ga22f62011bae33ea8d2974eff5d14f9b8}{glfw\+Get\+Monitor\+Name} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$monitor)
+\begin{DoxyCompactList}\small\item\em Returns the name of the specified monitor. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__monitor_ga8a7ee579a66720f24d656526f3e44c63}{G\+L\+F\+Wmonitorfun} \hyperlink{group__monitor_gacfa9978e57c73670577d530df23bf275}{glfw\+Set\+Monitor\+Callback} (\hyperlink{group__monitor_ga8a7ee579a66720f24d656526f3e44c63}{G\+L\+F\+Wmonitorfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the monitor configuration callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const \hyperlink{structGLFWvidmode}{G\+L\+F\+Wvidmode} $\ast$ \hyperlink{group__monitor_ga811c28d61595e630774389985947c665}{glfw\+Get\+Video\+Modes} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$monitor, int $\ast$count)
+\begin{DoxyCompactList}\small\item\em Returns the available video modes for the specified monitor. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const \hyperlink{structGLFWvidmode}{G\+L\+F\+Wvidmode} $\ast$ \hyperlink{group__monitor_gac234b63ec525c70d7e18ac84aca088c6}{glfw\+Get\+Video\+Mode} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$monitor)
+\begin{DoxyCompactList}\small\item\em Returns the current mode of the specified monitor. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__monitor_ga3e4ab484476c935b4cd0bf49a5c429d6}{glfw\+Set\+Gamma} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$monitor, float gamma)
+\begin{DoxyCompactList}\small\item\em Generates a gamma ramp and sets it for the specified monitor. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const \hyperlink{structGLFWgammaramp}{G\+L\+F\+Wgammaramp} $\ast$ \hyperlink{group__monitor_gaeeac9198f3c91b83440eed679441f76b}{glfw\+Get\+Gamma\+Ramp} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$monitor)
+\begin{DoxyCompactList}\small\item\em Returns the current gamma ramp for the specified monitor. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__monitor_gac9f36a1cfa10eab191d3029ea8bc9558}{glfw\+Set\+Gamma\+Ramp} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$monitor, const \hyperlink{structGLFWgammaramp}{G\+L\+F\+Wgammaramp} $\ast$ramp)
+\begin{DoxyCompactList}\small\item\em Sets the current gamma ramp for the specified monitor. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga8050ddceed9dc6bd9d3aa35666195cd4}{glfw\+Default\+Window\+Hints} (void)
+\begin{DoxyCompactList}\small\item\em Resets all window hints to their default values. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga69c40728499720bef8a49aa925ea0efa}{glfw\+Window\+Hint} (int hint, int value)
+\begin{DoxyCompactList}\small\item\em Sets the specified window hint to the desired value. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$ \hyperlink{group__window_ga680a02abe0e4494b6759d5703240713e}{glfw\+Create\+Window} (int width, int height, const char $\ast$title, \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$monitor, \hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$share)
+\begin{DoxyCompactList}\small\item\em Creates a window and its associated context. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga806747476b7247d292be3711c323ea10}{glfw\+Destroy\+Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Destroys the specified window and its context. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI int \hyperlink{group__window_gaa6162f67dfa38b8beda2fea623649332}{glfw\+Window\+Should\+Close} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Checks the close flag of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga1cadeda7a1e2f224e06a8415d30741aa}{glfw\+Set\+Window\+Should\+Close} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int value)
+\begin{DoxyCompactList}\small\item\em Sets the close flag of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga861ed3414ab8120e2f74151a666ed1dc}{glfw\+Set\+Window\+Title} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, const char $\ast$title)
+\begin{DoxyCompactList}\small\item\em Sets the title of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga182987a1a62a41a924842b9473d560df}{glfw\+Set\+Window\+Icon} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int count, const \hyperlink{structGLFWimage}{G\+L\+F\+Wimage} $\ast$images)
+\begin{DoxyCompactList}\small\item\em Sets the icon for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga0076a8591ef7494d359730cf2250b45b}{glfw\+Get\+Window\+Pos} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int $\ast$xpos, int $\ast$ypos)
+\begin{DoxyCompactList}\small\item\em Retrieves the position of the client area of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga0dc8d880a0d87be16d3ea8114561f6f0}{glfw\+Set\+Window\+Pos} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int xpos, int ypos)
+\begin{DoxyCompactList}\small\item\em Sets the position of the client area of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga7feb769ebb3f3d21579b5a3fb07be76e}{glfw\+Get\+Window\+Size} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int $\ast$width, int $\ast$height)
+\begin{DoxyCompactList}\small\item\em Retrieves the size of the client area of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga8af814fc98d786d1de2505b40b707de8}{glfw\+Set\+Window\+Size\+Limits} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int minwidth, int minheight, int maxwidth, int maxheight)
+\begin{DoxyCompactList}\small\item\em Sets the size limits of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_gad2ae94a2c5ee1c46a36e13a8f4ac68ac}{glfw\+Set\+Window\+Aspect\+Ratio} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int numer, int denom)
+\begin{DoxyCompactList}\small\item\em Sets the aspect ratio of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_gae54d1f4915ded15e267ddd3f41496cd2}{glfw\+Set\+Window\+Size} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int width, int height)
+\begin{DoxyCompactList}\small\item\em Sets the size of the client area of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_gaf7d17f3534b4b6dc9a6f905e3a240b7e}{glfw\+Get\+Framebuffer\+Size} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int $\ast$width, int $\ast$height)
+\begin{DoxyCompactList}\small\item\em Retrieves the size of the framebuffer of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_gaad46cdaae2eb732f68d3a1499a7c5409}{glfw\+Get\+Window\+Frame\+Size} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int $\ast$left, int $\ast$top, int $\ast$right, int $\ast$bottom)
+\begin{DoxyCompactList}\small\item\em Retrieves the size of the frame of the window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga24274e3c6ecd44e11fec5e6b66e4d7f3}{glfw\+Iconify\+Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Iconifies the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga1e29caf0b819f578b04db52fff17256c}{glfw\+Restore\+Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Restores the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga4f825a55367d3fabde3d06e7f30128e8}{glfw\+Maximize\+Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Maximizes the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga7945bcdff9e5e058cf36505d6873ed8c}{glfw\+Show\+Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Makes the specified window visible. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_gaa17e287d521544bdeceafa09ac036e20}{glfw\+Hide\+Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Hides the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga0da0e3daaa2d100f44a115c09077b510}{glfw\+Focus\+Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Brings the specified window to front and sets input focus. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$ \hyperlink{group__window_gaf1525cb3bccd5789c702cc9676ef3403}{glfw\+Get\+Window\+Monitor} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Returns the monitor that the window uses for full screen mode. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga12fabf78575e59c00f822f323ae0b6ae}{glfw\+Set\+Window\+Monitor} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\+L\+F\+Wmonitor} $\ast$monitor, int xpos, int ypos, int width, int height, int refresh\+Rate)
+\begin{DoxyCompactList}\small\item\em Sets the mode, monitor, video mode and placement of a window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI int \hyperlink{group__window_ga1bb0c7e100418e284dbb800789c63d40}{glfw\+Get\+Window\+Attrib} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int attrib)
+\begin{DoxyCompactList}\small\item\em Returns an attribute of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_gacc9e68faee3c1763b54cd9bc405cf43e}{glfw\+Set\+Window\+User\+Pointer} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, void $\ast$pointer)
+\begin{DoxyCompactList}\small\item\em Sets the user pointer of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void $\ast$ \hyperlink{group__window_ga0a9ff3b4bf8589e9518e8816d06a8f50}{glfw\+Get\+Window\+User\+Pointer} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Returns the user pointer of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__window_gafd8db81fdb0e850549dc6bace5ed697a}{G\+L\+F\+Wwindowposfun} \hyperlink{group__window_gaea610899c4cb070dcd655c6de1fe1d2c}{glfw\+Set\+Window\+Pos\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__window_gafd8db81fdb0e850549dc6bace5ed697a}{G\+L\+F\+Wwindowposfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the position callback for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__window_gae49ee6ebc03fa2da024b89943a331355}{G\+L\+F\+Wwindowsizefun} \hyperlink{group__window_ga150dad5f364425916c5816074cffa5e7}{glfw\+Set\+Window\+Size\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__window_gae49ee6ebc03fa2da024b89943a331355}{G\+L\+F\+Wwindowsizefun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the size callback for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__window_ga93e7c2555bd837f4ed8b20f76cada72e}{G\+L\+F\+Wwindowclosefun} \hyperlink{group__window_ga5b827da350141c789acd64f5c4f7a0e1}{glfw\+Set\+Window\+Close\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__window_ga93e7c2555bd837f4ed8b20f76cada72e}{G\+L\+F\+Wwindowclosefun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the close callback for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__window_ga7a56f9e0227e2cd9470d80d919032e08}{G\+L\+F\+Wwindowrefreshfun} \hyperlink{group__window_ga9d2621fbc271a0cdc0ce91f9749f46e3}{glfw\+Set\+Window\+Refresh\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__window_ga7a56f9e0227e2cd9470d80d919032e08}{G\+L\+F\+Wwindowrefreshfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the refresh callback for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__window_ga58be2061828dd35080bb438405d3a7e2}{G\+L\+F\+Wwindowfocusfun} \hyperlink{group__window_gac89c6534ba7fbab6f6c68b855656c0d4}{glfw\+Set\+Window\+Focus\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__window_ga58be2061828dd35080bb438405d3a7e2}{G\+L\+F\+Wwindowfocusfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the focus callback for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__window_gad2d4e4c3d28b1242e742e8268b9528af}{G\+L\+F\+Wwindowiconifyfun} \hyperlink{group__window_ga17cd86946117b56c76397530900519db}{glfw\+Set\+Window\+Iconify\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__window_gad2d4e4c3d28b1242e742e8268b9528af}{G\+L\+F\+Wwindowiconifyfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the iconify callback for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__window_ga3e218ef9ff826129c55a7d5f6971a285}{G\+L\+F\+Wframebuffersizefun} \hyperlink{group__window_gad766bcdb4465f9c6c62e5d8ca7cfba56}{glfw\+Set\+Framebuffer\+Size\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__window_ga3e218ef9ff826129c55a7d5f6971a285}{G\+L\+F\+Wframebuffersizefun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the framebuffer resize callback for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga872d16e4c77f58c0436f356255920cfc}{glfw\+Poll\+Events} (void)
+\begin{DoxyCompactList}\small\item\em Processes all pending events. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga6e042d05823c11e11c7339b81a237738}{glfw\+Wait\+Events} (void)
+\begin{DoxyCompactList}\small\item\em Waits until events are queued and processes them. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_ga05223a0a4c5e50f10f289e60398153aa}{glfw\+Wait\+Events\+Timeout} (double timeout)
+\begin{DoxyCompactList}\small\item\em Waits with timeout until events are queued and processes them. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_gad6f6b997278c91c43b35970eb9713d7e}{glfw\+Post\+Empty\+Event} (void)
+\begin{DoxyCompactList}\small\item\em Posts an empty event to the event queue. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI int \hyperlink{group__input_ga1248dd5b1e566b2817e71547564d6af9}{glfw\+Get\+Input\+Mode} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int mode)
+\begin{DoxyCompactList}\small\item\em Returns the value of an input option for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__input_gae1eb729d2dd91dc33fd60e150a6e1684}{glfw\+Set\+Input\+Mode} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int mode, int value)
+\begin{DoxyCompactList}\small\item\em Sets an input option for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const char $\ast$ \hyperlink{group__input_ga9323a397832dd03faa2a88534847c984}{glfw\+Get\+Key\+Name} (int key, int scancode)
+\begin{DoxyCompactList}\small\item\em Returns the localized name of the specified printable key. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI int \hyperlink{group__input_ga7d8ad8ffaf272808f04e1d5d33ec8859}{glfw\+Get\+Key} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int key)
+\begin{DoxyCompactList}\small\item\em Returns the last reported state of a keyboard key for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI int \hyperlink{group__input_ga6da5efb04f700c312a57a169fa9393a0}{glfw\+Get\+Mouse\+Button} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, int button)
+\begin{DoxyCompactList}\small\item\em Returns the last reported state of a mouse button for the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__input_gad289438eb7cf53d11eca685373f44105}{glfw\+Get\+Cursor\+Pos} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, double $\ast$xpos, double $\ast$ypos)
+\begin{DoxyCompactList}\small\item\em Retrieves the position of the cursor relative to the client area of the window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__input_gaaf152cc93418acb0ba342e3f4af922bc}{glfw\+Set\+Cursor\+Pos} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, double xpos, double ypos)
+\begin{DoxyCompactList}\small\item\em Sets the position of the cursor, relative to the client area of the window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{glfw3_8h_a89261ae18c75e863aaf2656ecdd238f4}{G\+L\+F\+Wcursor} $\ast$ \hyperlink{group__input_gac0f0f691f2d110f9acfb4bfe07f1216c}{glfw\+Create\+Cursor} (const \hyperlink{structGLFWimage}{G\+L\+F\+Wimage} $\ast$image, int xhot, int yhot)
+\begin{DoxyCompactList}\small\item\em Creates a custom cursor. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{glfw3_8h_a89261ae18c75e863aaf2656ecdd238f4}{G\+L\+F\+Wcursor} $\ast$ \hyperlink{group__input_ga969dd87ad2ddbf3e1086cc40f235eed1}{glfw\+Create\+Standard\+Cursor} (int shape)
+\begin{DoxyCompactList}\small\item\em Creates a cursor with a standard shape. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__input_ga27556b7122117bc1bbb4bb3cc003ea43}{glfw\+Destroy\+Cursor} (\hyperlink{glfw3_8h_a89261ae18c75e863aaf2656ecdd238f4}{G\+L\+F\+Wcursor} $\ast$cursor)
+\begin{DoxyCompactList}\small\item\em Destroys a cursor. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__input_gafaf103cea2f43530cff7de4e01126a4f}{glfw\+Set\+Cursor} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{glfw3_8h_a89261ae18c75e863aaf2656ecdd238f4}{G\+L\+F\+Wcursor} $\ast$cursor)
+\begin{DoxyCompactList}\small\item\em Sets the cursor for the window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__input_ga0192a232a41e4e82948217c8ba94fdfd}{G\+L\+F\+Wkeyfun} \hyperlink{group__input_gaa73bb92f628a2a0be9c132d56f19362c}{glfw\+Set\+Key\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__input_ga0192a232a41e4e82948217c8ba94fdfd}{G\+L\+F\+Wkeyfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the key callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__input_gabf24451c7ceb1952bc02b17a0d5c3e5f}{G\+L\+F\+Wcharfun} \hyperlink{group__input_ga07b2959b23dc3e466ce7475746021002}{glfw\+Set\+Char\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__input_gabf24451c7ceb1952bc02b17a0d5c3e5f}{G\+L\+F\+Wcharfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the Unicode character callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__input_gae36fb6897d2b7df9b128900c8ce9c507}{G\+L\+F\+Wcharmodsfun} \hyperlink{group__input_gae6eee0bda7429bfe8028615847cf6795}{glfw\+Set\+Char\+Mods\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__input_gae36fb6897d2b7df9b128900c8ce9c507}{G\+L\+F\+Wcharmodsfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the Unicode character with modifiers callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__input_ga39893a4a7e7c3239c98d29c9e084350c}{G\+L\+F\+Wmousebuttonfun} \hyperlink{group__input_ga20e5ba1ce4e086aedd48a06dc311c95f}{glfw\+Set\+Mouse\+Button\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__input_ga39893a4a7e7c3239c98d29c9e084350c}{G\+L\+F\+Wmousebuttonfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the mouse button callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__input_ga4cfad918fa836f09541e7b9acd36686c}{G\+L\+F\+Wcursorposfun} \hyperlink{group__input_ga9c49c0d3d3c775c3124726f1d902124d}{glfw\+Set\+Cursor\+Pos\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__input_ga4cfad918fa836f09541e7b9acd36686c}{G\+L\+F\+Wcursorposfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the cursor position callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__input_ga51ab436c41eeaed6db5a0c9403b1c840}{G\+L\+F\+Wcursorenterfun} \hyperlink{group__input_gaa20014985561efeb2c53f1956f727830}{glfw\+Set\+Cursor\+Enter\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__input_ga51ab436c41eeaed6db5a0c9403b1c840}{G\+L\+F\+Wcursorenterfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the cursor enter/exit callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__input_ga4687e2199c60a18a8dd1da532e6d75c9}{G\+L\+F\+Wscrollfun} \hyperlink{group__input_ga29011514e93368712a3063a28707ced3}{glfw\+Set\+Scroll\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__input_ga4687e2199c60a18a8dd1da532e6d75c9}{G\+L\+F\+Wscrollfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the scroll callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__input_gab71f4ca80b651462852e601caf308c4a}{G\+L\+F\+Wdropfun} \hyperlink{group__input_gad4fc40df63a5d0441ab06de9a585cc04}{glfw\+Set\+Drop\+Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, \hyperlink{group__input_gab71f4ca80b651462852e601caf308c4a}{G\+L\+F\+Wdropfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the file drop callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI int \hyperlink{group__input_ga7f81f22f355f4b7d315caf73cdfd9906}{glfw\+Joystick\+Present} (int joy)
+\begin{DoxyCompactList}\small\item\em Returns whether the specified joystick is present. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const float $\ast$ \hyperlink{group__input_gaab9e573d808b088c5079c0f577d39448}{glfw\+Get\+Joystick\+Axes} (int joy, int $\ast$count)
+\begin{DoxyCompactList}\small\item\em Returns the values of all axes of the specified joystick. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const unsigned char $\ast$ \hyperlink{group__input_ga3951bea72b5fb4870b1aa0e5c2e9c903}{glfw\+Get\+Joystick\+Buttons} (int joy, int $\ast$count)
+\begin{DoxyCompactList}\small\item\em Returns the state of all buttons of the specified joystick. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const char $\ast$ \hyperlink{group__input_gac50a4fd9b01886cf9fa2c45f19191fb8}{glfw\+Get\+Joystick\+Name} (int joy)
+\begin{DoxyCompactList}\small\item\em Returns the name of the specified joystick. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__input_gaa67aa597e974298c748bfe4fb17d406d}{G\+L\+F\+Wjoystickfun} \hyperlink{group__input_ga07524a1122a03642b1d28822ea931094}{glfw\+Set\+Joystick\+Callback} (\hyperlink{group__input_gaa67aa597e974298c748bfe4fb17d406d}{G\+L\+F\+Wjoystickfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the joystick configuration callback. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__input_ga7a580309bbc185a0459c3559021d2fd7}{glfw\+Set\+Clipboard\+String} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window, const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Sets the clipboard to the specified string. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const char $\ast$ \hyperlink{group__input_ga3ac90c8bbaf0b46063bb02b574f3b6f7}{glfw\+Get\+Clipboard\+String} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Returns the contents of the clipboard as a string. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI double \hyperlink{group__input_ga03d4a1039b8662c71eeb40beea8cb622}{glfw\+Get\+Time} (void)
+\begin{DoxyCompactList}\small\item\em Returns the value of the G\+L\+FW timer. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__input_ga94360a3628a09f32708f83cc3fa48590}{glfw\+Set\+Time} (double time)
+\begin{DoxyCompactList}\small\item\em Sets the G\+L\+FW timer. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI uint64\+\_\+t \hyperlink{group__input_gaa00c3e32227eb70b3968fca0bfe4ae26}{glfw\+Get\+Timer\+Value} (void)
+\begin{DoxyCompactList}\small\item\em Returns the current value of the raw timer. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI uint64\+\_\+t \hyperlink{group__input_gaa92d10b10013372778efbf6367714371}{glfw\+Get\+Timer\+Frequency} (void)
+\begin{DoxyCompactList}\small\item\em Returns the frequency, in Hz, of the raw timer. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__context_gafd76c93e15ec8b0b90506a9936a46185}{glfw\+Make\+Context\+Current} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Makes the context of the specified window current for the calling thread. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$ \hyperlink{group__context_gac28d98c655377d81a516bf5ef90780c8}{glfw\+Get\+Current\+Context} (void)
+\begin{DoxyCompactList}\small\item\em Returns the window whose context is current on the calling thread. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__window_gafb827800eedbfcbc97b1e5408df668d7}{glfw\+Swap\+Buffers} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\+L\+F\+Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Swaps the front and back buffers of the specified window. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__context_ga12a595c06947cec4967c6e1f14210a8a}{glfw\+Swap\+Interval} (int interval)
+\begin{DoxyCompactList}\small\item\em Sets the swap interval for the current context. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI int \hyperlink{group__context_ga9a28c712d35f9e43534e1d03b051c04c}{glfw\+Extension\+Supported} (const char $\ast$extension)
+\begin{DoxyCompactList}\small\item\em Returns whether the specified extension is available. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__context_ga3d47c2d2fbe0be9c505d0e04e91a133c}{G\+L\+F\+Wglproc} \hyperlink{group__context_ga0e8af175218929615c16e74938c10f2a}{glfw\+Get\+Proc\+Address} (const char $\ast$procname)
+\begin{DoxyCompactList}\small\item\em Returns the address of the specified function for the current context. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI int \hyperlink{group__vulkan_ga72e7c3757d9ff2333181a5569bb7c403}{glfw\+Vulkan\+Supported} (void)
+\begin{DoxyCompactList}\small\item\em Returns whether the Vulkan loader has been found. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const char $\ast$$\ast$ \hyperlink{group__vulkan_ga70adaf0cfc99adc484c49ea99e17c2cf}{glfw\+Get\+Required\+Instance\+Extensions} (uint32\+\_\+t $\ast$count)
+\begin{DoxyCompactList}\small\item\em Returns the Vulkan instance extensions required by G\+L\+FW. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The header of the G\+L\+FW 3 A\+PI. 
+
+This is the header file of the G\+L\+FW 3 A\+PI. It defines all its types and declares all its functions.
+
+For more information about how to use this file, see build\+\_\+include. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{glfw3_8h_ac877fe3b627d21ef3a0a23e0a73ba8c5}\label{glfw3_8h_ac877fe3b627d21ef3a0a23e0a73ba8c5}} 
+\index{glfw3.\+h@{glfw3.\+h}!G\+L\+F\+W\+\_\+\+F\+A\+L\+SE@{G\+L\+F\+W\+\_\+\+F\+A\+L\+SE}}
+\index{G\+L\+F\+W\+\_\+\+F\+A\+L\+SE@{G\+L\+F\+W\+\_\+\+F\+A\+L\+SE}!glfw3.\+h@{glfw3.\+h}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+\_\+\+F\+A\+L\+SE}{GLFW\_FALSE}}
+{\footnotesize\ttfamily \#define G\+L\+F\+W\+\_\+\+F\+A\+L\+SE~0}
+
+
+
+Zero. 
+
+Zero. Seriously. You don\textquotesingle{}t {\itshape need} to use this symbol in your code. It\textquotesingle{}s just just semantic sugar for the number 0. You can use {\ttfamily 0} or {\ttfamily false} or {\ttfamily \+\_\+\+False} or {\ttfamily G\+L\+\_\+\+F\+A\+L\+SE} or whatever you want. \mbox{\Hypertarget{glfw3_8h_a2744fbb29b5631bb28802dbe0cf36eba}\label{glfw3_8h_a2744fbb29b5631bb28802dbe0cf36eba}} 
+\index{glfw3.\+h@{glfw3.\+h}!G\+L\+F\+W\+\_\+\+T\+R\+UE@{G\+L\+F\+W\+\_\+\+T\+R\+UE}}
+\index{G\+L\+F\+W\+\_\+\+T\+R\+UE@{G\+L\+F\+W\+\_\+\+T\+R\+UE}!glfw3.\+h@{glfw3.\+h}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+\_\+\+T\+R\+UE}{GLFW\_TRUE}}
+{\footnotesize\ttfamily \#define G\+L\+F\+W\+\_\+\+T\+R\+UE~1}
+
+
+
+One. 
+
+One. Seriously. You don\textquotesingle{}t {\itshape need} to use this symbol in your code. It\textquotesingle{}s just semantic sugar for the number 1. You can use {\ttfamily 1} or {\ttfamily true} or {\ttfamily \+\_\+\+True} or {\ttfamily G\+L\+\_\+\+T\+R\+UE} or whatever you want. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{glfw3_8h_a89261ae18c75e863aaf2656ecdd238f4}\label{glfw3_8h_a89261ae18c75e863aaf2656ecdd238f4}} 
+\index{glfw3.\+h@{glfw3.\+h}!G\+L\+F\+Wcursor@{G\+L\+F\+Wcursor}}
+\index{G\+L\+F\+Wcursor@{G\+L\+F\+Wcursor}!glfw3.\+h@{glfw3.\+h}}
+\subsubsection{\texorpdfstring{G\+L\+F\+Wcursor}{GLFWcursor}}
+{\footnotesize\ttfamily typedef struct \hyperlink{glfw3_8h_a89261ae18c75e863aaf2656ecdd238f4}{G\+L\+F\+Wcursor} \hyperlink{glfw3_8h_a89261ae18c75e863aaf2656ecdd238f4}{G\+L\+F\+Wcursor}}
+
+
+
+Opaque cursor object. 
+
+Opaque cursor object.
+
+\begin{DoxySeeAlso}{See also}
+cursor\+\_\+object
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+Added in version 3.\+1. 
+\end{DoxySince}
+\mbox{\Hypertarget{glfw3_8h_ac81c32f4437de7b3aa58ab62c3d9e5b1}\label{glfw3_8h_ac81c32f4437de7b3aa58ab62c3d9e5b1}} 
+\index{glfw3.\+h@{glfw3.\+h}!G\+L\+F\+Wimage@{G\+L\+F\+Wimage}}
+\index{G\+L\+F\+Wimage@{G\+L\+F\+Wimage}!glfw3.\+h@{glfw3.\+h}}
+\subsubsection{\texorpdfstring{G\+L\+F\+Wimage}{GLFWimage}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structGLFWimage}{G\+L\+F\+Wimage}  \hyperlink{structGLFWimage}{G\+L\+F\+Wimage}}
+
+
+
+Image data. 
+
+\begin{DoxySeeAlso}{See also}
+cursor\+\_\+custom 
+
+window\+\_\+icon
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+Added in version 2.\+1.  Removed format and bytes-\/per-\/pixel members. 
+\end{DoxySince}

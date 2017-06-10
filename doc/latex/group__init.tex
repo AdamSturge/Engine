@@ -1,0 +1,282 @@
+\hypertarget{group__init}{}\section{Initialization, version and error reference}
+\label{group__init}\index{Initialization, version and error reference@{Initialization, version and error reference}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__errors}{Error codes}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__init_ga6b8a2639706d5c409fc1287e8f55e928}{G\+L\+F\+Werrorfun}) (int, const char $\ast$)
+\begin{DoxyCompactList}\small\item\em The function signature for error callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+G\+L\+F\+W\+A\+PI int \hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the G\+L\+FW library. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__init_gafd90e6fd4819ea9e22e5e739519a6504}{glfw\+Terminate} (void)
+\begin{DoxyCompactList}\small\item\em Terminates the G\+L\+FW library. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI void \hyperlink{group__init_ga2402c7824ac0194c13722790ff9559ff}{glfw\+Get\+Version} (int $\ast$major, int $\ast$minor, int $\ast$rev)
+\begin{DoxyCompactList}\small\item\em Retrieves the version of the G\+L\+FW library. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI const char $\ast$ \hyperlink{group__init_ga4b9092ac5eace57d94d3cd551d6b8ded}{glfw\+Get\+Version\+String} (void)
+\begin{DoxyCompactList}\small\item\em Returns a string describing the compile-\/time configuration. \end{DoxyCompactList}\item 
+G\+L\+F\+W\+A\+PI \hyperlink{group__init_ga6b8a2639706d5c409fc1287e8f55e928}{G\+L\+F\+Werrorfun} \hyperlink{group__init_ga5919096b958c47102126061fb5a6f9c3}{glfw\+Set\+Error\+Callback} (\hyperlink{group__init_ga6b8a2639706d5c409fc1287e8f55e928}{G\+L\+F\+Werrorfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the error callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{G\+L\+FW version macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__init_ga6337d9ea43b22fc529b2bba066b4a576}{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}~3
+\begin{DoxyCompactList}\small\item\em The major version number of the G\+L\+FW library. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__init_gaf80d40f0aea7088ff337606e9c48f7a3}{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}~2
+\begin{DoxyCompactList}\small\item\em The minor version number of the G\+L\+FW library. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__init_gab72ae2e2035d9ea461abc3495eac0502}{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+V\+I\+S\+I\+ON}~1
+\begin{DoxyCompactList}\small\item\em The revision number of the G\+L\+FW library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the reference documentation for initialization and termination of the library, version management and error handling. For more task-\/oriented information, see the intro\+\_\+guide. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__init_ga6337d9ea43b22fc529b2bba066b4a576}\label{group__init_ga6337d9ea43b22fc529b2bba066b4a576}} 
+\index{Initialization, version and error reference@{Initialization, version and error reference}!G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR@{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}}
+\index{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR@{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}!Initialization, version and error reference@{Initialization, version and error reference}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}{GLFW\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \#define G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR~3}
+
+
+
+The major version number of the G\+L\+FW library. 
+
+This is incremented when the A\+PI is changed in non-\/compatible ways. \mbox{\Hypertarget{group__init_gaf80d40f0aea7088ff337606e9c48f7a3}\label{group__init_gaf80d40f0aea7088ff337606e9c48f7a3}} 
+\index{Initialization, version and error reference@{Initialization, version and error reference}!G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR@{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}}
+\index{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR@{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}!Initialization, version and error reference@{Initialization, version and error reference}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}{GLFW\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \#define G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR~2}
+
+
+
+The minor version number of the G\+L\+FW library. 
+
+This is incremented when features are added to the A\+PI but it remains backward-\/compatible. \mbox{\Hypertarget{group__init_gab72ae2e2035d9ea461abc3495eac0502}\label{group__init_gab72ae2e2035d9ea461abc3495eac0502}} 
+\index{Initialization, version and error reference@{Initialization, version and error reference}!G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+V\+I\+S\+I\+ON@{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+V\+I\+S\+I\+ON}}
+\index{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+V\+I\+S\+I\+ON@{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+V\+I\+S\+I\+ON}!Initialization, version and error reference@{Initialization, version and error reference}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+V\+I\+S\+I\+ON}{GLFW\_VERSION\_REVISION}}
+{\footnotesize\ttfamily \#define G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+R\+E\+V\+I\+S\+I\+ON~1}
+
+
+
+The revision number of the G\+L\+FW library. 
+
+This is incremented when a bug fix release is made that does not contain any A\+PI changes. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__init_ga6b8a2639706d5c409fc1287e8f55e928}\label{group__init_ga6b8a2639706d5c409fc1287e8f55e928}} 
+\index{Initialization, version and error reference@{Initialization, version and error reference}!G\+L\+F\+Werrorfun@{G\+L\+F\+Werrorfun}}
+\index{G\+L\+F\+Werrorfun@{G\+L\+F\+Werrorfun}!Initialization, version and error reference@{Initialization, version and error reference}}
+\subsubsection{\texorpdfstring{G\+L\+F\+Werrorfun}{GLFWerrorfun}}
+{\footnotesize\ttfamily typedef void($\ast$  G\+L\+F\+Werrorfun) (int, const char $\ast$)}
+
+
+
+The function signature for error callbacks. 
+
+This is the function signature for error callback functions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em error} & An \hyperlink{group__errors}{error code}. \\
+\hline
+\mbox{\tt in}  & {\em description} & A U\+T\+F-\/8 encoded string describing the error.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+error\+\_\+handling 
+
+\hyperlink{group__init_ga5919096b958c47102126061fb5a6f9c3}{glfw\+Set\+Error\+Callback}
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+Added in version 3.\+0. 
+\end{DoxySince}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__init_ga2402c7824ac0194c13722790ff9559ff}\label{group__init_ga2402c7824ac0194c13722790ff9559ff}} 
+\index{Initialization, version and error reference@{Initialization, version and error reference}!glfw\+Get\+Version@{glfw\+Get\+Version}}
+\index{glfw\+Get\+Version@{glfw\+Get\+Version}!Initialization, version and error reference@{Initialization, version and error reference}}
+\subsubsection{\texorpdfstring{glfw\+Get\+Version()}{glfwGetVersion()}}
+{\footnotesize\ttfamily G\+L\+F\+W\+A\+PI void glfw\+Get\+Version (\begin{DoxyParamCaption}\item[{int $\ast$}]{major,  }\item[{int $\ast$}]{minor,  }\item[{int $\ast$}]{rev }\end{DoxyParamCaption})}
+
+
+
+Retrieves the version of the G\+L\+FW library. 
+
+This function retrieves the major, minor and revision numbers of the G\+L\+FW library. It is intended for when you are using G\+L\+FW as a shared library and want to ensure that you are using the minimum required version.
+
+Any or all of the version arguments may be {\ttfamily N\+U\+LL}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em major} & Where to store the major version number, or {\ttfamily N\+U\+LL}. \\
+\hline
+\mbox{\tt out}  & {\em minor} & Where to store the minor version number, or {\ttfamily N\+U\+LL}. \\
+\hline
+\mbox{\tt out}  & {\em rev} & Where to store the revision number, or {\ttfamily N\+U\+LL}.\\
+\hline
+\end{DoxyParams}
+None.
+
+\begin{DoxyRemark}{Remarks}
+This function may be called before \hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\+Init}.
+\end{DoxyRemark}
+This function may be called from any thread.
+
+\begin{DoxySeeAlso}{See also}
+intro\+\_\+version 
+
+\hyperlink{group__init_ga4b9092ac5eace57d94d3cd551d6b8ded}{glfw\+Get\+Version\+String}
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+Added in version 1.\+0. 
+\end{DoxySince}
+\mbox{\Hypertarget{group__init_ga4b9092ac5eace57d94d3cd551d6b8ded}\label{group__init_ga4b9092ac5eace57d94d3cd551d6b8ded}} 
+\index{Initialization, version and error reference@{Initialization, version and error reference}!glfw\+Get\+Version\+String@{glfw\+Get\+Version\+String}}
+\index{glfw\+Get\+Version\+String@{glfw\+Get\+Version\+String}!Initialization, version and error reference@{Initialization, version and error reference}}
+\subsubsection{\texorpdfstring{glfw\+Get\+Version\+String()}{glfwGetVersionString()}}
+{\footnotesize\ttfamily G\+L\+F\+W\+A\+PI const char$\ast$ glfw\+Get\+Version\+String (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns a string describing the compile-\/time configuration. 
+
+This function returns the compile-\/time generated version string of the G\+L\+FW library binary. It describes the version, platform, compiler and any platform-\/specific compile-\/time options. It should not be confused with the Open\+GL or Open\+GL ES version string, queried with {\ttfamily gl\+Get\+String}.
+
+{\bfseries Do not use the version string} to parse the G\+L\+FW library version. The \hyperlink{group__init_ga2402c7824ac0194c13722790ff9559ff}{glfw\+Get\+Version} function provides the version of the running library binary in numerical format.
+
+\begin{DoxyReturn}{Returns}
+The A\+S\+C\+II encoded G\+L\+FW version string.
+\end{DoxyReturn}
+None.
+
+\begin{DoxyRemark}{Remarks}
+This function may be called before \hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\+Init}.
+\end{DoxyRemark}
+The returned string is static and compile-\/time generated.
+
+This function may be called from any thread.
+
+\begin{DoxySeeAlso}{See also}
+intro\+\_\+version 
+
+\hyperlink{group__init_ga2402c7824ac0194c13722790ff9559ff}{glfw\+Get\+Version}
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+Added in version 3.\+0. 
+\end{DoxySince}
+\mbox{\Hypertarget{group__init_gab41771f0215a2e0afb4cf1cf98082d40}\label{group__init_gab41771f0215a2e0afb4cf1cf98082d40}} 
+\index{Initialization, version and error reference@{Initialization, version and error reference}!glfw\+Init@{glfw\+Init}}
+\index{glfw\+Init@{glfw\+Init}!Initialization, version and error reference@{Initialization, version and error reference}}
+\subsubsection{\texorpdfstring{glfw\+Init()}{glfwInit()}}
+{\footnotesize\ttfamily G\+L\+F\+W\+A\+PI int glfw\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the G\+L\+FW library. 
+
+This function initializes the G\+L\+FW library. Before most G\+L\+FW functions can be used, G\+L\+FW must be initialized, and before an application terminates G\+L\+FW should be terminated in order to free any resources allocated during or after initialization.
+
+If this function fails, it calls \hyperlink{group__init_gafd90e6fd4819ea9e22e5e739519a6504}{glfw\+Terminate} before returning. If it succeeds, you should call \hyperlink{group__init_gafd90e6fd4819ea9e22e5e739519a6504}{glfw\+Terminate} before the application exits.
+
+Additional calls to this function after successful initialization but before termination will return {\ttfamily G\+L\+F\+W\+\_\+\+T\+R\+UE} immediately.
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily G\+L\+F\+W\+\_\+\+T\+R\+UE} if successful, or {\ttfamily G\+L\+F\+W\+\_\+\+F\+A\+L\+SE} if an error occurred.
+\end{DoxyReturn}
+Possible errors include \hyperlink{group__errors_gad44162d78100ea5e87cdd38426b8c7a1}{G\+L\+F\+W\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}.
+
+\begin{DoxyRemark}{Remarks}
+This function will change the current directory of the application to the {\ttfamily Contents/\+Resources} subdirectory of the application\textquotesingle{}s bundle, if present. This can be disabled with a compile-\/time option.
+\end{DoxyRemark}
+This function must only be called from the main thread.
+
+\begin{DoxySeeAlso}{See also}
+intro\+\_\+init 
+
+\hyperlink{group__init_gafd90e6fd4819ea9e22e5e739519a6504}{glfw\+Terminate}
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+Added in version 1.\+0. 
+\end{DoxySince}
+\mbox{\Hypertarget{group__init_ga5919096b958c47102126061fb5a6f9c3}\label{group__init_ga5919096b958c47102126061fb5a6f9c3}} 
+\index{Initialization, version and error reference@{Initialization, version and error reference}!glfw\+Set\+Error\+Callback@{glfw\+Set\+Error\+Callback}}
+\index{glfw\+Set\+Error\+Callback@{glfw\+Set\+Error\+Callback}!Initialization, version and error reference@{Initialization, version and error reference}}
+\subsubsection{\texorpdfstring{glfw\+Set\+Error\+Callback()}{glfwSetErrorCallback()}}
+{\footnotesize\ttfamily G\+L\+F\+W\+A\+PI \hyperlink{group__init_ga6b8a2639706d5c409fc1287e8f55e928}{G\+L\+F\+Werrorfun} glfw\+Set\+Error\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group__init_ga6b8a2639706d5c409fc1287e8f55e928}{G\+L\+F\+Werrorfun}}]{cbfun }\end{DoxyParamCaption})}
+
+
+
+Sets the error callback. 
+
+This function sets the error callback, which is called with an error code and a human-\/readable description each time a G\+L\+FW error occurs.
+
+The error callback is called on the thread where the error occurred. If you are using G\+L\+FW from multiple threads, your error callback needs to be written accordingly.
+
+Because the description string may have been generated specifically for that error, it is not guaranteed to be valid after the callback has returned. If you wish to use it after the callback returns, you need to make a copy.
+
+Once set, the error callback remains set even after the library has been terminated.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cbfun} & The new callback, or {\ttfamily N\+U\+LL} to remove the currently set callback. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The previously set callback, or {\ttfamily N\+U\+LL} if no callback was set.
+\end{DoxyReturn}
+None.
+
+\begin{DoxyRemark}{Remarks}
+This function may be called before \hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\+Init}.
+\end{DoxyRemark}
+This function must only be called from the main thread.
+
+\begin{DoxySeeAlso}{See also}
+error\+\_\+handling
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+Added in version 3.\+0. 
+\end{DoxySince}
+\mbox{\Hypertarget{group__init_gafd90e6fd4819ea9e22e5e739519a6504}\label{group__init_gafd90e6fd4819ea9e22e5e739519a6504}} 
+\index{Initialization, version and error reference@{Initialization, version and error reference}!glfw\+Terminate@{glfw\+Terminate}}
+\index{glfw\+Terminate@{glfw\+Terminate}!Initialization, version and error reference@{Initialization, version and error reference}}
+\subsubsection{\texorpdfstring{glfw\+Terminate()}{glfwTerminate()}}
+{\footnotesize\ttfamily G\+L\+F\+W\+A\+PI void glfw\+Terminate (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Terminates the G\+L\+FW library. 
+
+This function destroys all remaining windows and cursors, restores any modified gamma ramps and frees any other allocated resources. Once this function is called, you must again call \hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\+Init} successfully before you will be able to use most G\+L\+FW functions.
+
+If G\+L\+FW has been successfully initialized, this function should be called before the application exits. If initialization fails, there is no need to call this function, as it is called by \hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\+Init} before it returns failure.
+
+Possible errors include \hyperlink{group__errors_gad44162d78100ea5e87cdd38426b8c7a1}{G\+L\+F\+W\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}.
+
+\begin{DoxyRemark}{Remarks}
+This function may be called before \hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\+Init}.
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+The contexts of any remaining windows must not be current on any other thread when this function is called.
+\end{DoxyWarning}
+This function must not be called from a callback.
+
+This function must only be called from the main thread.
+
+\begin{DoxySeeAlso}{See also}
+intro\+\_\+init 
+
+\hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\+Init}
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+Added in version 1.\+0. 
+\end{DoxySince}
