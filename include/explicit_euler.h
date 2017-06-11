@@ -26,8 +26,9 @@ class ExplicitEuler : public TimeIntegrator
             @param xi intial position of entity
             @param vi initial velocity of entity
             @param mass mass of entity
-            @param xf Final poisition of entity. This will be updated with the new position for the next grid point
-            @param vf Final velocity of entity. This will be ipdated with the new velocity for the next grid point
+            @param F force vector acting on the entity
+            @param xf final poisition of entity. This will be updated with the new position for the next time step
+            @param vf final velocity of entity. This will be ipdated with the new velocity for the next time step
         **/
         void Solve(
             const Vector3Gf xi,

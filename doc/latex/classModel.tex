@@ -24,14 +24,17 @@ void \hyperlink{classModel_a6b79c9e0c9abc50896e70fe1fabff4e7}{Set\+Model\+Matrix
 \item 
 \hyperlink{classMesh}{Mesh} \hyperlink{classModel_a332f5a4ecf9bca582e583b3ff7784bf5}{Get\+Mesh} ()
 \end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classModel_ae3b375de5f6df4faf74a95d64748e048}{Model} ()
+\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classModel_afe425f579d17b798e6c454a5c5e2d952}\label{classModel_afe425f579d17b798e6c454a5c5e2d952}} 
-\hyperlink{classMesh}{Mesh} {\bfseries m\+\_\+mesh}
+\hyperlink{classMesh}{Mesh} \hyperlink{classModel_afe425f579d17b798e6c454a5c5e2d952}{m\+\_\+mesh}
 \item 
-\mbox{\Hypertarget{classModel_a41d60873613f3b75c8242df3bbb44ca9}\label{classModel_a41d60873613f3b75c8242df3bbb44ca9}} 
-Eigen\+::\+Matrix$<$ G\+Lfloat, 4, 4 $>$ {\bfseries m\+\_\+model\+\_\+matrix}
+Eigen\+::\+Matrix$<$ G\+Lfloat, 4, 4 $>$ \hyperlink{classModel_a41d60873613f3b75c8242df3bbb44ca9}{m\+\_\+model\+\_\+matrix}
 \end{DoxyCompactItemize}
 
 
@@ -39,6 +42,15 @@ Eigen\+::\+Matrix$<$ G\+Lfloat, 4, 4 $>$ {\bfseries m\+\_\+model\+\_\+matrix}
 Defines a model used for rendering. 
 
 \hyperlink{classModel}{Model} is the base class for all entities that are rendered in a scene. It stores properites such as the mesh, material properties, textures, etc. It also holds the {\bfseries model matrix} which handles transforming the mesh from local coordinates to world coordinates. See \href{https://learnopengl.com/#!Getting-started/Coordinate-Systems}{\tt Here} for more details. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classModel_ae3b375de5f6df4faf74a95d64748e048}\label{classModel_ae3b375de5f6df4faf74a95d64748e048}} 
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\subsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Builds a \hyperlink{classModel}{Model} with an empty mesh and identity model matrix 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classModel_a332f5a4ecf9bca582e583b3ff7784bf5}\label{classModel_a332f5a4ecf9bca582e583b3ff7784bf5}} 
@@ -71,6 +83,21 @@ Sets the model matrix
 \hline
 \end{DoxyParams}
 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classModel_afe425f579d17b798e6c454a5c5e2d952}\label{classModel_afe425f579d17b798e6c454a5c5e2d952}} 
+\index{Model@{Model}!m\+\_\+mesh@{m\+\_\+mesh}}
+\index{m\+\_\+mesh@{m\+\_\+mesh}!Model@{Model}}
+\subsubsection{\texorpdfstring{m\+\_\+mesh}{m\_mesh}}
+{\footnotesize\ttfamily \hyperlink{classMesh}{Mesh} Model\+::m\+\_\+mesh\hspace{0.3cm}{\ttfamily [protected]}}
+
+The mesh for this model \mbox{\Hypertarget{classModel_a41d60873613f3b75c8242df3bbb44ca9}\label{classModel_a41d60873613f3b75c8242df3bbb44ca9}} 
+\index{Model@{Model}!m\+\_\+model\+\_\+matrix@{m\+\_\+model\+\_\+matrix}}
+\index{m\+\_\+model\+\_\+matrix@{m\+\_\+model\+\_\+matrix}!Model@{Model}}
+\subsubsection{\texorpdfstring{m\+\_\+model\+\_\+matrix}{m\_model\_matrix}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix$<$G\+Lfloat,4,4$>$ Model\+::m\+\_\+model\+\_\+matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+The model matrix. This handles transforming from local model coordinates to world coordinates 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

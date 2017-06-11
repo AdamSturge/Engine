@@ -28,9 +28,18 @@ class Model {
         Mesh GetMesh();
         
      protected:
+        /**
+            The mesh for this model
+        **/
         Mesh m_mesh; 
+        /**
+            The model matrix. This handles transforming from local model coordinates to world coordinates
+        **/
     	Eigen::Matrix<GLfloat,4,4> m_model_matrix;  
         
+        /**
+            Builds a Model with an empty mesh and identity model matrix
+        **/
         Model();
     
 };

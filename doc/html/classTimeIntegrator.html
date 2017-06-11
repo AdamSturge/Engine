@@ -87,6 +87,11 @@ $(document).ready(function(){initNavTree('classTimeIntegrator.html','');});
 <div class="title">TimeIntegrator Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>An abstact base class for all grid based numerical ODE solvers for Newton's laws.  
+ <a href="classTimeIntegrator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="time__integrator_8h_source.html">time_integrator.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for TimeIntegrator:</div>
 <div class="dyncontent">
@@ -99,8 +104,7 @@ Inheritance diagram for TimeIntegrator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad69eadc41d788f355959428ff9f84608"><td class="memItemLeft" align="right" valign="top"><a id="ad69eadc41d788f355959428ff9f84608"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Solve</b> (const Vector3Gf xi, const Vector3Gf vi, const GLfloat mass, const Vector3Gf F, Vector3Gf &amp;xf, Vector3Gf &amp;vf)=0</td></tr>
+<tr class="memitem:ad69eadc41d788f355959428ff9f84608"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#ad69eadc41d788f355959428ff9f84608">Solve</a> (const Vector3Gf xi, const Vector3Gf vi, const GLfloat mass, const Vector3Gf F, Vector3Gf &amp;xf, Vector3Gf &amp;vf)=0</td></tr>
 <tr class="separator:ad69eadc41d788f355959428ff9f84608"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -109,6 +113,82 @@ Protected Attributes</h2></td></tr>
 GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
 <tr class="separator:a8912a1a1f00d49556509a91dd999991f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An abstact base class for all grid based numerical ODE solvers for Newton's laws. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad69eadc41d788f355959428ff9f84608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69eadc41d788f355959428ff9f84608">&#9670;&nbsp;</a></span>Solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void TimeIntegrator::Solve </td>
+          <td>(</td>
+          <td class="paramtype">const Vector3Gf&#160;</td>
+          <td class="paramname"><em>xi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Vector3Gf&#160;</td>
+          <td class="paramname"><em>vi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLfloat&#160;</td>
+          <td class="paramname"><em>mass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Vector3Gf&#160;</td>
+          <td class="paramname"><em>F</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3Gf &amp;&#160;</td>
+          <td class="paramname"><em>xf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3Gf &amp;&#160;</td>
+          <td class="paramname"><em>vf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Solves Newton's equations of motion </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xi</td><td>initial position of entity </td></tr>
+    <tr><td class="paramname">vi</td><td>initial velocity of entity </td></tr>
+    <tr><td class="paramname">mass</td><td>mass of entity </td></tr>
+    <tr><td class="paramname">F</td><td>force vector acting on the entity </td></tr>
+    <tr><td class="paramname">xf</td><td>final position of entity. This will be updated with the new position for the next time step </td></tr>
+    <tr><td class="paramname">vf</td><td>final velocity of entity. This will be updated with the new position for the next time step </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classExplicitEuler.html#aee3f98264fab0eac7517d9dc8487ecb4">ExplicitEuler</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/adam/Desktop/Engine/include/<a class="el" href="time__integrator_8h_source.html">time_integrator.h</a></li>
 </ul>

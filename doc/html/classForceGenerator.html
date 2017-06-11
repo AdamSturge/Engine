@@ -86,6 +86,11 @@ $(document).ready(function(){initNavTree('classForceGenerator.html','');});
 <div class="title">ForceGenerator Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Abstract base class for all force generators.  
+ <a href="classForceGenerator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="force__generator_8h_source.html">force_generator.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ForceGenerator:</div>
 <div class="dyncontent">
@@ -98,10 +103,58 @@ Inheritance diagram for ForceGenerator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a96cae0febb1fa8a0bb017aba7b82dbe8"><td class="memItemLeft" align="right" valign="top"><a id="a96cae0febb1fa8a0bb017aba7b82dbe8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>AccumulateForce</b> (std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity, Vector3Gf &amp;F)=0</td></tr>
+<tr class="memitem:a96cae0febb1fa8a0bb017aba7b82dbe8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classForceGenerator.html#a96cae0febb1fa8a0bb017aba7b82dbe8">AccumulateForce</a> (std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity, Vector3Gf &amp;F)=0</td></tr>
 <tr class="separator:a96cae0febb1fa8a0bb017aba7b82dbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract base class for all force generators. </p>
+<p>A force generator is an abstraction of a particular kind of force acting on a <a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a>. The exact nature of the force depends on the implementaiton of the AccumulateForce method </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a96cae0febb1fa8a0bb017aba7b82dbe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96cae0febb1fa8a0bb017aba7b82dbe8">&#9670;&nbsp;</a></span>AccumulateForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ForceGenerator::AccumulateForce </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3Gf &amp;&#160;</td>
+          <td class="paramname"><em>F</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Computes a force through accumulation. Meaning the result is added to the value stored in F </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td><a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> the force is acting on </td></tr>
+    <tr><td class="paramname">F</td><td>Force vector which will be modified to add in the force represented by this generator </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classConstantForceGenerator.html#a6a50c67567de9d26073a373aed77d29f">ConstantForceGenerator</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/adam/Desktop/Engine/include/<a class="el" href="force__generator_8h_source.html">force_generator.h</a></li>
 </ul>

@@ -1,5 +1,14 @@
 \hypertarget{classTimeIntegrator}{}\section{Time\+Integrator Class Reference}
 \label{classTimeIntegrator}\index{Time\+Integrator@{Time\+Integrator}}
+
+
+An abstact base class for all grid based numerical O\+DE solvers for Newton\textquotesingle{}s laws.  
+
+
+
+
+{\ttfamily \#include $<$time\+\_\+integrator.\+h$>$}
+
 Inheritance diagram for Time\+Integrator\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,8 +18,7 @@ Inheritance diagram for Time\+Integrator\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTimeIntegrator_ad69eadc41d788f355959428ff9f84608}\label{classTimeIntegrator_ad69eadc41d788f355959428ff9f84608}} 
-virtual void {\bfseries Solve} (const Vector3\+Gf xi, const Vector3\+Gf vi, const G\+Lfloat mass, const Vector3\+Gf F, Vector3\+Gf \&xf, Vector3\+Gf \&vf)=0
+virtual void \hyperlink{classTimeIntegrator_ad69eadc41d788f355959428ff9f84608}{Solve} (const Vector3\+Gf xi, const Vector3\+Gf vi, const G\+Lfloat mass, const Vector3\+Gf F, Vector3\+Gf \&xf, Vector3\+Gf \&vf)=0
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -18,6 +26,37 @@ virtual void {\bfseries Solve} (const Vector3\+Gf xi, const Vector3\+Gf vi, cons
 \mbox{\Hypertarget{classTimeIntegrator_a8912a1a1f00d49556509a91dd999991f}\label{classTimeIntegrator_a8912a1a1f00d49556509a91dd999991f}} 
 G\+Lfloat {\bfseries m\+\_\+dt}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstact base class for all grid based numerical O\+DE solvers for Newton\textquotesingle{}s laws. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTimeIntegrator_ad69eadc41d788f355959428ff9f84608}\label{classTimeIntegrator_ad69eadc41d788f355959428ff9f84608}} 
+\index{Time\+Integrator@{Time\+Integrator}!Solve@{Solve}}
+\index{Solve@{Solve}!Time\+Integrator@{Time\+Integrator}}
+\subsubsection{\texorpdfstring{Solve()}{Solve()}}
+{\footnotesize\ttfamily virtual void Time\+Integrator\+::\+Solve (\begin{DoxyParamCaption}\item[{const Vector3\+Gf}]{xi,  }\item[{const Vector3\+Gf}]{vi,  }\item[{const G\+Lfloat}]{mass,  }\item[{const Vector3\+Gf}]{F,  }\item[{Vector3\+Gf \&}]{xf,  }\item[{Vector3\+Gf \&}]{vf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Solves Newton\textquotesingle{}s equations of motion 
+\begin{DoxyParams}{Parameters}
+{\em xi} & initial position of entity \\
+\hline
+{\em vi} & initial velocity of entity \\
+\hline
+{\em mass} & mass of entity \\
+\hline
+{\em F} & force vector acting on the entity \\
+\hline
+{\em xf} & final position of entity. This will be updated with the new position for the next time step \\
+\hline
+{\em vf} & final velocity of entity. This will be updated with the new position for the next time step \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classExplicitEuler_aee3f98264fab0eac7517d9dc8487ecb4}{Explicit\+Euler}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

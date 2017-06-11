@@ -1,7 +1,6 @@
 var classCamera =
 [
     [ "Camera", "classCamera.html#a852d8c105b562be494204cac8518b66f", null ],
-    [ "Camera", "classCamera.html#a1efd973829c22d5fe15a26ede3357ee5", null ],
     [ "GetViewMatrix", "classCamera.html#af040480b69b4235d9bd203bf6775e79a", null ],
     [ "ProcessKeyboard", "classCamera.html#ac7e9a7f3e63c670fd695a8f03d02dbdf", null ],
     [ "ProcessMouseMovement", "classCamera.html#a97ffbf8d8935fc63bd2ca71a4268eec4", null ],

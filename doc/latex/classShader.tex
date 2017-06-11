@@ -1,13 +1,15 @@
 \hypertarget{classShader}{}\section{Shader Class Reference}
 \label{classShader}\index{Shader@{Shader}}
+
+
+{\ttfamily \#include $<$shader.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classShader_a03421a8419cdad4b84cf58ecdb156879}\label{classShader_a03421a8419cdad4b84cf58ecdb156879}} 
-{\bfseries Shader} (const G\+Lchar $\ast$vertex\+Path, const G\+Lchar $\ast$fragment\+Path)
+\hyperlink{classShader_a03421a8419cdad4b84cf58ecdb156879}{Shader} (const G\+Lchar $\ast$vertex\+Path, const G\+Lchar $\ast$fragment\+Path)
 \item 
-\mbox{\Hypertarget{classShader_a6b11327cff651ffdb22988b6917b1650}\label{classShader_a6b11327cff651ffdb22988b6917b1650}} 
-void {\bfseries Use} ()
+void \hyperlink{classShader_a6b11327cff651ffdb22988b6917b1650}{Use} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -16,6 +18,34 @@ void {\bfseries Use} ()
 G\+Luint {\bfseries Program}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Wrapper around Open\+GL vertex and fragment shaders 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classShader_a03421a8419cdad4b84cf58ecdb156879}\label{classShader_a03421a8419cdad4b84cf58ecdb156879}} 
+\index{Shader@{Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Shader@{Shader}}
+\subsubsection{\texorpdfstring{Shader()}{Shader()}}
+{\footnotesize\ttfamily Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{vertex\+Path,  }\item[{const G\+Lchar $\ast$}]{fragment\+Path }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{classShader}{Shader} that loads G\+L\+SL files from the supplied path 
+\begin{DoxyParams}{Parameters}
+{\em vertex\+Path} & path to G\+L\+SL file that compiles into the vertex shader \\
+\hline
+{\em fragment\+Path} & path to the G\+L\+SL file that compiles into the fragment shader \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classShader_a6b11327cff651ffdb22988b6917b1650}\label{classShader_a6b11327cff651ffdb22988b6917b1650}} 
+\index{Shader@{Shader}!Use@{Use}}
+\index{Use@{Use}!Shader@{Shader}}
+\subsubsection{\texorpdfstring{Use()}{Use()}}
+{\footnotesize\ttfamily void Shader\+::\+Use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Loads the shader for rendering 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

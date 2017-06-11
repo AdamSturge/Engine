@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['setmodelmatrix',['SetModelMatrix',['../classModel.html#a6b79c9e0c9abc50896e70fe1fabff4e7',1,'Model']]],
-  ['setnextposition',['SetNextPosition',['../classPhysicsEntity.html#a18913bb368bbe6e61e6838d7e8353bd4',1,'PhysicsEntity']]],
-  ['setnextvelocity',['SetNextVelocity',['../classPhysicsEntity.html#a6d23d47421d535cc934405e8a7d1a43b',1,'PhysicsEntity']]],
-  ['solve',['Solve',['../classExplicitEuler.html#aee3f98264fab0eac7517d9dc8487ecb4',1,'ExplicitEuler']]]
+  ['physicsentity',['PhysicsEntity',['../classPhysicsEntity.html#a2c0cf9804f1864105849586bc91e8dea',1,'PhysicsEntity']]],
+  ['processkeyboard',['ProcessKeyboard',['../classCamera.html#ac7e9a7f3e63c670fd695a8f03d02dbdf',1,'Camera']]],
+  ['processmousemovement',['ProcessMouseMovement',['../classCamera.html#a97ffbf8d8935fc63bd2ca71a4268eec4',1,'Camera']]],
+  ['processmousescroll',['ProcessMouseScroll',['../classCamera.html#af269e5ef38e791afb7f4a1dfb8da2399',1,'Camera']]]
 ];

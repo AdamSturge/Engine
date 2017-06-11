@@ -81,6 +81,7 @@ $(document).ready(function(){initNavTree('classModel.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classModel-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -98,7 +99,7 @@ Inheritance diagram for Model:</div>
  <div class="center">
   <img src="classModel.png" usemap="#Model_map" alt=""/>
   <map id="Model_map" name="Model_map">
-<area href="classSphere.html" alt="Sphere" shape="rect" coords="0,56,53,80"/>
+<area href="classSphere.html" title="A sphere. " alt="Sphere" shape="rect" coords="0,56,53,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -111,19 +112,49 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a332f5a4ecf9bca582e583b3ff7784bf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMesh.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a332f5a4ecf9bca582e583b3ff7784bf5">GetMesh</a> ()</td></tr>
 <tr class="separator:a332f5a4ecf9bca582e583b3ff7784bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ae3b375de5f6df4faf74a95d64748e048"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#ae3b375de5f6df4faf74a95d64748e048">Model</a> ()</td></tr>
+<tr class="separator:ae3b375de5f6df4faf74a95d64748e048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:afe425f579d17b798e6c454a5c5e2d952"><td class="memItemLeft" align="right" valign="top"><a id="afe425f579d17b798e6c454a5c5e2d952"></a>
-<a class="el" href="classMesh.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_mesh</b></td></tr>
+<tr class="memitem:afe425f579d17b798e6c454a5c5e2d952"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMesh.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#afe425f579d17b798e6c454a5c5e2d952">m_mesh</a></td></tr>
 <tr class="separator:afe425f579d17b798e6c454a5c5e2d952"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41d60873613f3b75c8242df3bbb44ca9"><td class="memItemLeft" align="right" valign="top"><a id="a41d60873613f3b75c8242df3bbb44ca9"></a>
-Eigen::Matrix&lt; GLfloat, 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_model_matrix</b></td></tr>
+<tr class="memitem:a41d60873613f3b75c8242df3bbb44ca9"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; GLfloat, 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a41d60873613f3b75c8242df3bbb44ca9">m_model_matrix</a></td></tr>
 <tr class="separator:a41d60873613f3b75c8242df3bbb44ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines a model used for rendering. </p>
 <p><a class="el" href="classModel.html" title="Defines a model used for rendering. ">Model</a> is the base class for all entities that are rendered in a scene. It stores properites such as the mesh, material properties, textures, etc. It also holds the <b>model matrix</b> which handles transforming the mesh from local coordinates to world coordinates. See <a href="https://learnopengl.com/#!Getting-started/Coordinate-Systems">Here</a> for more details. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae3b375de5f6df4faf74a95d64748e048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b375de5f6df4faf74a95d64748e048">&#9670;&nbsp;</a></span>Model()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Model::Model </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Builds a <a class="el" href="classModel.html" title="Defines a model used for rendering. ">Model</a> with an empty mesh and identity model matrix </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a332f5a4ecf9bca582e583b3ff7784bf5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a332f5a4ecf9bca582e583b3ff7784bf5">&#9670;&nbsp;</a></span>GetMesh()</h2>
 
@@ -181,6 +212,53 @@ Eigen::Matrix&lt; GLfloat, 4, 4 &gt;&#160;</td><td class="memItemRight" valign="
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="afe425f579d17b798e6c454a5c5e2d952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe425f579d17b798e6c454a5c5e2d952">&#9670;&nbsp;</a></span>m_mesh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMesh.html">Mesh</a> Model::m_mesh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The mesh for this model </p>
+
+</div>
+</div>
+<a id="a41d60873613f3b75c8242df3bbb44ca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d60873613f3b75c8242df3bbb44ca9">&#9670;&nbsp;</a></span>m_model_matrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix&lt;GLfloat,4,4&gt; Model::m_model_matrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The model matrix. This handles transforming from local model coordinates to world coordinates </p>
 
 </div>
 </div>

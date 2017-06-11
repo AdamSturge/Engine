@@ -87,14 +87,14 @@ $(document).ready(function(){initNavTree('classShader.html','');});
 <div class="title">Shader Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="shader_8h_source.html">shader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a03421a8419cdad4b84cf58ecdb156879"><td class="memItemLeft" align="right" valign="top"><a id="a03421a8419cdad4b84cf58ecdb156879"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Shader</b> (const GLchar *vertexPath, const GLchar *fragmentPath)</td></tr>
+<tr class="memitem:a03421a8419cdad4b84cf58ecdb156879"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a03421a8419cdad4b84cf58ecdb156879">Shader</a> (const GLchar *vertexPath, const GLchar *fragmentPath)</td></tr>
 <tr class="separator:a03421a8419cdad4b84cf58ecdb156879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b11327cff651ffdb22988b6917b1650"><td class="memItemLeft" align="right" valign="top"><a id="a6b11327cff651ffdb22988b6917b1650"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Use</b> ()</td></tr>
+<tr class="memitem:a6b11327cff651ffdb22988b6917b1650"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShader.html#a6b11327cff651ffdb22988b6917b1650">Use</a> ()</td></tr>
 <tr class="separator:a6b11327cff651ffdb22988b6917b1650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -103,6 +103,63 @@ Public Attributes</h2></td></tr>
 GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>Program</b></td></tr>
 <tr class="separator:a51b23253846bc84dcc2ef06612679012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Wrapper around OpenGL vertex and fragment shaders </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a03421a8419cdad4b84cf58ecdb156879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03421a8419cdad4b84cf58ecdb156879">&#9670;&nbsp;</a></span>Shader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shader::Shader </td>
+          <td>(</td>
+          <td class="paramtype">const GLchar *&#160;</td>
+          <td class="paramname"><em>vertexPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLchar *&#160;</td>
+          <td class="paramname"><em>fragmentPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="classShader.html">Shader</a> that loads GLSL files from the supplied path </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexPath</td><td>path to GLSL file that compiles into the vertex shader </td></tr>
+    <tr><td class="paramname">fragmentPath</td><td>path to the GLSL file that compiles into the fragment shader </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6b11327cff651ffdb22988b6917b1650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b11327cff651ffdb22988b6917b1650">&#9670;&nbsp;</a></span>Use()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shader::Use </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loads the shader for rendering </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/adam/Desktop/Engine/include/<a class="el" href="shader_8h_source.html">shader.h</a></li>
 <li>/home/adam/Desktop/Engine/shader.cpp</li>

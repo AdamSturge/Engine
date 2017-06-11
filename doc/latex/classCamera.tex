@@ -1,25 +1,26 @@
 \hypertarget{classCamera}{}\section{Camera Class Reference}
 \label{classCamera}\index{Camera@{Camera}}
+
+
+A \hyperlink{classCamera}{Camera} is used to view a scene from a particular vantage point.  
+
+
+
+
+{\ttfamily \#include $<$camera.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCamera_a852d8c105b562be494204cac8518b66f}\label{classCamera_a852d8c105b562be494204cac8518b66f}} 
-{\bfseries Camera} (Vector3\+Gf position=Vector3\+Gf(0.\+0f, 0.\+0f, 0.\+0f), Vector3\+Gf up=\+Vector3\+Gf(0.\+0f, 1.\+0f, 0.\+0f), G\+Lfloat yaw=\+Y\+A\+W, G\+Lfloat pitch=\+P\+I\+T\+C\+H)
+\hyperlink{classCamera_a852d8c105b562be494204cac8518b66f}{Camera} (Vector3\+Gf position=Vector3\+Gf(0.\+0f, 0.\+0f, 0.\+0f), Vector3\+Gf up=\+Vector3\+Gf(0.\+0f, 1.\+0f, 0.\+0f), G\+Lfloat yaw=\+Y\+A\+W, G\+Lfloat pitch=\+P\+I\+T\+C\+H)
 \item 
-\mbox{\Hypertarget{classCamera_a1efd973829c22d5fe15a26ede3357ee5}\label{classCamera_a1efd973829c22d5fe15a26ede3357ee5}} 
-{\bfseries Camera} (G\+Lfloat posX, G\+Lfloat posY, G\+Lfloat posZ, G\+Lfloat upX, G\+Lfloat upY, G\+Lfloat upZ, G\+Lfloat yaw, G\+Lfloat pitch)
+Eigen\+::\+Matrix$<$ G\+Lfloat, 4, 4 $>$ \hyperlink{classCamera_af040480b69b4235d9bd203bf6775e79a}{Get\+View\+Matrix} ()
 \item 
-\mbox{\Hypertarget{classCamera_af040480b69b4235d9bd203bf6775e79a}\label{classCamera_af040480b69b4235d9bd203bf6775e79a}} 
-Eigen\+::\+Matrix$<$ G\+Lfloat, 4, 4 $>$ {\bfseries Get\+View\+Matrix} ()
+void \hyperlink{classCamera_ac7e9a7f3e63c670fd695a8f03d02dbdf}{Process\+Keyboard} (Camera\+\_\+\+Movement direction, G\+Lfloat delta\+Time)
 \item 
-\mbox{\Hypertarget{classCamera_ac7e9a7f3e63c670fd695a8f03d02dbdf}\label{classCamera_ac7e9a7f3e63c670fd695a8f03d02dbdf}} 
-void {\bfseries Process\+Keyboard} (Camera\+\_\+\+Movement direction, G\+Lfloat delta\+Time)
+void \hyperlink{classCamera_a97ffbf8d8935fc63bd2ca71a4268eec4}{Process\+Mouse\+Movement} (G\+Lfloat xoffset, G\+Lfloat yoffset, G\+Lboolean constrain\+Pitch=true)
 \item 
-\mbox{\Hypertarget{classCamera_a97ffbf8d8935fc63bd2ca71a4268eec4}\label{classCamera_a97ffbf8d8935fc63bd2ca71a4268eec4}} 
-void {\bfseries Process\+Mouse\+Movement} (G\+Lfloat xoffset, G\+Lfloat yoffset, G\+Lboolean constrain\+Pitch=true)
-\item 
-\mbox{\Hypertarget{classCamera_af269e5ef38e791afb7f4a1dfb8da2399}\label{classCamera_af269e5ef38e791afb7f4a1dfb8da2399}} 
-void {\bfseries Process\+Mouse\+Scroll} (G\+Lfloat yoffset)
+void \hyperlink{classCamera_af269e5ef38e791afb7f4a1dfb8da2399}{Process\+Mouse\+Scroll} (G\+Lfloat yoffset)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -54,6 +55,82 @@ G\+Lfloat {\bfseries Mouse\+Sensitivity}
 \mbox{\Hypertarget{classCamera_a1078d85d2e18bdc32291aabfcdda710a}\label{classCamera_a1078d85d2e18bdc32291aabfcdda710a}} 
 G\+Lfloat {\bfseries Zoom}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classCamera}{Camera} is used to view a scene from a particular vantage point. 
+
+A \hyperlink{classCamera}{Camera} requires a position,orientation, and direction to look in space. These things together define a camera centered coordinate system. This camera system is based on the camera system from \href{https://learnopengl.com/#!Getting-started/Camera}{\tt here} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCamera_a852d8c105b562be494204cac8518b66f}\label{classCamera_a852d8c105b562be494204cac8518b66f}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{Vector3\+Gf}]{position = {\ttfamily Vector3Gf(0.0f,~0.0f,~0.0f)},  }\item[{Vector3\+Gf}]{up = {\ttfamily Vector3Gf(0.0f,~1.0f,~0.0f)},  }\item[{G\+Lfloat}]{yaw = {\ttfamily YAW},  }\item[{G\+Lfloat}]{pitch = {\ttfamily PITCH} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a \hyperlink{classCamera}{Camera} 
+\begin{DoxyParams}{Parameters}
+{\em position} & position of the camera in world coordinates \\
+\hline
+{\em up} & up direction in world cordinates for the camera. This is used to define up in the \hyperlink{classCamera}{Camera} coordinate system \\
+\hline
+{\em yaw} & yaw value for the camera \\
+\hline
+{\em pitch} & pitch value for the camera \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCamera_af040480b69b4235d9bd203bf6775e79a}\label{classCamera_af040480b69b4235d9bd203bf6775e79a}} 
+\index{Camera@{Camera}!Get\+View\+Matrix@{Get\+View\+Matrix}}
+\index{Get\+View\+Matrix@{Get\+View\+Matrix}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Get\+View\+Matrix()}{GetViewMatrix()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix$<$G\+Lfloat,4,4$>$ Camera\+::\+Get\+View\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the view matrix calculated using Eular Angles and the Look\+At Matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_ac7e9a7f3e63c670fd695a8f03d02dbdf}\label{classCamera_ac7e9a7f3e63c670fd695a8f03d02dbdf}} 
+\index{Camera@{Camera}!Process\+Keyboard@{Process\+Keyboard}}
+\index{Process\+Keyboard@{Process\+Keyboard}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Process\+Keyboard()}{ProcessKeyboard()}}
+{\footnotesize\ttfamily void Camera\+::\+Process\+Keyboard (\begin{DoxyParamCaption}\item[{Camera\+\_\+\+Movement}]{direction,  }\item[{G\+Lfloat}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Processes input received from any keyboard-\/like input system. Accepts input parameter in the form of camera defined E\+N\+UM 
+\begin{DoxyParams}{Parameters}
+{\em direction} & direction to move the camera in \\
+\hline
+{\em delta\+Time} & time in seconds between rendering cycles. Helps smooth camera movement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCamera_a97ffbf8d8935fc63bd2ca71a4268eec4}\label{classCamera_a97ffbf8d8935fc63bd2ca71a4268eec4}} 
+\index{Camera@{Camera}!Process\+Mouse\+Movement@{Process\+Mouse\+Movement}}
+\index{Process\+Mouse\+Movement@{Process\+Mouse\+Movement}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Process\+Mouse\+Movement()}{ProcessMouseMovement()}}
+{\footnotesize\ttfamily void Camera\+::\+Process\+Mouse\+Movement (\begin{DoxyParamCaption}\item[{G\+Lfloat}]{xoffset,  }\item[{G\+Lfloat}]{yoffset,  }\item[{G\+Lboolean}]{constrain\+Pitch = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Processes input received from a mouse input system. Expects the offset value in both the x and y direction. 
+\begin{DoxyParams}{Parameters}
+{\em xoffset} & change in x position of mouse \\
+\hline
+{\em yoffset} & change in y position of mouse \\
+\hline
+{\em constrain\+Pitch} & controls if pitch is constrained within \mbox{[}-\/89,89\mbox{]} degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCamera_af269e5ef38e791afb7f4a1dfb8da2399}\label{classCamera_af269e5ef38e791afb7f4a1dfb8da2399}} 
+\index{Camera@{Camera}!Process\+Mouse\+Scroll@{Process\+Mouse\+Scroll}}
+\index{Process\+Mouse\+Scroll@{Process\+Mouse\+Scroll}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Process\+Mouse\+Scroll()}{ProcessMouseScroll()}}
+{\footnotesize\ttfamily void Camera\+::\+Process\+Mouse\+Scroll (\begin{DoxyParamCaption}\item[{G\+Lfloat}]{yoffset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Processes input received from a mouse scroll-\/wheel event. Only requires input on the vertical wheel-\/axis 
+\begin{DoxyParams}{Parameters}
+{\em yoffset} & change in scroll value \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

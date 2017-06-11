@@ -26,6 +26,12 @@ const GLfloat ZOOM       =  45.0f;
 
 
 // An abstract camera class that processes input and calculates the corresponding Eular Angles, Vectors and Matrices for use in OpenGL
+/**
+    \brief A Camera is used to view a scene from a particular vantage point
+
+    A Camera requires a position,orientation, and direction to look  in space. These things together define a camera centered coordinate system.
+    This camera system is based on the camera system from <a href="https://learnopengl.com/#!Getting-started/Camera">here</a>
+**/
 class Camera
 {
 public:
@@ -43,7 +49,13 @@ public:
     GLfloat MouseSensitivity;
     GLfloat Zoom;
 
-    // Constructor with vectors
+    /**
+        Constructs a Camera
+        @param position position of the camera in world coordinates
+        @param up up direction in world cordinates for the camera. This is used to define up in the Camera coordinate system
+        @param yaw yaw value for the camera
+        @param pitch pitch value for the camera
+    **/
     Camera(Vector3Gf position = Vector3Gf(0.0f, 0.0f, 0.0f), Vector3Gf up = Vector3Gf(0.0f, 1.0f, 0.0f), GLfloat yaw = YAW, GLfloat pitch = PITCH) : Front(Vector3Gf(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVTY), Zoom(ZOOM)
     {
         this->Position = position;
@@ -52,24 +64,21 @@ public:
         this->Pitch = pitch;
         this->updateCameraVectors();
     }
-    // Constructor with scalar values
-    Camera(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat upX, GLfloat upY, GLfloat upZ, GLfloat yaw, GLfloat pitch) : Front(Vector3Gf(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVTY), Zoom(ZOOM)
-    {
-        this->Position = Vector3Gf(posX, posY, posZ);
-        this->WorldUp = Vector3Gf(upX, upY, upZ);
-        this->Yaw = yaw;
-        this->Pitch = pitch;
-        this->updateCameraVectors();
-    }
-
-    // Returns the view matrix calculated using Eular Angles and the LookAt Matrix
+   
+    /** 
+        @return the view matrix calculated using Eular Angles and the LookAt Matrix
+    **/
     Eigen::Matrix<GLfloat,4,4> GetViewMatrix()
     {
 	Eigen::Matrix<GLfloat,3,1> center = this->Position + this->Front;        
 	return LookAt(this->Position, center, this->Up);
     }
 
-    // Processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM (to abstract it from windowing systems)
+    /**
+        Processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM
+        @param direction direction to move the camera in
+        @param deltaTime time in seconds between rendering cycles. Helps smooth camera movement
+    **/
     void ProcessKeyboard(Camera_Movement direction, GLfloat deltaTime)
     {
         GLfloat velocity = this->MovementSpeed * deltaTime;
@@ -83,7 +92,12 @@ public:
             this->Position += this->Right * velocity;
     }
 
-    // Processes input received from a mouse input system. Expects the offset value in both the x and y direction.
+    /**
+        Processes input received from a mouse input system. Expects the offset value in both the x and y direction.
+        @param xoffset change in x position of mouse
+        @param yoffset change in y position of mouse
+        @param constrainPitch controls if pitch is constrained within [-89,89] degrees
+    **/
     void ProcessMouseMovement(GLfloat xoffset, GLfloat yoffset, GLboolean constrainPitch = true)
     {
         xoffset *= this->MouseSensitivity;
@@ -105,7 +119,10 @@ public:
         this->updateCameraVectors();
     }
 
-    // Processes input received from a mouse scroll-wheel event. Only requires input on the vertical wheel-axis
+    /**
+        Processes input received from a mouse scroll-wheel event. Only requires input on the vertical wheel-axis
+        @param yoffset change in scroll value
+    **/
     void ProcessMouseScroll(GLfloat yoffset)
     {
         if (this->Zoom >= 1.0f && this->Zoom <= 45.0f)
@@ -117,7 +134,9 @@ public:
     }
 
 private:
-    // Calculates the front vector from the Camera's (updated) Eular Angles
+    /** 
+        Calculates the front vector from the Camera's (updated) Eular Angles
+    **/
     void updateCameraVectors()
     {
         // Calculate the new Front vector

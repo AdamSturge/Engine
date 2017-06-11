@@ -54,16 +54,35 @@ class PhysicsEntity{
         void UpdateFromBuffers();
 
      protected:     
+        /**
+            The type of this entity. Ex.) SPHERE_ENTITY
+        **/
         ENTITY_TYPE m_entity_type;         
 
+        /**
+            The position of this entity
+        **/
     	Vector3Gf m_position;
-        Vector3Gf m_next_position_buffer; // Stores the next predicted position of this game entity
-        
+        /**
+            The next predicted position of this entity. 
+        **/
+        Vector3Gf m_next_position_buffer;    
+        /**
+            The velocity of this entity
+        **/
         Vector3Gf m_velocity;
-        Vector3Gf m_next_velocity_buffer; // Stores the next predicted velocity of this game entity
-
+        /**
+            The next predicted velocity of this entity
+        **/
+        Vector3Gf m_next_velocity_buffer;
+        /**
+            The mass of this entity
+        **/
         GLfloat m_mass; // stores the mass of this game entity
 
+        /**
+            Creates an instance of PhysicsEntity centered at the origin, zero velocity, and unit mass
+        **/
         PhysicsEntity();
     
 };

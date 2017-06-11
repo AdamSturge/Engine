@@ -86,46 +86,311 @@ $(document).ready(function(){initNavTree('classScene.html','');});
 <div class="title">Scene Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A scene in the engine.  
+ <a href="classScene.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="scene_8h_source.html">scene.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0a3d0bcafa5f18639e2af91c4c43115b"><td class="memItemLeft" align="right" valign="top"><a id="a0a3d0bcafa5f18639e2af91c4c43115b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Scene</b> (std::shared_ptr&lt; <a class="el" href="classTimeIntegrator.html">TimeIntegrator</a> &gt; integrator, <a class="el" href="classConstantForceGenerator.html">ConstantForceGenerator</a> cfg)</td></tr>
+<tr class="memitem:ad10176d75a9cc0da56626f682d083507"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#ad10176d75a9cc0da56626f682d083507">Scene</a> ()</td></tr>
+<tr class="separator:ad10176d75a9cc0da56626f682d083507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3d0bcafa5f18639e2af91c4c43115b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a0a3d0bcafa5f18639e2af91c4c43115b">Scene</a> (std::shared_ptr&lt; <a class="el" href="classTimeIntegrator.html">TimeIntegrator</a> &gt; integrator, <a class="el" href="classConstantForceGenerator.html">ConstantForceGenerator</a> cfg)</td></tr>
 <tr class="separator:a0a3d0bcafa5f18639e2af91c4c43115b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18477e2b5b504b46f3e7d37908abb98d"><td class="memItemLeft" align="right" valign="top"><a id="a18477e2b5b504b46f3e7d37908abb98d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddPhysicsEntity</b> (std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity_ptr)</td></tr>
+<tr class="memitem:a18477e2b5b504b46f3e7d37908abb98d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a18477e2b5b504b46f3e7d37908abb98d">AddPhysicsEntity</a> (std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity_ptr)</td></tr>
 <tr class="separator:a18477e2b5b504b46f3e7d37908abb98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac20558c7452d933ce3ebe8caa1514702"><td class="memItemLeft" align="right" valign="top"><a id="ac20558c7452d933ce3ebe8caa1514702"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GetPhysicsEntity</b> (const GLuint index, std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; &amp;entity_ptr)</td></tr>
+<tr class="memitem:ac20558c7452d933ce3ebe8caa1514702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#ac20558c7452d933ce3ebe8caa1514702">GetPhysicsEntity</a> (const GLuint index, std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; &amp;entity_ptr)</td></tr>
 <tr class="separator:ac20558c7452d933ce3ebe8caa1514702"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5419dc941ee6efc29cd5cef8e7d6d414"><td class="memItemLeft" align="right" valign="top"><a id="a5419dc941ee6efc29cd5cef8e7d6d414"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddModel</b> (std::shared_ptr&lt; <a class="el" href="classModel.html">Model</a> &gt; model_ptr)</td></tr>
+<tr class="memitem:a5419dc941ee6efc29cd5cef8e7d6d414"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a5419dc941ee6efc29cd5cef8e7d6d414">AddModel</a> (std::shared_ptr&lt; <a class="el" href="classModel.html">Model</a> &gt; model_ptr)</td></tr>
 <tr class="separator:a5419dc941ee6efc29cd5cef8e7d6d414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a031dc667e4152e4bfd2a8930d31320a4"><td class="memItemLeft" align="right" valign="top"><a id="a031dc667e4152e4bfd2a8930d31320a4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GetModel</b> (const GLuint index, std::shared_ptr&lt; <a class="el" href="classModel.html">Model</a> &gt; &amp;model_ptr, GLuint &amp;VAO)</td></tr>
+<tr class="memitem:a031dc667e4152e4bfd2a8930d31320a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a031dc667e4152e4bfd2a8930d31320a4">GetModel</a> (const GLuint index, std::shared_ptr&lt; <a class="el" href="classModel.html">Model</a> &gt; &amp;model_ptr, GLuint &amp;VAO)</td></tr>
 <tr class="separator:a031dc667e4152e4bfd2a8930d31320a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cadf8fe478a7e3a270902a0536751a9"><td class="memItemLeft" align="right" valign="top"><a id="a2cadf8fe478a7e3a270902a0536751a9"></a>
-GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>GetPhysicsEntityCount</b> ()</td></tr>
+<tr class="memitem:a2cadf8fe478a7e3a270902a0536751a9"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a2cadf8fe478a7e3a270902a0536751a9">GetPhysicsEntityCount</a> ()</td></tr>
 <tr class="separator:a2cadf8fe478a7e3a270902a0536751a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a406df661eb7be589964dafe76f7f09c8"><td class="memItemLeft" align="right" valign="top"><a id="a406df661eb7be589964dafe76f7f09c8"></a>
-GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>GetModelCount</b> ()</td></tr>
+<tr class="memitem:a406df661eb7be589964dafe76f7f09c8"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a406df661eb7be589964dafe76f7f09c8">GetModelCount</a> ()</td></tr>
 <tr class="separator:a406df661eb7be589964dafe76f7f09c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fe443641612290ba78931132d1fddb5"><td class="memItemLeft" align="right" valign="top"><a id="a5fe443641612290ba78931132d1fddb5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>StepPhysics</b> ()</td></tr>
+<tr class="memitem:a5fe443641612290ba78931132d1fddb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a5fe443641612290ba78931132d1fddb5">StepPhysics</a> ()</td></tr>
 <tr class="separator:a5fe443641612290ba78931132d1fddb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a603827ae26832207c3d8ff01d4f80f3f"><td class="memItemLeft" align="right" valign="top"><a id="a603827ae26832207c3d8ff01d4f80f3f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ComputeNetForce</b> (const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity_ptr, Vector3Gf &amp;force)</td></tr>
-<tr class="separator:a603827ae26832207c3d8ff01d4f80f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7edc9fabe7ef61a426cd6278a0b209fe"><td class="memItemLeft" align="right" valign="top"><a id="a7edc9fabe7ef61a426cd6278a0b209fe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Render</b> (<a class="el" href="classShader.html">Shader</a> shader)</td></tr>
+<tr class="memitem:a7edc9fabe7ef61a426cd6278a0b209fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a7edc9fabe7ef61a426cd6278a0b209fe">Render</a> (<a class="el" href="classShader.html">Shader</a> shader)</td></tr>
 <tr class="separator:a7edc9fabe7ef61a426cd6278a0b209fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a830078c354d5df8ef9b811dac7b2c7dd"><td class="memItemLeft" align="right" valign="top"><a id="a830078c354d5df8ef9b811dac7b2c7dd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CleanUp</b> ()</td></tr>
+<tr class="memitem:a830078c354d5df8ef9b811dac7b2c7dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a830078c354d5df8ef9b811dac7b2c7dd">CleanUp</a> ()</td></tr>
 <tr class="separator:a830078c354d5df8ef9b811dac7b2c7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4760f2a7033d15e0771a82a8296a8e7"><td class="memItemLeft" align="right" valign="top"><a id="ad4760f2a7033d15e0771a82a8296a8e7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DoMovement</b> (GLfloat deltaTime, bool keys[])</td></tr>
-<tr class="separator:ad4760f2a7033d15e0771a82a8296a8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A scene in the engine. </p>
+<p>A scene contains (pointers to) a number of <a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> objects to simululate and a number of <a class="el" href="classModel.html" title="Defines a model used for rendering. ">Model</a> objects to render. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad10176d75a9cc0da56626f682d083507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad10176d75a9cc0da56626f682d083507">&#9670;&nbsp;</a></span>Scene() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::Scene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="classScene.html" title="A scene in the engine. ">Scene</a> instance with default values for its <a class="el" href="classTimeIntegrator.html" title="An abstact base class for all grid based numerical ODE solvers for Newton&#39;s laws. ...">TimeIntegrator</a> and <a class="el" href="classForceGenerator.html" title="Abstract base class for all force generators. ">ForceGenerator</a> members </p>
+
+</div>
+</div>
+<a id="a0a3d0bcafa5f18639e2af91c4c43115b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3d0bcafa5f18639e2af91c4c43115b">&#9670;&nbsp;</a></span>Scene() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::Scene </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classTimeIntegrator.html">TimeIntegrator</a> &gt;&#160;</td>
+          <td class="paramname"><em>integrator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classConstantForceGenerator.html">ConstantForceGenerator</a>&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="classScene.html" title="A scene in the engine. ">Scene</a> instance with the provided <a class="el" href="classTimeIntegrator.html" title="An abstact base class for all grid based numerical ODE solvers for Newton&#39;s laws. ...">TimeIntegrator</a> and <a class="el" href="classForceGenerator.html" title="Abstract base class for all force generators. ">ForceGenerator</a> members </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">integrator</td><td>TimeIngrator instance to handle time evolution of the PhysicsEntities in the scene </td></tr>
+    <tr><td class="paramname">cfg</td><td><a class="el" href="classConstantForceGenerator.html" title="A constant force throughout all space. ">ConstantForceGenerator</a> used to generate a spatially and temporally uniform force </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5419dc941ee6efc29cd5cef8e7d6d414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5419dc941ee6efc29cd5cef8e7d6d414">&#9670;&nbsp;</a></span>AddModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::AddModel </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classModel.html">Model</a> &gt;&#160;</td>
+          <td class="paramname"><em>model_ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a <a class="el" href="classModel.html" title="Defines a model used for rendering. ">Model</a> to the scene </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">model_ptr</td><td>a shared pointer to the model to be added to the scene </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a18477e2b5b504b46f3e7d37908abb98d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18477e2b5b504b46f3e7d37908abb98d">&#9670;&nbsp;</a></span>AddPhysicsEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::AddPhysicsEntity </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&#160;</td>
+          <td class="paramname"><em>entity_ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a <a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> to the <a class="el" href="classScene.html" title="A scene in the engine. ">Scene</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity_ptr</td><td>a shared pointer to the <a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> to be added to the scene </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a830078c354d5df8ef9b811dac7b2c7dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a830078c354d5df8ef9b811dac7b2c7dd">&#9670;&nbsp;</a></span>CleanUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::CleanUp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes all <a class="el" href="classModel.html" title="Defines a model used for rendering. ">Model</a> data from the GPU </p>
+
+</div>
+</div>
+<a id="a031dc667e4152e4bfd2a8930d31320a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031dc667e4152e4bfd2a8930d31320a4">&#9670;&nbsp;</a></span>GetModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::GetModel </td>
+          <td>(</td>
+          <td class="paramtype">const GLuint&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classModel.html">Model</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>model_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint &amp;&#160;</td>
+          <td class="paramname"><em>VAO</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loads the <a class="el" href="classModel.html" title="Defines a model used for rendering. ">Model</a> at the given index into the supplied shared pointer </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index into the <a class="el" href="classModel.html" title="Defines a model used for rendering. ">Model</a> list for this <a class="el" href="classScene.html" title="A scene in the engine. ">Scene</a> </td></tr>
+    <tr><td class="paramname">model_ptr</td><td>pointer that will be modifed to point to the <a class="el" href="classModel.html" title="Defines a model used for rendering. ">Model</a> at the given index </td></tr>
+    <tr><td class="paramname">VAO</td><td>uint that will be modifed to store the vertex array object id for the <a class="el" href="classModel.html" title="Defines a model used for rendering. ">Model</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a406df661eb7be589964dafe76f7f09c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a406df661eb7be589964dafe76f7f09c8">&#9670;&nbsp;</a></span>GetModelCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint Scene::GetModelCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The number of Models in the <a class="el" href="classScene.html" title="A scene in the engine. ">Scene</a> </dd></dl>
+
+</div>
+</div>
+<a id="ac20558c7452d933ce3ebe8caa1514702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac20558c7452d933ce3ebe8caa1514702">&#9670;&nbsp;</a></span>GetPhysicsEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::GetPhysicsEntity </td>
+          <td>(</td>
+          <td class="paramtype">const GLuint&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>entity_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loads the <a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> at the given index into the supplied shared pointer </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index into the <a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> list for this <a class="el" href="classScene.html" title="A scene in the engine. ">Scene</a> </td></tr>
+    <tr><td class="paramname">entity_ptr</td><td>pointer that will be modified to point to the <a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> at the given index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2cadf8fe478a7e3a270902a0536751a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cadf8fe478a7e3a270902a0536751a9">&#9670;&nbsp;</a></span>GetPhysicsEntityCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint Scene::GetPhysicsEntityCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The number of Physics Entites in the <a class="el" href="classScene.html" title="A scene in the engine. ">Scene</a> </dd></dl>
+
+</div>
+</div>
+<a id="a7edc9fabe7ef61a426cd6278a0b209fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7edc9fabe7ef61a426cd6278a0b209fe">&#9670;&nbsp;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::Render </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classShader.html">Shader</a>&#160;</td>
+          <td class="paramname"><em>shader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Renders the Models in the <a class="el" href="classScene.html" title="A scene in the engine. ">Scene</a> to the screen </p>
+
+</div>
+</div>
+<a id="a5fe443641612290ba78931132d1fddb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fe443641612290ba78931132d1fddb5">&#9670;&nbsp;</a></span>StepPhysics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::StepPhysics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Moves the physical simulation one time step forward </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/adam/Desktop/Engine/include/<a class="el" href="scene_8h_source.html">scene.h</a></li>
 <li>/home/adam/Desktop/Engine/scene.cpp</li>
