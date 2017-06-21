@@ -95,10 +95,10 @@ $(document).ready(function(){initNavTree('classCamera.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a852d8c105b562be494204cac8518b66f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a852d8c105b562be494204cac8518b66f">Camera</a> (Vector3Gf position=Vector3Gf(0.0f, 0.0f, 0.0f), Vector3Gf up=Vector3Gf(0.0f, 1.0f, 0.0f), GLfloat yaw=YAW, GLfloat pitch=PITCH)</td></tr>
-<tr class="separator:a852d8c105b562be494204cac8518b66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af040480b69b4235d9bd203bf6775e79a"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; GLfloat, 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#af040480b69b4235d9bd203bf6775e79a">GetViewMatrix</a> ()</td></tr>
-<tr class="separator:af040480b69b4235d9bd203bf6775e79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62099f1900f3eadd71c43cf408b42e29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a62099f1900f3eadd71c43cf408b42e29">Camera</a> (Vector3Gf position=Vector3Gf(0.0f, 0.0f, 0.0f), Vector3Gf up=Vector3Gf(0.0f, 1.0f, 0.0f), GLfloat yaw=-90.0f, GLfloat pitch=0.0f)</td></tr>
+<tr class="separator:a62099f1900f3eadd71c43cf408b42e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48d98aa52c1ddb1587b45621916af06"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; GLfloat, 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#ad48d98aa52c1ddb1587b45621916af06">GetViewMatrix</a> ()</td></tr>
+<tr class="separator:ad48d98aa52c1ddb1587b45621916af06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7e9a7f3e63c670fd695a8f03d02dbdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#ac7e9a7f3e63c670fd695a8f03d02dbdf">ProcessKeyboard</a> (Camera_Movement direction, GLfloat deltaTime)</td></tr>
 <tr class="separator:ac7e9a7f3e63c670fd695a8f03d02dbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97ffbf8d8935fc63bd2ca71a4268eec4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a97ffbf8d8935fc63bd2ca71a4268eec4">ProcessMouseMovement</a> (GLfloat xoffset, GLfloat yoffset, GLboolean constrainPitch=true)</td></tr>
@@ -108,49 +108,46 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab24ae04e34fbcc1057be0ccca9ce5d76"><td class="memItemLeft" align="right" valign="top"><a id="ab24ae04e34fbcc1057be0ccca9ce5d76"></a>
-Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><b>Position</b></td></tr>
-<tr class="separator:ab24ae04e34fbcc1057be0ccca9ce5d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ead2f5965525cc388b16baaf7730e2b"><td class="memItemLeft" align="right" valign="top"><a id="a7ead2f5965525cc388b16baaf7730e2b"></a>
-Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><b>Front</b></td></tr>
-<tr class="separator:a7ead2f5965525cc388b16baaf7730e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a034f566309116c5e31bf31fc3ae668a5"><td class="memItemLeft" align="right" valign="top"><a id="a034f566309116c5e31bf31fc3ae668a5"></a>
-Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><b>Up</b></td></tr>
-<tr class="separator:a034f566309116c5e31bf31fc3ae668a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab720984bfc18071ec793fceb0174f6e5"><td class="memItemLeft" align="right" valign="top"><a id="ab720984bfc18071ec793fceb0174f6e5"></a>
-Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><b>Right</b></td></tr>
-<tr class="separator:ab720984bfc18071ec793fceb0174f6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37ce2216fcfd5a5f58913ebd320981aa"><td class="memItemLeft" align="right" valign="top"><a id="a37ce2216fcfd5a5f58913ebd320981aa"></a>
-Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><b>WorldUp</b></td></tr>
-<tr class="separator:a37ce2216fcfd5a5f58913ebd320981aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf27283ca0ccc51bae8446796ffc6b44"><td class="memItemLeft" align="right" valign="top"><a id="abf27283ca0ccc51bae8446796ffc6b44"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Yaw</b></td></tr>
-<tr class="separator:abf27283ca0ccc51bae8446796ffc6b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6afc2507f67baf4390405cfda1d1e87"><td class="memItemLeft" align="right" valign="top"><a id="ae6afc2507f67baf4390405cfda1d1e87"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Pitch</b></td></tr>
-<tr class="separator:ae6afc2507f67baf4390405cfda1d1e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93ea63669df9617a6f63fa09e74a01a9"><td class="memItemLeft" align="right" valign="top"><a id="a93ea63669df9617a6f63fa09e74a01a9"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>MovementSpeed</b></td></tr>
-<tr class="separator:a93ea63669df9617a6f63fa09e74a01a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc61747052dc386a4ab8e110a1fbc628"><td class="memItemLeft" align="right" valign="top"><a id="adc61747052dc386a4ab8e110a1fbc628"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>MouseSensitivity</b></td></tr>
-<tr class="separator:adc61747052dc386a4ab8e110a1fbc628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1078d85d2e18bdc32291aabfcdda710a"><td class="memItemLeft" align="right" valign="top"><a id="a1078d85d2e18bdc32291aabfcdda710a"></a>
-GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
-<tr class="separator:a1078d85d2e18bdc32291aabfcdda710a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3a02dd8a0c6188318bcae0f0d11be2"><td class="memItemLeft" align="right" valign="top"><a id="aca3a02dd8a0c6188318bcae0f0d11be2"></a>
+Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><b>m_position</b></td></tr>
+<tr class="separator:aca3a02dd8a0c6188318bcae0f0d11be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a262bc80dd3741c001386396572ae693d"><td class="memItemLeft" align="right" valign="top"><a id="a262bc80dd3741c001386396572ae693d"></a>
+Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><b>m_front</b></td></tr>
+<tr class="separator:a262bc80dd3741c001386396572ae693d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab932edf18f145415d5365816fba6cbca"><td class="memItemLeft" align="right" valign="top"><a id="ab932edf18f145415d5365816fba6cbca"></a>
+Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><b>m_up</b></td></tr>
+<tr class="separator:ab932edf18f145415d5365816fba6cbca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520d3131813eda3b3ef7e1e620091e01"><td class="memItemLeft" align="right" valign="top"><a id="a520d3131813eda3b3ef7e1e620091e01"></a>
+Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><b>m_right</b></td></tr>
+<tr class="separator:a520d3131813eda3b3ef7e1e620091e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4bb6ecdb1d105612b991a44dbcd2872"><td class="memItemLeft" align="right" valign="top"><a id="aa4bb6ecdb1d105612b991a44dbcd2872"></a>
+Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><b>m_world_up</b></td></tr>
+<tr class="separator:aa4bb6ecdb1d105612b991a44dbcd2872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad838ef15aeb221f6f4e9cdc99e4f6da8"><td class="memItemLeft" align="right" valign="top"><a id="ad838ef15aeb221f6f4e9cdc99e4f6da8"></a>
+GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_yaw</b></td></tr>
+<tr class="separator:ad838ef15aeb221f6f4e9cdc99e4f6da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a497676400c09767236e1d645c9efbaf9"><td class="memItemLeft" align="right" valign="top"><a id="a497676400c09767236e1d645c9efbaf9"></a>
+GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_pitch</b></td></tr>
+<tr class="separator:a497676400c09767236e1d645c9efbaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149c20f499c3d0fc62050d41b3e14c04"><td class="memItemLeft" align="right" valign="top"><a id="a149c20f499c3d0fc62050d41b3e14c04"></a>
+GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_movement_speed</b></td></tr>
+<tr class="separator:a149c20f499c3d0fc62050d41b3e14c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033b6d56b72f3efdb3528ba8f5765eae"><td class="memItemLeft" align="right" valign="top"><a id="a033b6d56b72f3efdb3528ba8f5765eae"></a>
+GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_mouse_sensitivity</b></td></tr>
+<tr class="separator:a033b6d56b72f3efdb3528ba8f5765eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c910db7bd2ae58fcf79334c5e592799"><td class="memItemLeft" align="right" valign="top"><a id="a1c910db7bd2ae58fcf79334c5e592799"></a>
+GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_zoom</b></td></tr>
+<tr class="separator:a1c910db7bd2ae58fcf79334c5e592799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A <a class="el" href="classCamera.html" title="A Camera is used to view a scene from a particular vantage point. ">Camera</a> is used to view a scene from a particular vantage point. </p>
 <p>A <a class="el" href="classCamera.html" title="A Camera is used to view a scene from a particular vantage point. ">Camera</a> requires a position,orientation, and direction to look in space. These things together define a camera centered coordinate system. This camera system is based on the camera system from <a href="https://learnopengl.com/#!Getting-started/Camera">here</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a852d8c105b562be494204cac8518b66f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a852d8c105b562be494204cac8518b66f">&#9670;&nbsp;</a></span>Camera()</h2>
+<a id="a62099f1900f3eadd71c43cf408b42e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62099f1900f3eadd71c43cf408b42e29">&#9670;&nbsp;</a></span>Camera()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Camera::Camera </td>
@@ -168,13 +165,13 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">GLfloat&#160;</td>
-          <td class="paramname"><em>yaw</em> = <code>YAW</code>, </td>
+          <td class="paramname"><em>yaw</em> = <code>-90.0f</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">GLfloat&#160;</td>
-          <td class="paramname"><em>pitch</em> = <code>PITCH</code>&#160;</td>
+          <td class="paramname"><em>pitch</em> = <code>0.0f</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -182,11 +179,6 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Constructs a <a class="el" href="classCamera.html" title="A Camera is used to view a scene from a particular vantage point. ">Camera</a> </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -201,27 +193,19 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af040480b69b4235d9bd203bf6775e79a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af040480b69b4235d9bd203bf6775e79a">&#9670;&nbsp;</a></span>GetViewMatrix()</h2>
+<a id="ad48d98aa52c1ddb1587b45621916af06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48d98aa52c1ddb1587b45621916af06">&#9670;&nbsp;</a></span>GetViewMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::Matrix&lt;GLfloat,4,4&gt; Camera::GetViewMatrix </td>
+          <td class="memname">Eigen::Matrix&lt; GLfloat, 4, 4 &gt; Camera::GetViewMatrix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the view matrix calculated using Eular Angles and the LookAt Matrix </dd></dl>
 
@@ -232,9 +216,6 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Camera::ProcessKeyboard </td>
@@ -254,11 +235,6 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -275,9 +251,6 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Camera::ProcessMouseMovement </td>
@@ -303,11 +276,6 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Processes input received from a mouse input system. Expects the offset value in both the x and y direction. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -325,9 +293,6 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Camera::ProcessMouseScroll </td>
@@ -337,11 +302,6 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Processes input received from a mouse scroll-wheel event. Only requires input on the vertical wheel-axis </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -352,8 +312,9 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="camera_8h_source.html">camera.h</a></li>
+<li>camera.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

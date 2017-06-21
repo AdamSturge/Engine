@@ -122,7 +122,7 @@ int main()
         view = camera.GetViewMatrix();
         
         Eigen::Matrix<GLfloat,4,4> projection;
-        projection = perspective<GLfloat>(camera.Zoom, ((GLfloat)WIDTH)/((GLfloat)HEIGHT), 0.1f, 100.0f);          
+        projection = perspective<GLfloat>(camera.m_zoom, ((GLfloat)WIDTH)/((GLfloat)HEIGHT), 0.1f, 100.0f);          
       
         GLint modelLoc = glGetUniformLocation(shader.Program, "model");
         GLint viewLoc = glGetUniformLocation(shader.Program, "view"); 
