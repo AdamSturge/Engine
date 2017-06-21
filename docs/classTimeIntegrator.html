@@ -104,8 +104,8 @@ Inheritance diagram for TimeIntegrator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad69eadc41d788f355959428ff9f84608"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#ad69eadc41d788f355959428ff9f84608">Solve</a> (const Vector3Gf xi, const Vector3Gf vi, const GLfloat mass, const Vector3Gf F, Vector3Gf &amp;xf, Vector3Gf &amp;vf)=0</td></tr>
-<tr class="separator:ad69eadc41d788f355959428ff9f84608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d0b91005aff6954ff5ccb3dc5e5225"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#a09d0b91005aff6954ff5ccb3dc5e5225">StepForward</a> (const Vector3Gf xi, const Vector3Gf vi, const GLfloat mass, const Vector3Gf F, Vector3Gf &amp;xf, Vector3Gf &amp;vf)</td></tr>
+<tr class="separator:a09d0b91005aff6954ff5ccb3dc5e5225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -116,8 +116,8 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An abstact base class for all grid based numerical ODE solvers for Newton's laws. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad69eadc41d788f355959428ff9f84608"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad69eadc41d788f355959428ff9f84608">&#9670;&nbsp;</a></span>Solve()</h2>
+<a id="a09d0b91005aff6954ff5ccb3dc5e5225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09d0b91005aff6954ff5ccb3dc5e5225">&#9670;&nbsp;</a></span>StepForward()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,7 +126,7 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void TimeIntegrator::Solve </td>
+          <td class="memname">void TimeIntegrator::StepForward </td>
           <td>(</td>
           <td class="paramtype">const Vector3Gf&#160;</td>
           <td class="paramname"><em>xi</em>, </td>
@@ -169,11 +169,11 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Solves Newton's equations of motion </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Public interface for all solvers. Computes position and velocity updates by solving Newton's equations of motion </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xi</td><td>initial position of entity </td></tr>
     <tr><td class="paramname">vi</td><td>initial velocity of entity </td></tr>
@@ -185,12 +185,11 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classExplicitEuler.html#aee3f98264fab0eac7517d9dc8487ecb4">ExplicitEuler</a>.</p>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="time__integrator_8h_source.html">time_integrator.h</a></li>
+<li>time_integrator.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

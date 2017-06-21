@@ -14,9 +14,27 @@ class TimeIntegrator
 
     public:
          virtual ~TimeIntegrator(){};
-
+        
         /**
-            Solves Newton's equations of motion
+            Public interface for all solvers. Computes position and velocity updates by solving Newton's equations of motion
+            @param xi initial position of entity
+            @param vi initial velocity of entity
+            @param mass mass of entity 
+            @param F force vector acting on the entity
+            @param xf final position of entity. This will be updated with the new position for the next time step
+            @param vf final velocity of entity. This will be updated with the new position for the next time step
+        **/
+         virtual void StepForward(
+            const Vector3Gf xi,
+            const Vector3Gf vi, 
+            const GLfloat mass,
+            const Vector3Gf F,
+            Vector3Gf &xf,
+            Vector3Gf &vf);
+
+    private:
+        /**
+            Private implementation details for solver.
             @param xi initial position of entity
             @param vi initial velocity of entity
             @param mass mass of entity 

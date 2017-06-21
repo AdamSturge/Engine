@@ -95,7 +95,7 @@ void Scene::StepPhysicsWithType(std::shared_ptr<T> entity_ptr)
         Vector3Gf xf;
         Vector3Gf vf;
 
-        m_time_integrator->Solve(xi,vi,mass,force,xf,vf);
+        m_time_integrator->StepForward(xi,vi,mass,force,xf,vf);
 
         entity_ptr->SetNextPosition(xf);
         entity_ptr->SetNextVelocity(vf);

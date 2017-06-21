@@ -97,13 +97,17 @@ int main()
 
         if(keys[GLFW_KEY_F])
         {
-            //glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
-            start = true;
+            glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
         }
 
         if(keys[GLFW_KEY_G])
         {
             glPolygonMode( GL_FRONT_AND_BACK, GL_FILL ); 
+        }
+
+        if(keys[GLFW_KEY_SPACE])
+        {
+            start = !start;
         }
 
 

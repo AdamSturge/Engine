@@ -6,7 +6,7 @@
 /**
     \brief A constant force throughout all space 
 **/
-class ConstantForceGenerator : public ForceGenerator
+class ConstantForceGenerator
 {
     private:
         /** Spacially and temporarly uniform acceleration vector represeting constant force **/

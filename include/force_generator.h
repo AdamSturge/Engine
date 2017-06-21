@@ -4,10 +4,11 @@
 #include <memory>
 #include <vector3G.h>
 
+
 #ifndef FORCE_GENERATOR
 #define FORCE_GENERATOR
 /**
-    \brief Abstract base class for all force generators
+    \brief NO LONGER USED. REMOVE LATER.  Abstract base class for all force generators
 
     A force generator is an abstraction of a particular kind of force acting on a PhysicsEntity. The exact nature of the force depends on the implementaiton of the AccumulateForce method
 **/
