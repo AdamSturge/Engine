@@ -35,8 +35,8 @@ void Sphere::UpdateFromBuffers()
 };
 
 void Sphere::UVSphereMesh(const GLfloat radius, const Vector3Gf center, const GLuint numU, const GLuint numV, Mesh& mesh)
-{
-    GLfloat uStart = 0.0f;
+{  
+	GLfloat uStart = 0.0f;
     GLfloat vStart = 0.0f;
     GLfloat uEnd = 2*M_PI;
     GLfloat vEnd = M_PI;
@@ -44,11 +44,12 @@ void Sphere::UVSphereMesh(const GLfloat radius, const Vector3Gf center, const GL
     GLfloat uStep = (uEnd - uStart)/numU;
     GLfloat vStep = (vEnd - vStart)/numV;
 
+    List3df vertices(numU*numV*4,3);
+    List3di faces(numU*numV*2,3);
+
+	int vIndex = -1;
+	int fIndex = -1;
     int eIndex = 0;
-
-    std::vector<GLfloat> vertices;
-    std::vector<std::pair<GLuint,GLuint>> edges;
-
     for(int i = 0; i < numU; i++)
     {
         GLfloat u = uStart + i*uStep;
@@ -63,23 +64,27 @@ void Sphere::UVSphereMesh(const GLfloat radius, const Vector3Gf center, const GL
             Vector3Gf p2 = radius*Vector3Gf(cos(un)*sin(v),cos(v),sin(un)*sin(v)) - center; 
             Vector3Gf p3 = radius*Vector3Gf(cos(un)*sin(vn),cos(vn),sin(un)*sin(vn)) - center;
 
-            vertices.push_back(p0(0)); vertices.push_back(p0(1)); vertices.push_back(p0(2));
-            vertices.push_back(p1(0)); vertices.push_back(p1(1)); vertices.push_back(p1(2));
-            vertices.push_back(p2(0)); vertices.push_back(p2(1)); vertices.push_back(p2(2));
-            vertices.push_back(p3(0)); vertices.push_back(p3(1)); vertices.push_back(p3(2));
-                   
-            edges.push_back(std::pair<GLuint,GLuint>(eIndex+2,eIndex+0));
-            edges.push_back(std::pair<GLuint,GLuint>(eIndex+1,eIndex+2));
-            edges.push_back(std::pair<GLuint,GLuint>(eIndex+0,eIndex+1));
+			vertices.row(++vIndex) = p0;
+			vertices.row(++vIndex) = p1;
+			vertices.row(++vIndex) = p2;
+			vertices.row(++vIndex) = p3;
+           
+			fIndex++; 
+     
+			faces(fIndex,0) = eIndex+1;
+			faces(fIndex,1) = eIndex+0;
+			faces(fIndex,2) = eIndex+2;
 
-            edges.push_back(std::pair<GLuint,GLuint>(eIndex+1,eIndex+3));
-            edges.push_back(std::pair<GLuint,GLuint>(eIndex+2,eIndex+1));
-            edges.push_back(std::pair<GLuint,GLuint>(eIndex+3,eIndex+2));
-
+			fIndex++;		
+			
+			faces(fIndex,0) = eIndex+1;
+			faces(fIndex,1) = eIndex+2;
+			faces(fIndex,2) = eIndex+3;
+  
             eIndex += 4;
         }
     }
 
-    mesh = Mesh(vertices,edges);
+    mesh = Mesh(vertices,faces);
 };
 

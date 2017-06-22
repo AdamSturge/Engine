@@ -86,22 +86,17 @@ $(document).ready(function(){initNavTree('classMesh.html','');});
 <div class="title">Mesh Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Defines a mesh.  
- <a href="classMesh.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="mesh_8h_source.html">mesh.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2af137f1571af89172b9c102302c416b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a2af137f1571af89172b9c102302c416b">Mesh</a> ()</td></tr>
 <tr class="separator:a2af137f1571af89172b9c102302c416b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acca57d57a35d834a9ba0fa0290a4d121"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#acca57d57a35d834a9ba0fa0290a4d121">Mesh</a> (std::vector&lt; GLfloat &gt; vertices, std::vector&lt; std::pair&lt; GLuint, GLuint &gt;&gt; edges)</td></tr>
-<tr class="separator:acca57d57a35d834a9ba0fa0290a4d121"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad4e49df1b12331d688d677f997360a5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#aad4e49df1b12331d688d677f997360a5">GetVertices</a> ()</td></tr>
-<tr class="separator:aad4e49df1b12331d688d677f997360a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c31bac7ef0c5552e8dc692a33726ca3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; GLuint, GLuint &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a4c31bac7ef0c5552e8dc692a33726ca3">GetEdges</a> ()</td></tr>
-<tr class="separator:a4c31bac7ef0c5552e8dc692a33726ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5fc26424c935c7c7eccdddf233ef714"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#ae5fc26424c935c7c7eccdddf233ef714">Mesh</a> (List3df vertices, List3di faces)</td></tr>
+<tr class="separator:ae5fc26424c935c7c7eccdddf233ef714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85e1a55bac7d02af659f38eb55a5664"><td class="memItemLeft" align="right" valign="top">List3df&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#aa85e1a55bac7d02af659f38eb55a5664">GetVertices</a> ()</td></tr>
+<tr class="separator:aa85e1a55bac7d02af659f38eb55a5664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d834e592567ebd0740188277ce7f4e9"><td class="memItemLeft" align="right" valign="top">List3di&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a0d834e592567ebd0740188277ce7f4e9">GetFaces</a> ()</td></tr>
+<tr class="separator:a0d834e592567ebd0740188277ce7f4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbbf05c59fd7cc170ceca2a0a71d7af1"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#adbbf05c59fd7cc170ceca2a0a71d7af1">GetNumEdges</a> ()</td></tr>
 <tr class="separator:adbbf05c59fd7cc170ceca2a0a71d7af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4917bc56c71f31974af4be3eb90a390"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#ad4917bc56c71f31974af4be3eb90a390">GetVAO</a> ()</td></tr>
@@ -109,10 +104,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abe1f7ce31904fb28cef0c156b892af8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#abe1f7ce31904fb28cef0c156b892af8e">CleanUp</a> ()</td></tr>
 <tr class="separator:abe1f7ce31904fb28cef0c156b892af8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Defines a mesh. </p>
-<p>A mesh is represented by a list of vertices and edges. A vertex is a set of 3 floats representing a (x,y,z) pair in R^3. An Edge is represented by a pair of indices into the vertex list. Vertices in edges are listed in clockwise order as they appear on the mesh. Once a mesh is built it is loaded onto the GPU so it can be rendered </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2af137f1571af89172b9c102302c416b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2af137f1571af89172b9c102302c416b">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[1/2]</span></h2>
 
@@ -131,8 +123,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acca57d57a35d834a9ba0fa0290a4d121"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acca57d57a35d834a9ba0fa0290a4d121">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[2/2]</span></h2>
+<a id="ae5fc26424c935c7c7eccdddf233ef714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5fc26424c935c7c7eccdddf233ef714">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,14 +132,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Mesh::Mesh </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; GLfloat &gt;&#160;</td>
+          <td class="paramtype">List3df&#160;</td>
           <td class="paramname"><em>vertices</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::pair&lt; GLuint, GLuint &gt;&gt;&#160;</td>
-          <td class="paramname"><em>edges</em>&#160;</td>
+          <td class="paramtype">List3di&#160;</td>
+          <td class="paramname"><em>faces</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -158,8 +150,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Builds a mesh with the provided vertices and edges </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vertices</td><td>List of vertices for the mesh. It's length should be a multiple of 3 </td></tr>
-    <tr><td class="paramname">edges</td><td>List of edges for the mesh. Listed in clockwise order </td></tr>
+    <tr><td class="paramname">vertices</td><td>nx3 matrix of vertices for the mesh. </td></tr>
+    <tr><td class="paramname">faces</td><td>mx3 list of face indices for the mesh. Listed in clockwise order </td></tr>
   </table>
   </dd>
 </dl>
@@ -185,21 +177,21 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4c31bac7ef0c5552e8dc692a33726ca3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c31bac7ef0c5552e8dc692a33726ca3">&#9670;&nbsp;</a></span>GetEdges()</h2>
+<a id="a0d834e592567ebd0740188277ce7f4e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d834e592567ebd0740188277ce7f4e9">&#9670;&nbsp;</a></span>GetFaces()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::pair&lt; GLuint, GLuint &gt; &gt; Mesh::GetEdges </td>
+          <td class="memname">List3di Mesh::GetFaces </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>A copy of the edges in the mesh </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of the faces in the mesh </dd></dl>
 
 </div>
 </div>
@@ -239,14 +231,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aad4e49df1b12331d688d677f997360a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad4e49df1b12331d688d677f997360a5">&#9670;&nbsp;</a></span>GetVertices()</h2>
+<a id="aa85e1a55bac7d02af659f38eb55a5664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa85e1a55bac7d02af659f38eb55a5664">&#9670;&nbsp;</a></span>GetVertices()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; GLfloat &gt; Mesh::GetVertices </td>
+          <td class="memname">List3df Mesh::GetVertices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

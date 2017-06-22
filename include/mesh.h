@@ -1,5 +1,6 @@
 #include <vector>
 #include <GL/glew.h>
+#include <Eigen/Core>
 #ifndef MESH
 #define MESH
 /**
@@ -9,11 +10,15 @@
      An Edge is represented by a pair of indices into the vertex list. Vertices in edges are listed in clockwise order as they appear on the mesh.
      Once a mesh is built it is loaded onto the GPU so it can be rendered
 **/
+
+typedef Eigen::Matrix<GLfloat, Eigen::Dynamic, 3, Eigen::RowMajor> List3df;
+typedef Eigen::Matrix<GLint, Eigen::Dynamic, 3, Eigen::RowMajor> List3di;
+
 class Mesh
 {
     private:        
-    	std::vector<GLfloat> m_vertices; // list of vertices in mesh
-    	std::vector<std::pair<GLuint,GLuint>> m_edges; // list of pairs of indices into vertex list in clockwise order.
+    	List3df m_vertices; // list of vertices in mesh
+    	List3di m_faces; // list of pairs of indices into vertex list in clockwise order.
     	GLuint m_VAO;
     	GLuint m_VBO;
     	GLuint m_EBO;
@@ -28,10 +33,10 @@ class Mesh
 
         /**
             Builds a mesh with the provided vertices and edges
-            @param vertices List of vertices for the mesh. It's length should be a multiple of 3
-            @param edges List of edges for the mesh. Listed in clockwise order
+            @param vertices nx3 matrix of vertices for the mesh. 
+            @param faces mx3 list of face indices for the mesh. Listed in clockwise order
         **/
-        Mesh(std::vector<GLfloat> vertices, std::vector<std::pair<GLuint,GLuint>> edges);
+        Mesh(List3df vertices, List3di faces);
 /*
         ~Mesh();
 
@@ -47,12 +52,12 @@ class Mesh
         /**
             @return A copy of the vertices in the mesh
         **/
-        std::vector<GLfloat> GetVertices();
+        List3df GetVertices();
 
         /**
-            @return A copy of the edges in the mesh
+            @return A copy of the faces in the mesh
         **/
-        std::vector<std::pair<GLuint,GLuint>> GetEdges();
+        List3di GetFaces();
 
         /**
             @return The number of edges in the mesh
