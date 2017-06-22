@@ -18,10 +18,10 @@ class Mesh
 {
     private:        
     	List3df m_vertices; // list of vertices in mesh
-    	List3di m_faces; // list of pairs of indices into vertex list in clockwise order.
+    	List3di m_faces; // list of indices into the vertex matrix in counter-clockwise order.
     	GLuint m_VAO;
-    	GLuint m_VBO;
-    	GLuint m_EBO;
+        GLuint m_VBO;
+        GLuint m_EBO;
 
 	void GenerateVAO();
 
@@ -34,7 +34,7 @@ class Mesh
         /**
             Builds a mesh with the provided vertices and edges
             @param vertices nx3 matrix of vertices for the mesh. 
-            @param faces mx3 list of face indices for the mesh. Listed in clockwise order
+            @param faces mx3 list of face indices for the mesh. Listed in counter-clockwise order
         **/
         Mesh(List3df vertices, List3di faces);
 /*

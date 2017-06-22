@@ -88,14 +88,10 @@ void Mesh::GenerateVAO()
     glBindVertexArray(m_VAO);
 
     GLfloat vertices[3*m_vertices.rows()];
-    //std::copy(m_vertices.data()->begin(),m_vertices->end(),vertices);
-
-	Eigen::Map<List3df>( vertices, m_vertices.rows(), m_vertices.cols() ) = m_vertices;
-	//for(int i = 0; i < 3*m_vertices.rows(); i+=3)
-	//{
-	//	std::cout << vertices[i] << "," << vertices[i+1] << "," << vertices[i+2] << std::endl;
-	//}
-
+    
+    // Copy underlying data from m_vertices into primative array
+    Eigen::Map<List3df>( vertices, m_vertices.rows(), m_vertices.cols() ) = m_vertices;
+    
     glBindBuffer(GL_ARRAY_BUFFER,m_VBO);
     glBufferData(GL_ARRAY_BUFFER,sizeof(vertices),vertices,GL_STATIC_DRAW);
     
