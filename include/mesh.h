@@ -17,8 +17,8 @@ typedef Eigen::Matrix<GLint, Eigen::Dynamic, 3, Eigen::RowMajor> List3di;
 class Mesh
 {
     private:        
-    	List3df m_vertices; // list of vertices in mesh
-    	List3di m_faces; // list of pairs of indices into vertex list in clockwise order.
+    	List3df m_vertices; // Matrix of vertices in mesh
+    	List3di m_faces; // Matrix of indices into vertex list in counter-clockwise order.
     	GLuint m_VAO;
     	GLuint m_VBO;
     	GLuint m_EBO;
@@ -34,20 +34,9 @@ class Mesh
         /**
             Builds a mesh with the provided vertices and edges
             @param vertices nx3 matrix of vertices for the mesh. 
-            @param faces mx3 list of face indices for the mesh. Listed in clockwise order
+            @param faces mx3 matrix of face indices for the mesh. Listed in counter-clockwise order
         **/
         Mesh(List3df vertices, List3di faces);
-/*
-        ~Mesh();
-
-        Mesh(const Mesh& other);
-
-        Mesh(Mesh&& other);
-
-        Mesh& operator=(const Mesh& other);
-
-        Mesh& operator=(Mesh&& other);
-*/
 
         /**
             @return A copy of the vertices in the mesh
