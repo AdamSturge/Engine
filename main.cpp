@@ -76,16 +76,8 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new ExplicitEuler(0.01f));
-    ConstantForceGenerator cfg = ConstantForceGenerator(Vector3Gf(0.0f,-9.8f,0.0f));
-    Scene scene(time_integrator_ptr,cfg);
+    Sphere sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f));
 
-    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(10.0f,15.0f,0.0f), 1.0f));
-    scene.AddPhysicsEntity(sphere1_ptr);
-    scene.AddModel(sphere1_ptr);
-
-
-    bool start = false;
     while(!glfwWindowShouldClose(window))
     {
         GLfloat current_frame = glfwGetTime();
@@ -105,12 +97,6 @@ int main()
             glPolygonMode( GL_FRONT_AND_BACK, GL_FILL ); 
         }
 
-        if(keys[GLFW_KEY_SPACE])
-        {
-            start = !start;
-        }
-
-
         glClear(GL_COLOR_BUFFER_BIT);     
 
         glEnable(GL_DEPTH_TEST);
@@ -129,20 +115,22 @@ int main()
         GLint projectionLoc = glGetUniformLocation(shader.Program, "projection");
 
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, view.data());
-        glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, projection.data());
-  
-        if(start)
-        {
-            scene.StepPhysics();
-        }        
+        glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, projection.data());        
        
-        scene.Render(shader);
+        GLuint VAO = sphere.GetMesh().GetVAO();
+
+        Eigen::Matrix<float,4,4> model_matrix = sphere.GetModelMatrix();
+
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, model_matrix.data());
+
+        glBindVertexArray(VAO);
+
+        glDrawElements(GL_TRIANGLES, 2*sphere.GetMesh().GetNumEdges(), GL_UNSIGNED_INT,0);
+
+        glBindVertexArray(0);
 
         glfwSwapBuffers(window);
-        glBindVertexArray(0);
     }    
-
-    scene.CleanUp();
 
     glfwTerminate();
 

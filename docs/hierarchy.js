@@ -7,9 +7,7 @@ var hierarchy =
     [ "Model", "classModel.html", [
       [ "Sphere", "classSphere.html", null ]
     ] ],
-    [ "PhysicsEntity", "classPhysicsEntity.html", [
-      [ "Sphere", "classSphere.html", null ]
-    ] ],
+    [ "PhysicsEntity", "classPhysicsEntity.html", null ],
     [ "Scene", "classScene.html", null ],
     [ "Shader", "classShader.html", null ],
     [ "TimeIntegrator", "classTimeIntegrator.html", [

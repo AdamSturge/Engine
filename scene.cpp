@@ -56,8 +56,8 @@ void Scene::StepPhysics()
         {
             case PhysicsEntity::ENTITY_TYPE::SPHERE_ENTITY :
             {    
-                std::shared_ptr<Sphere> derived_entity_ptr = std::static_pointer_cast<Sphere>(entity_ptr);
-                StepPhysicsWithType<Sphere>(derived_entity_ptr);
+                //std::shared_ptr<Sphere> derived_entity_ptr = std::static_pointer_cast<Sphere>(entity_ptr);
+                //StepPhysicsWithType<Sphere>(derived_entity_ptr);
                 break;
             }
         }
@@ -70,8 +70,8 @@ void Scene::StepPhysics()
         {
             case PhysicsEntity::ENTITY_TYPE::SPHERE_ENTITY :
             {    
-                std::shared_ptr<Sphere> derived_entity_ptr = std::static_pointer_cast<Sphere>(entity_ptr);
-                derived_entity_ptr->UpdateFromBuffers();
+                //std::shared_ptr<Sphere> derived_entity_ptr = std::static_pointer_cast<Sphere>(entity_ptr);
+                //derived_entity_ptr->UpdateFromBuffers();
                 break;
             }
         }

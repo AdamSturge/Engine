@@ -6,7 +6,7 @@ var searchData=
   ['setnextvelocity',['SetNextVelocity',['../classPhysicsEntity.html#a6d23d47421d535cc934405e8a7d1a43b',1,'PhysicsEntity']]],
   ['shader',['Shader',['../classShader.html#a03421a8419cdad4b84cf58ecdb156879',1,'Shader']]],
   ['solve',['Solve',['../classExplicitEuler.html#aee3f98264fab0eac7517d9dc8487ecb4',1,'ExplicitEuler']]],
-  ['sphere',['Sphere',['../classSphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9',1,'Sphere::Sphere()'],['../classSphere.html#a6d47af660fd83089c6b26519e3d1ba0b',1,'Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass)']]],
+  ['sphere',['Sphere',['../classSphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9',1,'Sphere::Sphere()'],['../classSphere.html#a2c887a11635aeb4a3f4e72a3bb527840',1,'Sphere::Sphere(GLfloat radius, Vector3Gf position)']]],
   ['stepforward',['StepForward',['../classTimeIntegrator.html#a09d0b91005aff6954ff5ccb3dc5e5225',1,'TimeIntegrator']]],
   ['stepphysics',['StepPhysics',['../classScene.html#a5fe443641612290ba78931132d1fddb5',1,'Scene']]]
 ];
