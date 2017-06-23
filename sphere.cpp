@@ -5,7 +5,7 @@ Sphere::Sphere() : Model()
 {
     m_radius = 1.0f;
     m_center = Vector3Gf(0.0f,0.0f,0.0f);
-    UVSphereMesh(m_radius, Vector3Gf(0.0f,0.0f,0.0f), 20, 20, m_mesh);
+    UVSphereMesh(m_radius, 20, 20, m_mesh);
 };
 
 Sphere::Sphere(GLfloat radius, Vector3Gf position) : Model()
@@ -15,11 +15,11 @@ Sphere::Sphere(GLfloat radius, Vector3Gf position) : Model()
     m_center = position;
 
     m_model_matrix.col(3) << position(0), position(1), position(2), 1.0f; 
-    UVSphereMesh(m_radius, Vector3Gf(0.0f,0.0f,0.0f), 20, 20, m_mesh); // model matrix handles translation of mesh so we use (0,0,0) as mesh center
+    UVSphereMesh(m_radius, 20, 20, m_mesh); // model matrix handles translation of mesh so we use (0,0,0) as mesh center
 
 };
 
-void Sphere::UVSphereMesh(const GLfloat radius, const Vector3Gf center, const GLuint numU, const GLuint numV, Mesh& mesh)
+void Sphere::UVSphereMesh(const GLfloat radius, const GLuint numU, const GLuint numV, Mesh& mesh)
 {  
     GLfloat uStart = 0.0f;
     GLfloat vStart = 0.0f;
@@ -44,10 +44,10 @@ void Sphere::UVSphereMesh(const GLfloat radius, const Vector3Gf center, const GL
             GLfloat v = vStart + j*vStep;
             GLfloat vn = (j+1 == numV) ? vEnd : (v + vStep);
 
-            Vector3Gf p0 = radius*Vector3Gf(cos(u)*sin(v),cos(v),sin(u)*sin(v)) - center; 
-            Vector3Gf p1 = radius*Vector3Gf(cos(u)*sin(vn),cos(vn),sin(u)*sin(vn)) - center;
-            Vector3Gf p2 = radius*Vector3Gf(cos(un)*sin(v),cos(v),sin(un)*sin(v)) - center; 
-            Vector3Gf p3 = radius*Vector3Gf(cos(un)*sin(vn),cos(vn),sin(un)*sin(vn)) - center;
+            Vector3Gf p0 = radius*Vector3Gf(cos(u)*sin(v),cos(v),sin(u)*sin(v));
+            Vector3Gf p1 = radius*Vector3Gf(cos(u)*sin(vn),cos(vn),sin(u)*sin(vn));
+            Vector3Gf p2 = radius*Vector3Gf(cos(un)*sin(v),cos(v),sin(un)*sin(v)); 
+            Vector3Gf p3 = radius*Vector3Gf(cos(un)*sin(vn),cos(vn),sin(un)*sin(vn));
 
             vertices.row(++vIndex) = p0;
             vertices.row(++vIndex) = p1;
