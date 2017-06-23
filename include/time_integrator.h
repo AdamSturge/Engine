@@ -24,7 +24,7 @@ class TimeIntegrator
             @param xf final position of entity. This will be updated with the new position for the next time step
             @param vf final velocity of entity. This will be updated with the new position for the next time step
         **/
-         virtual void StepForward(
+          void StepForward(
             const Vector3Gf xi,
             const Vector3Gf vi, 
             const GLfloat mass,
