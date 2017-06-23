@@ -25,7 +25,12 @@ class Sphere  : public Model, public PhysicsEntity
             Constructs a Sphere of radius 1.0, mass 1.0, centered at the origin
         **/
         Sphere();    
-    
+
+        /**
+            Deconstructs a sphere
+        **/
+        ~Sphere();            
+
         /**
             Constructs a sphere
             @param radius radius of the Sphere

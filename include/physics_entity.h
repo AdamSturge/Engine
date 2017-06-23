@@ -70,6 +70,11 @@ class PhysicsEntity{
         **/
         PhysicsEntity();
 
+        /** 
+            Destructor for PhysicsEntity
+        **/
+        virtual ~PhysicsEntity(){};
+
     private :
         /**
             Called after UpdateFromBuffers. Allows subclasses to perform class specific actions when physical observables update

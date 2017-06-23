@@ -8,6 +8,8 @@ Sphere::Sphere() : Model(), PhysicsEntity()
     UVSphereMesh(m_radius,  20, 20, m_mesh);
 };
 
+Sphere::~Sphere(){};
+
 Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass) : Model(), PhysicsEntity()
 {      
     m_radius = radius;

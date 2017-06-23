@@ -1,6 +1,7 @@
 var classPhysicsEntity =
 [
     [ "PhysicsEntity", "classPhysicsEntity.html#a2c0cf9804f1864105849586bc91e8dea", null ],
+    [ "~PhysicsEntity", "classPhysicsEntity.html#a8c27ca31ce7afe3b5adb018eb2e07430", null ],
     [ "GetMass", "classPhysicsEntity.html#a07943c4b81878d402b97d1280f8c8ff9", null ],
     [ "GetPosition", "classPhysicsEntity.html#a73d263f4efb4fc87b36493f340d94a97", null ],
     [ "GetVelocity", "classPhysicsEntity.html#a2064523af6e64719996d505360e37af1", null ],
