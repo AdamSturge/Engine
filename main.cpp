@@ -25,7 +25,7 @@ void DoMovement();
 
 const GLuint WIDTH = 800, HEIGHT = 600;
 
-Camera camera(Vector3Gf(13.0f,0.0f,73.0f));
+Camera camera(Vector3Gf(0.0f,0.0f,3.0f));
 
 bool keys[1024] = {false};
 
