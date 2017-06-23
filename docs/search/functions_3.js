@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['getentitytype',['GetEntityType',['../classPhysicsEntity.html#a5a1eb68e1ecb2d845959addbbc915577',1,'PhysicsEntity']]],
   ['getfaces',['GetFaces',['../classMesh.html#a0d834e592567ebd0740188277ce7f4e9',1,'Mesh']]],
   ['getmass',['GetMass',['../classPhysicsEntity.html#a07943c4b81878d402b97d1280f8c8ff9',1,'PhysicsEntity']]],
   ['getmesh',['GetMesh',['../classModel.html#a332f5a4ecf9bca582e583b3ff7784bf5',1,'Model']]],
