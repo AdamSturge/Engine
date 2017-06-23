@@ -18,7 +18,7 @@ class Sphere  : public Model, public PhysicsEntity
 	GLfloat m_radius;
     	Vector3Gf m_center; 
 
-	void UVSphereMesh(const GLfloat radius, const Vector3Gf center, const GLuint numU, const GLuint numV, Mesh &mesh);    
+	void UVSphereMesh(const GLfloat radius, const GLuint numU, const GLuint numV, Mesh &mesh);    
 
     public:
         /**
