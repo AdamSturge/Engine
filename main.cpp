@@ -25,7 +25,7 @@ void DoMovement();
 
 const GLuint WIDTH = 800, HEIGHT = 600;
 
-Camera camera(Vector3Gf(13.0f,0.0f,73.0f));
+Camera camera(Vector3Gf(0.0f,0.0f,10.0f));
 
 bool keys[1024] = {false};
 
@@ -76,14 +76,9 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new ExplicitEuler(0.01f));
-    ConstantForceGenerator cfg = ConstantForceGenerator(Vector3Gf(0.0f,-9.8f,0.0f));
-    Scene scene(time_integrator_ptr,cfg);
+    Sphere sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(0.3f,0.0f,0.0f),1.0f);
 
-    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(10.0f,15.0f,0.0f), 1.0f));
-    scene.AddPhysicsEntity(sphere1_ptr);
-    scene.AddModel(sphere1_ptr);
-
+    ExplicitEuler time_integrator(0.01);
 
     bool start = false;
     while(!glfwWindowShouldClose(window))
@@ -105,11 +100,10 @@ int main()
             glPolygonMode( GL_FRONT_AND_BACK, GL_FILL ); 
         }
 
-        if(keys[GLFW_KEY_SPACE])
+        if(keys[GLFW_KEY_B])
         {
             start = !start;
         }
-
 
         glClear(GL_COLOR_BUFFER_BIT);     
 
@@ -129,20 +123,39 @@ int main()
         GLint projectionLoc = glGetUniformLocation(shader.Program, "projection");
 
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, view.data());
-        glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, projection.data());
-  
+        glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, projection.data());        
+      
         if(start)
-        {
-            scene.StepPhysics();
-        }        
-       
-        scene.Render(shader);
+        { 
+            Vector3Gf xf,vf;
+            time_integrator.StepForward(
+                sphere.GetPosition(),
+                sphere.GetVelocity(),
+                sphere.GetMass(),
+                Vector3Gf(0.0f,0.0f,0.0f),
+                xf,
+                vf
+            );
+        
+            sphere.SetNextPosition(xf);
+            sphere.SetNextVelocity(vf);
+            sphere.UpdateFromBuffers();
+        }
+
+        GLuint VAO = sphere.GetMesh().GetVAO();
+
+        Eigen::Matrix<float,4,4> model_matrix = sphere.GetModelMatrix();
+
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, model_matrix.data());
+
+        glBindVertexArray(VAO);
+
+        glDrawElements(GL_TRIANGLES, 2*sphere.GetMesh().GetNumEdges(), GL_UNSIGNED_INT,0);
+
+        glBindVertexArray(0);
 
         glfwSwapBuffers(window);
-        glBindVertexArray(0);
     }    
-
-    scene.CleanUp();
 
     glfwTerminate();
 
