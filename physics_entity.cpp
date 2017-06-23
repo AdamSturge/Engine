@@ -2,7 +2,7 @@
 
 PhysicsEntity::PhysicsEntity()
 {
-	m_position.setZero();
+    m_position.setZero();
 
     m_next_position_buffer = m_position;
     
@@ -12,11 +12,6 @@ PhysicsEntity::PhysicsEntity()
 
     m_mass = 1.0f;
 }
-
-PhysicsEntity::ENTITY_TYPE PhysicsEntity::GetEntityType()
-{
-    return m_entity_type;
-};
 
 Vector3Gf PhysicsEntity::GetPosition()
 {
@@ -47,4 +42,5 @@ void PhysicsEntity::UpdateFromBuffers()
 {
     m_position = m_next_position_buffer;
     m_velocity = m_next_velocity_buffer;
+    OnUpdateFromBuffers();
 }

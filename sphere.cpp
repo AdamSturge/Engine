@@ -3,16 +3,13 @@
 
 Sphere::Sphere() : Model(), PhysicsEntity()
 {
-    m_entity_type = PhysicsEntity::ENTITY_TYPE::SPHERE_ENTITY;
     m_radius = 1.0f;
     m_center = Vector3Gf(0.0f,0.0f,0.0f);
     UVSphereMesh(m_radius,  20, 20, m_mesh);
 };
 
 Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass) : Model(), PhysicsEntity()
-{
-    m_entity_type = PhysicsEntity::ENTITY_TYPE::SPHERE_ENTITY;
-       
+{      
     m_radius = radius;
     m_center = position;
 
@@ -26,9 +23,8 @@ Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat m
 };
 
 
-void Sphere::UpdateFromBuffers()
+void Sphere::OnUpdateFromBuffers()
 {
-    PhysicsEntity::UpdateFromBuffers();
     m_center = m_position;
     m_model_matrix.setIdentity();
     m_model_matrix.col(3)  << m_center(0), m_center(1), m_center(2), 1.0f; 
