@@ -104,7 +104,7 @@ Inheritance diagram for TimeIntegrator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a09d0b91005aff6954ff5ccb3dc5e5225"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#a09d0b91005aff6954ff5ccb3dc5e5225">StepForward</a> (const Vector3Gf xi, const Vector3Gf vi, const GLfloat mass, const Vector3Gf F, Vector3Gf &amp;xf, Vector3Gf &amp;vf)</td></tr>
+<tr class="memitem:a09d0b91005aff6954ff5ccb3dc5e5225"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#a09d0b91005aff6954ff5ccb3dc5e5225">StepForward</a> (const Vector3Gf xi, const Vector3Gf vi, const GLfloat mass, const Vector3Gf F, Vector3Gf &amp;xf, Vector3Gf &amp;vf)</td></tr>
 <tr class="separator:a09d0b91005aff6954ff5ccb3dc5e5225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -121,9 +121,6 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void TimeIntegrator::StepForward </td>
@@ -167,11 +164,6 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Public interface for all solvers. Computes position and velocity updates by solving Newton's equations of motion </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
