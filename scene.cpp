@@ -51,6 +51,36 @@ void Scene::StepPhysics()
 {
     for(std::shared_ptr<PhysicsEntity> entity_ptr : m_physics_entity_ptrs)
     {
+        PhysicsEntity::ENTITY_TYPE entity_type = entity_ptr->GetEntityType();
+        switch(entity_type)
+        {
+            case PhysicsEntity::ENTITY_TYPE::SPHERE_ENTITY :
+            {    
+                std::shared_ptr<Sphere> derived_entity_ptr = std::static_pointer_cast<Sphere>(entity_ptr);
+                StepPhysicsWithType<Sphere>(derived_entity_ptr);
+                break;
+            }
+        }
+    }
+
+    for(std::shared_ptr<PhysicsEntity> entity_ptr : m_physics_entity_ptrs)
+    {
+        PhysicsEntity::ENTITY_TYPE entity_type = entity_ptr->GetEntityType();
+        switch(entity_type)
+        {
+            case PhysicsEntity::ENTITY_TYPE::SPHERE_ENTITY :
+            {    
+                std::shared_ptr<Sphere> derived_entity_ptr = std::static_pointer_cast<Sphere>(entity_ptr);
+                derived_entity_ptr->UpdateFromBuffers();
+                break;
+            }
+        }
+    }
+
+};
+template <class T>
+void Scene::StepPhysicsWithType(std::shared_ptr<T> entity_ptr)
+{
         Vector3Gf xi = entity_ptr->GetPosition();
         Vector3Gf vi = entity_ptr->GetVelocity();
         GLfloat mass = entity_ptr->GetMass();
@@ -60,6 +90,8 @@ void Scene::StepPhysics()
 
         ComputeNetForce(entity_ptr,force);
 
+        //std::cout << force << std::endl << std::endl;
+
         Vector3Gf xf;
         Vector3Gf vf;
 
@@ -67,14 +99,7 @@ void Scene::StepPhysics()
 
         entity_ptr->SetNextPosition(xf);
         entity_ptr->SetNextVelocity(vf);
-
-    }
-
-    for(std::shared_ptr<PhysicsEntity> entity_ptr : m_physics_entity_ptrs)
-    {
-        entity_ptr->UpdateFromBuffers();
-    }
-
+ 
 };
 
 void Scene::ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force)

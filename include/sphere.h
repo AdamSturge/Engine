@@ -38,7 +38,7 @@ class Sphere  : public Model, public PhysicsEntity
         /**
             Loads the next position and velocity values from their respective buffers
         **/
-        void OnUpdateFromBuffers();
+        void UpdateFromBuffers();
 
     
 };

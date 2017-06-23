@@ -12,6 +12,16 @@
 class PhysicsEntity{
    public:
         /**
+            Enum representing the different kinds of physical entities there can be. Used in casting operations
+        **/
+        enum class ENTITY_TYPE {SPHERE_ENTITY};
+
+        /**
+            @return Entity type for this instance
+        **/
+        ENTITY_TYPE GetEntityType();	
+
+        /**
             @return Spatial position for this entity
         **/
         Vector3Gf GetPosition();
@@ -45,6 +55,11 @@ class PhysicsEntity{
 
      protected:     
         /**
+            The type of this entity. Ex.) SPHERE_ENTITY
+        **/
+        ENTITY_TYPE m_entity_type;         
+
+        /**
             The position of this entity
         **/
     	Vector3Gf m_position;
@@ -69,12 +84,6 @@ class PhysicsEntity{
             Creates an instance of PhysicsEntity centered at the origin, zero velocity, and unit mass
         **/
         PhysicsEntity();
-
-    private :
-        /**
-            Called after UpdateFromBuffers. Allows subclasses to perform class specific actions when physical observables update
-        **/
-        virtual void OnUpdateFromBuffers() {};
     
 };
 #endif

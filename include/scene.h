@@ -23,7 +23,13 @@ class Scene
         std::shared_ptr<TimeIntegrator> m_time_integrator;
         ConstantForceGenerator m_constant_force_generator;
            
-       
+        /**
+            Moves the physics simulation one time step forward in time. This method is templated to allow overriden update methods to be called based on the exact type of the PhysicsEntity
+            @param entity_ptr pointer to the entity to evolve forward in time. 
+        **/ 
+        template <class T>
+        void StepPhysicsWithType(std::shared_ptr<T> entity_ptr);
+        
         /**
             Computes the net force acting on an entity
             @param entity_ptr pointer to the entity the forces are acting on
