@@ -22,7 +22,7 @@ List3di Mesh::GetFaces()
 
 GLuint Mesh::GetNumEdges()
 {
-    return 6*m_faces.rows();
+    return 3*m_faces.rows();
 };
 
 GLuint Mesh::GetVAO()
@@ -52,14 +52,14 @@ void Mesh::GenerateVAO()
     GLuint indices[6*n_F];
     for(int i=0,j=0; i < n_F; i++,j+=6)
     {     
-		indices[j]   = m_faces(i,0);
+	indices[j]   = m_faces(i,0);
         indices[j+1] = m_faces(i,1);
 		
-		indices[j+4] = m_faces(i,1);
-		indices[j+5] = m_faces(i,2);
+	indices[j+4] = m_faces(i,1);
+	indices[j+5] = m_faces(i,2);
         
-		indices[j+2] = m_faces(i,2);
-		indices[j+3] = m_faces(i,0);
+	indices[j+2] = m_faces(i,2);
+	indices[j+3] = m_faces(i,0);
     }
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_EBO);
