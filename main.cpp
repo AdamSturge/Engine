@@ -25,7 +25,7 @@ void DoMovement();
 
 const GLuint WIDTH = 800, HEIGHT = 600;
 
-Camera camera(Vector3Gf(13.0f,0.0f,73.0f));
+Camera camera(Vector3Gf(0.0f,0.0f,73.0f));
 
 bool keys[1024] = {false};
 
@@ -84,6 +84,9 @@ int main()
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
 
+    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(-10.0f,15.0f,0.0f), 1.0f));
+    scene.AddPhysicsEntity(sphere2_ptr);
+    scene.AddModel(sphere2_ptr);
 
     bool start = false;
     while(!glfwWindowShouldClose(window))
@@ -105,7 +108,7 @@ int main()
             glPolygonMode( GL_FRONT_AND_BACK, GL_FILL ); 
         }
 
-        if(keys[GLFW_KEY_SPACE])
+        if(keys[GLFW_KEY_P])
         {
             start = !start;
         }

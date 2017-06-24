@@ -18,8 +18,8 @@
 class Scene
 {
     private:    
-    std::vector<std::shared_ptr<PhysicsEntity>> m_physics_entity_ptrs;
-    std::vector<std::shared_ptr<Model>> m_model_ptrs;
+        std::vector<std::shared_ptr<PhysicsEntity>> m_physics_entity_ptrs;
+        std::vector<std::shared_ptr<Model>> m_model_ptrs;
         std::shared_ptr<TimeIntegrator> m_time_integrator;
         ConstantForceGenerator m_constant_force_generator;
            
@@ -61,7 +61,7 @@ class Scene
             Adds a Model to the scene
             @param model_ptr a shared pointer to the model to be added to the scene
         **/
-    void AddModel(std::shared_ptr<Model> model_ptr);
+        void AddModel(std::shared_ptr<Model> model_ptr);
 
         /**
             Loads the Model at the given index into the supplied shared pointer
@@ -79,7 +79,7 @@ class Scene
         /**
             @return The number of Models in the Scene
         **/
-    GLuint GetModelCount();
+        GLuint GetModelCount();
 
         /**
             Moves the physical simulation one time step forward
@@ -94,6 +94,6 @@ class Scene
         /**
             Removes all Model data from the GPU
         **/
-    void CleanUp();
+        void CleanUp();
 };
 #endif
