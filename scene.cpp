@@ -7,11 +7,13 @@
 Scene::Scene()
 { 
     m_time_integrator = std::shared_ptr<TimeIntegrator>(new ExplicitEuler(0.01f));
+    m_constant_force_generator = ConstantForceGenerator(Vector3Gf(0.0f,0.0f,0.0f));
 };
 
-Scene::Scene(std::shared_ptr<TimeIntegrator> integrator)
+Scene::Scene(std::shared_ptr<TimeIntegrator> integrator, ConstantForceGenerator cfg)
 {
     m_time_integrator = integrator;
+    m_constant_force_generator = cfg;
 }
 
 void Scene::AddPhysicsEntity(std::shared_ptr<PhysicsEntity> entity_ptr)
@@ -56,6 +58,8 @@ void Scene::StepPhysics()
         Vector3Gf force;
         force.setZero();
 
+        ComputeNetForce(entity_ptr,force);
+
         Vector3Gf xf;
         Vector3Gf vf;
 
@@ -71,6 +75,11 @@ void Scene::StepPhysics()
         entity_ptr->UpdateFromBuffers();
     }
 
+};
+
+void Scene::ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force)
+{
+    m_constant_force_generator.AccumulateForce(entity_ptr,force);
 };
 
 void Scene::Render(Shader shader)
@@ -90,7 +99,7 @@ void Scene::Render(Shader shader)
         
         glBindVertexArray(VAO);
         
-        glDrawElements(GL_TRIANGLES, 2*model_ptr->GetMesh().GetNumEdges(), GL_UNSIGNED_INT,0);
+        glDrawElements(GL_TRIANGLES, model_ptr->GetMesh().GetNumEdges(), GL_UNSIGNED_INT,0);
 
         glBindVertexArray(0);   
 

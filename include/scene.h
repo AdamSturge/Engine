@@ -18,10 +18,19 @@
 class Scene
 {
     private:    
-	std::vector<std::shared_ptr<PhysicsEntity>> m_physics_entity_ptrs;
-	std::vector<std::shared_ptr<Model>> m_model_ptrs;
-        std::shared_ptr<TimeIntegrator> m_time_integrator;   
-          
+    std::vector<std::shared_ptr<PhysicsEntity>> m_physics_entity_ptrs;
+    std::vector<std::shared_ptr<Model>> m_model_ptrs;
+        std::shared_ptr<TimeIntegrator> m_time_integrator;
+        ConstantForceGenerator m_constant_force_generator;
+           
+       
+        /**
+            Computes the net force acting on an entity
+            @param entity_ptr pointer to the entity the forces are acting on
+            @param force force vector that will be modified to contain the net force
+        **/
+        void ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force);
+
     public :
         /**
             Creates a Scene instance with default values for its TimeIntegrator and ForceGenerator members
@@ -31,8 +40,9 @@ class Scene
         /**
             Creates a Scene instance with the provided TimeIntegrator and ForceGenerator members
             @param integrator TimeIngrator instance to handle time evolution of the PhysicsEntities in the scene
+            @param cfg  ConstantForceGenerator used to generate a spatially and temporally uniform force
         **/
-        Scene(std::shared_ptr<TimeIntegrator> integrator);
+        Scene(std::shared_ptr<TimeIntegrator> integrator, ConstantForceGenerator cfg);
         
         /**
             Add a PhysicsEntity to the Scene.
@@ -51,7 +61,7 @@ class Scene
             Adds a Model to the scene
             @param model_ptr a shared pointer to the model to be added to the scene
         **/
-	void AddModel(std::shared_ptr<Model> model_ptr);
+    void AddModel(std::shared_ptr<Model> model_ptr);
 
         /**
             Loads the Model at the given index into the supplied shared pointer
@@ -69,7 +79,7 @@ class Scene
         /**
             @return The number of Models in the Scene
         **/
-	GLuint GetModelCount();
+    GLuint GetModelCount();
 
         /**
             Moves the physical simulation one time step forward
@@ -84,6 +94,6 @@ class Scene
         /**
             Removes all Model data from the GPU
         **/
-	void CleanUp();
+    void CleanUp();
 };
 #endif
