@@ -17,6 +17,6 @@ void ConstantForceGenerator::AccumulateForce(std::shared_ptr<PhysicsEntity> enti
 {
     GLfloat mass = entity->GetMass();
     
-    F = mass*m_accel.transpose(); // TO DO: Store transpose instead of computing each time
+    F += mass*m_accel.transpose(); // TO DO: Store transpose instead of computing each time
     
 };
