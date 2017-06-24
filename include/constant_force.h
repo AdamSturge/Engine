@@ -4,6 +4,7 @@
 #include <memory>
 #include <vector3G.h>
 
+
 #ifndef CONSTANT_FORCE_GENERATOR
 #define CONSTANT_FORCE_GENERATOR
 /**
