@@ -1,4 +1,7 @@
-#include <force_generator.h>
+#include <Eigen/Core>
+#include <GL/glew.h>
+#include <physics_entity.h>
+#include <memory>
 #include <vector3G.h>
 
 #ifndef CONSTANT_FORCE_GENERATOR
