@@ -20,17 +20,8 @@ class Scene
     private:    
 	std::vector<std::shared_ptr<PhysicsEntity>> m_physics_entity_ptrs;
 	std::vector<std::shared_ptr<Model>> m_model_ptrs;
-        std::shared_ptr<TimeIntegrator> m_time_integrator;
-        ConstantForceGenerator m_constant_force_generator;
-           
-       
-        /**
-            Computes the net force acting on an entity
-            @param entity_ptr pointer to the entity the forces are acting on
-            @param force force vector that will be modified to contain the net force
-        **/
-        void ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force);
-
+        std::shared_ptr<TimeIntegrator> m_time_integrator;   
+          
     public :
         /**
             Creates a Scene instance with default values for its TimeIntegrator and ForceGenerator members
@@ -40,9 +31,8 @@ class Scene
         /**
             Creates a Scene instance with the provided TimeIntegrator and ForceGenerator members
             @param integrator TimeIngrator instance to handle time evolution of the PhysicsEntities in the scene
-            @param cfg  ConstantForceGenerator used to generate a spatially and temporally uniform force
         **/
-        Scene(std::shared_ptr<TimeIntegrator> integrator, ConstantForceGenerator cfg);
+        Scene(std::shared_ptr<TimeIntegrator> integrator);
         
         /**
             Add a PhysicsEntity to the Scene.

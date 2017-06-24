@@ -77,8 +77,7 @@ int main()
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
     std::shared_ptr<TimeIntegrator> time_integrator_ptr(new ExplicitEuler(0.01f));
-    ConstantForceGenerator cfg = ConstantForceGenerator(Vector3Gf(0.0f,-9.8f,0.0f));
-    Scene scene(time_integrator_ptr,cfg);
+    Scene scene(time_integrator_ptr);
 
     std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(10.0f,15.0f,0.0f), 1.0f));
     scene.AddPhysicsEntity(sphere1_ptr);
