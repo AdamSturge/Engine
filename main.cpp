@@ -105,7 +105,7 @@ int main()
             glPolygonMode( GL_FRONT_AND_BACK, GL_FILL ); 
         }
 
-        if(keys[GLFW_KEY_SPACE])
+        if(keys[GLFW_KEY_P])
         {
             start = !start;
         }
