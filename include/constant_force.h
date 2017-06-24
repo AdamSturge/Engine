@@ -1,4 +1,3 @@
-#include <force_generator.h>
 #include <vector3G.h>
 
 #ifndef CONSTANT_FORCE_GENERATOR
