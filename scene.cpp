@@ -83,7 +83,11 @@ void Scene::ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vec
     
     for(std::shared_ptr<PhysicsEntity> other_entity_ptr : m_physics_entity_ptrs)
     {
-        m_gravity_force_generator.AccumulateForce(entity_ptr,other_entity_ptr,force);
+        
+        if(other_entity_ptr != entity_ptr)
+        {
+            m_gravity_force_generator.AccumulateForce(entity_ptr,other_entity_ptr,force);
+        }
     }
 
 };

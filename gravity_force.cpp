@@ -14,11 +14,10 @@ void GravityForceGenerator::AccumulateForce(const std::shared_ptr<PhysicsEntity>
     Vector3Gf n = x2 - x1;
     GLfloat r = n.norm();
     n = n/r;
-
-    std::cout << r << std::endl;
-
+     
     if(r > 0.001)
     {
         F += (m_G*m1*m2/(r*r))*n;
     }
+
 };
