@@ -21,6 +21,8 @@ class ExplicitEuler : public TimeIntegrator
         **/
         ExplicitEuler(GLfloat dt);
 
+    private:
+
         /**
             Solves Newton's equations of motion
             @param xi intial position of entity

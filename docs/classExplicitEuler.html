@@ -107,8 +107,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa16df6a77bb175fdd6291c302cb61d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7ba8cf17d34831178c47a3a3711c3b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExplicitEuler.html#ab7ba8cf17d34831178c47a3a3711c3b0">ExplicitEuler</a> (GLfloat dt)</td></tr>
 <tr class="separator:ab7ba8cf17d34831178c47a3a3711c3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee3f98264fab0eac7517d9dc8487ecb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExplicitEuler.html#aee3f98264fab0eac7517d9dc8487ecb4">Solve</a> (const Vector3Gf xi, const Vector3Gf vi, const GLfloat mass, const Vector3Gf F, Vector3Gf &amp;xf, Vector3Gf &amp;vf)</td></tr>
-<tr class="separator:aee3f98264fab0eac7517d9dc8487ecb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTimeIntegrator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTimeIntegrator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTimeIntegrator.html">TimeIntegrator</a></td></tr>
 <tr class="memitem:a09d0b91005aff6954ff5ccb3dc5e5225 inherit pub_methods_classTimeIntegrator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#a09d0b91005aff6954ff5ccb3dc5e5225">StepForward</a> (const Vector3Gf xi, const Vector3Gf vi, const GLfloat mass, const Vector3Gf F, Vector3Gf &amp;xf, Vector3Gf &amp;vf)</td></tr>
 <tr class="separator:a09d0b91005aff6954ff5ccb3dc5e5225 inherit pub_methods_classTimeIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,80 +160,6 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="aee3f98264fab0eac7517d9dc8487ecb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee3f98264fab0eac7517d9dc8487ecb4">&#9670;&nbsp;</a></span>Solve()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ExplicitEuler::Solve </td>
-          <td>(</td>
-          <td class="paramtype">const Vector3Gf&#160;</td>
-          <td class="paramname"><em>xi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Vector3Gf&#160;</td>
-          <td class="paramname"><em>vi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const GLfloat&#160;</td>
-          <td class="paramname"><em>mass</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Vector3Gf&#160;</td>
-          <td class="paramname"><em>F</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector3Gf &amp;&#160;</td>
-          <td class="paramname"><em>xf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector3Gf &amp;&#160;</td>
-          <td class="paramname"><em>vf</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Solves Newton's equations of motion </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">xi</td><td>intial position of entity </td></tr>
-    <tr><td class="paramname">vi</td><td>initial velocity of entity </td></tr>
-    <tr><td class="paramname">mass</td><td>mass of entity </td></tr>
-    <tr><td class="paramname">F</td><td>force vector acting on the entity </td></tr>
-    <tr><td class="paramname">xf</td><td>final poisition of entity. This will be updated with the new position for the next time step </td></tr>
-    <tr><td class="paramname">vf</td><td>final velocity of entity. This will be ipdated with the new velocity for the next time step </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="classTimeIntegrator.html">TimeIntegrator</a>.</p>
 
 </div>
 </div>
