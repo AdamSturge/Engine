@@ -1,5 +1,4 @@
 #include <gravity_force.h>
-#include <iostream>
 
 GravityForceGenerator::GravityForceGenerator(){};
 
