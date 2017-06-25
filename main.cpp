@@ -84,7 +84,7 @@ int main()
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
 
-    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(2.0f, Vector3Gf(5.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1e12));
+    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(2.0f, Vector3Gf(5.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1e13));
     scene.AddPhysicsEntity(sphere2_ptr);
     scene.AddModel(sphere2_ptr);
 
@@ -97,7 +97,7 @@ int main()
     sphere1_ptr->SetNextVelocity(orbital_velocity);
     sphere1_ptr->UpdateFromBuffers();
 
-    bool start = false;
+    bool start = true;
     while(!glfwWindowShouldClose(window))
     {
         GLfloat current_frame = glfwGetTime();

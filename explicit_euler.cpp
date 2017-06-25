@@ -21,7 +21,6 @@ void ExplicitEuler::Solve(
             Vector3Gf &vf)
 {   
     xf = xi + m_dt*vi;
-    vf = vi + m_dt*(1/mass)*F;
-
+    vf = vi + m_dt*(1/mass)*F;   
 };
 
