@@ -19,9 +19,7 @@ void ExplicitEuler::Solve(
             const Vector3Gf F,
             Vector3Gf &xf,
             Vector3Gf &vf)
-{
-    assert(mass != 0.0f);
-    
+{   
     xf = xi + m_dt*vi;
     vf = vi + m_dt*(1/mass)*F;
 

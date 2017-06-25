@@ -76,7 +76,7 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new ExplicitEuler(0.001f));
+    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new ExplicitEuler(0.01f));
     ConstantForceGenerator cfg = ConstantForceGenerator(Vector3Gf(0.0f,0.0f,0.0f));
     Scene scene(time_integrator_ptr,cfg);
 
@@ -84,9 +84,18 @@ int main()
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
 
-    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(2.0f, Vector3Gf(5.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 2.0f));
+    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(2.0f, Vector3Gf(5.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1e12));
     scene.AddPhysicsEntity(sphere2_ptr);
     scene.AddModel(sphere2_ptr);
+
+    Vector3Gf orbital_velocity(
+        0.0f,
+        sqrt((6.673e-11)*sphere2_ptr->GetMass()/((sphere1_ptr->GetPosition() - sphere2_ptr->GetPosition()).norm())),
+        0.0f
+    );
+
+    sphere1_ptr->SetNextVelocity(orbital_velocity);
+    sphere1_ptr->UpdateFromBuffers();
 
     bool start = false;
     while(!glfwWindowShouldClose(window))
@@ -112,7 +121,6 @@ int main()
         {
             start = !start;
         }
-
 
         glClear(GL_COLOR_BUFFER_BIT);     
 
