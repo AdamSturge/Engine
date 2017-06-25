@@ -7,6 +7,7 @@
 #include <shader.h>
 #include <camera.h>
 #include <GLFW/glfw3.h>
+#include <gravity_force.h>
 
 #ifndef SCENE
 #define SCENE
@@ -21,8 +22,10 @@ class Scene
 	std::vector<std::shared_ptr<PhysicsEntity>> m_physics_entity_ptrs;
 	std::vector<std::shared_ptr<Model>> m_model_ptrs;
         std::shared_ptr<TimeIntegrator> m_time_integrator;
+        
+        // Force generators
         ConstantForceGenerator m_constant_force_generator;
-           
+        GravityForceGenerator m_gravity_force_generator;           
        
         /**
             Computes the net force acting on an entity

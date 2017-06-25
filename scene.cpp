@@ -80,6 +80,12 @@ void Scene::StepPhysics()
 void Scene::ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force)
 {
     m_constant_force_generator.AccumulateForce(entity_ptr,force);
+    
+    for(std::shared_ptr<PhysicsEntity> other_entity_ptr : m_physics_entity_ptrs)
+    {
+        m_gravity_force_generator.AccumulateForce(entity_ptr,other_entity_ptr,force);
+    }
+
 };
 
 void Scene::Render(Shader shader)
