@@ -82,10 +82,13 @@ var NAVTREEINDEX0 =
 "classSphere.html#a6d47af660fd83089c6b26519e3d1ba0b":[1,0,10,2],
 "classSphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9":[1,0,10,0],
 "classSphere.html#ac500d4fe73a970fc4e1751a9810120c0":[1,0,10,3],
-"classTimeIntegrator.html":[1,0,11],
-"classTimeIntegrator.html#a09d0b91005aff6954ff5ccb3dc5e5225":[1,0,11,1],
-"classTimeIntegrator.html#a0bb381cb547d2c23b6f8b0c84911d80d":[1,0,11,0],
-"classTimeIntegrator.html#a8912a1a1f00d49556509a91dd999991f":[1,0,11,2],
+"classSymplecticEuler.html":[1,0,11],
+"classSymplecticEuler.html#a9827570e6538fefd6ea766b659edeacf":[1,0,11,1],
+"classSymplecticEuler.html#aa05e6e4c067ea9b0f16ca3cc6fc37dfe":[1,0,11,0],
+"classTimeIntegrator.html":[1,0,12],
+"classTimeIntegrator.html#a09d0b91005aff6954ff5ccb3dc5e5225":[1,0,12,1],
+"classTimeIntegrator.html#a0bb381cb547d2c23b6f8b0c84911d80d":[1,0,12,0],
+"classTimeIntegrator.html#a8912a1a1f00d49556509a91dd999991f":[1,0,12,2],
 "classes.html":[1,1],
 "constant__force_8h_source.html":[2,0,0,1],
 "dir_d44c64559bbebec7f509842c48db8b23.html":[2,0,0],
@@ -108,6 +111,7 @@ var NAVTREEINDEX0 =
 "scene_8h_source.html":[2,0,0,10],
 "shader_8h_source.html":[2,0,0,11],
 "sphere_8h_source.html":[2,0,0,12],
-"time__integrator_8h_source.html":[2,0,0,13],
-"vector3G_8h_source.html":[2,0,0,14]
+"symplectic__euler_8h_source.html":[2,0,0,13],
+"time__integrator_8h_source.html":[2,0,0,14],
+"vector3G_8h_source.html":[2,0,0,15]
 };

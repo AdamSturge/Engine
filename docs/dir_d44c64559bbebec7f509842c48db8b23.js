@@ -13,6 +13,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "scene.h", "scene_8h_source.html", null ],
     [ "shader.h", "shader_8h_source.html", null ],
     [ "sphere.h", "sphere_8h_source.html", null ],
+    [ "symplectic_euler.h", "symplectic__euler_8h_source.html", null ],
     [ "time_integrator.h", "time__integrator_8h_source.html", null ],
     [ "vector3G.h", "vector3G_8h_source.html", null ]
 ];

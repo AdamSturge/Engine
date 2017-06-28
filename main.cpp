@@ -13,7 +13,7 @@
 #include <perspective.h>
 #include <vector3G.h>
 #include <memory.h>
-#include <explicit_euler.h>
+#include <symplectic_euler.h>
 #include <constant_force.h>
 #include <physics_entity.h>
 #include <model.h>
@@ -76,7 +76,7 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new ExplicitEuler(0.01f));
+    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new SymplecticEuler(0.01f));
     ConstantForceGenerator cfg = ConstantForceGenerator(Vector3Gf(0.0f,0.0f,0.0f));
     Scene scene(time_integrator_ptr,cfg);
 
