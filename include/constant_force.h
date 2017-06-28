@@ -37,7 +37,7 @@ class ConstantForceGenerator
             @param entity Entity whom the force will be applied against
             @param F Force vector that will accumulate the constant force represented by this instance
         **/
-        void AccumulateForce(std::shared_ptr<PhysicsEntity> entity, Vector3Gf &F);
+        void AccumulateForce(std::shared_ptr<PhysicsEntity> entity, Vector3Gf &F) const;
 
 };
 #endif

@@ -51,23 +51,7 @@ void Scene::StepPhysics()
 {
     for(std::shared_ptr<PhysicsEntity> entity_ptr : m_physics_entity_ptrs)
     {
-        Vector3Gf xi = entity_ptr->GetPosition();
-        Vector3Gf vi = entity_ptr->GetVelocity();
-        GLfloat mass = entity_ptr->GetMass();
-
-        Vector3Gf force;
-        force.setZero();
-
-        ComputeNetForce(entity_ptr,force);
-
-        Vector3Gf xf;
-        Vector3Gf vf;
-
-        m_time_integrator->StepForward(xi,vi,mass,force,xf,vf);
-
-        entity_ptr->SetNextPosition(xf);
-        entity_ptr->SetNextVelocity(vf);
-
+        m_time_integrator->StepForward(*this,entity_ptr);
     }
 
     for(std::shared_ptr<PhysicsEntity> entity_ptr : m_physics_entity_ptrs)
@@ -77,13 +61,12 @@ void Scene::StepPhysics()
 
 };
 
-void Scene::ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force)
+void Scene::ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force) const
 {
     m_constant_force_generator.AccumulateForce(entity_ptr,force);
     
     for(std::shared_ptr<PhysicsEntity> other_entity_ptr : m_physics_entity_ptrs)
-    {
-        
+    {        
         if(other_entity_ptr != entity_ptr)
         {
             m_gravity_force_generator.AccumulateForce(entity_ptr,other_entity_ptr,force);

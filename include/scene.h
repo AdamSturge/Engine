@@ -1,3 +1,6 @@
+#ifndef SCENE
+#define SCENE
+
 #include <physics_entity.h>
 #include <model.h>
 #include <memory>
@@ -9,8 +12,8 @@
 #include <GLFW/glfw3.h>
 #include <gravity_force.h>
 
-#ifndef SCENE
-#define SCENE
+class TimeIntegrator; // Forward declaration of TimeIntegrator. 
+
 /**
     \brief A scene in the engine
 
@@ -27,13 +30,6 @@ class Scene
         ConstantForceGenerator m_constant_force_generator;
         GravityForceGenerator m_gravity_force_generator;           
        
-        /**
-            Computes the net force acting on an entity
-            @param entity_ptr pointer to the entity the forces are acting on
-            @param force force vector that will be modified to contain the net force
-        **/
-        void ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force);
-
     public :
         /**
             Creates a Scene instance with default values for its TimeIntegrator and ForceGenerator members
@@ -88,7 +84,15 @@ class Scene
             Moves the physical simulation one time step forward
         **/
         void StepPhysics();
- 
+        
+        /**
+            Computes the net force acting on an entity
+            @param entity_ptr pointer to the entity the forces are acting on
+            @param force force vector that will be modified to contain the net force
+        **/
+       void ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force) const;
+
+
         /**
             Renders the Models in the Scene to the screen
         **/

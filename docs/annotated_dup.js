@@ -12,5 +12,6 @@ var annotated_dup =
     [ "Shader", "classShader.html", "classShader" ],
     [ "Sphere", "classSphere.html", "classSphere" ],
     [ "SymplecticEuler", "classSymplecticEuler.html", "classSymplecticEuler" ],
-    [ "TimeIntegrator", "classTimeIntegrator.html", "classTimeIntegrator" ]
+    [ "TimeIntegrator", "classTimeIntegrator.html", "classTimeIntegrator" ],
+    [ "Verlet", "classVerlet.html", "classVerlet" ]
 ];

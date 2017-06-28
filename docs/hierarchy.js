@@ -15,6 +15,7 @@ var hierarchy =
     [ "Shader", "classShader.html", null ],
     [ "TimeIntegrator", "classTimeIntegrator.html", [
       [ "ExplicitEuler", "classExplicitEuler.html", null ],
-      [ "SymplecticEuler", "classSymplecticEuler.html", null ]
+      [ "SymplecticEuler", "classSymplecticEuler.html", null ],
+      [ "Verlet", "classVerlet.html", null ]
     ] ]
 ];

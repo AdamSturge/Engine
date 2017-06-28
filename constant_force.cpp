@@ -13,7 +13,7 @@ ConstantForceGenerator::ConstantForceGenerator(Vector3Gf accel)
 
 ConstantForceGenerator::~ConstantForceGenerator(){};
 
-void ConstantForceGenerator::AccumulateForce(std::shared_ptr<PhysicsEntity> entity, Vector3Gf &F)
+void ConstantForceGenerator::AccumulateForce(std::shared_ptr<PhysicsEntity> entity, Vector3Gf &F) const
 {
     GLfloat mass = entity->GetMass();
     

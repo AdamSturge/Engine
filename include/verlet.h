@@ -1,25 +1,21 @@
 #include <time_integrator.h>
-#include <Eigen/Core>
-#include <vector3G.h>
 
-#ifndef SYMPLECTIC_EULER_H
-#define SYMPLECTIC_EULER_H
-/**
-    \brief Implementation of Symplectic Euler method for solving Newton's equations of motion
-**/
-class SymplecticEuler : public TimeIntegrator
-{
+#ifndef VERLET_H
+#define VERLET_H
+
+class Verlet : public TimeIntegrator{
+
     public :
         /**
-            Constructs an instance of SymplecticEuler with a default grid size
+            Constructs an instance of Verlet with a default grid size
         **/
-        SymplecticEuler();
+        Verlet();
 
         /**
-            Constructs an instance of SymplecticEuler with the provided grid size
+            Constructs an instance of Verlet with the provided grid size
             @param dt difference between two points on the grid
         **/
-        SymplecticEuler(GLfloat dt);
+        Verlet(GLfloat dt);
 
     private:
 
@@ -32,7 +28,6 @@ class SymplecticEuler : public TimeIntegrator
        void Solve(
             const Scene& scene,
             const std::shared_ptr<PhysicsEntity> entity_ptr);
-
+        
 };
 #endif
-

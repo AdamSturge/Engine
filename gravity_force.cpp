@@ -2,7 +2,7 @@
 
 GravityForceGenerator::GravityForceGenerator(){};
 
-void GravityForceGenerator::AccumulateForce(const std::shared_ptr<PhysicsEntity> e1, const std::shared_ptr<PhysicsEntity> e2, Vector3Gf &F)
+void GravityForceGenerator::AccumulateForce(const std::shared_ptr<PhysicsEntity> e1, const std::shared_ptr<PhysicsEntity> e2, Vector3Gf &F) const
 {
     GLfloat m1 = e1->GetMass();
     GLfloat m2 = e2->GetMass();
