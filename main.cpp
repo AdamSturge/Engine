@@ -13,6 +13,8 @@
 #include <perspective.h>
 #include <vector3G.h>
 #include <memory.h>
+#include <explicit_euler.h>
+#include <symplectic_euler.h>
 #include <verlet.h>
 #include <constant_force.h>
 #include <physics_entity.h>
@@ -25,7 +27,7 @@ void DoMovement();
 
 const GLuint WIDTH = 800, HEIGHT = 600;
 
-Camera camera(Vector3Gf(0.0f,0.0f,73.0f));
+Camera camera(Vector3Gf(10.0f,0.0f,100.0f));
 
 bool keys[1024] = {false};
 
@@ -76,7 +78,8 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new Verlet(0.01f));
+    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new SymplecticEuler(0.0095f));
+    //std::shared_ptr<TimeIntegrator> time_integrator_ptr(new Verlet(0.0095f));
     ConstantForceGenerator cfg = ConstantForceGenerator(Vector3Gf(0.0f,0.0f,0.0f));
     Scene scene(time_integrator_ptr,cfg);
 
@@ -84,7 +87,7 @@ int main()
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
 
-    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(2.0f, Vector3Gf(5.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1e13));
+    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(2.0f, Vector3Gf(10.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1e17));
     scene.AddPhysicsEntity(sphere2_ptr);
     scene.AddModel(sphere2_ptr);
 
@@ -97,7 +100,7 @@ int main()
     sphere1_ptr->SetNextVelocity(orbital_velocity);
     sphere1_ptr->UpdateFromBuffers();
 
-    bool start = true;
+    bool start = false;
     while(!glfwWindowShouldClose(window))
     {
         GLfloat current_frame = glfwGetTime();
