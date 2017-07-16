@@ -64,9 +64,6 @@ void BackwardEuler::Solve(const Scene& scene,const std::shared_ptr<PhysicsEntity
         diff = delta.squaredNorm();
      }
 
-    entity_ptr->SetPosition(xi);
-    entity_ptr->SetVelocity(vi);
-
     entity_ptr->SetNextPosition(xf);
     entity_ptr->SetNextVelocity(vf);
 

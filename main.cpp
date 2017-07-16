@@ -78,8 +78,8 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    //std::shared_ptr<TimeIntegrator> time_integrator_ptr(new MidpointMethod(0.01));
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new BackwardEuler(0.005));
+    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new MidpointMethod(0.01));
+    //std::shared_ptr<TimeIntegrator> time_integrator_ptr(new BackwardEuler(0.005));
     ConstantForceGenerator cfg = ConstantForceGenerator(Vector3Gf(0.0f,0.0f,0.0f));
     Scene scene(time_integrator_ptr,cfg);
     
