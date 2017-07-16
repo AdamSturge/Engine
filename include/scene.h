@@ -90,8 +90,15 @@ class Scene
             @param entity_ptr pointer to the entity the forces are acting on
             @param force force vector that will be modified to contain the net force
         **/
-       void ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force) const;
+        void ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force) const;
 
+        /**
+            Computes the Jacobian for the net force
+            @param entity_ptr entity the net force is acting on
+            @param dFdx matrix that will be modified to comtain the position jacobian
+            @param dFdv matrix that will be modified to contain the velocity jacobian
+        **/
+        void ComputeForceJacobian(const std::shared_ptr<PhysicsEntity> entity_ptr, Eigen::Matrix<GLfloat,3,3> &dFdx, Eigen::Matrix<GLfloat,3,3> &dFdv) const;
 
         /**
             Renders the Models in the Scene to the screen

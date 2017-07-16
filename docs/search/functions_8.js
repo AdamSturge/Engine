@@ -4,6 +4,8 @@ var searchData=
   ['setmodelmatrix',['SetModelMatrix',['../classModel.html#a6b79c9e0c9abc50896e70fe1fabff4e7',1,'Model']]],
   ['setnextposition',['SetNextPosition',['../classPhysicsEntity.html#a18913bb368bbe6e61e6838d7e8353bd4',1,'PhysicsEntity']]],
   ['setnextvelocity',['SetNextVelocity',['../classPhysicsEntity.html#a6d23d47421d535cc934405e8a7d1a43b',1,'PhysicsEntity']]],
+  ['setposition',['SetPosition',['../classPhysicsEntity.html#ade372f2cdf07f3fe3d97c03c64534ff0',1,'PhysicsEntity']]],
+  ['setvelocity',['SetVelocity',['../classPhysicsEntity.html#aa9b9cb8be38aeb3babf415d8cbad352c',1,'PhysicsEntity']]],
   ['shader',['Shader',['../classShader.html#a03421a8419cdad4b84cf58ecdb156879',1,'Shader']]],
   ['sphere',['Sphere',['../classSphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9',1,'Sphere::Sphere()'],['../classSphere.html#a6d47af660fd83089c6b26519e3d1ba0b',1,'Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass)']]],
   ['stepforward',['StepForward',['../classTimeIntegrator.html#a40267b124f9f84e0ebb887ebf6921965',1,'TimeIntegrator']]],

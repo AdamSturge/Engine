@@ -10,3 +10,8 @@ void TimeIntegrator::StepForward(
 
     Solve(scene,entity_ptr);
 }
+
+GLfloat TimeIntegrator::GetStepSize()
+{
+    return m_dt;
+}

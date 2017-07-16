@@ -1,5 +1,6 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
+    [ "backward_euler.h", "backward__euler_8h_source.html", null ],
     [ "camera.h", "camera_8h_source.html", null ],
     [ "constant_force.h", "constant__force_8h_source.html", null ],
     [ "explicit_euler.h", "explicit__euler_8h_source.html", null ],
@@ -7,6 +8,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "gravity_force.h", "gravity__force_8h_source.html", null ],
     [ "look_at.h", "look__at_8h_source.html", null ],
     [ "mesh.h", "mesh_8h_source.html", null ],
+    [ "midpoint_method.h", "midpoint__method_8h_source.html", null ],
     [ "model.h", "model_8h_source.html", null ],
     [ "perspective.h", "perspective_8h_source.html", null ],
     [ "physics_entity.h", "physics__entity_8h_source.html", null ],

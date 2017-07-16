@@ -98,9 +98,11 @@ Inheritance diagram for TimeIntegrator:</div>
  <div class="center">
   <img src="classTimeIntegrator.png" usemap="#TimeIntegrator_map" alt=""/>
   <map id="TimeIntegrator_map" name="TimeIntegrator_map">
-<area href="classExplicitEuler.html" title="Implementation of Explicit Euler method for solving Newton&#39;s equations of motion. ..." alt="ExplicitEuler" shape="rect" coords="0,56,103,80"/>
-<area href="classSymplecticEuler.html" title="Implementation of Symplectic Euler method for solving Newton&#39;s equations of motion. " alt="SymplecticEuler" shape="rect" coords="113,56,216,80"/>
-<area href="classVerlet.html" alt="Verlet" shape="rect" coords="226,56,329,80"/>
+<area href="classBackwardEuler.html" title="Implementation of Backward Euler method for solving Newton&#39;s Laws. " alt="BackwardEuler" shape="rect" coords="0,56,103,80"/>
+<area href="classExplicitEuler.html" title="Implementation of Explicit Euler method for solving Newton&#39;s equations of motion. ..." alt="ExplicitEuler" shape="rect" coords="113,56,216,80"/>
+<area href="classMidpointMethod.html" title="Implementation of Midpoint method for solving Newton&#39;s Laws. " alt="MidpointMethod" shape="rect" coords="226,56,329,80"/>
+<area href="classSymplecticEuler.html" title="Implementation of Symplectic Euler method for solving Newton&#39;s equations of motion. " alt="SymplecticEuler" shape="rect" coords="339,56,442,80"/>
+<area href="classVerlet.html" title="Implementation of velocity Verlet method for solving Newton&#39;s Laws. " alt="Verlet" shape="rect" coords="452,56,555,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -108,6 +110,8 @@ Inheritance diagram for TimeIntegrator:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a40267b124f9f84e0ebb887ebf6921965"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#a40267b124f9f84e0ebb887ebf6921965">StepForward</a> (const <a class="el" href="classScene.html">Scene</a> &amp;scene, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity_ptr)</td></tr>
 <tr class="separator:a40267b124f9f84e0ebb887ebf6921965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4137ec772085fa5d727a69c54de010da"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#a4137ec772085fa5d727a69c54de010da">GetStepSize</a> ()</td></tr>
+<tr class="separator:a4137ec772085fa5d727a69c54de010da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -118,6 +122,24 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An abstact base class for all grid based numerical ODE solvers for Newton's laws. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4137ec772085fa5d727a69c54de010da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4137ec772085fa5d727a69c54de010da">&#9670;&nbsp;</a></span>GetStepSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat TimeIntegrator::GetStepSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the current step size for the integrator </p>
+
+</div>
+</div>
 <a id="a40267b124f9f84e0ebb887ebf6921965"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40267b124f9f84e0ebb887ebf6921965">&#9670;&nbsp;</a></span>StepForward()</h2>
 

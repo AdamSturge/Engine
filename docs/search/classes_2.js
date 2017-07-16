@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['forcegenerator',['ForceGenerator',['../classForceGenerator.html',1,'']]]
+  ['expliciteuler',['ExplicitEuler',['../classExplicitEuler.html',1,'']]]
 ];

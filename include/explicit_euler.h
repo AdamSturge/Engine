@@ -1,9 +1,10 @@
+#ifndef EXPLICIT_EULER
+#define EXPLICIT_EULER
+
 #include <time_integrator.h>
 #include <Eigen/Core>
 #include <vector3G.h>
 
-#ifndef EXPLICIT_EULER
-#define EXPLICIT_EULER
 /**
     \brief Implementation of Explicit Euler method for solving Newton's equations of motion
 **/

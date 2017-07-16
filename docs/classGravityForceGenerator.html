@@ -89,10 +89,117 @@ $(document).ready(function(){initNavTree('classGravityForceGenerator.html','');}
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aac848d7864812c6aadc13aebaf19c550"><td class="memItemLeft" align="right" valign="top"><a id="aac848d7864812c6aadc13aebaf19c550"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AccumulateForce</b> (const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; e1, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; e2, Vector3Gf &amp;F) const</td></tr>
+<tr class="memitem:a3000cf3757c4b29c0799c0311f722bdf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGravityForceGenerator.html#a3000cf3757c4b29c0799c0311f722bdf">GravityForceGenerator</a> ()</td></tr>
+<tr class="separator:a3000cf3757c4b29c0799c0311f722bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac848d7864812c6aadc13aebaf19c550"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGravityForceGenerator.html#aac848d7864812c6aadc13aebaf19c550">AccumulateForce</a> (const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; e1, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; e2, Vector3Gf &amp;F) const</td></tr>
 <tr class="separator:aac848d7864812c6aadc13aebaf19c550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1476652844b7435a29e5957d8e9060d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGravityForceGenerator.html#a1476652844b7435a29e5957d8e9060d8">AccumulatedFdx</a> (const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; e1, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; e2, Eigen::Matrix&lt; GLfloat, 3, 3 &gt; &amp;dF) const</td></tr>
+<tr class="separator:a1476652844b7435a29e5957d8e9060d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3000cf3757c4b29c0799c0311f722bdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3000cf3757c4b29c0799c0311f722bdf">&#9670;&nbsp;</a></span>GravityForceGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GravityForceGenerator::GravityForceGenerator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Builds a <a class="el" href="classGravityForceGenerator.html">GravityForceGenerator</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1476652844b7435a29e5957d8e9060d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1476652844b7435a29e5957d8e9060d8">&#9670;&nbsp;</a></span>AccumulatedFdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GravityForceGenerator::AccumulatedFdx </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&#160;</td>
+          <td class="paramname"><em>e2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Matrix&lt; GLfloat, 3, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dF</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds the position deveriative of the constant force </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e1</td><td>Entity whom the force is acting on </td></tr>
+    <tr><td class="paramname">e2</td><td>Entity which is gravitationally interacting with e1 </td></tr>
+    <tr><td class="paramname">dF</td><td>Matrix that will accumulate the derivative of force with respect to position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aac848d7864812c6aadc13aebaf19c550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac848d7864812c6aadc13aebaf19c550">&#9670;&nbsp;</a></span>AccumulateForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GravityForceGenerator::AccumulateForce </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&#160;</td>
+          <td class="paramname"><em>e2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3Gf &amp;&#160;</td>
+          <td class="paramname"><em>F</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a constant force determined by the mass of the provided entity and the stored acceleration vector </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e1</td><td>Entity whom the force is acting on </td></tr>
+    <tr><td class="paramname">e2</td><td>Entity which is gravitationally interacting with e1 </td></tr>
+    <tr><td class="paramname">F</td><td>Force vector that will accumulate the constant force represented by this instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="gravity__force_8h_source.html">gravity_force.h</a></li>
 <li>gravity_force.cpp</li>

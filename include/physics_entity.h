@@ -17,22 +17,44 @@ class PhysicsEntity{
         Vector3Gf GetPosition();
 
         /**
-            Sets the next position buffer for this entity. This <b>DOES NOT</b> update the position until UpdateFromBuffers() is called.
+            Sets the position for this entity. If possible use SetNextPosition instead
             @param x Next position for this entity
         **/
+        void SetPosition(Vector3Gf x);
+
+        /**
+            Sets the next position buffer for this entity. This <b>DOES NOT</b> update the position until UpdateFromBuffers() is called.
+            @param x new position for this entity
+        **/
         void SetNextPosition(Vector3Gf x);
+        
+        /**
+            @return position for next time step
+        **/
+        Vector3Gf GetNextPosition();
 
         /**
             @return Spatial velocity for this entity
         **/
         Vector3Gf GetVelocity();
-
+        
+        /**
+            Sets the velocity for this entity. If possible use SetNextPosition instead
+            @param x new velocity for this entity
+        **/
+        void SetVelocity(Vector3Gf v);
+        
         /**
             Sets the next velocity buffer for the entity. This <b>DOES NOT</b> update the velocity until UpdateFromBuffers() is called.
             @param v Next velocity for this entity
         **/
         void SetNextVelocity(Vector3Gf v);
 
+        /**
+            @return velocity for next time step
+        **/
+        Vector3Gf GetNextVelocity();
+        
         /**
             @return Mass of this entity
         **/

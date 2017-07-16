@@ -29,6 +29,11 @@ class TimeIntegrator
             const Scene& scene,
             const std::shared_ptr<PhysicsEntity> entity_ptr);
 
+        /**
+            Returns the current step size for the integrator
+        **/
+        GLfloat GetStepSize();
+
     private:
         /**
             Private implementation details for solver.

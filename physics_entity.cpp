@@ -18,9 +18,19 @@ Vector3Gf PhysicsEntity::GetPosition()
     return m_position;
 };
 
+void PhysicsEntity::SetPosition(Vector3Gf x)
+{
+    m_position = x;
+}
+
 void PhysicsEntity::SetNextPosition(Vector3Gf x)
 {
     m_next_position_buffer = x;
+};
+
+Vector3Gf PhysicsEntity::GetNextPosition()
+{
+    return m_next_position_buffer;
 };
 
 Vector3Gf PhysicsEntity::GetVelocity()
@@ -28,9 +38,19 @@ Vector3Gf PhysicsEntity::GetVelocity()
     return m_velocity;
 };
 
+void PhysicsEntity::SetVelocity(Vector3Gf v)
+{
+    m_velocity = v;
+}
+
 void PhysicsEntity::SetNextVelocity(Vector3Gf v)
 {
     m_next_velocity_buffer = v;
+};
+
+Vector3Gf PhysicsEntity::GetNextVelocity()
+{
+    return m_next_velocity_buffer;
 };
 
 GLfloat PhysicsEntity::GetMass()

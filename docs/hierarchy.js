@@ -14,7 +14,9 @@ var hierarchy =
     [ "Scene", "classScene.html", null ],
     [ "Shader", "classShader.html", null ],
     [ "TimeIntegrator", "classTimeIntegrator.html", [
+      [ "BackwardEuler", "classBackwardEuler.html", null ],
       [ "ExplicitEuler", "classExplicitEuler.html", null ],
+      [ "MidpointMethod", "classMidpointMethod.html", null ],
       [ "SymplecticEuler", "classSymplecticEuler.html", null ],
       [ "Verlet", "classVerlet.html", null ]
     ] ]

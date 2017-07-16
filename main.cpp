@@ -14,6 +14,8 @@
 #include <vector3G.h>
 #include <memory.h>
 #include <verlet.h>
+#include <backward_euler.h>
+#include <midpoint_method.h>
 #include <constant_force.h>
 #include <physics_entity.h>
 #include <model.h>
@@ -76,10 +78,11 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new Verlet(0.01f));
+    //std::shared_ptr<TimeIntegrator> time_integrator_ptr(new MidpointMethod(0.01));
+    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new BackwardEuler(0.005));
     ConstantForceGenerator cfg = ConstantForceGenerator(Vector3Gf(0.0f,0.0f,0.0f));
     Scene scene(time_integrator_ptr,cfg);
-
+    
     std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
@@ -94,10 +97,9 @@ int main()
         0.0f
     );
 
-    sphere1_ptr->SetNextVelocity(orbital_velocity);
-    sphere1_ptr->UpdateFromBuffers();
-
-    bool start = true;
+    sphere1_ptr->SetVelocity(orbital_velocity);
+   
+    bool start = false;
     while(!glfwWindowShouldClose(window))
     {
         GLfloat current_frame = glfwGetTime();

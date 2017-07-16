@@ -3,6 +3,9 @@
 #ifndef VERLET_H
 #define VERLET_H
 
+/**
+    \brief Implementation of velocity Verlet method for solving Newton's Laws
+**/
 class Verlet : public TimeIntegrator{
 
     public :

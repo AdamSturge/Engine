@@ -75,6 +75,18 @@ void Scene::ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vec
 
 };
 
+void Scene::ComputeForceJacobian(const std::shared_ptr<PhysicsEntity> entity_ptr, Eigen::Matrix<GLfloat,3,3> &dFdx, Eigen::Matrix<GLfloat,3,3> &dFdv) const
+{
+    for(std::shared_ptr<PhysicsEntity> other_entity_ptr : m_physics_entity_ptrs)
+    {
+        if(other_entity_ptr != entity_ptr)
+        {
+            m_gravity_force_generator.AccumulatedFdx(entity_ptr,other_entity_ptr,dFdx);
+        }
+    }
+};
+
+
 void Scene::Render(Shader shader)
 {
     GLint modelLoc = glGetUniformLocation(shader.Program, "model");
