@@ -78,7 +78,8 @@ int main()
 
     std::shared_ptr<TimeIntegrator> time_integrator_ptr(new Verlet(0.01));
     NetForceAccumulator net_force_accumulator;
-    net_force_accumulator.EnableGravity(true);
+    net_force_accumulator.EnableGravity(false);
+    net_force_accumulator.EnableDrag(true);
     Scene scene(time_integrator_ptr,net_force_accumulator);
     
     std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));

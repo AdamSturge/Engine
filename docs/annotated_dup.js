@@ -3,6 +3,7 @@ var annotated_dup =
     [ "BackwardEuler", "classBackwardEuler.html", "classBackwardEuler" ],
     [ "Camera", "classCamera.html", "classCamera" ],
     [ "ConstantForceGenerator", "classConstantForceGenerator.html", "classConstantForceGenerator" ],
+    [ "DragForceGenerator", "classDragForceGenerator.html", "classDragForceGenerator" ],
     [ "ExplicitEuler", "classExplicitEuler.html", "classExplicitEuler" ],
     [ "ForceGenerator", "classForceGenerator.html", "classForceGenerator" ],
     [ "GravityForceGenerator", "classGravityForceGenerator.html", "classGravityForceGenerator" ],

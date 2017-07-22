@@ -6,6 +6,7 @@
 #include <physics_entity.h>
 #include <constant_force.h>
 #include <gravity_force.h>
+#include <drag_force.h>
 
 class NetForceAccumulator
 {
@@ -13,6 +14,8 @@ class NetForceAccumulator
         std::vector<ConstantForceGenerator> m_constant_forces;
         GravityForceGenerator m_gravity_force;
         bool gravity_on;
+        DragForceGenerator m_drag_force;
+        bool drag_on;
 
     public:
 
@@ -32,6 +35,17 @@ class NetForceAccumulator
             @param enable true to turn on gravtational attraction, false to turn off
         **/
         void EnableGravity(bool enable);
+        
+        /**
+            Enables/Disables velocity based drag
+            @param enable true to turn on drag, false to turn off
+        **/
+        void EnableDrag(bool enable);
+
+        /**
+            Set the drag coefficent. Large values mean stronger drag
+        **/
+        void SetDragCoeff(GLfloat beta);
 
         /**
             Computes the net force acting on an entity in the sumulation via accumulation

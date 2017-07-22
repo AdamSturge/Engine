@@ -95,6 +95,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abe5a7dbdcc2a0b04dfbb744fbed41387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92f06c86781e56e364596bc44b427a08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetForceAccumulator.html#a92f06c86781e56e364596bc44b427a08">EnableGravity</a> (bool enable)</td></tr>
 <tr class="separator:a92f06c86781e56e364596bc44b427a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb0b119c5f4793003d045c9fd77a64e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetForceAccumulator.html#acb0b119c5f4793003d045c9fd77a64e2">EnableDrag</a> (bool enable)</td></tr>
+<tr class="separator:acb0b119c5f4793003d045c9fd77a64e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bb41addcdf120d4b163a75ff36b2358"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetForceAccumulator.html#a4bb41addcdf120d4b163a75ff36b2358">SetDragCoeff</a> (GLfloat beta)</td></tr>
+<tr class="separator:a4bb41addcdf120d4b163a75ff36b2358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65f5bca9bd11305dff1e7a66dfe50e45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetForceAccumulator.html#a65f5bca9bd11305dff1e7a66dfe50e45">ComputeNetForce</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&gt; &amp;entity_ptrs, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity_ptr, Vector3Gf &amp;force) const</td></tr>
 <tr class="separator:a65f5bca9bd11305dff1e7a66dfe50e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337268a47e321da708218fce5e5d50d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetForceAccumulator.html#a337268a47e321da708218fce5e5d50d3">ComputeNetForceJacobian</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&gt; &amp;entity_ptrs, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity_ptr, Eigen::Matrix&lt; GLfloat, 3, 3 &gt; &amp;dFdx, Eigen::Matrix&lt; GLfloat, 3, 3 &gt; &amp;dFdv) const</td></tr>
@@ -235,6 +239,30 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="acb0b119c5f4793003d045c9fd77a64e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0b119c5f4793003d045c9fd77a64e2">&#9670;&nbsp;</a></span>EnableDrag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetForceAccumulator::EnableDrag </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enables/Disables velocity based drag </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>true to turn on drag, false to turn off </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a92f06c86781e56e364596bc44b427a08"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a92f06c86781e56e364596bc44b427a08">&#9670;&nbsp;</a></span>EnableGravity()</h2>
 
@@ -256,6 +284,25 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4bb41addcdf120d4b163a75ff36b2358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bb41addcdf120d4b163a75ff36b2358">&#9670;&nbsp;</a></span>SetDragCoeff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetForceAccumulator::SetDragCoeff </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>beta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the drag coefficent. Large values mean stronger drag </p>
 
 </div>
 </div>

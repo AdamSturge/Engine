@@ -15,6 +15,16 @@ void NetForceAccumulator::EnableGravity(bool enable)
     gravity_on = enable;
 }
 
+void NetForceAccumulator::EnableDrag(bool enable)
+{
+    drag_on = enable;
+}
+
+void NetForceAccumulator::SetDragCoeff(GLfloat beta)
+{
+    m_drag_force.SetDragCoeff(beta);
+}
+
 void NetForceAccumulator::ComputeNetForce(
     const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
     const std::shared_ptr<PhysicsEntity> entity_ptr,
@@ -34,6 +44,11 @@ void NetForceAccumulator::ComputeNetForce(
                 m_gravity_force.AccumulateForce(entity_ptr,other_entity_ptr,force);
             }
         }
+    }
+
+    if(drag_on)
+    {
+        m_drag_force.AccumulateForce(entity_ptr,force);
     }
     
 }
