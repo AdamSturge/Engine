@@ -12,7 +12,10 @@ ExplicitEuler::ExplicitEuler(GLfloat dt)
     m_dt = dt;
 };
 
-void ExplicitEuler::Solve(const Scene& scene,const std::shared_ptr<PhysicsEntity> entity_ptr) 
+void ExplicitEuler::Solve(
+            const NetForceAccumulator& net_force_accumulator,
+			const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
+            const std::shared_ptr<PhysicsEntity> entity_ptr)
 {   
     const Vector3Gf xi = entity_ptr->GetPosition();
     const Vector3Gf vi = entity_ptr->GetVelocity();
@@ -20,7 +23,7 @@ void ExplicitEuler::Solve(const Scene& scene,const std::shared_ptr<PhysicsEntity
    
     Vector3Gf F;
     F.setZero();
-    scene.ComputeNetForce(entity_ptr,F);
+    net_force_accumulator.ComputeNetForce(entity_ptrs,entity_ptr,F);
 
     Vector3Gf xf = xi + m_dt*vi;
     Vector3Gf vf = vi + m_dt*(1/mass)*F; 

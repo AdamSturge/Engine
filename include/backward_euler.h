@@ -15,10 +15,14 @@ class BackwardEuler : public TimeIntegrator
     private:
         /**
             Private implementation details for solver.
-            @param scene scene containing entities to be integrated forward
+            @param net_force_accumulator accumulates the net force acting on entity_ptr
+			@param entity_ptrs list of all the PhysicsEntities in the scene
             @param entity_ptr pointer to the entity being updated
         **/
-        void Solve(const Scene& scene,const std::shared_ptr<PhysicsEntity> entity_ptr);
+        void Solve(
+            const NetForceAccumulator& net_force_accumulator,
+			const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
+            const std::shared_ptr<PhysicsEntity> entity_ptr);
 
         /**
             Computes the Jacobian of the update rule for use in Newton's Method

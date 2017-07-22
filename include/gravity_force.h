@@ -8,7 +8,7 @@
 class GravityForceGenerator
 {
     private :
-        const GLfloat m_G = 6.673e-11; // Universal gravitational constant 
+        GLfloat m_G = 6.673e-11; // Universal gravitational constant 
     
     public :
         /**

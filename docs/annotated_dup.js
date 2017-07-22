@@ -9,6 +9,7 @@ var annotated_dup =
     [ "Mesh", "classMesh.html", "classMesh" ],
     [ "MidpointMethod", "classMidpointMethod.html", "classMidpointMethod" ],
     [ "Model", "classModel.html", "classModel" ],
+    [ "NetForceAccumulator", "classNetForceAccumulator.html", "classNetForceAccumulator" ],
     [ "PhysicsEntity", "classPhysicsEntity.html", "classPhysicsEntity" ],
     [ "Scene", "classScene.html", "classScene" ],
     [ "Shader", "classShader.html", "classShader" ],

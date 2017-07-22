@@ -12,7 +12,10 @@ BackwardEuler::BackwardEuler(GLfloat dt)
     m_dt = dt;
 }
 
-void BackwardEuler::Solve(const Scene& scene,const std::shared_ptr<PhysicsEntity> entity_ptr)
+void BackwardEuler::Solve(
+            const NetForceAccumulator& net_force_accumulator,
+			const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
+            const std::shared_ptr<PhysicsEntity> entity_ptr)
 {
     Vector3Gf xi = entity_ptr->GetPosition();
     Vector3Gf vi = entity_ptr->GetVelocity();
@@ -21,7 +24,7 @@ void BackwardEuler::Solve(const Scene& scene,const std::shared_ptr<PhysicsEntity
     // Set initial guess z_0 by using Symplectic Euler
     Vector3Gf F;
     F.setZero();
-    scene.ComputeNetForce(entity_ptr,F);
+    net_force_accumulator.ComputeNetForce(entity_ptrs,entity_ptr,F);
     Vector3Gf vf = vi + m_dt*F/mass;
     Vector3Gf xf = xi + m_dt*vf;
 
@@ -39,12 +42,12 @@ void BackwardEuler::Solve(const Scene& scene,const std::shared_ptr<PhysicsEntity
         J.setZero();
         dFdx.setZero();
         dFdv.setZero();
-        scene.ComputeForceJacobian(entity_ptr,dFdx,dFdv);
+        net_force_accumulator.ComputeNetForceJacobian(entity_ptrs,entity_ptr,dFdx,dFdv);
         ComputeJacobian(mass,dFdx,dFdv,J);
         
         // Compute force at current guess
         F.setZero();
-        scene.ComputeNetForce(entity_ptr,F);
+        net_force_accumulator.ComputeNetForce(entity_ptrs,entity_ptr,F);
 
         // Compute G for current guess
         G.topRows(3) = xf - xi - m_dt*vf;

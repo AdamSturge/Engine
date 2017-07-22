@@ -7,13 +7,12 @@
 Scene::Scene()
 { 
     m_time_integrator = std::shared_ptr<TimeIntegrator>(new ExplicitEuler(0.01f));
-    m_constant_force_generator = ConstantForceGenerator(Vector3Gf(0.0f,0.0f,0.0f));
 };
 
-Scene::Scene(std::shared_ptr<TimeIntegrator> integrator, ConstantForceGenerator cfg)
+Scene::Scene(std::shared_ptr<TimeIntegrator> integrator, NetForceAccumulator net_force_accumulator)
 {
     m_time_integrator = integrator;
-    m_constant_force_generator = cfg;
+    m_net_force_accumulator = net_force_accumulator;
 }
 
 void Scene::AddPhysicsEntity(std::shared_ptr<PhysicsEntity> entity_ptr)
@@ -51,7 +50,7 @@ void Scene::StepPhysics()
 {
     for(std::shared_ptr<PhysicsEntity> entity_ptr : m_physics_entity_ptrs)
     {
-        m_time_integrator->StepForward(*this,entity_ptr);
+        m_time_integrator->StepForward(m_net_force_accumulator,m_physics_entity_ptrs,entity_ptr);
     }
 
     for(std::shared_ptr<PhysicsEntity> entity_ptr : m_physics_entity_ptrs)
@@ -59,31 +58,6 @@ void Scene::StepPhysics()
         entity_ptr->UpdateFromBuffers();
     }
 
-};
-
-void Scene::ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force) const
-{
-    m_constant_force_generator.AccumulateForce(entity_ptr,force);
-    
-    for(std::shared_ptr<PhysicsEntity> other_entity_ptr : m_physics_entity_ptrs)
-    {        
-        if(other_entity_ptr != entity_ptr)
-        {
-            m_gravity_force_generator.AccumulateForce(entity_ptr,other_entity_ptr,force);
-        }
-    }
-
-};
-
-void Scene::ComputeForceJacobian(const std::shared_ptr<PhysicsEntity> entity_ptr, Eigen::Matrix<GLfloat,3,3> &dFdx, Eigen::Matrix<GLfloat,3,3> &dFdv) const
-{
-    for(std::shared_ptr<PhysicsEntity> other_entity_ptr : m_physics_entity_ptrs)
-    {
-        if(other_entity_ptr != entity_ptr)
-        {
-            m_gravity_force_generator.AccumulatedFdx(entity_ptr,other_entity_ptr,dFdx);
-        }
-    }
 };
 
 

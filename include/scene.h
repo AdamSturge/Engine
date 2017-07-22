@@ -6,13 +6,11 @@
 #include <memory>
 #include <vector3G.h>
 #include <time_integrator.h>
-#include <constant_force.h>
 #include <shader.h>
 #include <camera.h>
 #include <GLFW/glfw3.h>
-#include <gravity_force.h>
-
-class TimeIntegrator; // Forward declaration of TimeIntegrator. 
+#include <net_force_accumulator.h>
+ 
 
 /**
     \brief A scene in the engine
@@ -26,9 +24,7 @@ class Scene
 	std::vector<std::shared_ptr<Model>> m_model_ptrs;
         std::shared_ptr<TimeIntegrator> m_time_integrator;
         
-        // Force generators
-        ConstantForceGenerator m_constant_force_generator;
-        GravityForceGenerator m_gravity_force_generator;           
+        NetForceAccumulator m_net_force_accumulator;           
        
     public :
         /**
@@ -39,9 +35,9 @@ class Scene
         /**
             Creates a Scene instance with the provided TimeIntegrator and ForceGenerator members
             @param integrator TimeIngrator instance to handle time evolution of the PhysicsEntities in the scene
-            @param cfg  ConstantForceGenerator used to generate a spatially and temporally uniform force
+            @param net_force_accumulator  NetForceAccumulator used to compute net forces acting on PhysicsEntities in the scene
         **/
-        Scene(std::shared_ptr<TimeIntegrator> integrator, ConstantForceGenerator cfg);
+        Scene(std::shared_ptr<TimeIntegrator> integrator, NetForceAccumulator net_force_accumulator);
         
         /**
             Add a PhysicsEntity to the Scene.
@@ -85,22 +81,7 @@ class Scene
         **/
         void StepPhysics();
         
-        /**
-            Computes the net force acting on an entity
-            @param entity_ptr pointer to the entity the forces are acting on
-            @param force force vector that will be modified to contain the net force
-        **/
-        void ComputeNetForce(const std::shared_ptr<PhysicsEntity> entity_ptr, Vector3Gf &force) const;
-
-        /**
-            Computes the Jacobian for the net force
-            @param entity_ptr entity the net force is acting on
-            @param dFdx matrix that will be modified to comtain the position jacobian
-            @param dFdv matrix that will be modified to contain the velocity jacobian
-        **/
-        void ComputeForceJacobian(const std::shared_ptr<PhysicsEntity> entity_ptr, Eigen::Matrix<GLfloat,3,3> &dFdx, Eigen::Matrix<GLfloat,3,3> &dFdv) const;
-
-        /**
+       /**
             Renders the Models in the Scene to the screen
         **/
         void Render(Shader shader);

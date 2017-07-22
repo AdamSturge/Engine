@@ -23,13 +23,14 @@ class Verlet : public TimeIntegrator{
     private:
 
         /**
-            Solves Newton's equations of motion.
-            Updates entity_ptr buffers with next predicted position and velocity
-            @param scene scene containing entities to be integrated forward
-            @param entity_ptr pointer to entity to be integrated forward
+            Private implementation details for solver.
+            @param net_force_accumulator accumulates the net force acting on entity_ptr
+			@param entity_ptrs list of all the PhysicsEntities in the scene
+            @param entity_ptr pointer to the entity being updated
         **/
-       void Solve(
-            const Scene& scene,
+        void Solve(
+            const NetForceAccumulator& net_force_accumulator,
+			const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
             const std::shared_ptr<PhysicsEntity> entity_ptr);
         
 };

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['verlet',['Verlet',['../classVerlet.html',1,'']]]
+  ['timeintegrator',['TimeIntegrator',['../classTimeIntegrator.html',1,'']]]
 ];

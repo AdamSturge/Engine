@@ -14,11 +14,9 @@
 #include <vector3G.h>
 #include <memory.h>
 #include <verlet.h>
-#include <backward_euler.h>
-#include <midpoint_method.h>
-#include <constant_force.h>
 #include <physics_entity.h>
 #include <model.h>
+#include <net_force_accumulator.h>
 
 void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode);
 void MouseCallback(GLFWwindow*,double xpos, double ypos);
@@ -78,10 +76,10 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new MidpointMethod(0.01));
-    //std::shared_ptr<TimeIntegrator> time_integrator_ptr(new BackwardEuler(0.005));
-    ConstantForceGenerator cfg = ConstantForceGenerator(Vector3Gf(0.0f,0.0f,0.0f));
-    Scene scene(time_integrator_ptr,cfg);
+    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new Verlet(0.01));
+    NetForceAccumulator net_force_accumulator;
+    net_force_accumulator.EnableGravity(true);
+    Scene scene(time_integrator_ptr,net_force_accumulator);
     
     std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));
     scene.AddPhysicsEntity(sphere1_ptr);

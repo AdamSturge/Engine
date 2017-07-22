@@ -12,12 +12,15 @@ MidpointMethod::MidpointMethod(GLfloat dt)
     m_backward_euler = BackwardEuler(0.5f*m_dt);
 }
 
-void MidpointMethod::Solve(const Scene& scene,const std::shared_ptr<PhysicsEntity> entity_ptr)
+void MidpointMethod::Solve(
+            const NetForceAccumulator& net_force_accumulator,
+			const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
+            const std::shared_ptr<PhysicsEntity> entity_ptr)
 {
     Vector3Gf xi = entity_ptr->GetPosition();
     Vector3Gf vi = entity_ptr->GetVelocity();
     
-    m_backward_euler.StepForward(scene,entity_ptr);
+    m_backward_euler.StepForward(net_force_accumulator,entity_ptrs,entity_ptr);
     
     Vector3Gf xhalf = entity_ptr->GetNextPosition();
     Vector3Gf vhalf = entity_ptr->GetNextVelocity();

@@ -8,6 +8,7 @@ var hierarchy =
     [ "Model", "classModel.html", [
       [ "Sphere", "classSphere.html", null ]
     ] ],
+    [ "NetForceAccumulator", "classNetForceAccumulator.html", null ],
     [ "PhysicsEntity", "classPhysicsEntity.html", [
       [ "Sphere", "classSphere.html", null ]
     ] ],

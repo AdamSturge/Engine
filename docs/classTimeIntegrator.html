@@ -108,8 +108,8 @@ Inheritance diagram for TimeIntegrator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a40267b124f9f84e0ebb887ebf6921965"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#a40267b124f9f84e0ebb887ebf6921965">StepForward</a> (const <a class="el" href="classScene.html">Scene</a> &amp;scene, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity_ptr)</td></tr>
-<tr class="separator:a40267b124f9f84e0ebb887ebf6921965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9fa137f3da10fd381ce1c75c14b7d82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#ac9fa137f3da10fd381ce1c75c14b7d82">StepForward</a> (const <a class="el" href="classNetForceAccumulator.html">NetForceAccumulator</a> &amp;net_force_accumulator, const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&gt; &amp;entity_ptrs, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity_ptr)</td></tr>
+<tr class="separator:ac9fa137f3da10fd381ce1c75c14b7d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4137ec772085fa5d727a69c54de010da"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeIntegrator.html#a4137ec772085fa5d727a69c54de010da">GetStepSize</a> ()</td></tr>
 <tr class="separator:a4137ec772085fa5d727a69c54de010da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -140,8 +140,8 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
 
 </div>
 </div>
-<a id="a40267b124f9f84e0ebb887ebf6921965"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40267b124f9f84e0ebb887ebf6921965">&#9670;&nbsp;</a></span>StepForward()</h2>
+<a id="ac9fa137f3da10fd381ce1c75c14b7d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9fa137f3da10fd381ce1c75c14b7d82">&#9670;&nbsp;</a></span>StepForward()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,8 +149,14 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
         <tr>
           <td class="memname">void TimeIntegrator::StepForward </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classScene.html">Scene</a> &amp;&#160;</td>
-          <td class="paramname"><em>scene</em>, </td>
+          <td class="paramtype">const <a class="el" href="classNetForceAccumulator.html">NetForceAccumulator</a> &amp;&#160;</td>
+          <td class="paramname"><em>net_force_accumulator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>entity_ptrs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -167,7 +173,8 @@ GLfloat&#160;</td><td class="memItemRight" valign="bottom"><b>m_dt</b></td></tr>
 </div><div class="memdoc">
 <p>Public interface for all solvers. Computes position and velocity updates by solving Newton's equations of motion. Updates entity_ptr buffers with next predicted position and velocity </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">scene</td><td>scene containing entities to be integrated forward </td></tr>
+    <tr><td class="paramname">net_force_accumulator</td><td>accumulates the net force acting on entity_ptr </td></tr>
+    <tr><td class="paramname">entity_ptrs</td><td>list of all the PhysicsEntities in the scene </td></tr>
     <tr><td class="paramname">entity_ptr</td><td>pointer to the entity being updated </td></tr>
   </table>
   </dd>
