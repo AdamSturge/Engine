@@ -99,6 +99,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a932f6198843366df598b793ee8531264"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29148ee03ac1173f08802881e70ff297"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDragForceGenerator.html#a29148ee03ac1173f08802881e70ff297">AccumulateForce</a> (std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity, Vector3Gf &amp;F) const</td></tr>
 <tr class="separator:a29148ee03ac1173f08802881e70ff297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f1b04bc562c30c3a25cdc54e9a85e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDragForceGenerator.html#a82f1b04bc562c30c3a25cdc54e9a85e3">AccumulatedFdv</a> (const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity, Eigen::Matrix&lt; GLfloat, 3, 3 &gt; &amp;dF) const</td></tr>
+<tr class="separator:a82f1b04bc562c30c3a25cdc54e9a85e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aec386ae201331637f617ff9abe36cd1c"></a>
@@ -144,6 +146,41 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a82f1b04bc562c30c3a25cdc54e9a85e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f1b04bc562c30c3a25cdc54e9a85e3">&#9670;&nbsp;</a></span>AccumulatedFdv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DragForceGenerator::AccumulatedFdv </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Matrix&lt; GLfloat, 3, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dF</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds the velocity jacobian </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>Entity whom the force is acting on </td></tr>
+    <tr><td class="paramname">dF</td><td>Matrix that will accumulate the derivative of force with respect to velocity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a29148ee03ac1173f08802881e70ff297"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29148ee03ac1173f08802881e70ff297">&#9670;&nbsp;</a></span>AccumulateForce()</h2>
 

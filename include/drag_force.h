@@ -42,6 +42,14 @@ class DragForceGenerator
         **/
         void AccumulateForce(std::shared_ptr<PhysicsEntity> entity, Vector3Gf &F) const;
 
+        /**
+            Adds the velocity jacobian
+            @param entity Entity whom the force is acting on
+            @param dF Matrix that will accumulate the derivative of force with respect to velocity
+        **/
+        void AccumulatedFdv(const std::shared_ptr<PhysicsEntity> entity, Eigen::Matrix<GLfloat,3,3> &dF) const;
+
+
 };
 
 #endif

@@ -25,7 +25,7 @@ class GravityForceGenerator
         void AccumulateForce(const std::shared_ptr<PhysicsEntity> e1, const std::shared_ptr<PhysicsEntity> e2, Vector3Gf &F) const;
 
         /**
-            Adds the position deveriative of the constant force
+            Adds the position jacobian
             @param e1 Entity whom the force is acting on
             @param e2 Entity which is gravitationally interacting with e1
             @param dF Matrix that will accumulate the derivative of force with respect to position

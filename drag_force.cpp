@@ -28,3 +28,10 @@ void DragForceGenerator::AccumulateForce(std::shared_ptr<PhysicsEntity> entity, 
     F += -m_beta*mass*v;
 }
 
+void DragForceGenerator::AccumulatedFdv(const std::shared_ptr<PhysicsEntity> entity, Eigen::Matrix<GLfloat,3,3> &dF) const
+{
+    Eigen::Matrix<GLfloat,3,3> I = Eigen::Matrix<GLfloat,3,3>::Identity();
+
+    dF += m_beta*I;
+}
+

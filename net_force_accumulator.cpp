@@ -59,13 +59,20 @@ void NetForceAccumulator::ComputeNetForceJacobian(
             Eigen::Matrix<GLfloat,3,3> &dFdx, 
             Eigen::Matrix<GLfloat,3,3> &dFdv) const
 {
-    for(std::shared_ptr<PhysicsEntity> other_entity_ptr : entity_ptrs)
+    if(gravity_on)
     {
-        if(other_entity_ptr != entity_ptr)
+        for(std::shared_ptr<PhysicsEntity> other_entity_ptr : entity_ptrs)
         {
-            m_gravity_force.AccumulatedFdx(entity_ptr,other_entity_ptr,dFdx);
+            if(other_entity_ptr != entity_ptr)
+            {
+                m_gravity_force.AccumulatedFdx(entity_ptr,other_entity_ptr,dFdx);
+            }
         }
     }
 
+    if(drag_on)
+    {
+        m_drag_force.AccumulatedFdv(entity_ptr,dFdv);
+    }
 }
 
