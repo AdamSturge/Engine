@@ -6,7 +6,7 @@
 #include <memory>
 #include "physics_entity.h"
 
-class DragForceGenerator
+class LinearDragForceGenerator
 {
     private:
         GLfloat m_beta; // drag coefficent
@@ -14,15 +14,15 @@ class DragForceGenerator
     public:
 
         /**
-            Constructs a DragForceGenerator
+            Constructs a LinearDragForceGenerator
         **/
-        DragForceGenerator();
+        LinearDragForceGenerator();
 
         /**
-            Constructs a DragForceGenerator with the chosen drag coefficient
+            Constructs a LinearDragForceGenerator with the chosen drag coefficient
             @param beta drag coefficent
         **/    
-        DragForceGenerator(GLfloat beta);
+        LinearDragForceGenerator(GLfloat beta);
 
         /**
             @return the drag coefficent

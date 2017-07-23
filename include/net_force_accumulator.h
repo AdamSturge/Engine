@@ -6,7 +6,7 @@
 #include <physics_entity.h>
 #include <constant_force.h>
 #include <gravity_force.h>
-#include <drag_force.h>
+#include <linear_drag_force.h>
 
 class NetForceAccumulator
 {
@@ -14,7 +14,7 @@ class NetForceAccumulator
         std::vector<ConstantForceGenerator> m_constant_forces;
         GravityForceGenerator m_gravity_force;
         bool gravity_on;
-        DragForceGenerator m_drag_force;
+        LinearDragForceGenerator m_drag_force;
         bool drag_on;
 
     public:

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dragforcegenerator',['DragForceGenerator',['../classDragForceGenerator.html',1,'']]]
+  ['expliciteuler',['ExplicitEuler',['../classExplicitEuler.html',1,'']]]
 ];

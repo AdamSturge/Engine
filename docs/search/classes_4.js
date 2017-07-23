@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['forcegenerator',['ForceGenerator',['../classForceGenerator.html',1,'']]]
+  ['gravityforcegenerator',['GravityForceGenerator',['../classGravityForceGenerator.html',1,'']]]
 ];
