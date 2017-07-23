@@ -63,7 +63,7 @@ class NetForceAccumulator
             @param entity_ptrs list of all entities in the simulation
             @param entity_ptr entity whom the net force is acting on
             @param dFdx matrix that will be modified to contain the net force jacobian with respect to position
-            @param dFdx matrix that will be modified to contain the net force jacobian with respect to velocity
+            @param dFdv matrix that will be modified to contain the net force jacobian with respect to velocity
         **/
         void ComputeNetForceJacobian(
             const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs, 

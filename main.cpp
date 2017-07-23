@@ -78,25 +78,15 @@ int main()
 
     std::shared_ptr<TimeIntegrator> time_integrator_ptr(new Verlet(0.01));
     NetForceAccumulator net_force_accumulator;
+    //Vector3Gf g(0.0f,-9.81f,0.0f);
+    //net_force_accumulator.AddConstantForce(g);
     net_force_accumulator.EnableGravity(false);
     net_force_accumulator.EnableDrag(true);
     Scene scene(time_integrator_ptr,net_force_accumulator);
     
-    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));
+    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(10.0f,0.0f,0.0f), 1.0f));
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
-
-    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(2.0f, Vector3Gf(5.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1e13));
-    scene.AddPhysicsEntity(sphere2_ptr);
-    scene.AddModel(sphere2_ptr);
-
-    Vector3Gf orbital_velocity(
-        0.0f,
-        sqrt((6.673e-11)*sphere2_ptr->GetMass()/((sphere1_ptr->GetPosition() - sphere2_ptr->GetPosition()).norm())),
-        0.0f
-    );
-
-    sphere1_ptr->SetVelocity(orbital_velocity);
    
     bool start = false;
     while(!glfwWindowShouldClose(window))
@@ -146,7 +136,7 @@ int main()
         if(start)
         {
             scene.StepPhysics();
-        }        
+        }
        
         scene.Render(shader);
 
