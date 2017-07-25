@@ -2,6 +2,7 @@ var classPhysicsEntity =
 [
     [ "PhysicsEntity", "classPhysicsEntity.html#a2c0cf9804f1864105849586bc91e8dea", null ],
     [ "~PhysicsEntity", "classPhysicsEntity.html#a8c27ca31ce7afe3b5adb018eb2e07430", null ],
+    [ "GetId", "classPhysicsEntity.html#a768b5515cb33ce3c90936d8aa3ebc547", null ],
     [ "GetMass", "classPhysicsEntity.html#a07943c4b81878d402b97d1280f8c8ff9", null ],
     [ "GetNextPosition", "classPhysicsEntity.html#aeb34696ee2a1be77b968746b3ee65da8", null ],
     [ "GetNextVelocity", "classPhysicsEntity.html#a2b08544dc828f7fdaaae545238a0be43", null ],
@@ -12,6 +13,7 @@ var classPhysicsEntity =
     [ "SetPosition", "classPhysicsEntity.html#ade372f2cdf07f3fe3d97c03c64534ff0", null ],
     [ "SetVelocity", "classPhysicsEntity.html#aa9b9cb8be38aeb3babf415d8cbad352c", null ],
     [ "UpdateFromBuffers", "classPhysicsEntity.html#a912c227d955b9a3c82e77b9732c8e5f2", null ],
+    [ "m_id", "classPhysicsEntity.html#a307a68bd03c07e34972a2533ce714e2e", null ],
     [ "m_mass", "classPhysicsEntity.html#a5a7bc5174169e169f69723d2483c2eff", null ],
     [ "m_next_position_buffer", "classPhysicsEntity.html#abc38c58fd803d67079f25043331f0018", null ],
     [ "m_next_velocity_buffer", "classPhysicsEntity.html#a00034d95cc1a6f34ceaf5ad961e4afe6", null ],

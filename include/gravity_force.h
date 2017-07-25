@@ -4,7 +4,9 @@
 
 #ifndef GRAVITY_FORCE_H
 #define GRAVITY_FORCE_H
-
+/**
+    \brief Computes graviational force of attraction between 2 entities
+**/
 class GravityForceGenerator
 {
     private :

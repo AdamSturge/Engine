@@ -1,7 +1,11 @@
 #include <physics_entity.h>
 
+std::atomic<GLint> PhysicsEntity::next_id(0);
+
 PhysicsEntity::PhysicsEntity()
 {
+    m_id = PhysicsEntity::next_id++; // store current value of next_id and increment for next entity
+
     m_position.setZero();
 
     m_next_position_buffer = m_position;
@@ -11,6 +15,11 @@ PhysicsEntity::PhysicsEntity()
     m_next_velocity_buffer = m_velocity;
 
     m_mass = 1.0f;
+}
+
+GLint PhysicsEntity::GetId() const
+{
+    return m_id;
 }
 
 Vector3Gf PhysicsEntity::GetPosition()

@@ -9,8 +9,14 @@
 class MidpointMethod : public TimeIntegrator
 {
     public:
+        /**
+            Constucts a MidpointMethod with the default time step
+        **/
         MidpointMethod();
 
+        /**
+            Constructs a MidpointMethod with the provided timestep
+        **/
         MidpointMethod(GLfloat dt);
 
     private:

@@ -46,6 +46,11 @@ GLuint Scene::GetModelCount()
     return m_model_ptrs.size();
 }
 
+void Scene::AddSpring(Spring spring)
+{
+    m_net_force_accumulator.AddSpring(spring);
+}
+
 void Scene::StepPhysics()
 {
     for(std::shared_ptr<PhysicsEntity> entity_ptr : m_physics_entity_ptrs)

@@ -2,7 +2,6 @@ var hierarchy =
 [
     [ "Camera", "classCamera.html", null ],
     [ "ConstantForceGenerator", "classConstantForceGenerator.html", null ],
-    [ "ForceGenerator", "classForceGenerator.html", null ],
     [ "GravityForceGenerator", "classGravityForceGenerator.html", null ],
     [ "LinearDragForceGenerator", "classLinearDragForceGenerator.html", null ],
     [ "Mesh", "classMesh.html", null ],
@@ -15,6 +14,8 @@ var hierarchy =
     ] ],
     [ "Scene", "classScene.html", null ],
     [ "Shader", "classShader.html", null ],
+    [ "Spring", "structSpring.html", null ],
+    [ "SpringForceGenerator", "classSpringForceGenerator.html", null ],
     [ "TimeIntegrator", "classTimeIntegrator.html", [
       [ "BackwardEuler", "classBackwardEuler.html", null ],
       [ "ExplicitEuler", "classExplicitEuler.html", null ],

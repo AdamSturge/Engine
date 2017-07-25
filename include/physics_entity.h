@@ -1,6 +1,7 @@
 #include <mesh.h>
 #include <Eigen/Core>
 #include <vector3G.h>
+#include <atomic>
 
 #ifndef PHYSICS_ENTITY
 #define PHYSICS_ENTITY
@@ -11,6 +12,11 @@
 **/
 class PhysicsEntity{
    public:
+        /**
+            Returns the unique id for this entity
+        **/
+        GLint GetId() const;
+    
         /**
             @return Spatial position for this entity
         **/
@@ -40,7 +46,7 @@ class PhysicsEntity{
         
         /**
             Sets the velocity for this entity. If possible use SetNextPosition instead
-            @param x new velocity for this entity
+            @param v new velocity for this entity
         **/
         void SetVelocity(Vector3Gf v);
         
@@ -66,6 +72,11 @@ class PhysicsEntity{
         void UpdateFromBuffers();
 
      protected:     
+        /**
+            Unique id for this entity
+        **/
+        GLuint m_id;
+
         /**
             The position of this entity
         **/
@@ -98,6 +109,8 @@ class PhysicsEntity{
         virtual ~PhysicsEntity(){};
 
     private :
+        static std::atomic<GLint> next_id;
+
         /**
             Called after UpdateFromBuffers. Allows subclasses to perform class specific actions when physical observables update
         **/

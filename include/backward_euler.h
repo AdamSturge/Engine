@@ -8,8 +8,14 @@
 class BackwardEuler : public TimeIntegrator
 {
     public:
+        /**
+            Constructs a BackwardEuler with the default timestep
+        **/
         BackwardEuler();
 
+        /**
+            Constructs a BackwardEuler with the provided timestep
+        **/
         BackwardEuler(GLfloat dt);
 
     private:

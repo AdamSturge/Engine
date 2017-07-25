@@ -1,4 +1,5 @@
 #include <net_force_accumulator.h>
+#include <iostream> 
 
 NetForceAccumulator::NetForceAccumulator()
 {
@@ -23,6 +24,13 @@ void NetForceAccumulator::EnableDrag(bool enable)
 void NetForceAccumulator::SetDragCoeff(GLfloat beta)
 {
     m_drag_force.SetDragCoeff(beta);
+}
+
+void NetForceAccumulator::AddSpring(Spring spring)
+{
+    m_springs[spring.id] = spring;
+    m_entity_spring_map[spring.entity1_ptr->GetId()].push_back(spring.id);
+    m_entity_spring_map[spring.entity2_ptr->GetId()].push_back(spring.id);
 }
 
 void NetForceAccumulator::ComputeNetForce(
@@ -50,7 +58,32 @@ void NetForceAccumulator::ComputeNetForce(
     {
         m_drag_force.AccumulateForce(entity_ptr,force);
     }
-    
+
+    GLint pid = entity_ptr->GetId();
+    // Have to use find() instead of [] since we declared the method as const
+    std::unordered_map<GLint,std::vector<GLint>>::const_iterator spring_itr = m_entity_spring_map.find(pid);
+    if(spring_itr != m_entity_spring_map.end())
+    {
+        std::vector<GLint> spring_ids = spring_itr->second;
+        for(GLint spring_id : spring_ids)
+        {
+            Spring spring = m_springs.find(spring_id)->second;
+            if(spring.entity1_ptr == entity_ptr)
+            {
+                m_spring_force.AccumulateForce(spring.k,spring.l0,spring.entity1_ptr,spring.entity2_ptr,force); 
+            }
+            else if(spring.entity2_ptr == entity_ptr)
+            {
+                // swap the order of entity1_ptr and entity2_ptr to produce the negative of the force
+                m_spring_force.AccumulateForce(spring.k,spring.l0,spring.entity2_ptr,spring.entity1_ptr,force); 
+            }
+            else
+            {
+                // We done goofed. 
+                std::cout << "Computing a spring force on an entity not in this spring. PID : " << pid << " SpringID : " << spring_id << std::endl;
+            }
+        }
+    }    
 }
 
 void NetForceAccumulator::ComputeNetForceJacobian(

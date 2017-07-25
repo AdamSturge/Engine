@@ -7,6 +7,9 @@
 #include <constant_force.h>
 #include <gravity_force.h>
 #include <linear_drag_force.h>
+#include <unordered_map>
+#include <spring.h>
+#include <spring_force.h>
 
 class NetForceAccumulator
 {
@@ -16,6 +19,9 @@ class NetForceAccumulator
         bool gravity_on;
         LinearDragForceGenerator m_drag_force;
         bool drag_on;
+        SpringForceGenerator m_spring_force;
+        std::unordered_map<GLint, Spring> m_springs; // maps spring id to spring
+        std::unordered_map<GLint,std::vector<GLint>> m_entity_spring_map; // maps physics id to springs it is a part of (by id)
 
     public:
 
@@ -46,6 +52,11 @@ class NetForceAccumulator
             Set the drag coefficent. Large values mean stronger drag
         **/
         void SetDragCoeff(GLfloat beta);
+
+        /**
+            Adds a spring to the force simulation
+        **/
+        void AddSpring(Spring spring);
 
         /**
             Computes the net force acting on an entity in the sumulation via accumulation

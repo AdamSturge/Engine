@@ -4,6 +4,7 @@ var classScene =
     [ "Scene", "classScene.html#a8040db7addb6ae23254bd517323b65fa", null ],
     [ "AddModel", "classScene.html#a5419dc941ee6efc29cd5cef8e7d6d414", null ],
     [ "AddPhysicsEntity", "classScene.html#a18477e2b5b504b46f3e7d37908abb98d", null ],
+    [ "AddSpring", "classScene.html#a2887ec4b474b1ac7572aa0e3031ebdb0", null ],
     [ "CleanUp", "classScene.html#a830078c354d5df8ef9b811dac7b2c7dd", null ],
     [ "GetModel", "classScene.html#a031dc667e4152e4bfd2a8930d31320a4", null ],
     [ "GetModelCount", "classScene.html#a406df661eb7be589964dafe76f7f09c8", null ],

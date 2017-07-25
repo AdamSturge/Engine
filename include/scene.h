@@ -10,7 +10,7 @@
 #include <camera.h>
 #include <GLFW/glfw3.h>
 #include <net_force_accumulator.h>
- 
+#include <spring.h>
 
 /**
     \brief A scene in the engine
@@ -75,6 +75,12 @@ class Scene
             @return The number of Models in the Scene
         **/
 	GLuint GetModelCount();
+
+        /**
+            Adds a spring connecting two entities in the scene
+            @param spring the spring
+        **/
+        void AddSpring(Spring spring);
 
         /**
             Moves the physical simulation one time step forward

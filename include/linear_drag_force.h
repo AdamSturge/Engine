@@ -6,6 +6,9 @@
 #include <memory>
 #include "physics_entity.h"
 
+/**
+    \brief Computes a simple linear drag force on the provided entity
+**/
 class LinearDragForceGenerator
 {
     private:

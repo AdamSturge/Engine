@@ -105,6 +105,8 @@ Inheritance diagram for PhysicsEntity:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a768b5515cb33ce3c90936d8aa3ebc547"><td class="memItemLeft" align="right" valign="top">GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#a768b5515cb33ce3c90936d8aa3ebc547">GetId</a> () const</td></tr>
+<tr class="separator:a768b5515cb33ce3c90936d8aa3ebc547"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73d263f4efb4fc87b36493f340d94a97"><td class="memItemLeft" align="right" valign="top">Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#a73d263f4efb4fc87b36493f340d94a97">GetPosition</a> ()</td></tr>
 <tr class="separator:a73d263f4efb4fc87b36493f340d94a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade372f2cdf07f3fe3d97c03c64534ff0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#ade372f2cdf07f3fe3d97c03c64534ff0">SetPosition</a> (Vector3Gf x)</td></tr>
@@ -135,6 +137,8 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a307a68bd03c07e34972a2533ce714e2e"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#a307a68bd03c07e34972a2533ce714e2e">m_id</a></td></tr>
+<tr class="separator:a307a68bd03c07e34972a2533ce714e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afee5026bb0c5504697b7a6c4c59d8003"><td class="memItemLeft" align="right" valign="top">Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#afee5026bb0c5504697b7a6c4c59d8003">m_position</a></td></tr>
 <tr class="separator:afee5026bb0c5504697b7a6c4c59d8003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc38c58fd803d67079f25043331f0018"><td class="memItemLeft" align="right" valign="top">Vector3Gf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#abc38c58fd803d67079f25043331f0018">m_next_position_buffer</a></td></tr>
@@ -203,6 +207,24 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a768b5515cb33ce3c90936d8aa3ebc547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a768b5515cb33ce3c90936d8aa3ebc547">&#9670;&nbsp;</a></span>GetId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint PhysicsEntity::GetId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the unique id for this entity </p>
+
+</div>
+</div>
 <a id="a07943c4b81878d402b97d1280f8c8ff9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a07943c4b81878d402b97d1280f8c8ff9">&#9670;&nbsp;</a></span>GetMass()</h2>
 
@@ -382,7 +404,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the velocity for this entity. If possible use SetNextPosition instead </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>new velocity for this entity </td></tr>
+    <tr><td class="paramname">v</td><td>new velocity for this entity </td></tr>
   </table>
   </dd>
 </dl>
@@ -408,6 +430,29 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a307a68bd03c07e34972a2533ce714e2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307a68bd03c07e34972a2533ce714e2e">&#9670;&nbsp;</a></span>m_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint PhysicsEntity::m_id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unique id for this entity </p>
+
+</div>
+</div>
 <a id="a5a7bc5174169e169f69723d2483c2eff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a7bc5174169e169f69723d2483c2eff">&#9670;&nbsp;</a></span>m_mass</h2>
 

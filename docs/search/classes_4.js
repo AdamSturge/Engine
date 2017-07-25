@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gravityforcegenerator',['GravityForceGenerator',['../classGravityForceGenerator.html',1,'']]]
+  ['lineardragforcegenerator',['LinearDragForceGenerator',['../classLinearDragForceGenerator.html',1,'']]]
 ];

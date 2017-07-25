@@ -17,6 +17,7 @@
 #include <physics_entity.h>
 #include <model.h>
 #include <net_force_accumulator.h>
+#include <spring.h>
 
 void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode);
 void MouseCallback(GLFWwindow*,double xpos, double ypos);
@@ -25,7 +26,7 @@ void DoMovement();
 
 const GLuint WIDTH = 800, HEIGHT = 600;
 
-Camera camera(Vector3Gf(0.0f,0.0f,73.0f));
+Camera camera(Vector3Gf(1.0f,0.0f,10.0f));
 
 bool keys[1024] = {false};
 
@@ -84,11 +85,18 @@ int main()
     net_force_accumulator.EnableDrag(true);
     Scene scene(time_integrator_ptr,net_force_accumulator);
     
-    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(10.0f,0.0f,0.0f), 1.0f));
+    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
+    
+    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(1.0f, Vector3Gf(3.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));
+    scene.AddPhysicsEntity(sphere2_ptr);
+    scene.AddModel(sphere2_ptr);
+
+    Spring spring(10.0f,5.0f,sphere1_ptr,sphere2_ptr);
+    scene.AddSpring(spring);
    
-    bool start = false;
+    bool start = true;
     while(!glfwWindowShouldClose(window))
     {
         GLfloat current_frame = glfwGetTime();
