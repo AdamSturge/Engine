@@ -148,7 +148,7 @@ int main()
         {
             scene.StepPhysics();
         }
-        std::cout << (sphere2_ptr->GetPosition() - sphere1_ptr->GetPosition()).transpose() << std::endl;       
+//        std::cout << (sphere2_ptr->GetPosition() - sphere1_ptr->GetPosition()).transpose() << std::endl;       
 
         scene.Render(shader);
 

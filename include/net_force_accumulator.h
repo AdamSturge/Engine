@@ -50,11 +50,13 @@ class NetForceAccumulator
 
         /**
             Set the drag coefficent. Large values mean stronger drag
+            @param beta drag coefficent
         **/
         void SetDragCoeff(GLfloat beta);
 
         /**
             Adds a spring to the force simulation
+            @param spring spring to be added
         **/
         void AddSpring(Spring spring);
 
