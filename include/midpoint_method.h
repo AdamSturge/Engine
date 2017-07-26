@@ -16,12 +16,15 @@ class MidpointMethod : public TimeIntegrator
 
         /**
             Constructs a MidpointMethod with the provided timestep
+            @param dt time step
+            @param threshold if successive iterations are less than threshold different in norm then halt
+            @param max_iter maximum number of iterations to run
         **/
-        MidpointMethod(GLfloat dt);
+        MidpointMethod(GLfloat dt, GLfloat threshold,GLuint max_iter);
 
     private:
         BackwardEuler m_backward_euler;
-
+        
         /**
             Private implementation details for solver.
             @param net_force_accumulator accumulates the net force acting on entity_ptr
@@ -30,7 +33,7 @@ class MidpointMethod : public TimeIntegrator
         **/
         void Solve(
             const NetForceAccumulator& net_force_accumulator,
-			const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
+	    const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
             const std::shared_ptr<PhysicsEntity> entity_ptr);
        
 };

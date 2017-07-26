@@ -14,6 +14,9 @@
 #include <vector3G.h>
 #include <memory.h>
 #include <verlet.h>
+#include <midpoint_method.h>
+#include <backward_euler.h>
+#include <symplectic_euler.h>
 #include <physics_entity.h>
 #include <model.h>
 #include <net_force_accumulator.h>
@@ -77,12 +80,12 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new Verlet(0.01));
+    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new SymplecticEuler(0.01));
     NetForceAccumulator net_force_accumulator;
     //Vector3Gf g(0.0f,-9.81f,0.0f);
     //net_force_accumulator.AddConstantForce(g);
     net_force_accumulator.EnableGravity(false);
-    net_force_accumulator.EnableDrag(true);
+    net_force_accumulator.EnableDrag(false);
     Scene scene(time_integrator_ptr,net_force_accumulator);
     
     std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));
@@ -93,7 +96,7 @@ int main()
     scene.AddPhysicsEntity(sphere2_ptr);
     scene.AddModel(sphere2_ptr);
 
-    Spring spring(10.0f,5.0f,sphere1_ptr,sphere2_ptr);
+    Spring spring(1.0f,5.0f,sphere1_ptr,sphere2_ptr);
     scene.AddSpring(spring);
    
     bool start = true;
@@ -145,7 +148,8 @@ int main()
         {
             scene.StepPhysics();
         }
-       
+        std::cout << (sphere2_ptr->GetPosition() - sphere1_ptr->GetPosition()).transpose() << std::endl;       
+
         scene.Render(shader);
 
         glfwSwapBuffers(window);

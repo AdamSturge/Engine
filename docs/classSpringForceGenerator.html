@@ -98,8 +98,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8963528f2bb6efbf489b4abe6eb0ec76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38554755154d8d49ccc0df9a3c551fc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpringForceGenerator.html#a38554755154d8d49ccc0df9a3c551fc1">AccumulateForce</a> (const GLfloat k, const GLfloat l0, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity1_ptr, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity2_ptr, Vector3Gf &amp;F) const</td></tr>
 <tr class="separator:a38554755154d8d49ccc0df9a3c551fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fa847741eba56d2a251c57a65a91f1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpringForceGenerator.html#a4fa847741eba56d2a251c57a65a91f1f">AccumulatedFdx</a> (const <a class="el" href="structSpring.html">Spring</a> spring, Eigen::Matrix&lt; GLfloat, 3, 3 &gt; &amp;dF) const</td></tr>
-<tr class="separator:a4fa847741eba56d2a251c57a65a91f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bafc74e85a2a21ff8bb95bbe8274cc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpringForceGenerator.html#a5bafc74e85a2a21ff8bb95bbe8274cc1">AccumulatedFdx</a> (const GLfloat k, const GLfloat l0, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity1_ptr, const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt; entity2_ptr, Eigen::Matrix&lt; GLfloat, 3, 3 &gt; &amp;dF) const</td></tr>
+<tr class="separator:a5bafc74e85a2a21ff8bb95bbe8274cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Computes the spring force resulting from 2 entities being connected by a spring. </p>
@@ -123,8 +123,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4fa847741eba56d2a251c57a65a91f1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fa847741eba56d2a251c57a65a91f1f">&#9670;&nbsp;</a></span>AccumulatedFdx()</h2>
+<a id="a5bafc74e85a2a21ff8bb95bbe8274cc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bafc74e85a2a21ff8bb95bbe8274cc1">&#9670;&nbsp;</a></span>AccumulatedFdx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,8 +132,26 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void SpringForceGenerator::AccumulatedFdx </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structSpring.html">Spring</a>&#160;</td>
-          <td class="paramname"><em>spring</em>, </td>
+          <td class="paramtype">const GLfloat&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLfloat&#160;</td>
+          <td class="paramname"><em>l0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&#160;</td>
+          <td class="paramname"><em>entity1_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classPhysicsEntity.html">PhysicsEntity</a> &gt;&#160;</td>
+          <td class="paramname"><em>entity2_ptr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -150,7 +168,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Adds the position jacobian </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">spring</td><td>spring connecting 2 entities </td></tr>
+    <tr><td class="paramname">k</td><td>stiffness coefficent of spring </td></tr>
+    <tr><td class="paramname">l0</td><td>rest length of spring </td></tr>
+    <tr><td class="paramname">entity1_ptr</td><td>entity on one end of the spring. The force will be computed such that it acts on this entity. </td></tr>
+    <tr><td class="paramname">entity2_ptr</td><td>entity on the other end of the spring. The negative of the computed force acts on this entity. </td></tr>
     <tr><td class="paramname">dF</td><td>Matrix that will accumulate the derivative of force with respect to position </td></tr>
   </table>
   </dd>

@@ -14,12 +14,12 @@ SymplecticEuler::SymplecticEuler(GLfloat dt)
 
 void SymplecticEuler::Solve(
             const NetForceAccumulator& net_force_accumulator,
-			const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
+	    const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
             const std::shared_ptr<PhysicsEntity> entity_ptr)
 {   
-    const Vector3Gf xi = entity_ptr->GetPosition();
-    const Vector3Gf vi = entity_ptr->GetVelocity();
-    const GLfloat mass = entity_ptr->GetMass();
+    Vector3Gf xi = entity_ptr->GetPosition();
+    Vector3Gf vi = entity_ptr->GetVelocity();
+    GLfloat mass = entity_ptr->GetMass();
 
     Vector3Gf F;
     F.setZero();
@@ -28,7 +28,6 @@ void SymplecticEuler::Solve(
     Vector3Gf vf = vi + m_dt*(1/mass)*F; 
     Vector3Gf xf = xi + m_dt*vf;
     
-
     entity_ptr->SetNextPosition(xf);
     entity_ptr->SetNextVelocity(vf);
 };

@@ -15,14 +15,20 @@ class BackwardEuler : public TimeIntegrator
 
         /**
             Constructs a BackwardEuler with the provided timestep
-        **/
-        BackwardEuler(GLfloat dt);
+            @param dt time step
+            @param threshold if successive iterations are less than m_thresold in norm apart then halt
+            @param max_iter maximum number of iterations to run
+         **/
+        BackwardEuler(GLfloat dt, GLfloat threshold, GLuint max_iter);
 
     private:
+        GLfloat m_threshold; // if successive iterations are less than m_threshold halt
+        GLuint m_max_iter; // maximum number of iterations to run
+
         /**
             Private implementation details for solver.
             @param net_force_accumulator accumulates the net force acting on entity_ptr
-			@param entity_ptrs list of all the PhysicsEntities in the scene
+	    @param entity_ptrs list of all the PhysicsEntities in the scene
             @param entity_ptr pointer to the entity being updated
         **/
         void Solve(

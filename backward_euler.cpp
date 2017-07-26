@@ -5,16 +5,20 @@
 BackwardEuler::BackwardEuler()
 {
     m_dt = 0.01;
+    m_threshold = 1e-9;
+    m_max_iter = 3;
 }
 
-BackwardEuler::BackwardEuler(GLfloat dt)
+BackwardEuler::BackwardEuler(GLfloat dt, GLfloat threshold, GLuint max_iter)
 {
     m_dt = dt;
+    m_threshold = threshold;
+    m_max_iter = max_iter;
 }
 
 void BackwardEuler::Solve(
             const NetForceAccumulator& net_force_accumulator,
-			const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
+	    const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
             const std::shared_ptr<PhysicsEntity> entity_ptr)
 {
     Vector3Gf xi = entity_ptr->GetPosition();
@@ -36,7 +40,7 @@ void BackwardEuler::Solve(
     Eigen::Matrix<GLfloat,3,3> dFdx,dFdv;
     Eigen::Matrix<GLfloat,6,1> G;    
     Eigen::Matrix<GLfloat,6,1> delta;
-    for(int i = 0; i < 3 && diff > 1e-9; ++i)
+    for(uint i = 0; i < m_max_iter && diff > m_threshold; ++i)
     {
         // Compute Jacobian at current guess
         J.setZero();

@@ -35,10 +35,19 @@ class SpringForceGenerator
 
         /**
             Adds the position jacobian
-            @param spring spring connecting 2 entities
+            @param k stiffness coefficent of spring
+            @param l0 rest length of spring
+            @param entity1_ptr entity on one end of the spring. The force will be computed such that it acts on this entity.
+            @param entity2_ptr entity on the other end of the spring. The negative of the computed force acts on this entity.
             @param dF Matrix that will accumulate the derivative of force with respect to position
         **/
-        void AccumulatedFdx(const Spring spring, Eigen::Matrix<GLfloat,3,3> &dF) const;
+        void AccumulatedFdx(
+            const GLfloat k,
+            const GLfloat l0,
+            const std::shared_ptr<PhysicsEntity> entity1_ptr,
+            const std::shared_ptr<PhysicsEntity> entity2_ptr,
+            Eigen::Matrix<GLfloat,3,3> &dF) const;
+
 
 
 };
