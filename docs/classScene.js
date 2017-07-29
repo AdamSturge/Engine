@@ -10,6 +10,7 @@ var classScene =
     [ "GetModelCount", "classScene.html#a406df661eb7be589964dafe76f7f09c8", null ],
     [ "GetPhysicsEntity", "classScene.html#ac20558c7452d933ce3ebe8caa1514702", null ],
     [ "GetPhysicsEntityCount", "classScene.html#a2cadf8fe478a7e3a270902a0536751a9", null ],
-    [ "Render", "classScene.html#a7edc9fabe7ef61a426cd6278a0b209fe", null ],
+    [ "Render", "classScene.html#a182e7b63b42ad9cfa48a52cd910fa7da", null ],
+    [ "SetLight", "classScene.html#a0c7e2102f9c6edbb42888cd3204ca251", null ],
     [ "StepPhysics", "classScene.html#a5fe443641612290ba78931132d1fddb5", null ]
 ];

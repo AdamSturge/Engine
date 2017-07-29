@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Engine: Member List</title>
+<title>Engine: include/light.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classMesh.html','');});
+$(document).ready(function(){initNavTree('light_8h_source.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -80,25 +80,16 @@ $(document).ready(function(){initNavTree('classMesh.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Mesh Member List</div>  </div>
+<div class="title">light.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classMesh.html">Mesh</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classMesh.html#abe1f7ce31904fb28cef0c156b892af8e">CleanUp</a>()</td><td class="entry"><a class="el" href="classMesh.html">Mesh</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMesh.html#a0d834e592567ebd0740188277ce7f4e9">GetFaces</a>()</td><td class="entry"><a class="el" href="classMesh.html">Mesh</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMesh.html#a5440570a2cc20d00e3a9ee958c3f4999">GetNormals</a>()</td><td class="entry"><a class="el" href="classMesh.html">Mesh</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMesh.html#adbbf05c59fd7cc170ceca2a0a71d7af1">GetNumEdges</a>()</td><td class="entry"><a class="el" href="classMesh.html">Mesh</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMesh.html#ad4917bc56c71f31974af4be3eb90a390">GetVAO</a>()</td><td class="entry"><a class="el" href="classMesh.html">Mesh</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMesh.html#aa85e1a55bac7d02af659f38eb55a5664">GetVertices</a>()</td><td class="entry"><a class="el" href="classMesh.html">Mesh</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMesh.html#a2af137f1571af89172b9c102302c416b">Mesh</a>()</td><td class="entry"><a class="el" href="classMesh.html">Mesh</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMesh.html#a46b8aa0246bf98bf18c91ee93503eae1">Mesh</a>(List3df vertices, List3di faces, List3df normals)</td><td class="entry"><a class="el" href="classMesh.html">Mesh</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LIGHT_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LIGHT_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector3G.h&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="structLight.html">    5</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structLight.html">Light</a></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    public :</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        Vector3Gf position;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        Vector3Gf ambient;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        Vector3Gf diffuse;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        Vector3Gf specular;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="structLight.html">Light</a>();</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="structLight.html">Light</a>(Vector3Gf position, Vector3Gf ambient, Vector3Gf diffuse, Vector3Gf specular);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="structLight_html"><div class="ttname"><a href="structLight.html">Light</a></div><div class="ttdef"><b>Definition:</b> light.h:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>light.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>

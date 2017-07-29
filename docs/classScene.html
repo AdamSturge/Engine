@@ -112,10 +112,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a406df661eb7be589964dafe76f7f09c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2887ec4b474b1ac7572aa0e3031ebdb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a2887ec4b474b1ac7572aa0e3031ebdb0">AddSpring</a> (<a class="el" href="structSpring.html">Spring</a> spring)</td></tr>
 <tr class="separator:a2887ec4b474b1ac7572aa0e3031ebdb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7e2102f9c6edbb42888cd3204ca251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a0c7e2102f9c6edbb42888cd3204ca251">SetLight</a> (<a class="el" href="structLight.html">Light</a> light)</td></tr>
+<tr class="separator:a0c7e2102f9c6edbb42888cd3204ca251"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fe443641612290ba78931132d1fddb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a5fe443641612290ba78931132d1fddb5">StepPhysics</a> ()</td></tr>
 <tr class="separator:a5fe443641612290ba78931132d1fddb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7edc9fabe7ef61a426cd6278a0b209fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a7edc9fabe7ef61a426cd6278a0b209fe">Render</a> (<a class="el" href="classShader.html">Shader</a> shader)</td></tr>
-<tr class="separator:a7edc9fabe7ef61a426cd6278a0b209fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182e7b63b42ad9cfa48a52cd910fa7da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a182e7b63b42ad9cfa48a52cd910fa7da">Render</a> (<a class="el" href="classShader.html">Shader</a> shader, Vector3Gf view_pos)</td></tr>
+<tr class="separator:a182e7b63b42ad9cfa48a52cd910fa7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830078c354d5df8ef9b811dac7b2c7dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScene.html#a830078c354d5df8ef9b811dac7b2c7dd">CleanUp</a> ()</td></tr>
 <tr class="separator:a830078c354d5df8ef9b811dac7b2c7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -380,8 +382,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7edc9fabe7ef61a426cd6278a0b209fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7edc9fabe7ef61a426cd6278a0b209fe">&#9670;&nbsp;</a></span>Render()</h2>
+<a id="a182e7b63b42ad9cfa48a52cd910fa7da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182e7b63b42ad9cfa48a52cd910fa7da">&#9670;&nbsp;</a></span>Render()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -390,12 +392,52 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void Scene::Render </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classShader.html">Shader</a>&#160;</td>
-          <td class="paramname"><em>shader</em></td><td>)</td>
+          <td class="paramname"><em>shader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3Gf&#160;</td>
+          <td class="paramname"><em>view_pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Renders the Models in the <a class="el" href="classScene.html" title="A scene in the engine. ">Scene</a> to the screen </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shader</td><td>shader to use to render scene </td></tr>
+    <tr><td class="paramname">view_pos</td><td>position scene is being viewed from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c7e2102f9c6edbb42888cd3204ca251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c7e2102f9c6edbb42888cd3204ca251">&#9670;&nbsp;</a></span>SetLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::SetLight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLight.html">Light</a>&#160;</td>
+          <td class="paramname"><em>light</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Renders the Models in the <a class="el" href="classScene.html" title="A scene in the engine. ">Scene</a> to the screen </p>
+<p>Sets the light fpr the scene </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">light</td><td>the light source </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

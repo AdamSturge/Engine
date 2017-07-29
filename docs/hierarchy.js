@@ -3,7 +3,9 @@ var hierarchy =
     [ "Camera", "classCamera.html", null ],
     [ "ConstantForceGenerator", "classConstantForceGenerator.html", null ],
     [ "GravityForceGenerator", "classGravityForceGenerator.html", null ],
+    [ "Light", "structLight.html", null ],
     [ "LinearDragForceGenerator", "classLinearDragForceGenerator.html", null ],
+    [ "Material", "structMaterial.html", null ],
     [ "Mesh", "classMesh.html", null ],
     [ "Model", "classModel.html", [
       [ "Sphere", "classSphere.html", null ]

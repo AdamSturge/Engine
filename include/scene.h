@@ -11,6 +11,7 @@
 #include <GLFW/glfw3.h>
 #include <net_force_accumulator.h>
 #include <spring.h>
+#include <light.h>
 
 /**
     \brief A scene in the engine
@@ -26,6 +27,7 @@ class Scene
         
         NetForceAccumulator m_net_force_accumulator;           
        
+        Light m_light;
     public :
         /**
             Creates a Scene instance with default values for its TimeIntegrator and ForceGenerator members
@@ -83,14 +85,22 @@ class Scene
         void AddSpring(Spring spring);
 
         /**
+            Sets the light fpr the scene
+            @param light the light source
+        **/
+        void SetLight(Light light);
+
+        /**
             Moves the physical simulation one time step forward
         **/
         void StepPhysics();
         
        /**
             Renders the Models in the Scene to the screen
+            @param shader shader to use to render scene
+            @param view_pos position scene is being viewed from
         **/
-        void Render(Shader shader);
+        void Render(Shader shader, Vector3Gf view_pos);
 
         /**
             Removes all Model data from the GPU

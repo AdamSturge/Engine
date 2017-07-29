@@ -51,6 +51,11 @@ void Scene::AddSpring(Spring spring)
     m_net_force_accumulator.AddSpring(spring);
 }
 
+void Scene::SetLight(Light light)
+{
+    m_light = light;
+}
+
 void Scene::StepPhysics()
 {
     for(std::shared_ptr<PhysicsEntity> entity_ptr : m_physics_entity_ptrs)
@@ -66,9 +71,16 @@ void Scene::StepPhysics()
 };
 
 
-void Scene::Render(Shader shader)
+void Scene::Render(Shader shader, Vector3Gf view_pos)
 {
+    glUniform3f(glGetUniformLocation(shader.Program,"light.ambient"),m_light.ambient(0),m_light.ambient(1),m_light.ambient(2));
+    glUniform3f(glGetUniformLocation(shader.Program,"light.diffuse"),m_light.diffuse(0),m_light.diffuse(1),m_light.diffuse(2));
+    glUniform3f(glGetUniformLocation(shader.Program,"light.position"),m_light.position(0),m_light.position(1),m_light.position(2));
+
+    glUniform3f(glGetUniformLocation(shader.Program,"viewPos"),view_pos(0), view_pos(1), view_pos(2));
+
     GLint modelLoc = glGetUniformLocation(shader.Program, "model");
+    GLint normalLoc = glGetUniformLocation(shader.Program, "normalMat");
 
     const GLuint model_count = GetModelCount();
     std::shared_ptr<Model> model_ptr;
@@ -80,11 +92,22 @@ void Scene::Render(Shader shader)
        
         Eigen::Matrix<float,4,4> model_matrix = model_ptr->GetModelMatrix();
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, model_matrix.data());  
-        
+ 
+        Material material = model_ptr->GetMaterial();
+
+        glUniform3f(glGetUniformLocation(shader.Program,"material.ambient"),material.ambient(0),material.ambient(1),material.ambient(2));
+        glUniform3f(glGetUniformLocation(shader.Program,"material.diffuse"),material.diffuse(0),material.diffuse(1),material.diffuse(2));
+        glUniform3f(glGetUniformLocation(shader.Program,"material.specular"),material.specular(0),material.specular(1),material.specular(2));
+        glUniform1f(glGetUniformLocation(shader.Program,"material.shininess"),material.shininess);
+
+        Eigen::Matrix<GLfloat,3,3> N = model_ptr->GetNormalMatrix();
+
+        glUniformMatrix3fv(normalLoc, 1, GL_FALSE, N.data());
+
         glBindVertexArray(VAO);
         
         glDrawElements(GL_TRIANGLES, model_ptr->GetMesh().GetNumEdges(), GL_UNSIGNED_INT,0);
-
+        
         glBindVertexArray(0);   
 
     }

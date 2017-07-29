@@ -19,6 +19,7 @@ class Mesh
     private:        
     	List3df m_vertices; // Matrix of vertices in mesh
     	List3di m_faces; // Matrix of indices into vertex list in counter-clockwise order.
+        List3df m_normals; // Matrix of face normals
     	GLuint m_VAO;
     	GLuint m_VBO;
     	GLuint m_EBO;
@@ -35,8 +36,9 @@ class Mesh
             Builds a mesh with the provided vertices and edges
             @param vertices nx3 matrix of vertices for the mesh. 
             @param faces mx3 matrix of face indices for the mesh. Listed in counter-clockwise order
+            @param normals mx3 matrix of face normals
         **/
-        Mesh(List3df vertices, List3di faces);
+        Mesh(List3df vertices, List3di faces, List3df normals);
 
         /**
             @return A copy of the vertices in the mesh
@@ -47,6 +49,11 @@ class Mesh
             @return A copy of the faces in the mesh
         **/
         List3di GetFaces();
+
+        /**
+            @return A copy of the face normals in the mesh
+        **/
+        List3df GetNormals();
 
         /**
             @return The number of edges in the mesh

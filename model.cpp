@@ -3,6 +3,7 @@
 Model::Model()
 {
 	m_model_matrix.setIdentity();
+        m_normal_matrix.setIdentity();
 }
 
 Eigen::Matrix<GLfloat, 4, 4> Model::GetModelMatrix()
@@ -13,9 +14,20 @@ Eigen::Matrix<GLfloat, 4, 4> Model::GetModelMatrix()
 void Model::SetModelMatrix(Eigen::Matrix<GLfloat,4,4> m)
 {
     m_model_matrix = m;
+    m_normal_matrix = m.block(0,0,3,3).inverse().transpose();
 };
 
 Mesh Model::GetMesh()
 {
     return m_mesh;
+}
+
+Material Model::GetMaterial()
+{
+    return m_material;
+}
+
+Eigen::Matrix<GLfloat,3,3> Model::GetNormalMatrix()
+{
+    return m_normal_matrix;
 }

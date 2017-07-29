@@ -111,6 +111,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b79c9e0c9abc50896e70fe1fabff4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a332f5a4ecf9bca582e583b3ff7784bf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMesh.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a332f5a4ecf9bca582e583b3ff7784bf5">GetMesh</a> ()</td></tr>
 <tr class="separator:a332f5a4ecf9bca582e583b3ff7784bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e1400873ced0ee89d04cf3167ff0ce4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMaterial.html">Material</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a8e1400873ced0ee89d04cf3167ff0ce4">GetMaterial</a> ()</td></tr>
+<tr class="separator:a8e1400873ced0ee89d04cf3167ff0ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde876b115a2a8e64a18c147402402b7"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; GLfloat, 3, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#afde876b115a2a8e64a18c147402402b7">GetNormalMatrix</a> ()</td></tr>
+<tr class="separator:afde876b115a2a8e64a18c147402402b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -123,6 +127,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:afe425f579d17b798e6c454a5c5e2d952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41d60873613f3b75c8242df3bbb44ca9"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; GLfloat, 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a41d60873613f3b75c8242df3bbb44ca9">m_model_matrix</a></td></tr>
 <tr class="separator:a41d60873613f3b75c8242df3bbb44ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bdd98280096538d7768388925670fc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMaterial.html">Material</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a9bdd98280096538d7768388925670fc2">m_material</a></td></tr>
+<tr class="separator:a9bdd98280096538d7768388925670fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51fb583d297f5cf764c356efae491a63"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; GLfloat, 3, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a51fb583d297f5cf764c356efae491a63">m_normal_matrix</a></td></tr>
+<tr class="separator:a51fb583d297f5cf764c356efae491a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines a model used for rendering. </p>
@@ -155,6 +163,24 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e1400873ced0ee89d04cf3167ff0ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e1400873ced0ee89d04cf3167ff0ce4">&#9670;&nbsp;</a></span>GetMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMaterial.html">Material</a> Model::GetMaterial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>#return material for this mesh </p>
+
+</div>
+</div>
 <a id="a332f5a4ecf9bca582e583b3ff7784bf5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a332f5a4ecf9bca582e583b3ff7784bf5">&#9670;&nbsp;</a></span>GetMesh()</h2>
 
@@ -191,6 +217,24 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="afde876b115a2a8e64a18c147402402b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde876b115a2a8e64a18c147402402b7">&#9670;&nbsp;</a></span>GetNormalMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix&lt; GLfloat, 3, 3 &gt; Model::GetNormalMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The normal matrix </dd></dl>
+
+</div>
+</div>
 <a id="a6b79c9e0c9abc50896e70fe1fabff4e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b79c9e0c9abc50896e70fe1fabff4e7">&#9670;&nbsp;</a></span>SetModelMatrix()</h2>
 
@@ -216,6 +260,29 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9bdd98280096538d7768388925670fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bdd98280096538d7768388925670fc2">&#9670;&nbsp;</a></span>m_material</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMaterial.html">Material</a> Model::m_material</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="structMaterial.html">Material</a> properties for this model </p>
+
+</div>
+</div>
 <a id="afe425f579d17b798e6c454a5c5e2d952"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe425f579d17b798e6c454a5c5e2d952">&#9670;&nbsp;</a></span>m_mesh</h2>
 
@@ -259,6 +326,29 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The model matrix. This handles transforming from local model coordinates to world coordinates </p>
+
+</div>
+</div>
+<a id="a51fb583d297f5cf764c356efae491a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51fb583d297f5cf764c356efae491a63">&#9670;&nbsp;</a></span>m_normal_matrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix&lt;GLfloat,3,3&gt; Model::m_normal_matrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The normal matrix. Used in rendering light interaction with surface </p>
 
 </div>
 </div>

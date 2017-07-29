@@ -29,7 +29,7 @@ void DoMovement();
 
 const GLuint WIDTH = 800, HEIGHT = 600;
 
-Camera camera(Vector3Gf(1.0f,0.0f,10.0f));
+Camera camera(Vector3Gf(0.0f,0.0f,10.0f));
 
 bool keys[1024] = {false};
 
@@ -80,7 +80,7 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new SymplecticEuler(0.01));
+    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new Verlet(0.01));
     NetForceAccumulator net_force_accumulator;
     //Vector3Gf g(0.0f,-9.81f,0.0f);
     //net_force_accumulator.AddConstantForce(g);
@@ -88,17 +88,36 @@ int main()
     net_force_accumulator.EnableDrag(false);
     Scene scene(time_integrator_ptr,net_force_accumulator);
     
-    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(0.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));
+    Material material1;
+    material1.ambient = Vector3Gf(0.0f,0.0f,0.3f);
+    material1.diffuse = Vector3Gf(0.0f,0.0f,0.7f);
+    material1.specular = Vector3Gf(0.0f,0.0f,1.0f);
+    material1.shininess = 32.0f;
+
+    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(-2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, material1));
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
     
-    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(1.0f, Vector3Gf(3.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));
+    Material material2;
+    material2.ambient = Vector3Gf(0.3f,0.0f,0.0f);
+    material2.diffuse = Vector3Gf(0.7f,0.0f,0.0f);
+    material2.specular = Vector3Gf(1.0f,0.0f,0.0f);
+    material2.shininess = 32.0f;
+
+    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(1.0f, Vector3Gf(2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, material2));
     scene.AddPhysicsEntity(sphere2_ptr);
     scene.AddModel(sphere2_ptr);
 
     Spring spring(1.0f,5.0f,sphere1_ptr,sphere2_ptr);
     scene.AddSpring(spring);
    
+    Light light;
+    light.position = Vector3Gf(0.0f,0.0f,0.0f);
+    light.diffuse  = Vector3Gf(1.0f,1.0f,1.0f);
+    light.ambient  = Vector3Gf(1.0f,1.0f,1.0f);
+    light.specular = Vector3Gf(1.0f,1.0f,1.0f);
+    scene.SetLight(light);
+
     bool start = true;
     while(!glfwWindowShouldClose(window))
     {
@@ -140,6 +159,7 @@ int main()
         GLint modelLoc = glGetUniformLocation(shader.Program, "model");
         GLint viewLoc = glGetUniformLocation(shader.Program, "view"); 
         GLint projectionLoc = glGetUniformLocation(shader.Program, "projection");
+        GLint normalLoc = glGetUniformLocation(shader.Program, "normalMat");
 
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, view.data());
         glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, projection.data());
@@ -150,7 +170,7 @@ int main()
         }
 //        std::cout << (sphere2_ptr->GetPosition() - sphere1_ptr->GetPosition()).transpose() << std::endl;       
 
-        scene.Render(shader);
+        scene.Render(shader, camera.m_position);
 
         glfwSwapBuffers(window);
         glBindVertexArray(0);
