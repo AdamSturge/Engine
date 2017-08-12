@@ -85,7 +85,7 @@ class Scene
         void AddSpring(Spring spring);
 
         /**
-            Sets the light fpr the scene
+            Sets the light for the scene
             @param light the light source
         **/
         void SetLight(Light light);
