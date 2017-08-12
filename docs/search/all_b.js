@@ -9,7 +9,7 @@ var searchData=
   ['setposition',['SetPosition',['../classPhysicsEntity.html#ade372f2cdf07f3fe3d97c03c64534ff0',1,'PhysicsEntity']]],
   ['setvelocity',['SetVelocity',['../classPhysicsEntity.html#aa9b9cb8be38aeb3babf415d8cbad352c',1,'PhysicsEntity']]],
   ['shader',['Shader',['../classShader.html',1,'Shader'],['../classShader.html#a03421a8419cdad4b84cf58ecdb156879',1,'Shader::Shader()']]],
-  ['sphere',['Sphere',['../classSphere.html',1,'Sphere'],['../classSphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9',1,'Sphere::Sphere()'],['../classSphere.html#aa12c8d75058ff4911ca922cc99197965',1,'Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Material material)']]],
+  ['sphere',['Sphere',['../classSphere.html',1,'Sphere'],['../classSphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9',1,'Sphere::Sphere()'],['../classSphere.html#a6d47af660fd83089c6b26519e3d1ba0b',1,'Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass)']]],
   ['spring',['Spring',['../structSpring.html',1,'Spring'],['../structSpring.html#a751cea7f06b8e24a1f65c8d28cccde35',1,'Spring::Spring()'],['../structSpring.html#af97baa773074b6371e48098b507070a5',1,'Spring::Spring(GLfloat k, GLfloat l0, std::shared_ptr&lt; PhysicsEntity &gt; entity1_ptr, std::shared_ptr&lt; PhysicsEntity &gt; entity2_ptr)']]],
   ['springforcegenerator',['SpringForceGenerator',['../classSpringForceGenerator.html',1,'SpringForceGenerator'],['../classSpringForceGenerator.html#a8963528f2bb6efbf489b4abe6eb0ec76',1,'SpringForceGenerator::SpringForceGenerator()']]],
   ['stepforward',['StepForward',['../classTimeIntegrator.html#ac9fa137f3da10fd381ce1c75c14b7d82',1,'TimeIntegrator']]],

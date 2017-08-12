@@ -93,13 +93,6 @@ void Scene::Render(Shader shader, Vector3Gf view_pos)
         Eigen::Matrix<float,4,4> model_matrix = model_ptr->GetModelMatrix();
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, model_matrix.data());  
  
-        Material material = model_ptr->GetMaterial();
-
-        glUniform3f(glGetUniformLocation(shader.Program,"material.ambient"),material.ambient(0),material.ambient(1),material.ambient(2));
-        glUniform3f(glGetUniformLocation(shader.Program,"material.diffuse"),material.diffuse(0),material.diffuse(1),material.diffuse(2));
-        glUniform3f(glGetUniformLocation(shader.Program,"material.specular"),material.specular(0),material.specular(1),material.specular(2));
-        glUniform1f(glGetUniformLocation(shader.Program,"material.shininess"),material.shininess);
-
         Eigen::Matrix<GLfloat,3,3> N = model_ptr->GetNormalMatrix();
 
         glUniformMatrix3fv(normalLoc, 1, GL_FALSE, N.data());

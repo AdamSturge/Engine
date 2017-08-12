@@ -10,7 +10,7 @@ Sphere::Sphere() : Model(), PhysicsEntity()
 
 Sphere::~Sphere(){};
 
-Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Material material) : Model(), PhysicsEntity()
+Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass) : Model(), PhysicsEntity()
 {      
     m_radius = radius;
     m_center = position;
@@ -21,8 +21,6 @@ Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat m
 
     m_model_matrix.col(3) << position(0), position(1), position(2), 1.0f; 
     UVSphereMesh(m_radius, 20, 20, m_mesh); // model matrix handles translation of mesh so we use (0,0,0) as mesh center
-
-    m_material = material;
 };
 
 

@@ -73,8 +73,8 @@ int main()
     glfwSetKeyCallback(window,KeyCallback);
     glClearColor(0.2f,0.3f,0.3f,0.1f);
 
-    //glfwSetCursorPosCallback(window,MouseCallback);
-    //glfwSetInputMode(window,GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+//    glfwSetCursorPosCallback(window,MouseCallback);
+//    glfwSetInputMode(window,GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     glfwSetScrollCallback(window, ScrollCallback);
 
@@ -88,23 +88,11 @@ int main()
     net_force_accumulator.EnableDrag(false);
     Scene scene(time_integrator_ptr,net_force_accumulator);
     
-    Material material1;
-    material1.ambient = Vector3Gf(0.0f,0.0f,0.3f);
-    material1.diffuse = Vector3Gf(0.0f,0.0f,0.7f);
-    material1.specular = Vector3Gf(0.0f,0.0f,1.0f);
-    material1.shininess = 32.0f;
-
-    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(-2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, material1));
+    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(-2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
     
-    Material material2;
-    material2.ambient = Vector3Gf(0.3f,0.0f,0.0f);
-    material2.diffuse = Vector3Gf(0.7f,0.0f,0.0f);
-    material2.specular = Vector3Gf(1.0f,0.0f,0.0f);
-    material2.shininess = 32.0f;
-
-    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(1.0f, Vector3Gf(2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, material2));
+    std::shared_ptr<Sphere> sphere2_ptr(new Sphere(1.0f, Vector3Gf(2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f));
     scene.AddPhysicsEntity(sphere2_ptr);
     scene.AddModel(sphere2_ptr);
 
@@ -113,9 +101,9 @@ int main()
    
     Light light;
     light.position = Vector3Gf(0.0f,0.0f,0.0f);
-    light.diffuse  = Vector3Gf(1.0f,1.0f,1.0f);
-    light.ambient  = Vector3Gf(1.0f,1.0f,1.0f);
-    light.specular = Vector3Gf(1.0f,1.0f,1.0f);
+    light.diffuse  = Vector3Gf(1.0f,0.0f,0.0f);
+    light.ambient  = Vector3Gf(0.0f,0.0f,0.0f);
+    light.specular = Vector3Gf(1.0f,0.0f,0.0f);
     scene.SetLight(light);
 
     bool start = true;

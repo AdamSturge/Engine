@@ -22,11 +22,6 @@ Mesh Model::GetMesh()
     return m_mesh;
 }
 
-Material Model::GetMaterial()
-{
-    return m_material;
-}
-
 Eigen::Matrix<GLfloat,3,3> Model::GetNormalMatrix()
 {
     return m_normal_matrix;

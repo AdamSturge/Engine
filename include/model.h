@@ -4,7 +4,6 @@
 #include <Eigen/Core>
 #include <Eigen/Dense>
 #include <vector3G.h>
-#include <material.h>
 
 /**
     \brief Defines a model used for rendering
@@ -30,11 +29,6 @@ class Model {
         Mesh GetMesh();
 
         /**
-            #return material for this mesh
-        **/
-        Material GetMaterial();
-
-        /**
             @return The normal matrix
         **/
         Eigen::Matrix<GLfloat,3,3> GetNormalMatrix();
@@ -50,11 +44,7 @@ class Model {
         **/
     	Eigen::Matrix<GLfloat,4,4> m_model_matrix;  
 
-        /**
-            Material properties for this model
-        **/
-        Material m_material;
-        
+       
         /**
             The normal matrix. Used in rendering light interaction with surface
         **/

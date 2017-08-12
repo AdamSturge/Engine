@@ -4,7 +4,6 @@ var searchData=
   ['getfaces',['GetFaces',['../classMesh.html#a0d834e592567ebd0740188277ce7f4e9',1,'Mesh']]],
   ['getid',['GetId',['../classPhysicsEntity.html#a768b5515cb33ce3c90936d8aa3ebc547',1,'PhysicsEntity']]],
   ['getmass',['GetMass',['../classPhysicsEntity.html#a07943c4b81878d402b97d1280f8c8ff9',1,'PhysicsEntity']]],
-  ['getmaterial',['GetMaterial',['../classModel.html#a8e1400873ced0ee89d04cf3167ff0ce4',1,'Model']]],
   ['getmesh',['GetMesh',['../classModel.html#a332f5a4ecf9bca582e583b3ff7784bf5',1,'Model']]],
   ['getmodel',['GetModel',['../classScene.html#a031dc667e4152e4bfd2a8930d31320a4',1,'Scene']]],
   ['getmodelcount',['GetModelCount',['../classScene.html#a406df661eb7be589964dafe76f7f09c8',1,'Scene']]],
