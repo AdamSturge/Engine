@@ -10,14 +10,10 @@ Sphere::Sphere() : Model(), PhysicsEntity()
 
 Sphere::~Sphere(){};
 
-Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Material material) : Model(), PhysicsEntity()
+Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Material material) : Model(), PhysicsEntity(position,velocity,mass)
 {      
     m_radius = radius;
     m_center = position;
-
-    m_position = position;
-    m_velocity = velocity;
-    m_mass = mass; 
 
     m_model_matrix.col(3) << position(0), position(1), position(2), 1.0f; 
     UVSphereMesh(m_radius, 20, 20, m_mesh); // model matrix handles translation of mesh so we use (0,0,0) as mesh center
@@ -68,22 +64,23 @@ void Sphere::UVSphereMesh(const GLfloat radius, const GLuint numU, const GLuint 
             vertices.row(++vIndex) = p2;
             vertices.row(++vIndex) = p3;
 
-            fIndex++; 
-
-            faces(fIndex,0) = eIndex+1;
-            faces(fIndex,1) = eIndex+0;
-            faces(fIndex,2) = eIndex+2;
+            fIndex++;
+            
+            faces(fIndex,0) = eIndex+0;
+            faces(fIndex,1) = eIndex+2;
+            faces(fIndex,2) = eIndex+1;
 
             fIndex++;		
             
-            faces(fIndex,0) = eIndex+1;
-            faces(fIndex,1) = eIndex+2;
-            faces(fIndex,2) = eIndex+3;
+            faces(fIndex,0) = eIndex+2;
+            faces(fIndex,1) = eIndex+3;
+            faces(fIndex,2) = eIndex+1;
 
             eIndex += 4;
+
         }
     }
 
-    mesh = Mesh(vertices,faces,vertices);
+    mesh = Mesh(vertices,faces);
 };
 

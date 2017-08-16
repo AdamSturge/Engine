@@ -17,6 +17,21 @@ PhysicsEntity::PhysicsEntity()
     m_mass = 1.0f;
 }
 
+PhysicsEntity::PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mass)
+{
+    m_id = PhysicsEntity::next_id++; // store current value of next_id and increment for next entity
+
+    m_position = position;
+
+    m_next_position_buffer = m_position;
+
+    m_velocity = velocity;
+
+    m_next_velocity_buffer = m_velocity;
+
+    m_mass = mass;
+}
+
 GLint PhysicsEntity::GetId() const
 {
     return m_id;

@@ -91,14 +91,14 @@ $(document).ready(function(){initNavTree('classMesh.html','');});
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2af137f1571af89172b9c102302c416b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a2af137f1571af89172b9c102302c416b">Mesh</a> ()</td></tr>
 <tr class="separator:a2af137f1571af89172b9c102302c416b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b8aa0246bf98bf18c91ee93503eae1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a46b8aa0246bf98bf18c91ee93503eae1">Mesh</a> (List3df vertices, List3di faces, List3df normals)</td></tr>
-<tr class="separator:a46b8aa0246bf98bf18c91ee93503eae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5fc26424c935c7c7eccdddf233ef714"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#ae5fc26424c935c7c7eccdddf233ef714">Mesh</a> (List3df vertices, List3di faces)</td></tr>
+<tr class="separator:ae5fc26424c935c7c7eccdddf233ef714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa85e1a55bac7d02af659f38eb55a5664"><td class="memItemLeft" align="right" valign="top">List3df&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#aa85e1a55bac7d02af659f38eb55a5664">GetVertices</a> ()</td></tr>
 <tr class="separator:aa85e1a55bac7d02af659f38eb55a5664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d834e592567ebd0740188277ce7f4e9"><td class="memItemLeft" align="right" valign="top">List3di&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a0d834e592567ebd0740188277ce7f4e9">GetFaces</a> ()</td></tr>
 <tr class="separator:a0d834e592567ebd0740188277ce7f4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5440570a2cc20d00e3a9ee958c3f4999"><td class="memItemLeft" align="right" valign="top">List3df&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a5440570a2cc20d00e3a9ee958c3f4999">GetNormals</a> ()</td></tr>
-<tr class="separator:a5440570a2cc20d00e3a9ee958c3f4999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee343735f008b6fa372a3efb3a0f9512"><td class="memItemLeft" align="right" valign="top">List3df&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#aee343735f008b6fa372a3efb3a0f9512">GetFaceNormals</a> ()</td></tr>
+<tr class="separator:aee343735f008b6fa372a3efb3a0f9512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbbf05c59fd7cc170ceca2a0a71d7af1"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#adbbf05c59fd7cc170ceca2a0a71d7af1">GetNumEdges</a> ()</td></tr>
 <tr class="separator:adbbf05c59fd7cc170ceca2a0a71d7af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4917bc56c71f31974af4be3eb90a390"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#ad4917bc56c71f31974af4be3eb90a390">GetVAO</a> ()</td></tr>
@@ -125,8 +125,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a46b8aa0246bf98bf18c91ee93503eae1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46b8aa0246bf98bf18c91ee93503eae1">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[2/2]</span></h2>
+<a id="ae5fc26424c935c7c7eccdddf233ef714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5fc26424c935c7c7eccdddf233ef714">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,13 +141,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">List3di&#160;</td>
-          <td class="paramname"><em>faces</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">List3df&#160;</td>
-          <td class="paramname"><em>normals</em>&#160;</td>
+          <td class="paramname"><em>faces</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -160,7 +154,6 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">vertices</td><td>nx3 matrix of vertices for the mesh. </td></tr>
     <tr><td class="paramname">faces</td><td>mx3 matrix of face indices for the mesh. Listed in counter-clockwise order </td></tr>
-    <tr><td class="paramname">normals</td><td>mx3 matrix of face normals </td></tr>
   </table>
   </dd>
 </dl>
@@ -186,6 +179,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aee343735f008b6fa372a3efb3a0f9512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee343735f008b6fa372a3efb3a0f9512">&#9670;&nbsp;</a></span>GetFaceNormals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List3df Mesh::GetFaceNormals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>A copy of the face normals in the mesh </dd></dl>
+
+</div>
+</div>
 <a id="a0d834e592567ebd0740188277ce7f4e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d834e592567ebd0740188277ce7f4e9">&#9670;&nbsp;</a></span>GetFaces()</h2>
 
@@ -201,24 +212,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>A copy of the faces in the mesh </dd></dl>
-
-</div>
-</div>
-<a id="a5440570a2cc20d00e3a9ee958c3f4999"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5440570a2cc20d00e3a9ee958c3f4999">&#9670;&nbsp;</a></span>GetNormals()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">List3df Mesh::GetNormals </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>A copy of the face normals in the mesh </dd></dl>
 
 </div>
 </div>

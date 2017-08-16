@@ -21,6 +21,7 @@
 #include <model.h>
 #include <net_force_accumulator.h>
 #include <spring.h>
+#include <rectangular_prism.h>
 
 void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode);
 void MouseCallback(GLFWwindow*,double xpos, double ypos);
@@ -73,8 +74,8 @@ int main()
     glfwSetKeyCallback(window,KeyCallback);
     glClearColor(0.2f,0.3f,0.3f,0.1f);
 
-    //glfwSetCursorPosCallback(window,MouseCallback);
-    //glfwSetInputMode(window,GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    glfwSetCursorPosCallback(window,MouseCallback);
+    glfwSetInputMode(window,GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     glfwSetScrollCallback(window, ScrollCallback);
 
@@ -94,10 +95,14 @@ int main()
     material1.specular = Vector3Gf(0.0f,0.0f,1.0f);
     material1.shininess = 32.0f;
 
-    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(-2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, material1));
+    std::shared_ptr<RectangularPrism> rectangle_ptr(new RectangularPrism(1.0f,1.0f,1.0f,Vector3Gf(-2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, material1));
+    scene.AddPhysicsEntity(rectangle_ptr);
+    scene.AddModel(rectangle_ptr);
+
+    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, material1));
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
-    
+/*    
     Material material2;
     material2.ambient = Vector3Gf(0.3f,0.0f,0.0f);
     material2.diffuse = Vector3Gf(0.7f,0.0f,0.0f);
@@ -108,9 +113,9 @@ int main()
     scene.AddPhysicsEntity(sphere2_ptr);
     scene.AddModel(sphere2_ptr);
 
-    Spring spring(1.0f,5.0f,sphere1_ptr,sphere2_ptr);
+    Spring spring(1.0f,5.0f,sphere1_ptr,rectangle_ptr);
     scene.AddSpring(spring);
-   
+*/   
     Light light;
     light.position = Vector3Gf(0.0f,0.0f,0.0f);
     light.diffuse  = Vector3Gf(1.0f,1.0f,1.0f);

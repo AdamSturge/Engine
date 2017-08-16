@@ -99,7 +99,8 @@ Inheritance diagram for PhysicsEntity:</div>
  <div class="center">
   <img src="classPhysicsEntity.png" usemap="#PhysicsEntity_map" alt=""/>
   <map id="PhysicsEntity_map" name="PhysicsEntity_map">
-<area href="classSphere.html" title="A sphere. " alt="Sphere" shape="rect" coords="0,56,87,80"/>
+<area href="classRectangularPrism.html" alt="RectangularPrism" shape="rect" coords="0,56,111,80"/>
+<area href="classSphere.html" title="A sphere. " alt="Sphere" shape="rect" coords="121,56,232,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -132,6 +133,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2c0cf9804f1864105849586bc91e8dea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#a2c0cf9804f1864105849586bc91e8dea">PhysicsEntity</a> ()</td></tr>
 <tr class="separator:a2c0cf9804f1864105849586bc91e8dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac763793d6176c81d67422f5d872698b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#ac763793d6176c81d67422f5d872698b1">PhysicsEntity</a> (Vector3Gf position, Vector3Gf velocity, GLfloat mass)</td></tr>
+<tr class="separator:ac763793d6176c81d67422f5d872698b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c27ca31ce7afe3b5adb018eb2e07430"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#a8c27ca31ce7afe3b5adb018eb2e07430">~PhysicsEntity</a> ()</td></tr>
 <tr class="separator:a8c27ca31ce7afe3b5adb018eb2e07430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -155,7 +158,7 @@ Protected Attributes</h2></td></tr>
 <p><a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> is a base class for all objects in a scene that respond to forces and other physical phenomenon </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2c0cf9804f1864105849586bc91e8dea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c0cf9804f1864105849586bc91e8dea">&#9670;&nbsp;</a></span>PhysicsEntity()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c0cf9804f1864105849586bc91e8dea">&#9670;&nbsp;</a></span>PhysicsEntity() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +180,56 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Creates an instance of <a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> centered at the origin, zero velocity, and unit mass </p>
+
+</div>
+</div>
+<a id="ac763793d6176c81d67422f5d872698b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac763793d6176c81d67422f5d872698b1">&#9670;&nbsp;</a></span>PhysicsEntity() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PhysicsEntity::PhysicsEntity </td>
+          <td>(</td>
+          <td class="paramtype">Vector3Gf&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3Gf&#160;</td>
+          <td class="paramname"><em>velocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>mass</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates an instance of <a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> centered at the provided position with the provided velocity and mass </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>- position of center of mass </td></tr>
+    <tr><td class="paramname">velocity</td><td>- velocity of the entity </td></tr>
+    <tr><td class="paramname">mass</td><td>- mass of the entity </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -19,12 +19,15 @@ class Mesh
     private:        
     	List3df m_vertices; // Matrix of vertices in mesh
     	List3di m_faces; // Matrix of indices into vertex list in counter-clockwise order.
-        List3df m_normals; // Matrix of face normals
+        List3df m_face_normals; // Matrix of face normals
+        List3df m_vertex_normals; // Matrix of vertex normals
     	GLuint m_VAO;
     	GLuint m_VBO;
     	GLuint m_EBO;
 
 	void GenerateVAO();
+
+        void ComputeNormals();
 
     public:
         /**
@@ -36,9 +39,8 @@ class Mesh
             Builds a mesh with the provided vertices and edges
             @param vertices nx3 matrix of vertices for the mesh. 
             @param faces mx3 matrix of face indices for the mesh. Listed in counter-clockwise order
-            @param normals mx3 matrix of face normals
         **/
-        Mesh(List3df vertices, List3di faces, List3df normals);
+        Mesh(List3df vertices, List3di faces);
 
         /**
             @return A copy of the vertices in the mesh
@@ -53,14 +55,14 @@ class Mesh
         /**
             @return A copy of the face normals in the mesh
         **/
-        List3df GetNormals();
+        List3df GetFaceNormals();
 
         /**
             @return The number of edges in the mesh
         **/
         GLuint GetNumEdges();
 
-	/**
+       	/**
             @return The vertex array buffer index for this mesh
         **/
         GLuint GetVAO();

@@ -8,10 +8,12 @@ var hierarchy =
     [ "Material", "structMaterial.html", null ],
     [ "Mesh", "classMesh.html", null ],
     [ "Model", "classModel.html", [
+      [ "RectangularPrism", "classRectangularPrism.html", null ],
       [ "Sphere", "classSphere.html", null ]
     ] ],
     [ "NetForceAccumulator", "classNetForceAccumulator.html", null ],
     [ "PhysicsEntity", "classPhysicsEntity.html", [
+      [ "RectangularPrism", "classRectangularPrism.html", null ],
       [ "Sphere", "classSphere.html", null ]
     ] ],
     [ "Scene", "classScene.html", null ],

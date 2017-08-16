@@ -103,6 +103,14 @@ class PhysicsEntity{
         **/
         PhysicsEntity();
 
+        /**
+            Creates an instance of PhysicsEntity centered at the provided position with the provided velocity and mass
+            @param position - position of center of mass
+            @param velocity - velocity of the entity
+            @param mass - mass of the entity
+        **/
+        PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mass);
+
         /** 
             Destructor for PhysicsEntity
         **/
