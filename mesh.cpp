@@ -106,9 +106,9 @@ void Mesh::ComputeNormals()
         GLuint b = m_faces(i,1);
         GLuint c = m_faces(i,2);
 
-        Vector3Gf A = m_vertices.row(m_faces(i,0)); 
-        Vector3Gf B = m_vertices.row(m_faces(i,1)); 
-        Vector3Gf C = m_vertices.row(m_faces(i,2));
+        Vector3Gf A = m_vertices.row(a); 
+        Vector3Gf B = m_vertices.row(b); 
+        Vector3Gf C = m_vertices.row(c);
 
         Vector3Gf BA = B - A;
         Vector3Gf CA = C - A;
