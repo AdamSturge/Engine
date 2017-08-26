@@ -22,6 +22,7 @@
 #include <net_force_accumulator.h>
 #include <spring.h>
 #include <rectangular_prism.h>
+#include <quaternion.h>
 
 void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode);
 void MouseCallback(GLFWwindow*,double xpos, double ypos);
@@ -43,6 +44,15 @@ bool first_mouse = true;
 
 int main()
 {
+    Quaternion q1;
+    q1.r = 1.0f;
+    q1.im = Vector3Gf(1.0f,1.0f,1.0f);    
+    Quaternion q2;
+    q2.r = 1.0f;
+    q2.im = Vector3Gf(1.0f,1.0f,1.0f);    
+    Quaternion q3 = q1.conjugate();
+    std::cout << q3 << std::endl;
+
     // Begin building window
     glfwInit();
 

@@ -13,6 +13,7 @@ var annotated_dup =
     [ "Model", "classModel.html", "classModel" ],
     [ "NetForceAccumulator", "classNetForceAccumulator.html", "classNetForceAccumulator" ],
     [ "PhysicsEntity", "classPhysicsEntity.html", "classPhysicsEntity" ],
+    [ "Quaternion", "structQuaternion.html", "structQuaternion" ],
     [ "RectangularPrism", "classRectangularPrism.html", "classRectangularPrism" ],
     [ "Scene", "classScene.html", "classScene" ],
     [ "Shader", "classShader.html", "classShader" ],

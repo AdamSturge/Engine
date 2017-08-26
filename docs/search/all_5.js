@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['light',['Light',['../structLight.html',1,'']]],
-  ['lineardragforcegenerator',['LinearDragForceGenerator',['../classLinearDragForceGenerator.html',1,'LinearDragForceGenerator'],['../classLinearDragForceGenerator.html#acf04fdb7b807d848d7d773bf562e5fa3',1,'LinearDragForceGenerator::LinearDragForceGenerator()'],['../classLinearDragForceGenerator.html#ab703231d172120e8a77710b57cb9cbe9',1,'LinearDragForceGenerator::LinearDragForceGenerator(GLfloat beta)']]]
+  ['inv',['inv',['../structQuaternion.html#aa4a36619a215d4bd88b7b9c6c5338bd5',1,'Quaternion']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rectangularprism',['RectangularPrism',['../classRectangularPrism.html',1,'']]]
+  ['quaternion',['Quaternion',['../structQuaternion.html',1,'']]]
 ];

@@ -15,6 +15,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "net_force_accumulator.h", "net__force__accumulator_8h_source.html", null ],
     [ "perspective.h", "perspective_8h_source.html", null ],
     [ "physics_entity.h", "physics__entity_8h_source.html", null ],
+    [ "quaternion.h", "quaternion_8h_source.html", null ],
     [ "rectangular_prism.h", "rectangular__prism_8h_source.html", null ],
     [ "scene.h", "scene_8h_source.html", null ],
     [ "shader.h", "shader_8h_source.html", null ],

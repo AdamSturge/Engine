@@ -16,6 +16,7 @@ var hierarchy =
       [ "RectangularPrism", "classRectangularPrism.html", null ],
       [ "Sphere", "classSphere.html", null ]
     ] ],
+    [ "Quaternion", "structQuaternion.html", null ],
     [ "Scene", "classScene.html", null ],
     [ "Shader", "classShader.html", null ],
     [ "Spring", "structSpring.html", null ],

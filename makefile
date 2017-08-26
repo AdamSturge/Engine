@@ -5,7 +5,8 @@ LDLIBS= -lGLEW -lglfw3 -lGL -lX11 -lXi -lXrandr -lXxf86vm -lXinerama -lXcursor -
 define SOURCES
 main.cpp camera.cpp shader.cpp mesh.cpp model.cpp sphere.cpp rectangular_prism.cpp time_integrator.cpp scene.cpp physics_entity.cpp \
  explicit_euler.cpp symplectic_euler.cpp verlet.cpp constant_force.cpp gravity_force.cpp backward_euler.cpp \
- midpoint_method.cpp net_force_accumulator.cpp linear_drag_force.cpp spring.cpp spring_force.cpp light.cpp material.cpp
+ midpoint_method.cpp net_force_accumulator.cpp linear_drag_force.cpp spring.cpp spring_force.cpp light.cpp material.cpp \
+ quaternion.cpp 
 endef
 EXECUTABLE=sim.o
 
