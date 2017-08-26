@@ -3,7 +3,7 @@ var classPhysicsEntity =
     [ "PhysicsEntity", "classPhysicsEntity.html#a2c0cf9804f1864105849586bc91e8dea", null ],
     [ "PhysicsEntity", "classPhysicsEntity.html#ac763793d6176c81d67422f5d872698b1", null ],
     [ "~PhysicsEntity", "classPhysicsEntity.html#a8c27ca31ce7afe3b5adb018eb2e07430", null ],
-    [ "GetId", "classPhysicsEntity.html#a768b5515cb33ce3c90936d8aa3ebc547", null ],
+    [ "GetId", "classPhysicsEntity.html#a4a8f00b24638849be2b602fde2f5eeee", null ],
     [ "GetMass", "classPhysicsEntity.html#a07943c4b81878d402b97d1280f8c8ff9", null ],
     [ "GetNextPosition", "classPhysicsEntity.html#aeb34696ee2a1be77b968746b3ee65da8", null ],
     [ "GetNextVelocity", "classPhysicsEntity.html#a2b08544dc828f7fdaaae545238a0be43", null ],
