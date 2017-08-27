@@ -1,12 +1,13 @@
 #include <rectangular_prism.h>
 #include <iostream>
-RectangularPrism::RectangularPrism(GLuint length, GLuint width, GLuint height, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Material material) : Model(), PhysicsEntity(position,velocity,mass)
+RectangularPrism::RectangularPrism(GLuint length, GLuint width, GLuint height, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Material material) : Model(), PhysicsEntity(position,velocity,mass,orientation)
 {
     m_length = length; 
     m_width  = width; 
     m_height = height; 
 
     m_model_matrix.col(3) << position(0), position(1), position(2), 1.0f; 
+    m_model_matrix.block(0,0,3,3) = orientation.toRotationMatrix();
     GenerateMesh();
 
     m_material = material;
@@ -64,5 +65,7 @@ void RectangularPrism::OnUpdateFromBuffers()
 {
     m_model_matrix.setIdentity();
     m_model_matrix.col(3)  << m_position(0), m_position(1), m_position(2), 1.0f;
+    m_model_matrix.block(0,0,3,3) = m_orientation.toRotationMatrix();
+
 };
 

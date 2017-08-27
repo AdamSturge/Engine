@@ -44,15 +44,6 @@ bool first_mouse = true;
 
 int main()
 {
-    Quaternion q1;
-    q1.r = 1.0f;
-    q1.im = Vector3Gf(1.0f,1.0f,1.0f);    
-    Quaternion q2;
-    q2.r = 1.0f;
-    q2.im = Vector3Gf(1.0f,1.0f,1.0f);    
-    Quaternion q3 = q1.conjugate();
-    std::cout << q3 << std::endl;
-
     // Begin building window
     glfwInit();
 
@@ -105,11 +96,11 @@ int main()
     material1.specular = Vector3Gf(0.0f,0.0f,1.0f);
     material1.shininess = 32.0f;
 
-//    std::shared_ptr<RectangularPrism> rectangle_ptr(new RectangularPrism(1.0f,1.0f,1.0f,Vector3Gf(-2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, material1));
-//    scene.AddPhysicsEntity(rectangle_ptr);
-//    scene.AddModel(rectangle_ptr);
+    std::shared_ptr<RectangularPrism> rectangle_ptr(new RectangularPrism(1.0f,1.0f,1.0f,Vector3Gf(-2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, Quaternion(45.0f,Vector3Gf(1.0f,0.0f,0.0f)), material1));
+    scene.AddPhysicsEntity(rectangle_ptr);
+    scene.AddModel(rectangle_ptr);
 
-    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(-2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, material1));
+/*    std::shared_ptr<Sphere> sphere1_ptr(new Sphere(1.0f, Vector3Gf(-2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, material1));
     scene.AddPhysicsEntity(sphere1_ptr);
     scene.AddModel(sphere1_ptr);
     
@@ -125,7 +116,7 @@ int main()
 
     Spring spring(1.0f,5.0f,sphere1_ptr,sphere2_ptr);
     scene.AddSpring(spring);
-   
+*/   
     Light light;
     light.position = Vector3Gf(0.0f,0.0f,0.0f);
     light.diffuse  = Vector3Gf(1.0f,1.0f,1.0f);

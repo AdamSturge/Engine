@@ -3,7 +3,9 @@
 #include <Eigen/Dense>
 #include <vector3G.h>
 #include <iostream>
-
+/**
+  \brief data structure reprenseting a Quaternion.
+**/
 struct Quaternion
 {
 	GLfloat r; // real part of quaternion
@@ -11,8 +13,12 @@ struct Quaternion
 
     Quaternion();
 
-    Quaternion(GLfloat real, Vector3Gf imag);
-    
+    /**
+     * Builds a quaternion in polar form. 
+     * Used for rotations
+     * */
+    Quaternion(GLfloat angle, Vector3Gf axis);
+
     /**
      * @return the squared norm of the quaternion 
     * */
@@ -37,6 +43,8 @@ struct Quaternion
      * @return the inverse of this quaternion
      **/
     Quaternion inv() const;
+
+    Eigen::Matrix<GLfloat,3,3> toRotationMatrix();
 
 	Quaternion operator+(const Quaternion& q) const;
 

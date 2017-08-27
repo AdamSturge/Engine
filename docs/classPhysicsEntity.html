@@ -159,8 +159,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2c0cf9804f1864105849586bc91e8dea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#a2c0cf9804f1864105849586bc91e8dea">PhysicsEntity</a> ()</td></tr>
 <tr class="separator:a2c0cf9804f1864105849586bc91e8dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac763793d6176c81d67422f5d872698b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#ac763793d6176c81d67422f5d872698b1">PhysicsEntity</a> (Vector3Gf position, Vector3Gf velocity, GLfloat mass)</td></tr>
-<tr class="separator:ac763793d6176c81d67422f5d872698b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27f478a4c6674bc7ce3b0f684bd916b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#ab27f478a4c6674bc7ce3b0f684bd916b">PhysicsEntity</a> (Vector3Gf position, Vector3Gf velocity, GLfloat mass, <a class="el" href="structQuaternion.html">Quaternion</a> orientation)</td></tr>
+<tr class="separator:ab27f478a4c6674bc7ce3b0f684bd916b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c27ca31ce7afe3b5adb018eb2e07430"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#a8c27ca31ce7afe3b5adb018eb2e07430">~PhysicsEntity</a> ()</td></tr>
 <tr class="separator:a8c27ca31ce7afe3b5adb018eb2e07430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -178,6 +178,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a00034d95cc1a6f34ceaf5ad961e4afe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a7bc5174169e169f69723d2483c2eff"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#a5a7bc5174169e169f69723d2483c2eff">m_mass</a></td></tr>
 <tr class="separator:a5a7bc5174169e169f69723d2483c2eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc2b05aaa61b084d007613e60332ba6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structQuaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPhysicsEntity.html#a7bc2b05aaa61b084d007613e60332ba6">m_orientation</a></td></tr>
+<tr class="separator:a7bc2b05aaa61b084d007613e60332ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An entity subject to the laws of physics. </p>
@@ -207,7 +209,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac763793d6176c81d67422f5d872698b1"></a>
+<a class="anchor" id="ab27f478a4c6674bc7ce3b0f684bd916b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -230,7 +232,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">GLfloat&#160;</td>
-          <td class="paramname"><em>mass</em>&#160;</td>
+          <td class="paramname"><em>mass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structQuaternion.html">Quaternion</a>&#160;</td>
+          <td class="paramname"><em>orientation</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -246,9 +254,10 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates an instance of <a class="el" href="classPhysicsEntity.html" title="An entity subject to the laws of physics. ">PhysicsEntity</a> centered at the provided position with the provided velocity and mass </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">position</td><td>- position of center of mass </td></tr>
-    <tr><td class="paramname">velocity</td><td>- velocity of the entity </td></tr>
+    <tr><td class="paramname">position</td><td>- position of center of mass in world coordinates </td></tr>
+    <tr><td class="paramname">velocity</td><td>- velocity of the entity in world coordinates </td></tr>
     <tr><td class="paramname">mass</td><td>- mass of the entity </td></tr>
+    <tr><td class="paramname">orientation</td><td>- orientation of the entity </td></tr>
   </table>
   </dd>
 </dl>
@@ -498,7 +507,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Unique id for this entity </p>
+<p>Unique id for this entity in world coordinates </p>
 
 </div>
 </div>
@@ -540,7 +549,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The next predicted position of this entity. </p>
+<p>The next predicted position of this entity in world coordinates. </p>
 
 </div>
 </div>
@@ -561,7 +570,28 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The next predicted velocity of this entity </p>
+<p>The next predicted velocity of this entity in world coordiantes </p>
+
+</div>
+</div>
+<a class="anchor" id="a7bc2b05aaa61b084d007613e60332ba6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structQuaternion.html">Quaternion</a> PhysicsEntity::m_orientation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The orientation of this entity </p>
 
 </div>
 </div>
@@ -582,7 +612,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The position of this entity </p>
+<p>The position of this entity in word coordinates </p>
 
 </div>
 </div>
@@ -603,7 +633,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The velocity of this entity </p>
+<p>The velocity of this entity in world coordinates </p>
 
 </div>
 </div>

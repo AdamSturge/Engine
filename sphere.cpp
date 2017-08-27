@@ -10,12 +10,13 @@ Sphere::Sphere() : Model(), PhysicsEntity()
 
 Sphere::~Sphere(){};
 
-Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Material material) : Model(), PhysicsEntity(position,velocity,mass)
+Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Material material) : Model(), PhysicsEntity(position,velocity,mass,orientation)
 {      
     m_radius = radius;
     m_center = position;
 
     m_model_matrix.col(3) << position(0), position(1), position(2), 1.0f; 
+    m_model_matrix.block(0,0,3,3) = orientation.toRotationMatrix();
     UVSphereMesh(m_radius, 20, 20, m_mesh); // model matrix handles translation of mesh so we use (0,0,0) as mesh center
 
     m_material = material;
@@ -26,7 +27,8 @@ void Sphere::OnUpdateFromBuffers()
 {
     m_center = m_position;
     m_model_matrix.setIdentity();
-    m_model_matrix.col(3)  << m_center(0), m_center(1), m_center(2), 1.0f; 
+    m_model_matrix.col(3)  << m_center(0), m_center(1), m_center(2), 1.0f;
+    m_model_matrix.block(0,0,3,3) = m_orientation.toRotationMatrix(); 
 };
 
 void Sphere::UVSphereMesh(const GLfloat radius, const GLuint numU, const GLuint numV, Mesh& mesh)

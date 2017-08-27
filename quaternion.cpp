@@ -1,10 +1,16 @@
 #include <quaternion.h>
+#include <assert.h>
 Quaternion::Quaternion(){}
 
-Quaternion::Quaternion(GLfloat real, Vector3Gf imag)
+Quaternion::Quaternion(GLfloat angle, Vector3Gf axis)
 {
-    r = real;
-    im = imag;
+    GLfloat l2 = axis.squaredNorm();
+    if(l2 != 1.0f)
+    {
+        axis = axis/sqrt(l2);
+    }
+    r = cos(angle/2.0f);
+    im = sin(angle/2.0f)*axis;
 }
 
 GLfloat Quaternion::squaredNorm() const
@@ -24,12 +30,26 @@ void Quaternion::normalize()
 
 Quaternion Quaternion::conjugate() const
 {
-    return Quaternion(r,-im);
+    Quaternion q3;
+    q3.r = r;
+    q3.im = -im;
+    return q3;
 }
 
 Quaternion Quaternion::inv() const
 {
     return (this->conjugate())/this->norm();
+}
+
+Eigen::Matrix<GLfloat,3,3> Quaternion::toRotationMatrix()
+{
+    Eigen::Matrix<GLfloat,3,3> R(3,3);
+    GLfloat s = 1.0f/this->squaredNorm();
+    R << 1 - 2*s*(im(1)*im(1) + im(2)*im(2)), 2*s*(im(0)*im(1) - im(2)*r),         2*s*(im(0)*im(2) + im(1)*r), 
+         2*s*(im(0)*im(1) + im(2)*r),        1 - 2*s*(im(0)*im(0) + im(2)*im(2)), 2*s*(im(1)*im(2) - im(0)*r), 
+         2*s*(im(0)*im(2) - im(1)*r),        2*s*(im(1)*im(2) + im(0)*r),         1-2*s*(im(0)*im(0) + im(1)*im(1));
+
+    return R;
 }
 
 Quaternion Quaternion::operator+(const Quaternion& q) const

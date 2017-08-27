@@ -12,10 +12,24 @@ class RectangularPrism : public Model, public PhysicsEntity
         GLuint m_width;
         GLuint m_height;
 
+        /**
+         * Builds a mesh representing a Rectangular Prism
+         * */
         void GenerateMesh();
 
     public:
-        RectangularPrism(GLuint length, GLuint width, GLuint height, Vector3Gf postion, Vector3Gf velocity, GLfloat mass, Material material);
+        /**                                                                                    
+         * Constructs a Rectangular Prism                                                                
+         * @param length x dimension of the Rectangular Prism
+         * @param width y dimension of the Rectangular Prism
+         * @param height z dimension of the Rectangular Prism
+         * @param position position of the Rectangular Prism                             
+         * @param velocity velocity of the Rectangular Prism                                            
+         * @param mass mass of the Rectangular Prism                                             
+         * @param orientation orientation of the Rectangular Prism                                       
+         * @param material material properties for the Rectangular Prism                                
+         ***/ 
+        RectangularPrism(GLuint length, GLuint width, GLuint height, Vector3Gf postion, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Material material);
 
         /**
             Loads the next position and velocity values from their respective buffers

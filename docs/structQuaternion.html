@@ -114,12 +114,16 @@ $(document).ready(function(){initNavTree('structQuaternion.html','');});
 <div class="title">Quaternion Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>data structure reprenseting a <a class="el" href="structQuaternion.html" title="data structure reprenseting a Quaternion. ">Quaternion</a>.  
+ <a href="structQuaternion.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="quaternion_8h_source.html">quaternion.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a006d094230468542c39bef117da1e47b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a006d094230468542c39bef117da1e47b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Quaternion</b> (GLfloat real, Vector3Gf imag)</td></tr>
-<tr class="separator:a006d094230468542c39bef117da1e47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab259048f67a432050a2e060fb7c81b55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQuaternion.html#ab259048f67a432050a2e060fb7c81b55">Quaternion</a> (GLfloat angle, Vector3Gf axis)</td></tr>
+<tr class="separator:ab259048f67a432050a2e060fb7c81b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12e9b67e4599d544107e0214dd0cbfa7"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQuaternion.html#a12e9b67e4599d544107e0214dd0cbfa7">squaredNorm</a> () const </td></tr>
 <tr class="separator:a12e9b67e4599d544107e0214dd0cbfa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca75a44f45a3c760f5c0b65efc87ab3d"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQuaternion.html#aca75a44f45a3c760f5c0b65efc87ab3d">norm</a> () const </td></tr>
@@ -130,6 +134,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a19533dac4d839a72d31908871c9aa37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a36619a215d4bd88b7b9c6c5338bd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structQuaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQuaternion.html#aa4a36619a215d4bd88b7b9c6c5338bd5">inv</a> () const </td></tr>
 <tr class="separator:aa4a36619a215d4bd88b7b9c6c5338bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd820cdc2a3acb8d9b9b6ca3dc226f70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd820cdc2a3acb8d9b9b6ca3dc226f70"></a>
+Eigen::Matrix&lt; GLfloat, 3, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>toRotationMatrix</b> ()</td></tr>
+<tr class="separator:acd820cdc2a3acb8d9b9b6ca3dc226f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0805649e775e55063b1c2ea7ebfc6553"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0805649e775e55063b1c2ea7ebfc6553"></a>
 <a class="el" href="structQuaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="structQuaternion.html">Quaternion</a> &amp;q) const </td></tr>
 <tr class="separator:a0805649e775e55063b1c2ea7ebfc6553"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +174,36 @@ Friends</h2></td></tr>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="structQuaternion.html">Quaternion</a> &amp;q)</td></tr>
 <tr class="separator:a9dc71eaedf4486dc005fa9a67c6da866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>data structure reprenseting a <a class="el" href="structQuaternion.html" title="data structure reprenseting a Quaternion. ">Quaternion</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab259048f67a432050a2e060fb7c81b55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion::Quaternion </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3Gf&#160;</td>
+          <td class="paramname"><em>axis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Builds a quaternion in polar form. Used for rotations </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a19533dac4d839a72d31908871c9aa37d"></a>
 <div class="memitem">

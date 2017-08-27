@@ -15,9 +15,11 @@ PhysicsEntity::PhysicsEntity()
     m_next_velocity_buffer = m_velocity;
 
     m_mass = 1.0f;
+    
+    m_orientation = Quaternion(0.0f,Vector3Gf(1.0f,0.0f,0.0f));
 }
 
-PhysicsEntity::PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mass)
+PhysicsEntity::PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation)
 {
     m_id = PhysicsEntity::next_id++; // store current value of next_id and increment for next entity
 
@@ -30,6 +32,8 @@ PhysicsEntity::PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mas
     m_next_velocity_buffer = m_velocity;
 
     m_mass = mass;
+
+    m_orientation = orientation;
 }
 
 GLint PhysicsEntity::GetId() const

@@ -2,6 +2,7 @@
 #include <Eigen/Core>
 #include <vector3G.h>
 #include <atomic>
+#include <quaternion.h>
 
 #ifndef PHYSICS_ENTITY
 #define PHYSICS_ENTITY
@@ -73,30 +74,34 @@ class PhysicsEntity{
 
      protected:     
         /**
-            Unique id for this entity
+            Unique id for this entity in world coordinates
         **/
         GLuint m_id;
-
         /**
-            The position of this entity
+            The position of this entity in word coordinates
         **/
     	Vector3Gf m_position;
         /**
-            The next predicted position of this entity. 
+            The next predicted position of this entity in world coordinates. 
         **/
         Vector3Gf m_next_position_buffer;    
         /**
-            The velocity of this entity
+            The velocity of this entity in world coordinates
         **/
         Vector3Gf m_velocity;
         /**
-            The next predicted velocity of this entity
+            The next predicted velocity of this entity in world coordiantes
         **/
         Vector3Gf m_next_velocity_buffer;
         /**
             The mass of this entity
         **/
-        GLfloat m_mass; // stores the mass of this game entity
+        GLfloat m_mass;
+
+        /**
+         * The orientation of this entity 
+         * */
+        Quaternion m_orientation;
 
         /**
             Creates an instance of PhysicsEntity centered at the origin, zero velocity, and unit mass
@@ -105,11 +110,12 @@ class PhysicsEntity{
 
         /**
             Creates an instance of PhysicsEntity centered at the provided position with the provided velocity and mass
-            @param position - position of center of mass
-            @param velocity - velocity of the entity
+            @param position - position of center of mass in world coordinates
+            @param velocity - velocity of the entity in world coordinates
             @param mass - mass of the entity
+            @param orientation - orientation of the entity 
         **/
-        PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mass);
+        PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation);
 
         /** 
             Destructor for PhysicsEntity
