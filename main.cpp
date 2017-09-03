@@ -82,7 +82,7 @@ int main()
 
     Shader shader("./shaders/shader.vs","./shaders/shader.frag");
 
-    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new Verlet(0.01));
+    std::shared_ptr<TimeIntegrator> time_integrator_ptr(new SymplecticEuler(0.01));
     NetForceAccumulator net_force_accumulator;
     //Vector3Gf g(0.0f,-9.81f,0.0f);
     //net_force_accumulator.AddConstantForce(g);
@@ -96,7 +96,18 @@ int main()
     material1.specular = Vector3Gf(0.0f,0.0f,1.0f);
     material1.shininess = 32.0f;
 
-    std::shared_ptr<RectangularPrism> rectangle_ptr(new RectangularPrism(1.0f,1.0f,1.0f,Vector3Gf(-2.0f,0.0f,0.0f), Vector3Gf(0.0f,0.0f,0.0f), 1.0f, Quaternion(45.0f,Vector3Gf(1.0f,0.0f,0.0f)), material1));
+    std::shared_ptr<RectangularPrism> rectangle_ptr(
+        new RectangularPrism(1.0f,
+                             1.0f,
+                             1.0f,
+                             Vector3Gf(-2.0f,0.0f,0.0f), 
+                             Vector3Gf(0.0f,0.0f,0.0f), 
+                             1.0f,
+                             Quaternion(0.0f,Vector3Gf(1.0f,0.0f,0.0f)),
+                             Vector3Gf(0.3f,0.1f,0.0f),
+                             material1
+                            )
+    );
     scene.AddPhysicsEntity(rectangle_ptr);
     scene.AddModel(rectangle_ptr);
 

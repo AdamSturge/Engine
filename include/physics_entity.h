@@ -68,6 +68,52 @@ class PhysicsEntity{
         GLfloat GetMass();
 
         /**
+            @return the orientaiton for this entity
+        **/
+        Quaternion GetOrientation();
+
+        /**
+            Sets the orientaiton for the entity
+            @param q new orientation for this entity
+        **/
+        void SetOrientation(Quaternion q);
+
+        /**
+            Gets the orientation for the next time step.
+        **/
+        Quaternion GetNextOrientation();
+
+        /**
+            Sets the next orientation for the entity.
+            This <b>DOES NOT</b> update the orientation until UpdateFromBuffers() is called
+            @param q next orientation for this entity    
+        **/
+        void SetNextOrientation(Quaternion q);
+        
+        /**
+            @return the angular velocity for this entity
+        **/
+        Vector3Gf GetAngularVelocity();
+
+        /**
+            Sets the angular velocity for the entity
+            @param w new angular velocity for this entity
+        **/
+        void SetAngularVelocity(Vector3Gf w);
+
+        /**
+            Gets the angular velocity for the next time step.
+         **/
+        Vector3Gf GetNextAngularVelocity();
+
+        /**
+            Sets the next orientation for the entity.
+            This <b>DOES NOT</b> update the angular velocity until UpdateFromBuffers() is called
+            @param w next angular velocity for this entity    
+        **/
+        void SetNextAngularVelocity(Vector3Gf w);
+
+        /**
             Updates internal state from buffers. This will load the next position and velocity from their corresponding buffers
         **/
         void UpdateFromBuffers();
@@ -84,7 +130,7 @@ class PhysicsEntity{
         /**
             The next predicted position of this entity in world coordinates. 
         **/
-        Vector3Gf m_next_position_buffer;    
+        Vector3Gf m_next_position;    
         /**
             The velocity of this entity in world coordinates
         **/
@@ -92,7 +138,7 @@ class PhysicsEntity{
         /**
             The next predicted velocity of this entity in world coordiantes
         **/
-        Vector3Gf m_next_velocity_buffer;
+        Vector3Gf m_next_velocity;
         /**
             The mass of this entity
         **/
@@ -104,18 +150,34 @@ class PhysicsEntity{
         Quaternion m_orientation;
 
         /**
+            The next predicted orientation of the entity in world coordinates
+        **/
+        Quaternion m_next_orientation;
+
+        /**
+            the next predicted angular velocity in world coordinates
+        **/    
+        Vector3Gf m_next_angular_velocity;
+
+        /**
+         * The angular velocity of this entity
+         **/
+        Vector3Gf m_angular_velocity;
+
+        /**
             Creates an instance of PhysicsEntity centered at the origin, zero velocity, and unit mass
         **/
         PhysicsEntity();
 
         /**
             Creates an instance of PhysicsEntity centered at the provided position with the provided velocity and mass
-            @param position - position of center of mass in world coordinates
-            @param velocity - velocity of the entity in world coordinates
-            @param mass - mass of the entity
-            @param orientation - orientation of the entity 
+            @param position position of center of mass in world coordinates
+            @param velocity velocity of the entity in world coordinates
+            @param mass mass of the entity
+            @param orientation orientation of the entity
+            @param angular_velocity angular velocity of the entity 
         **/
-        PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation);
+        PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Vector3Gf angular_velocity);
 
         /** 
             Destructor for PhysicsEntity

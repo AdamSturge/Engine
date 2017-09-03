@@ -18,6 +18,11 @@ struct Quaternion
      * Used for rotations
      * */
     Quaternion(GLfloat angle, Vector3Gf axis);
+    
+    /**
+     * Builds a purely imaginary quaternion. 
+     * */
+    Quaternion(Vector3Gf axis);
 
     /**
      * @return the squared norm of the quaternion 

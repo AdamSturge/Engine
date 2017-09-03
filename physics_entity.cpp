@@ -8,32 +8,44 @@ PhysicsEntity::PhysicsEntity()
 
     m_position.setZero();
 
-    m_next_position_buffer = m_position;
+    m_next_position = m_position;
     
     m_velocity.setZero();
 
-    m_next_velocity_buffer = m_velocity;
+    m_next_velocity = m_velocity;
 
     m_mass = 1.0f;
     
     m_orientation = Quaternion(0.0f,Vector3Gf(1.0f,0.0f,0.0f));
+
+    m_next_orientation = m_orientation;
+
+    m_angular_velocity.setZero();
+
+    m_next_angular_velocity = m_angular_velocity;
 }
 
-PhysicsEntity::PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation)
+PhysicsEntity::PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Vector3Gf angular_velocity)
 {
     m_id = PhysicsEntity::next_id++; // store current value of next_id and increment for next entity
 
     m_position = position;
 
-    m_next_position_buffer = m_position;
+    m_next_position = m_position;
 
     m_velocity = velocity;
 
-    m_next_velocity_buffer = m_velocity;
+    m_next_velocity = m_velocity;
 
     m_mass = mass;
 
-    m_orientation = orientation;
+    m_orientation = orientation / orientation.norm();
+
+    m_next_orientation = m_orientation;
+
+    m_angular_velocity = angular_velocity;
+
+    m_next_angular_velocity = angular_velocity;
 }
 
 GLint PhysicsEntity::GetId() const
@@ -53,12 +65,12 @@ void PhysicsEntity::SetPosition(Vector3Gf x)
 
 void PhysicsEntity::SetNextPosition(Vector3Gf x)
 {
-    m_next_position_buffer = x;
+    m_next_position = x;
 };
 
 Vector3Gf PhysicsEntity::GetNextPosition()
 {
-    return m_next_position_buffer;
+    return m_next_position;
 };
 
 Vector3Gf PhysicsEntity::GetVelocity()
@@ -73,12 +85,12 @@ void PhysicsEntity::SetVelocity(Vector3Gf v)
 
 void PhysicsEntity::SetNextVelocity(Vector3Gf v)
 {
-    m_next_velocity_buffer = v;
+    m_next_velocity = v;
 };
 
 Vector3Gf PhysicsEntity::GetNextVelocity()
 {
-    return m_next_velocity_buffer;
+    return m_next_velocity;
 };
 
 GLfloat PhysicsEntity::GetMass()
@@ -86,9 +98,51 @@ GLfloat PhysicsEntity::GetMass()
     return m_mass;
 }
 
+Quaternion PhysicsEntity::GetOrientation()
+{
+    return m_orientation;
+}
+
+void PhysicsEntity::SetOrientation(Quaternion q)
+{
+    m_orientation = q;
+}
+
+Quaternion PhysicsEntity::GetNextOrientation()
+{
+    return m_next_orientation;
+}
+
+void PhysicsEntity::SetNextOrientation(Quaternion q)
+{
+    m_next_orientation = q;
+}
+
+Vector3Gf PhysicsEntity::GetAngularVelocity()
+{
+    return m_angular_velocity;
+}
+
+void PhysicsEntity::SetAngularVelocity(Vector3Gf w)
+{
+    m_angular_velocity = w;
+}
+
+Vector3Gf PhysicsEntity::GetNextAngularVelocity()
+{
+    return m_next_angular_velocity;
+}
+
+void PhysicsEntity::SetNextAngularVelocity(Vector3Gf w)
+{
+    m_next_angular_velocity = w;
+}
+
 void PhysicsEntity::UpdateFromBuffers()
 {
-    m_position = m_next_position_buffer;
-    m_velocity = m_next_velocity_buffer;
+    m_position = m_next_position;
+    m_velocity = m_next_velocity;
+    m_orientation = m_next_orientation;
+    m_angular_velocity = m_next_angular_velocity;
     OnUpdateFromBuffers();
 }

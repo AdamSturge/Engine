@@ -38,9 +38,10 @@ class Sphere  : public Model, public PhysicsEntity
             @param velocity velocity of the Sphere
             @param mass mass of the Sphere
             @param orientation orientation of the Sphere
+            @param angular_velocity angular_velocity of the Sphere
             @param material material properties for the sphere
         **/
-        Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Material material);
+        Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Vector3Gf angular_velocity, Material material);
 
         /**
             Loads the next position and velocity values from their respective buffers

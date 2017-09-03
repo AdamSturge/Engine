@@ -26,10 +26,11 @@ class RectangularPrism : public Model, public PhysicsEntity
          * @param position position of the Rectangular Prism                             
          * @param velocity velocity of the Rectangular Prism                                            
          * @param mass mass of the Rectangular Prism                                             
-         * @param orientation orientation of the Rectangular Prism                                       
-         * @param material material properties for the Rectangular Prism                                
+         * @param orientation orientation of the Rectangular Prism
+         * @param angular_velocity angular velocity of the Rectangular Prism                                 
+         * @param material material properties for the Rectangular Prism
          ***/ 
-        RectangularPrism(GLuint length, GLuint width, GLuint height, Vector3Gf postion, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Material material);
+        RectangularPrism(GLuint length, GLuint width, GLuint height, Vector3Gf postion, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Vector3Gf angular_velocity, Material material);
 
         /**
             Loads the next position and velocity values from their respective buffers

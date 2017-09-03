@@ -13,6 +13,12 @@ Quaternion::Quaternion(GLfloat angle, Vector3Gf axis)
     im = sin(angle/2.0f)*axis;
 }
 
+Quaternion::Quaternion(Vector3Gf imag)
+{
+    r = 0.0f;
+    im = imag;
+}
+
 GLfloat Quaternion::squaredNorm() const
 {
     return r*r + im.squaredNorm();

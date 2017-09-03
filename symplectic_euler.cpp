@@ -17,10 +17,12 @@ void SymplecticEuler::Solve(
 	    const std::vector<std::shared_ptr<PhysicsEntity>> &entity_ptrs,
             const std::shared_ptr<PhysicsEntity> entity_ptr)
 {   
-    Vector3Gf xi = entity_ptr->GetPosition();
-    Vector3Gf vi = entity_ptr->GetVelocity();
-    GLfloat mass = entity_ptr->GetMass();
-
+    const Vector3Gf xi = entity_ptr->GetPosition();
+    const Vector3Gf vi = entity_ptr->GetVelocity();
+    const GLfloat mass = entity_ptr->GetMass();
+    const Quaternion oi = entity_ptr->GetOrientation();
+    const Vector3Gf  wi = entity_ptr->GetAngularVelocity();
+   
     Vector3Gf F;
     F.setZero();
     net_force_accumulator.ComputeNetForce(entity_ptrs,entity_ptr,F);
@@ -30,5 +32,10 @@ void SymplecticEuler::Solve(
     
     entity_ptr->SetNextPosition(xf);
     entity_ptr->SetNextVelocity(vf);
+
+    Quaternion of = oi + m_dt*Quaternion(wi)*oi;
+
+    entity_ptr->SetNextOrientation(of);
+
 };
 
