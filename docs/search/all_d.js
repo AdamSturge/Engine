@@ -16,7 +16,7 @@ var searchData=
   ['sphere',['Sphere',['../classSphere.html',1,'Sphere'],['../classSphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9',1,'Sphere::Sphere()'],['../classSphere.html#ac3bae9d0bb26a2bbcd401d2741888694',1,'Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Vector3Gf angular_velocity, Material material)']]],
   ['spring',['Spring',['../structSpring.html',1,'Spring'],['../structSpring.html#a751cea7f06b8e24a1f65c8d28cccde35',1,'Spring::Spring()'],['../structSpring.html#af97baa773074b6371e48098b507070a5',1,'Spring::Spring(GLfloat k, GLfloat l0, std::shared_ptr&lt; PhysicsEntity &gt; entity1_ptr, std::shared_ptr&lt; PhysicsEntity &gt; entity2_ptr)']]],
   ['springforcegenerator',['SpringForceGenerator',['../classSpringForceGenerator.html',1,'SpringForceGenerator'],['../classSpringForceGenerator.html#a8963528f2bb6efbf489b4abe6eb0ec76',1,'SpringForceGenerator::SpringForceGenerator()']]],
-  ['squarednorm',['squaredNorm',['../structQuaternion.html#a447719105000ef01b72b0d1dba7c96a1',1,'Quaternion']]],
+  ['squarednorm',['squaredNorm',['../structQuaternion.html#a12e9b67e4599d544107e0214dd0cbfa7',1,'Quaternion']]],
   ['stepforward',['StepForward',['../classTimeIntegrator.html#ac9fa137f3da10fd381ce1c75c14b7d82',1,'TimeIntegrator']]],
   ['stepphysics',['StepPhysics',['../classScene.html#a5fe443641612290ba78931132d1fddb5',1,'Scene']]],
   ['symplecticeuler',['SymplecticEuler',['../classSymplecticEuler.html',1,'SymplecticEuler'],['../classSymplecticEuler.html#aa05e6e4c067ea9b0f16ca3cc6fc37dfe',1,'SymplecticEuler::SymplecticEuler()'],['../classSymplecticEuler.html#a9827570e6538fefd6ea766b659edeacf',1,'SymplecticEuler::SymplecticEuler(GLfloat dt)']]]

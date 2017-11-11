@@ -4,7 +4,7 @@ var classPhysicsEntity =
     [ "PhysicsEntity", "classPhysicsEntity.html#a2946202f5147048dff29dca67b690094", null ],
     [ "~PhysicsEntity", "classPhysicsEntity.html#a8c27ca31ce7afe3b5adb018eb2e07430", null ],
     [ "GetAngularVelocity", "classPhysicsEntity.html#a8dd0c4e4383c759d61a186c01eb06ebd", null ],
-    [ "GetId", "classPhysicsEntity.html#a768b5515cb33ce3c90936d8aa3ebc547", null ],
+    [ "GetId", "classPhysicsEntity.html#a4a8f00b24638849be2b602fde2f5eeee", null ],
     [ "GetMass", "classPhysicsEntity.html#a07943c4b81878d402b97d1280f8c8ff9", null ],
     [ "GetNextAngularVelocity", "classPhysicsEntity.html#a21d0f1ec1160181b8ab3949407d31ff4", null ],
     [ "GetNextOrientation", "classPhysicsEntity.html#a409cdc6d89fc10d225b06bbb1c844707", null ],

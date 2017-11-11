@@ -75,8 +75,8 @@ int main()
     glfwSetKeyCallback(window,KeyCallback);
     glClearColor(0.2f,0.3f,0.3f,0.1f);
 
-    glfwSetCursorPosCallback(window,MouseCallback);
-    glfwSetInputMode(window,GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    //glfwSetCursorPosCallback(window,MouseCallback);
+    //glfwSetInputMode(window,GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     glfwSetScrollCallback(window, ScrollCallback);
 
@@ -104,7 +104,7 @@ int main()
                              Vector3Gf(0.0f,0.0f,0.0f), 
                              1.0f,
                              Quaternion(0.0f,Vector3Gf(1.0f,0.0f,0.0f)),
-                             Vector3Gf(0.3f,0.1f,0.0f),
+                             Vector3Gf(3.3f,0.1f,0.0f),
                              material1
                             )
     );

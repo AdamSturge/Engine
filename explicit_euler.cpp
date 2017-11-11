@@ -33,7 +33,7 @@ void ExplicitEuler::Solve(
     entity_ptr->SetNextPosition(xf);
     entity_ptr->SetNextVelocity(vf);  
 
-    Quaternion of = oi + m_dt*Quaternion(wi)*oi;
+    Quaternion of = oi + 0.5*m_dt*Quaternion(wi)*oi;
 
     entity_ptr->SetNextOrientation(of);
 
