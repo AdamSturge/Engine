@@ -42,12 +42,16 @@ class Sphere  : public Model, public PhysicsEntity
             @param material material properties for the sphere
         **/
         Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Vector3Gf angular_velocity, Material material);
-
+	
+    protected:
         /**
             Loads the next position and velocity values from their respective buffers
         **/
         void OnUpdateFromBuffers();
 
-    
+	/* 
+	 * Calls base class versions of this function for Model and Physics Entity
+	 */
+        void OnModelMatrixUpdate();	
 };
 #endif

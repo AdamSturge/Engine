@@ -20,6 +20,11 @@ Sphere::Sphere(GLfloat radius, Vector3Gf position, Vector3Gf velocity, GLfloat m
     UVSphereMesh(m_radius, 20, 20, m_mesh); // model matrix handles translation of mesh so we use (0,0,0) as mesh center
 
     m_material = material;
+
+    Eigen::Matrix<GLfloat,3,3> I;
+    I.setIdentity();
+    I = (2.0f/5.0f)*mass*radius*radius;
+    SetInertiaTensor(I);
 };
 
 
@@ -87,3 +92,8 @@ void Sphere::UVSphereMesh(const GLfloat radius, const GLuint numU, const GLuint 
     mesh = Mesh(vertices,faces);
 };
 
+void Sphere::OnModelMatrixUpdate()
+{
+  Model::OnModelMatrixUpdate();
+  PhysicsEntity::OnModelMatrixUpdate();
+}

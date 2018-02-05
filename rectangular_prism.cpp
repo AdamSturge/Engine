@@ -11,6 +11,14 @@ RectangularPrism::RectangularPrism(GLuint length, GLuint width, GLuint height, V
     GenerateMesh();
 
     m_material = material;
+
+    Eigen::Matrix<GLfloat,3,3> I;
+    I.setZero();
+    I(0,0) = width*width + height*height;
+    I(1,1) = width*width + length*length;
+    I(2,2) = height*height + length*length;
+    I = (1.0f/3.0f)*mass*I;
+    SetInertiaTensor(I);
 }
 
 void RectangularPrism::GenerateMesh()
@@ -70,3 +78,8 @@ void RectangularPrism::OnUpdateFromBuffers()
 
 };
 
+void RectangularPrism::OnModelMatrixUpdate()
+{
+  Model::OnModelMatrixUpdate();
+  PhysicsEntity::OnModelMatrixUpdate();
+}

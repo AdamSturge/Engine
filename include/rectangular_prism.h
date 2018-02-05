@@ -32,10 +32,15 @@ class RectangularPrism : public Model, public PhysicsEntity
          ***/ 
         RectangularPrism(GLuint length, GLuint width, GLuint height, Vector3Gf postion, Vector3Gf velocity, GLfloat mass, Quaternion orientation, Vector3Gf angular_velocity, Material material);
 
+    protected:
         /**
             Loads the next position and velocity values from their respective buffers
         **/
         void OnUpdateFromBuffers();
 
+	/**
+	 * Calls base class versions of this function for Model and PhysicsEntity
+	 */
+	void OnModelMatrixUpdate();
 };
 #endif

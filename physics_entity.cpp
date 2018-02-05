@@ -15,7 +15,11 @@ PhysicsEntity::PhysicsEntity()
     m_next_velocity = m_velocity;
 
     m_mass = 1.0f;
+
+    m_inverse_inertia_tensor_local.setIdentity();
     
+    m_inverse_inertia_tensor_world.setIdentity();
+
     m_orientation = Quaternion(0.0f,Vector3Gf(1.0f,0.0f,0.0f));
 
     m_next_orientation = m_orientation;
@@ -38,6 +42,10 @@ PhysicsEntity::PhysicsEntity(Vector3Gf position, Vector3Gf velocity, GLfloat mas
     m_next_velocity = m_velocity;
 
     m_mass = mass;
+
+    m_inverse_inertia_tensor_local.setIdentity();
+    
+    m_inverse_inertia_tensor_world.setIdentity();
 
     m_orientation = orientation / orientation.norm();
 
@@ -136,6 +144,16 @@ Vector3Gf PhysicsEntity::GetNextAngularVelocity()
 void PhysicsEntity::SetNextAngularVelocity(Vector3Gf w)
 {
     m_next_angular_velocity = w;
+}
+
+void PhysicsEntity::SetInertiaTensor(Eigen::Matrix<GLfloat,3,3> I)
+{
+  m_inverse_inertia_tensor_local = I.inverse();
+}
+
+void PhysicsEntity::OnModelMatrixUpdate()
+{
+  m_inverse_inertia_tensor_world = m_model_matrix.block(0,0,3,3)*m_inverse_inertia_tensor_local;
 }
 
 void PhysicsEntity::UpdateFromBuffers()

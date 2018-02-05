@@ -2,10 +2,11 @@ var searchData=
 [
   ['m_5fangular_5fvelocity',['m_angular_velocity',['../classPhysicsEntity.html#a238d3a865831ce9b9a2786581f01befc',1,'PhysicsEntity']]],
   ['m_5fid',['m_id',['../classPhysicsEntity.html#a307a68bd03c07e34972a2533ce714e2e',1,'PhysicsEntity']]],
+  ['m_5finverse_5finertia_5ftensor_5flocal',['m_inverse_inertia_tensor_local',['../classPhysicsEntity.html#a2ed40e25da558bd51ee4932002e64da6',1,'PhysicsEntity']]],
   ['m_5fmass',['m_mass',['../classPhysicsEntity.html#a5a7bc5174169e169f69723d2483c2eff',1,'PhysicsEntity']]],
   ['m_5fmaterial',['m_material',['../classModel.html#a9bdd98280096538d7768388925670fc2',1,'Model']]],
   ['m_5fmesh',['m_mesh',['../classModel.html#afe425f579d17b798e6c454a5c5e2d952',1,'Model']]],
-  ['m_5fmodel_5fmatrix',['m_model_matrix',['../classModel.html#a41d60873613f3b75c8242df3bbb44ca9',1,'Model']]],
+  ['m_5fmodel_5fmatrix',['m_model_matrix',['../classLocalCoordinateEntity.html#a221e8879e892080b475d24bf56af19d9',1,'LocalCoordinateEntity']]],
   ['m_5fnext_5fangular_5fvelocity',['m_next_angular_velocity',['../classPhysicsEntity.html#acdc8fe1406bb68ad717302ca5e5bdcd4',1,'PhysicsEntity']]],
   ['m_5fnext_5forientation',['m_next_orientation',['../classPhysicsEntity.html#aad6183c1238275b2fe964b1d5319bfe7',1,'PhysicsEntity']]],
   ['m_5fnext_5fposition',['m_next_position',['../classPhysicsEntity.html#adf3a1aa08e8fcc5b67afd759d48db25b',1,'PhysicsEntity']]],

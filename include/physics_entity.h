@@ -3,6 +3,7 @@
 #include <vector3G.h>
 #include <atomic>
 #include <quaternion.h>
+#include "local_coordinate_entity.h"
 
 #ifndef PHYSICS_ENTITY
 #define PHYSICS_ENTITY
@@ -11,7 +12,7 @@
 
     PhysicsEntity is a base class for all objects in a scene that respond to forces and other physical phenomenon  
 **/
-class PhysicsEntity{
+class PhysicsEntity : virtual public LocalCoordinateEntity{
    public:
         /**
             Returns the unique id for this entity
@@ -113,6 +114,12 @@ class PhysicsEntity{
         **/
         void SetNextAngularVelocity(Vector3Gf w);
 
+	/**
+	 * Sets the local coordinate inertia tensor for the entity 
+	 * @param I inertia tensor in local coordinates
+	 */
+	void SetInertiaTensor(Eigen::Matrix<GLfloat,3,3> I);
+
         /**
             Updates internal state from buffers. This will load the next position and velocity from their corresponding buffers
         **/
@@ -144,6 +151,16 @@ class PhysicsEntity{
         **/
         GLfloat m_mass;
 
+	/*
+	 * Inverse of interial tensor for this entity in world coordinates
+	 */
+	Eigen::Matrix<GLfloat,3,3> m_inverse_inertia_tensor_world;
+
+	/**
+	 * Inverse of interial tensor for this entity in local coordinates
+	 */
+	Eigen::Matrix<GLfloat,3,3> m_inverse_inertia_tensor_local;
+
         /**
          * The orientation of this entity 
          * */
@@ -163,8 +180,13 @@ class PhysicsEntity{
          * The angular velocity of this entity
          **/
         Vector3Gf m_angular_velocity;
-
-        /**
+  
+	/**
+	 * Updates local coorindate data into world coorindate data where appropriate
+	 */
+	void OnModelMatrixUpdate();
+        
+	/**
             Creates an instance of PhysicsEntity centered at the origin, zero velocity, and unit mass
         **/
         PhysicsEntity();
@@ -182,7 +204,7 @@ class PhysicsEntity{
         /** 
             Destructor for PhysicsEntity
         **/
-        virtual ~PhysicsEntity(){};
+        virtual ~PhysicsEntity(){}; 
 
     private :
         static std::atomic<GLint> next_id;

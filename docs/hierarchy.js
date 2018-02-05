@@ -5,17 +5,19 @@ var hierarchy =
     [ "GravityForceGenerator", "classGravityForceGenerator.html", null ],
     [ "Light", "structLight.html", null ],
     [ "LinearDragForceGenerator", "classLinearDragForceGenerator.html", null ],
+    [ "LocalCoordinateEntity", "classLocalCoordinateEntity.html", [
+      [ "Model", "classModel.html", [
+        [ "RectangularPrism", "classRectangularPrism.html", null ],
+        [ "Sphere", "classSphere.html", null ]
+      ] ],
+      [ "PhysicsEntity", "classPhysicsEntity.html", [
+        [ "RectangularPrism", "classRectangularPrism.html", null ],
+        [ "Sphere", "classSphere.html", null ]
+      ] ]
+    ] ],
     [ "Material", "structMaterial.html", null ],
     [ "Mesh", "classMesh.html", null ],
-    [ "Model", "classModel.html", [
-      [ "RectangularPrism", "classRectangularPrism.html", null ],
-      [ "Sphere", "classSphere.html", null ]
-    ] ],
     [ "NetForceAccumulator", "classNetForceAccumulator.html", null ],
-    [ "PhysicsEntity", "classPhysicsEntity.html", [
-      [ "RectangularPrism", "classRectangularPrism.html", null ],
-      [ "Sphere", "classSphere.html", null ]
-    ] ],
     [ "Quaternion", "structQuaternion.html", null ],
     [ "Scene", "classScene.html", null ],
     [ "Shader", "classShader.html", null ],

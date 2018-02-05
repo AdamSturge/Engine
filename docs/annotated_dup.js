@@ -7,6 +7,7 @@ var annotated_dup =
     [ "GravityForceGenerator", "classGravityForceGenerator.html", "classGravityForceGenerator" ],
     [ "Light", "structLight.html", "structLight" ],
     [ "LinearDragForceGenerator", "classLinearDragForceGenerator.html", "classLinearDragForceGenerator" ],
+    [ "LocalCoordinateEntity", "classLocalCoordinateEntity.html", "classLocalCoordinateEntity" ],
     [ "Material", "structMaterial.html", "structMaterial" ],
     [ "Mesh", "classMesh.html", "classMesh" ],
     [ "MidpointMethod", "classMidpointMethod.html", "classMidpointMethod" ],
