@@ -118,7 +118,7 @@ class PhysicsEntity : virtual public LocalCoordinateEntity{
 	 * Sets the local coordinate inertia tensor for the entity 
 	 * @param I inertia tensor in local coordinates
 	 */
-	void SetInertiaTensor(Eigen::Matrix<GLfloat,3,3> I);
+	void SetLocalInertiaTensor(Eigen::Matrix<GLfloat,3,3> I);
 
         /**
             Updates internal state from buffers. This will load the next position and velocity from their corresponding buffers

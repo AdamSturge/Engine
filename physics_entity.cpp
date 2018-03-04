@@ -146,7 +146,7 @@ void PhysicsEntity::SetNextAngularVelocity(Vector3Gf w)
     m_next_angular_velocity = w;
 }
 
-void PhysicsEntity::SetInertiaTensor(Eigen::Matrix<GLfloat,3,3> I)
+void PhysicsEntity::SetLocalInertiaTensor(Eigen::Matrix<GLfloat,3,3> I)
 {
   m_inverse_inertia_tensor_local = I.inverse();
 }
